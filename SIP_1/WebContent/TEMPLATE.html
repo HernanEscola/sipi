@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Hoteles-Backoffice</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/clear.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ui-lightness/jquery-ui-1.7.2.custom.css" />
+    <link href="css/autoCompleteFaceted.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.searchFilter.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/grid.css" />
+    <link href="css/jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <script src="js/jquery1.3.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.alerts.js" type="text/javascript"></script>
+    
+	<script type="text/javascript">
+		$(document).ready(function(){
+		});
+	</script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <div id="topheader">
+                <div class="login">
+                    <img height="18" width="18" border="0" alt="ImagenUsuario" src="img/usericon.png" />
+                    <label>
+                        Usuario:</label>
+                    <span id="username">SIPI</span> <a href="index.html" id="logout">Salir</a> 
+                </div>
+            </div>
+            <div id="navigation">
+                <ul id="menus">
+                    <!--<li id="edit"><a title="Demonstration" class="firstItem" onclick="javascript:edition(3);">Editar</a></li>-->
+                    <li id="new"><a title="Promociones">Crear Promociones</a></li>
+					<li id="edit"><a title="Disponibilidad">Disponibilidad</a></li>
+                    <li id="edit"><a title="Reservas">Crear Reserva</a></li>
+                    <li id="orden"><a title="Cancelaciones">Cancelar Reserva</a></li>
+                    <li id="orden"><a title="Reporte">Reportes por Reserva</a></li>
+                    <li id="simil"><a title="Reporte" class="lastItem">Reportes por Habitaci&oacute;n</a></li>
+                </ul>
+                <div class="fixed">
+                </div>
+            </div>
+            <div id="content">
+                <!-- content --><!--
+                
+                /*---------------------------------------------------------------------*/
+                
+                -->
+                
+                
+                <div id="note">
+				  <div class="edit">
+				  
+				  	<div id="editheader" class="editheader">
+					</div>
+					
+					<div id="editmenu" class="editmenu">
+					  <ul>
+					    <li id="provider" class="selected">
+					      <a title="Proveedores" id="proovedoresTabs"
+					      href="crud_page.html#edition#OID=null">Proveedores</a>
+					    </li>
+					    <li id="header">
+					      <a title="Encabezado" id="headerTabs"
+					      href="crud_page.html#edition#OID=null">Encabezado</a>
+					    </li>
+					    <li id="photos">
+					      <a title="Fotos" id="photosTabs"
+					      href="crud_page.html#edition#OID=null">Fotos</a>
+					    </li>
+					    <li id="location">
+					      <a title="Ubicaci&#243;n" id="locationTabs"
+					      href="crud_page.html#edition#OID=null">Ubicaci&#243;n</a>
+					    </li>
+					    <li id="services">
+					      <a title="Servicios" id="servicesTabs"
+					      href="crud_page.html#edition#OID=null">Servicios</a>
+					    </li>
+					  </ul>
+					</div>
+					
+					<div id="editcontent" class="editcontent">
+					<div id="editcontentheader" class="editcontentheader" style="display: block;">
+					  <div class="headerBox">
+					  <div class="hotelHeaderDetails">
+						  <h5>Datos B&#225;sicos</h5>
+						  <p>
+						    <label>Nombre :</label>
+						    <input type="text" class="hotelName" id="hotelName" value=""
+						    name="hotelName">
+						      <span class="iconComplete"></span>
+						      <p>
+						        <label>Tel&#233;fono :</label>
+						        <input type="text" class="hotelPhone" id="hotelPhone"
+						        value="" name="hotelPhone">
+						          <span class="iconComplete"></span>
+						          <p>
+						            <label>Mail :</label>
+						            <input type="text" class="hotelMail" id="hotelMail"
+						            value="" name="hotelMail">
+						              <span class="iconComplete"></span>
+						              <p>
+						                <label>Check - in:</label>
+						                <input type="text" class="time" id="checkInTime"
+						                value="" name="checkInTime" style="display: none;">
+						                  <select class="h timepicker" id="h_checkInTime">
+						                    <option value="00">00</option>
+						                    <option value="01">01</option>
+						                    <option value="02">02</option>
+						                    <option value="03">03</option>
+						                    <option value="04">04</option>
+						                    <option value="05">05</option>
+						                    <option value="06">06</option>
+						                    <option value="07">07</option>
+						                    <option value="08">08</option>
+						                    <option value="09">09</option>
+						                    <option value="10">10</option>
+						                    <option value="11">11</option>
+						                    <option value="12">12</option>
+						                    <option value="13">13</option>
+						                    <option value="14">14</option>
+						                    <option selected="selected" value="15">
+						                    15</option>
+						                    <option value="16">16</option>
+						                    <option value="17">17</option>
+						                    <option value="18">18</option>
+						                    <option value="19">19</option>
+						                    <option value="20">20</option>
+						                    <option value="21">21</option>
+						                    <option value="22">22</option>
+						                    <option value="23">23</option>
+						                  </select>
+						                  <select class="m timepicker" id="m_checkInTime">
+						                    <option value="00">00</option>
+						                    <option value="15">15</option>
+						                    <option selected="selected" value="30">
+						                    30</option>
+						                    <option value="45">45</option>
+						                  </select>
+						                  <span id="checkInIcon" class="iconComplete">
+						                  </span>
+						                  <p>
+						                    <label>Check - out:</label>
+						                    <input type="text" class="time"
+						                    id="checkOutTime" value="" name="checkOutTime"
+						                    style="display: none;">
+						                      <select class="h timepicker"
+						                      id="h_checkOutTime">
+						                        <option value="00">00</option>
+						                        <option value="01">01</option>
+						                        <option value="02">02</option>
+						                        <option value="03">03</option>
+						                        <option value="04">04</option>
+						                        <option value="05">05</option>
+						                        <option value="06">06</option>
+						                        <option value="07">07</option>
+						                        <option value="08">08</option>
+						                        <option value="09">09</option>
+						                        <option value="10">10</option>
+						                        <option value="11">11</option>
+						                        <option value="12">12</option>
+						                        <option value="13">13</option>
+						                        <option value="14">14</option>
+						                        <option selected="selected" value="15">
+						                        15</option>
+						                        <option value="16">16</option>
+						                        <option value="17">17</option>
+						                        <option value="18">18</option>
+						                        <option value="19">19</option>
+						                        <option value="20">20</option>
+						                        <option value="21">21</option>
+						                        <option value="22">22</option>
+						                        <option value="23">23</option>
+						                      </select>
+						                      <select class="m timepicker"
+						                      id="m_checkOutTime">
+						                        <option value="00">00</option>
+						                        <option value="15">15</option>
+						                        <option selected="selected" value="30">
+						                        30</option>
+						                        <option value="45">45</option>
+						                      </select>
+						                      <span class="iconComplete"></span>
+						                      <p>
+						                        <label>Categoria :</label>
+						                        <select class="hotelCategory"
+						                        id="hotelCategory">
+						                          <option value="0">Seleccione..</option>
+						                          <option value="1">1 Estrella</option>
+						                          <option value="1.5">1,5
+						                          Estrellas</option>
+						                          <option value="2">2 Estrellas</option>
+						                          <option value="2.5">2,5
+						                          Estrellas</option>
+						                          <option value="3">3 Estrellas</option>
+						                          <option value="3.5">3,5
+						                          Estrellas</option>
+						                          <option value="4">4 Estrellas</option>
+						                          <option value="4.5">4,5
+						                          Estrellas</option>
+						                          <option value="5">5 Estrellas</option>
+						                        </select>
+						                        <span class="iconComplete"></span>
+						                      </p>
+						                      <p>
+						                        <label>Tipo :</label>
+						                        <select class="hotelType" id="hotelType">
+						                          <option value="1">Hotel Boutique</option>
+						                          <option value="2">Posada</option>
+						                          <option value="3">Hostel</option>
+						                          <option value="4">Caba&#241;a</option>
+						                          <option value="5">Apart Hotel</option>
+						                          <option value="6">Hoster&#237;a</option>
+						                          <option value="7">Hotel</option>
+						                          <option value="8">Casas para
+						                          Alquilar</option>
+						                          <option value="9">Estancia</option>
+						                          <option value="10">Bed And
+						                          Breakfast</option>
+						                          <option value="11">Ecolodge</option>
+						                          <option value="12">Departamentos
+						                          Amoblados</option>
+						                        </select>
+						                        <span class="iconComplete"></span>
+						                      </p>
+						                      <p>
+						                        <label>Tour Virtual:</label>
+						                        <textarea disabled="disabled"
+						                        class="virtualTour" id="virtualTour"
+						                        name="virtualTour"></textarea>
+						                        <a target="_blank" class="virtualTourLink"
+						                        href="null" id="virtualTourLink"
+						                        style="display: none;">Ver</a>
+						                        <span id="deleteVirtualTour"
+						                        class="pictureDeleteVirtualTour"
+						                        style="display: none;"></span>
+						                      </p>
+						                      <p>
+						                        <button class="validate"
+						                        id="btnValidateHeaderData">Validar Datos
+						                        B&#225;sicos</button>
+						                      </p>
+						                    </input>
+						                  </p>
+						                </input>
+						              </p>
+						            </input>
+						          </p>
+						        </input>
+						      </p>
+						    </input>
+						  </p>
+						</div>
+					  
+					  <div class="translateBoxTop">
+						  <h5>Descripci&#243;n en Espa&#241;ol</h5>
+						  <span id="descriptionSpanish" class="ico descriptionBtnSpanish">
+						  </span>
+						  <span class="lengthLess">-150</span>
+						  <textarea cols="40" rows="8" class="descriptionES"
+						  style="border: 1px solid darkred; color: red;"></textarea>
+						  <label></label>
+						  <span class="langDetected_es"></span>
+						  <button class="translateButtonES">traducir</button>
+						</div>
+						
+						<div class="translateBoxBottom">
+						  <h5>Descripci&#243;n en Portugues</h5>
+						  <span id="descriptionPortugues"
+						  class="ico descriptionBtnPortugues"></span>
+						  <span class="lengthLess">-150</span>
+						  <textarea cols="40" rows="8" class="descriptionPT"
+						  style="border: 1px solid darkred; color: red;"></textarea>
+						  <span></span>
+						  <span class="langDetected_pt-PT"></span>
+						  <button class="translateButtonPT">traducir</button>
+						</div>
+						
+						<div style="clear: both;"></div>
+					  
+					  </div>
+					</div>
+								
+					</div>
+					
+					<div class="buttons">
+					  <button type="button" id="btnGuardar" class="button">
+					  Guardar</button>
+					  <button type="button" id="btnCancel" class="button">
+					  Salir</button>
+					</div>
+				  
+				  </div>
+				</div>
+				
+				
+				<!--
+				                
+               /*---------------------------------------------------------------------*/
+               
+                --><!-- /content -->
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+	<div id="overlay" class="overlay"></div>
+</body>
+</html>

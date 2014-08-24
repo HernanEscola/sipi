@@ -1,0 +1,756 @@
+/*-------------Reset------------*/
+
+	html, body, button, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
+	pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, 
+	s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, 
+	li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, hr , dd
+	{margin:0; padding:0; border:0; outline:0; 
+	background:transparent;}
+	ol, ul {list-style:none;}
+	li {line-height:100%;}
+	blockquote, q {quotes:none;}
+	table {border-collapse:collapse; border-spacing:0;}
+	* {	margin:0;padding:0;}
+
+/*-----------General------------*/
+
+	body {
+		background:#BEC3C6 url(../img/bg.jpg) repeat-x scroll 0 0;
+		color:#555555;
+		font-family:Verdana,"BitStream vera Sans",Helvetica,Sans-serif;
+		font-size:12px;
+	}
+	.translateBoxTop,.translateBoxBottom{
+		position:relative;
+	}
+	.lengthLess{
+		position:absolute;
+		top:27px;
+		right:10px;
+		color:darkgrey;
+		font-weight:bold;
+	}
+	#descriptionSpanish, #descriptionPortugues{
+		position:absolute;
+		top:0;
+		right:0;
+	}
+	#wrap {
+		background:transparent url(../img/light.gif) no-repeat scroll center top;
+		padding:10px 0;
+	}
+	
+	#container {
+		margin:0 auto;
+		width:936px;
+	}
+	
+	.notPublished{
+	  font-style:italic;
+	  color:#A3171E;
+	}
+	#topheader {
+		background:transparent url(../img/header.jpg) no-repeat scroll 0 0;
+		border-bottom:1px solid #A6A6A6;
+		height:80px;
+	}
+	
+	#topheader .login{
+		float:left;
+		margin-left:20px;
+		margin-top:50px;
+	}	
+	
+	#topheader img{
+		float:left;		
+	}			
+	
+	#topheader a{
+		float:left;
+		color:orange;
+		font-size:11px;
+		margin-top:2px;
+		margin-left:14px;
+		margin-right:47px;
+	}	
+		
+	#topheader label{
+		float:left;
+		color:#C5DBEC;		
+		font-size:11px;
+		margin-top:2px;
+	}
+		
+	#topheader span{
+		float:left;
+		color:#C5DBEC;
+		font-size:11px;
+		margin-top:2px;
+	}
+		
+	#navigation {
+		background:#FFFFFF none repeat scroll 0 0;
+		border-bottom:1px solid #A6A6A6;
+	}
+	
+	#content {
+		background:#FFFFFF url(../img/main_shadow.gif) repeat-x scroll center top;
+		border-bottom:1px solid #A6A6A6;
+		min-height:600px;
+		padding-left:10px;
+	}
+	
+	#content .datagrid{
+		padding-top:75px;	
+	}
+	
+	#content .edit{
+		margin:0 auto;
+		padding-top:30px;
+		width:900px;	
+		display:block;
+	}	
+	
+	#content .published{
+		color:#1C94C4;
+		font-size:11px;
+		font-weight:bold;
+		margin-bottom:10px;
+		margin-left:10px;
+		float:left;
+	}
+	
+	#content .contentInner{
+		width:780px;
+		margin:0px 23px;
+		padding:20px 0;
+			
+	}
+	#content .title{
+		color: #003D92;
+    	font-size: 16px;
+    	font-weight: normal;
+    	margin-bottom:5px;
+  	}
+  	
+  	#content .grid_left{
+  		float:left;
+  	}
+	
+	#content .titleArea{
+		padding:5px;
+		width:250px;
+		font-size:11px;
+	}
+	#content .btnArea{
+		background: #E0E0E0;
+		background: linear-gradient(top, #E0E0E0 0%, #ffffff 100%); 
+		background: -moz-linear-gradient(top, #E0E0E0 0%, #ffffff 100%); 
+		border-bottom:1px solid #CECECE;
+		color:#53B3CB;
+		padding:5px;
+		width:250px;
+		margin-bottom:1px;
+	}
+	
+	#content .over{
+		background-color:#ADADAD;
+		color:#333333;
+		cursor:pointer;
+	}
+	#content .ableArea{
+		background: #72A9D3;
+		background: linear-gradient(top, #72A9D3 0%, #DFF0F5 100%); 
+		background: -moz-linear-gradient(top, #72A9D3 0%, #DFF0F5 100%); 
+		color:darkblue;
+		cursor:pointer;
+	}
+	#content .btnCountry{
+		padding:5px 0 5px 10px;
+		border-bottom:1px solid #dcdcdc;
+		margin-bottom:1px;
+		cursor:pointer;
+	}
+	
+	 #content .ableCountry{
+		background: #E4F1FC;
+		background: linear-gradient(top, #E4F1FC 0%, #FFFFFF 100%); 
+		background: -moz-linear-gradient(top, #E4F1FC 0%, #FFFFFF 100%); 
+		color:#1C94C4;
+		cursor:pointer;
+	}
+	
+	#content .btnCountry:hover{
+		background-color:#E4F1FC;
+		color:#1C94C4;
+		cursor:pointer;
+	}
+	
+	#content .btnArea .areaCount, #content .titleArea .areaCount, #content .btnCountry .areaCount{
+		float:right;
+	}
+	#content .btnCountry .areaCount{
+		margin-right:5px;
+	}
+	#content .listCountries{
+		display:none;
+		max-height:280px;
+		overflow:auto;
+	}
+	#dataGrid{
+		clear:both;
+	}
+	.grid .filter select{
+		width:115px;
+	}
+	.grid .filter span{
+		color:#1C94C4;
+		font-weight:bold;
+		font-size:11px;
+	}
+	.grid .filter{
+		float:right;
+		margin-right:25px;
+	}
+	#content .published span{	
+		padding-left:10px;
+	}
+	
+	#menus li {	
+		display:inline;
+		list-style-image:none;
+		list-style-position:outside;
+		list-style-type:none;
+		cursor:pointer;
+	}
+	
+	#menus li a {
+		-moz-user-select:none;
+		border-left:1px solid #CCC;
+		color:#382E1F;
+		display:block;
+		float:left;
+		font-size:11px;
+		height:31px;
+		line-height:31px;
+		padding:0 20px;
+		text-decoration:none;
+		z-index:1;
+	}
+	#menus li a:hover{ background-color:#CCC; }
+	#menus .selected a{ background-color:#CCC; }
+	#menus li a.home {
+		background-position:0 -93px;
+		margin-left:0;
+		padding:0;
+		text-indent:-999em;
+		width:45px;
+	}
+	
+	.ico{
+		background-image: url(../img/ui-icons_228ef1_256x240.png);
+		height:16px;
+		width:16px;
+	}
+ 		
+	.ui-grid-ico-sort {
+		cursor:pointer !important;
+		display:inline;
+		float:right;
+		overflow:hidden;
+		position:absolute;
+	}
+	
+	#footer {
+		background:transparent url(../img/footer.jpg) no-repeat scroll 0 0;
+		display:block;
+		margin-top:5px;
+		font-size:11px;
+		height:88px;
+		line-height:145%;
+		width:100%;
+		border-top:1px solid #A6A6A6;
+	}
+	.invalidCodeError{
+		border:1px solid red
+	}
+	
+	
+/*-------------Login-----------*/
+	
+	.contentlogin{
+			background:#FFFFFF url(../img/main_shadow.gif) repeat-x scroll center top;
+			border-bottom:1px solid #A6A6A6;
+			min-height:210px;
+			padding:150px;
+	}
+	
+	.loginbox{
+		-moz-border-radius:10px;				
+		background:url(../img/bkglogin.gif) repeat-x scroll center top;	
+		margin:0 auto;
+		padding-bottom:126px;
+		padding-top:34px;
+		width:300px;	
+	}
+	.s-ico{
+	  display:none !important;
+	}
+	.filterOrder{
+		padding-top:20px;
+	}
+	#id, #completiness,#state,#idType, thead tr, .datagrid #tableSimil #tbodyGrid #headcolumns{
+	  cursor:auto !important;
+	}
+	.filterOrder .filterText{
+		height:20px;
+		width:167px;
+	}
+	.orderMain{
+		margin-top:10px;
+		width:99%;
+	}
+	.pricesOrder{
+		width:67px;
+	}
+	thead{
+	  cursor:normal !important;
+	}
+	.headerOrder span{
+		display:block;
+		text-align:center;
+		margin:0;
+	}
+	.convOrder{
+		width:67px
+	}
+	.displaysOrder{
+		width:68px;
+	}
+	.grossBooking{
+		width:67px;
+	}
+	.touristRelevance{
+		width:67px;
+	}
+	.salesOrder{
+		width:69px;
+	}
+	.hotelLine .pricesOrder{
+		padding-top:6px;
+	}
+	.itemOrder{
+		height:27px;
+		float:left;
+		padding-top:6px;
+		border-right:1px solid #70A8D2;
+		overflow:hidden;
+	}
+	.hotelLine.manual{
+		background-color:#FFFF99;
+	}
+	.hotelLine{
+		border-left:1px solid #70A8D2;
+		border-bottom:1px solid #70A8D2;
+		border-top:1px solid #70A8D2;
+		overflow:auto;
+		cursor:pointer;
+		margin-top:-1px;
+	}
+	.nameOrder input{
+		float:left;
+		position:relative;
+		top:5px;
+		left:7px;
+	}
+	.itemOrder span{
+		white-space:nowrap;
+	}
+	.itemOrder.nameOrder span{
+		position:absolute;
+		top:10px;
+		left:22px;
+	}
+	.filterFoundOrder .toMove{
+	  border-bottom:9px solid #999999;
+	}
+	.mainContentOrder{
+		height:510px;
+		overflow-y:scroll;
+	}
+	.hotelLine:hover, .hotelLine:hover .continue{
+		background-color:#B5C4CF;
+	}
+	.variationOrder{
+		width:128px;
+	}
+	.toMove{
+	  background-color:#E9E9E9 !important;
+	}
+	.toMove .continue{
+	  background-color:#E9E9E9 !important;
+	}
+	.headerOrder.nameOrder span, .headerOrder.starsOrder span, .headerOrder.numOrder span, .headerOrder.convOrder span, .headerOrder.displaysOrder span, .headerOrder.salesOrder span,  .headerOrder.pricesOrder span, .headerOrder.relevOrder span,  .headerOrder.fichaOrder  span,.headerOrder.reviewOrder  span,.headerOrder.grossBooking  span{
+		margin-top:9px;
+	}
+	.headerOrder.touristRelevance  span{
+		margin-top:2px;
+	}
+	.manual .continue{
+	  background-color:#FFFF99;
+	}
+	.fichaOrder{
+		width:58px;
+	}
+	.reviewOrder{
+		width:43px;
+	}
+	.numOrder{
+		width:33px;
+		display:block;
+		text-align:center;
+	}
+	.manual .variationOrderDiaria ,.manual .variationOrderSemanal{
+		border-right:none;
+	}
+	.toMove{
+	  position:relative;
+	}
+	.nameOrder{
+		width:179px;
+		position:relative;
+	}
+	.variation{
+	  background-image:url(../img/variation.png);
+	  left:13px;
+	  position:absolute;
+	}
+	.variationDown{
+	  display:block;
+	  height:20px;
+	  width:10px
+	}
+	.variationOrderDiaria.letsSmall span, .variationOrderSemanal.letsSmall span, .variationOrderMensual.letsSmall span{
+	  font-size:11px;
+	  left:22px;
+	  position:absolute;
+	  top:14px;
+	}
+	.variationOrderDiaria, .variationOrderSemanal, .variationOrderMensual{
+	  position:relative;
+	}
+	.variationUp{
+	  background-position:-8px 0;
+	  display:block;
+	  height:20px;
+	  width:10px;
+	}
+	.manual .variationOrderDiaria em{
+	  display:none;
+	}
+	.crossToClose{
+	  background-color:white;
+	  border:1px solid;
+	  cursor:pointer;
+	  display:block;
+	  height:15px;
+	  left:-7px;
+	  position:absolute;
+	  top:-5px;
+	  width:8px;
+	}
+	.manual .variationOrderDiaria{
+	  background-color:transparent !important;
+	}
+	.automatic .variationOrderDiaria label{
+	  display:none !important;
+	}
+	.manual .variationOrderDiaria span, .manual .variationOrderSemanal, .manual .variationOrderMensual{
+	  display:none !important;
+	}
+	.continue{
+	  background-color:white;
+	  position:absolute;
+	  right:0;
+	  top:11px;
+	}
+	.manual .variationOrderDiaria label{
+	  width:129px;
+	  display:block !important;
+	  text-align:center;
+	}
+	.manual .itemOrder.variationOrderDiaria{
+	  width:129px !important;
+	}
+	.pricesOrder.itemOrder span, .starsOrder.itemOrder span, .reviewOrder.itemOrder span, .variationOrderDiaria.itemOrder span,.variationOrderDiaria.itemOrder label, .variationOrderSemanal.itemOrder span, .variationOrderMensual.itemOrder span{
+	  margin:0;
+	}
+	.relevOrder.itemOrder span,.salesOrder.itemOrder span, .displaysOrder.itemOrder span, .fichaOrder.itemOrder span, .grossBooking.itemOrder span, .touristRelevance.itemOrder span{
+	  display:block;
+	  text-align:right;
+	  padding-right:3px;
+	}
+	.stars.itemOrder span,.reviewOrder.itemOrder span,.variationOrderDiaria.itemOrder span, .variationOrderSemanal.itemOrder span, .variationOrderMensual.itemOrder span, .convOrder.itemOrder span{
+	  display:block;
+	  text-align:center;
+	}
+	/*.headerOrder.relevOrder,.headerOrder.convOrder,.headerOrder.fichaOrder,.headerOrder.priceCat,.headerOrder.reviewOrder {
+		background:url("../img/degradeHrm.jpg") repeat scroll 50% 50% transparent;
+		color:white;
+		font-weight:bold;
+		font-size:10px;
+	}*/
+	.starsOrder{
+		width:41px;
+		display:block;
+		text-align:center;
+	}
+	.headerOrder{
+		float:left;
+		border-right:1px solid #70A8D2;
+		height:32px;
+	}
+	.rangoOrder{
+		border-right:1px solid #70A8D2;
+	}
+	.rangoOrder, .promOrder{
+		float:left;
+		height:19px;
+	}
+	.hotelLine .rangoOrder,.hotelLine .promOrder{
+		width:67px;
+		border-right:1px solid #70A8D2;
+		height:27px;
+		display:block;
+		text-align:center;
+	}
+	.relevOrder{
+		width:66px;
+	}
+	.hotelLine .promOrder{
+		width:67px;
+	}
+	.variationOrderDiaria,.variationOrderMensual,.variationOrderSemanal{
+		width:42px;
+	}
+	.subItemVariation{
+		float:left;
+		display:block;
+		border-right:1px solid #70A8D2;
+		text-align:center;
+		width:42px;
+		height:19px;
+	}
+	.saveButtonOrder, .exitButtonOrder{
+		background-image:url("../img/button.gif");
+		color:#C5DBEC;
+		cursor:pointer;
+		font-size:11px;
+		font-weight:bold;
+		height:29px;
+		width:80px;
+		border:none;
+		margin:10px;
+	}
+	.anualOrder {
+		border-right:none;
+	}
+	.loadingContainer .loadingIcon{
+		background-image:url(../img/ajax-loader.gif);
+		position:fixed;
+		top:50%;
+		left:50%;
+		width:100px;
+		height:100px;
+	}
+	.loadingContainer{
+		background-color:white;
+		opacity:0.7;
+		position:absolute;
+		top:0;
+	}
+	.alertDialog #popup_content.alert{
+		background-image:url("../img/warning.png");
+	}
+	.priceMainOrder,.variationMainOrder{
+		border-bottom:1px solid #70A8D2;
+	}
+	.subItemPrice{
+		display:block;
+		text-align:center;
+		width:70px;
+	}
+	.HeadersOrder{
+		background:url("../img/ui-bg_glass_85_dfeffc_1x400.png") repeat scroll 50% 50% transparent;
+		height:32px;
+		border-bottom:1px solid #70A8D2;
+		border-left:1px solid #70A8D2;
+	}
+	.titleOrder{
+		background:url("../img/ui-bg_gloss-wave_55_5c9ccc_500x100.png") repeat scroll 50% 50% transparent;
+		color:white;
+		font-weight:bold;
+		height:21px;
+		padding-top:4px;
+		text-align:center;
+	}
+	.additInfo{
+		font-size:11px;
+		float:right;
+		position:relative;
+		right:10px;
+	}
+	.loginbox button{
+		-moz-border-radius:4px;
+		background:transparent url(../img/ui-bg_gloss-wave_55_5c9ccc_500x100.png) repeat scroll 50% 50%;
+		cursor:pointer;
+		float:left;
+		font-size:11px;
+		font-weight:bold;
+		height:23px;
+		margin:0 116px;
+		width:74px;	
+		color:#e4f1fc;
+	}
+	
+	.loginbox p{
+		float:left;
+		height:44px;
+		margin-left:20px;
+		width:270px;	
+	}
+	
+	.loginbox label{
+		color:#e4f1fc;
+		float:left;
+		font-size:11px;
+		font-weight:bold;
+		margin:4px 0 0 6px;
+		width: 84px;	
+	}
+	
+	.loginbox input{
+		-moz-border-radius:2px;
+		background:transparent url(../img/ui-bg_glass_85_dfeffc_1x400.png) repeat scroll 50% 50%;
+		border:none;
+		float:left;
+		height:19px;
+		width:150px;
+		padding:2px 0 0 4px;		
+	}
+	
+	
+	/* SIMIL DETAILS */
+	
+	.dateSimil{
+		float:left;
+		margin-top:18px;
+	}
+	.gridSimil{
+		width:62.6%;
+		overflow:hidden;
+		float:left;
+		clear:both;
+		border-bottom:1px solid #70A8D2;
+	}
+	.gridSimil .headerSimil{
+		background:url("../img/ui-bg_gloss-wave_55_5c9ccc_500x100.png") repeat scroll 50% 50% transparent;
+		height:27px;
+		float:left;
+		clear:both;
+		width:100%;
+		margin-top:20px;
+	}
+	.headerSimil span{
+		color:white;
+		font-weight:bold;
+		display:block;
+		text-align:center;
+		font-size:11px;
+		position:relative;
+		top:6px;
+	}
+	.headersListSimil{
+		float:left;
+		display:block;
+		width:100%;
+		border-bottom:1px solid #70A8D2;
+		background:url("../img/ui-bg_glass_85_dfeffc_1x400.png") repeat scroll 50% 50% transparent;
+	}
+	
+	.headersListSimil span, .itemSimil span{
+		margin:0px;
+		padding:5px;
+		display:block;
+		text-align:center;
+		border-right:1px solid #70A8D2;
+		float:left;
+	}
+	.oidSimil{
+		width:100px;
+	}
+	.itemMain{
+		font-weight:bold;
+	}
+	.viewMoreSimil{
+		height:10px;
+		border-left:1px solid #70A8D2;
+		height:14px;
+		width:0px;
+		border-right:0 none !important;
+	}
+	.countrySimil{
+		width:223px;
+	}
+	.clustersSimil{
+		width:100px;
+	}
+	.hotelsSimil{
+		width:100px;
+	}
+	.subItems{
+		display:none;
+		clear:both;
+		float:left;
+		overflow:hidden;
+	}
+	.imgMore{
+		background-image:url("../img/closed.png");
+		display:block;
+		height:11px;
+		left:-11px;
+		position:relative;
+		width:9px;
+	}
+	.imgItem{
+		background-image:url("../img/closed.png");
+		display:block;
+		height:11px;
+		position:relative;
+		width:9px;
+	}
+	.imgOpened{
+		background-image:url("../img/opened.png");
+		display:block;
+		height:11px;
+		left:-11px;
+		position:relative;
+		width:9px;
+	}
+	
+	.note{
+		margin-left:25px;
+		margin-top:10px;
+		font-size:10px;
+		font-weight:bold;
+	}
+	
+	.noteSimil{
+		margin:0 0 10px;
+		font-size:10px;
+	}
+	
+	#welcomeMessage {
+		margin-left: 35px;
+		font-size: 16px;
+	}

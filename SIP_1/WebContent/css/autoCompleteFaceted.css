@@ -1,0 +1,170 @@
+.ac_results ul.facetedList{
+	height:auto !important;
+	border-bottom:1px dotted #CCCCCC;
+	position:relative !important;
+	overflow:hidden !important;
+}
+.typeItem{
+	height:100%;
+	position:absolute;
+	width:27%;
+	right:0%;
+	z-index: 1002;
+}
+.typeItem span{
+	display:block;
+	font-family:Arial;
+	font-size:11px;
+	position:relative;
+	text-align:right;
+	top:4px;
+	text-transform:uppercase;
+	color:#818181;
+	right:6px;
+	padding-right:27px;
+	background-image:url("/css/Site/sprites/sprite-autocomplete.gif");
+	background-repeat:no-repeat;
+	white-space:nowrap;
+}
+.Listac .typeItem span{
+	background-position:113px 0;
+}
+.Listad .typeItem span{
+	background-position:113px -15px;
+}
+.Listah .typeItem span{
+	background-position:113px -91px;
+}
+
+.Listap .typeItem span{
+	background-position:113px -33px;
+}
+.Listai .typeItem span{
+	background-position:113px -51px;
+	height:18px;
+}
+.Listaa .typeItem span{
+	background-position:113px -73px;
+}
+.liFirst.ac_over{
+	-moz-border-radius-topleft: 10px;
+	border-top-left-radius: 10px;
+}
+.liLast.ac_over{
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+}
+.ac_results{
+	z-index:0;
+	width: 505px !important;
+}
+.itemLast{
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+}
+.liLast.ac_over{
+	border-bottom-left-radius: 10px; 
+}
+.forAutoComplete {
+	position:relative;
+	z-index:1002 !important;
+}
+
+.ac_results ul li{
+	border-bottom: 1px solid transparent !important;
+    border-top: 1px solid transparent !important;
+}
+.subtitleCountry{
+	color:#ADADAD;
+	font-style:italic;
+	font-size:11px;
+}
+.ac_results ul li span{
+	color: #4F4F4F;
+    display: block;
+    font-family: Arial;
+    font-size: 11px;
+    width: 70%;
+}
+.subitem{
+	position:relative;
+	left:6% !important;
+	height:15px !important;
+	width:68.5% !important;
+	/*display:none !important;*/
+}
+.itemType span{
+	background-image:url(http://desa.ar.despegar.com/images/Autocomplete/autocompleteItems.png);
+}
+.Listac .itemType span{
+	display:block;
+	height:17px;
+	position:absolute;
+	right:4px;
+	width:12px;
+	background-position:0px 5px;
+} 
+.minCharsLeyend{
+	width:auto !important;
+	left:auto !important;
+}
+.Listah .itemType span{
+	display:block;
+	height:18px;
+	position:absolute;
+	right:4px;
+	width:12px;
+	background-position:0px 65px;
+} 
+.Listai .itemType span{
+	display:block;
+	height:18px;
+	position:absolute;
+	right:4px;
+	width:12px;
+	background-position:0px 23px;
+} 
+.itemType em{
+	color:#ADADAD;
+	font-family:verdana;
+	font-size:12px;
+	position:absolute;
+	right:26px;
+	top:3px;
+} 
+
+.more{
+	background-image:url("http://desa.ar.despegar.com/images/Autocomplete/autocompleteSprite.png");
+	color:blue;
+	cursor:pointer;
+	height:11px;
+	left:5px;
+	position:absolute;
+	top:8px;
+	width:11px;
+}
+.noSelectable span{
+	margin-left:15px;
+}
+.more.clossed{
+	background-position:-20px 0;
+}
+.more.clossed:hover{
+	background-position:-20px -15px;
+}
+.more.opened{
+	background-position:0px 0px;
+}
+.more.opened:hover{
+	background-position:0px -15px;
+}
+.ac_results b{
+	font-weight:normal;
+	background-color:yellow;
+}
+.ac_over{
+	background-color:#EEEEEE !important;
+}
+/*.more.clossed{
+	background-image:url(desa.ar.despegar.com/images/Autocomplete/autocompleteSprite.png);
+}*/

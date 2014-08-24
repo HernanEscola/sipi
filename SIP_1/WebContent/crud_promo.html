@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Hoteles-Backoffice</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/clear.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ui-lightness/jquery-ui-1.7.2.custom.css" />
+    <link href="css/autoCompleteFaceted.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/jquery.searchFilter.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/grid.css" />
+    <link href="css/jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <script src="js/jquery1.3.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.alerts.js" type="text/javascript"></script>
+    
+	<script type="text/javascript">
+		$(document).ready(function(){
+		});
+	</script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <div id="topheader">
+                <div class="login">
+                    <img height="18" width="18" border="0" alt="ImagenUsuario" src="img/usericon.png" />
+                    <label>
+                        Usuario:</label>
+                    <span id="username">SIPI</span> <a href="index.html" id="logout">Salir</a> 
+                </div>
+            </div>
+            <div id="navigation">
+                <ul id="menus">
+                    <li id="new"><a href="crud_promo.html" title="Promociones">Crear Promociones</a></li>
+					<li id="edit"><a href="availability.html" title="Disponibilidad">Disponibilidad</a></li>
+                    <li id="edit"><a href="availability.html" title="Reservas">Crear Reserva</a></li>
+                    <li id="edit"><a href="cancelarreserva.html" title="Cancelaciones">Cancelar Reserva</a></li>
+                    <li id="edit"><a href="reportereserva.html" title="Reporte Reservas">Reportes por Reserva</a></li>
+                    <li id="edit"><a href="reportehabitacion.html" title="Reporte Habitaciones">Reportes por Habitaci&oacute;n</a></li>
+                </ul>
+                <div class="fixed">
+                </div>
+            </div>
+            <div id="content">
+                <!-- content --><!--
+                /*---------------------------------------------------------------------*/
+                -->
+                <div id="note">
+				  <div class="edit">
+				  
+				  	<div id="editheader" class="editheader">
+					</div>
+					
+					<div id="editmenu" class="editmenu">
+					  <ul>
+					    <li id="provider" class="selected">
+					      <a title="Proveedores" id="proovedoresTabs"
+					      href="">Promociones</a>
+					    </li>
+					  </ul>
+					</div>
+					
+					<form method="post" action="CrearPromocion">
+					<div id="editcontent" class="editcontent">
+					<div id="editcontentheader" class="editcontentheader" style="display: block;">
+					  <div class="headerBox">
+					  <div class="hotelHeaderDetails">
+						  	<h5>Noches Libres</h5>
+						    <p>
+						    <label>M&iacute;n. Noches :</label>
+						    <input type="text" class="minNoches" id="minNoches" value="" name="minNoches"/>
+						    <span class="iconComplete"></span>
+						    </p>
+						    <p>
+						    <label>Noches Free :</label>
+						    <input type="text" class="nochesFree" id="nochesFree" value="" name="nochesFree"/>
+						    <span class="iconComplete"></span>
+						    </p>
+						    <p>
+						    <label>Hotel ID :</label>
+						    <input type="text" class="hotelID" id="hotelID" value="" name="hotelID"/>
+						    <span class="iconComplete"></span>
+						    </p>
+						</div>
+						
+						<div class="hotelHeaderDetails">
+						  	<h5>Porcentaje Descuento</h5>
+						    <p>
+						    <label>Porcentaje :</label>
+						    <input type="text" class="porcentaje" id="porcentaje" value="" name="porcentaje"/>
+						    <span class="iconComplete"></span>
+						    </p>
+						    <p>
+						    <label>Hotel ID :</label>
+						    <input type="text" class="hotelID2" id="hotelID2" value="" name="hotelID2"/>
+						    <span class="iconComplete"></span>
+						    </p>
+						</div>
+					  	
+					    <div style="clear: both;"></div>
+					  
+					  </div>
+					</div>
+								
+					</div>
+					
+					<div class="buttons">
+					  <input id="btnGuardar" class="button" type="submit" value="Guardar" />
+					  <a href="crud_page.html"><button type="button" id="btnCancel" class="button">
+					  Salir</button></a> 
+					  <!--<input style="float:center;" type="submit" value="Guardar" />
+					--></div>
+				  </form>
+				  </div>
+				</div>
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+	<div id="overlay" class="overlay"></div>
+</body>
+</html>
