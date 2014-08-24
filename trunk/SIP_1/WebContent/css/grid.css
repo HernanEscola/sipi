@@ -1,0 +1,270 @@
+	/*---------------Grid Table ----------------*/
+ .datagrid{
+	padding-top:25px;
+	vertical-align:middle; 
+}
+
+ .datagrid .content{
+	font-size:11px;
+	margin-bottom:30px;
+}
+
+.datagrid table{
+	background-color:#fff;
+	border:1px solid #C5DBEC;	
+	color:#000;			
+	font-size:10px;
+	width:885px;	
+	text-align:center;
+}
+
+
+
+.datagrid select,span,label{
+	float:none;
+}
+
+ .datagrid table tr{
+	-moz-user-select:none;
+	height:20px;
+	cursor:pointer;		
+}
+.datagrid table tr:hover{
+	background-color:#dff0f5;	
+}
+
+.datagrid table #headcolumns{
+	background:transparent url(../img/ui-bg_glass_85_dfeffc_1x400.png) repeat scroll 50% 50%;
+}
+
+.datagrid table #headcolumns:hover{
+	background-color:transparent;
+}
+
+ .datagrid table td div{ 
+	 overflow:hidden;		
+ 	font-size: 9px;	
+}
+.datagrid #reFilter tr:hover{
+	background-color:transparent;	
+}
+
+.datagrid thead{
+			background:transparent url(../img/ui-bg_gloss-wave_55_5c9ccc_500x100.png) repeat scroll 50% 50%;
+			border:1px solid #C5DBEC;	
+			color:#fff;	
+			font-size:11px;		
+			font-weight:bold;			
+			text-align:center;
+		}
+
+.datagrid #reFilter tr{
+		background:transparent url(../img/ui-bg_glass_85_dfeffc_1x400.png) repeat scroll 50% 50%;
+		border:1px solid #C5DBEC;	
+		color:#333333;			
+		font-weight:bold;			
+		text-align:center;
+	}		
+		
+.datagrid thead tr:hover{
+		background-color:transparent;
+	}
+
+	.datagrid #theader:hover{
+		background-color:transparent;	
+	}
+		
+.datafrid #reFilter{
+	background:transparent url(../img/ui-bg_glass_85_dfeffc_1x400.png) repeat scroll 50% 50%;
+	border:1px solid #C5DBEC;	
+	color:#333333;			
+	font-weight:bold;			
+	text-align:center;
+}
+
+ .datagrid .title td{
+	padding:4px 0 8px;	
+}
+
+ .datagrid .s-ico{
+ 	padding:4px 0 8px;
+ 	display:none;	
+}
+
+ .datagrid .titleh{
+	margin: 0 auto;
+}
+.titleh span{
+	display:block;
+	text-align:center;
+	margin:0;
+}
+.datagrid .visible{
+	display:block !important;
+}
+
+ .datagrid .titleh span{
+	text-align: center;
+	display:block;
+	width:100%;
+}
+
+ .datagrid .titleh span{
+	float:left;
+}
+
+ .datagrid .titleh .s-ico{
+	margin-left:0px;
+}
+
+ .datagrid table th{	
+	color:#1C94C4;
+	padding-top:2px;				
+}
+
+ .datagrid table .ico{
+		background-image: url(../img/ui-icons_228ef1_256x240.png);
+		height:16px;
+		width:16px;
+}
+ .datagrid table .icon-triangle-up{
+	background-position:0 -16px;
+}
+
+ .datagrid table .icon-triangle-down {
+	background-position:-65px -15px;
+}
+
+.ui-jqgrid .ui-icon-desc {
+	height:12px;
+	margin-top:3px;
+}
+
+ .datagrid table .ui-grid-ico-sort {
+	cursor:pointer !important;
+	display:inline;
+	float:right;
+	overflow:hidden;
+	position:absolute;
+}
+
+ .datagrid table .ui-icon-asc {
+	height:12px;
+	margin-top:-10px;
+}
+
+ .datagrid table .ui-icon-desc {
+	height:12px;
+	margin-top:-4px;
+}
+
+ .datagrid table .research {
+	background-position:-160px -112px;
+}
+
+ .datagrid table .ui-icon-research {
+	height:17px;
+	margin-left:-24px;
+	margin-top:-8px;
+}
+
+ .datagrid table .refresh {
+	background-position:-64px -80px;
+}
+
+ .datagrid table .ui-icon-refresh {
+	height:17px;
+	margin-left:4px;
+	margin-top:-8px;
+}
+
+ .datagrid table .prev {
+	background-position:-48px -160px;
+}
+
+ .datagrid table .first {
+	background-position:-80px -160px;
+}
+
+ .datagrid table .next {
+	background-position:-32px -160px;
+}
+
+ .datagrid table .last {
+	background-position:-64px -160px;
+}
+
+ .datagrid table .ui-icon-first {
+	height:17px;
+	margin-left:-18px;
+	margin-top:4px;
+}
+
+ .datagrid table .ui-icon-prev {
+	height:17px;
+	margin-left:0px;
+	margin-top:4px;
+}
+
+ .datagrid table .ui-icon-next {
+	height:17px;
+	margin-left:-6px;
+	margin-top:4px;
+}
+
+ .datagrid table .ui-icon-last {
+	height:17px;
+	margin-left:12px;
+	margin-top:4px;
+}
+
+#reFilter {
+	font-size: 10px;
+	color:#1C94C4 !important;		
+	height:30px;
+}
+
+ .datagrid table .disabled{	
+	opacity:0.35;		
+}
+
+ .datagrid table .pages-text{
+		padding: 0 10px 0 10px;		
+	}
+
+ .datagrid table select{
+		font-size:10px;
+		height:18px;
+		margin-right:8px;
+		margin-top:1px;
+	}
+
+ .datagrid .pageRecordsPerPage{
+		margin:0 0 0 30px;
+	}
+	
+	
+.ac_results{
+	width: 350px!important;
+}
+.ac_results .Listah .typeItem span{
+	background-position:68px -91px;
+}
+.ac_results .Listac .typeItem span{
+	background-position:68px 0px;
+}
+.ac_results .Listaq .typeItem span{
+	background-position:68px -33px;
+}
+/*-------------------------------------------*/
+
+
+/* Tabla Simil*/
+#tableResultsSimil  .datagrid table{
+	width:400px;
+}
+
+#content #tableResultsSimil .datagrid{
+	margin:0 0 0 50px;
+	padding:0;
+}
