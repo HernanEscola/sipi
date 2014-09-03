@@ -3,6 +3,10 @@ import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import enumerates.ETipoNota;
 
 //
 //
@@ -23,6 +27,19 @@ public class Nota {
 	private ETipoNota tipo;
 	private Date fechaAprobacion;
 	private int nota;
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	
 	public Nota() {
 		// TODO Auto-generated constructor stub

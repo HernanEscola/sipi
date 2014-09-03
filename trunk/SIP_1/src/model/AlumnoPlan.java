@@ -4,7 +4,11 @@ import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
+import enumerates.EEstado;
 
 //
 //
@@ -28,6 +32,19 @@ public class AlumnoPlan {
 	private Date fechaAlta;
 	private Date fechaFin;
 
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
 	public AlumnoPlan() {
 		// TODO Auto-generated constructor stub
 	}

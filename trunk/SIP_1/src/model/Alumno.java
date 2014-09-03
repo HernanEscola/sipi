@@ -1,12 +1,15 @@
 package model;
 
 import java.sql.Date;
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+
+import enumerates.EEstado;
 
 //
 //
@@ -23,10 +26,10 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Alumno extends Usuario{
-	@OneToMany(fetch=FetchType.EAGER)
-	private List<AlumnoPlan> alumnoPlanes;
-	@OneToMany(fetch=FetchType.EAGER)
-	private List<AlumnoCurso> alumnoCursos;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	private Set<AlumnoPlan> alumnoPlanes;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	private Set<AlumnoCurso> alumnoCursos;
 	private Integer prioridad;
 	public Date fechaNacimiento ;
 	private Date fechaInscripcion ;
@@ -45,22 +48,22 @@ public class Alumno extends Usuario{
 	}
 
 
-	public List<AlumnoPlan> getAlumnoPlanes() {
+	public Set<AlumnoPlan> getAlumnoPlanes() {
 		return alumnoPlanes;
 	}
 
 
-	public void setAlumnoPlanes(List<AlumnoPlan> alumnoPlanes) {
+	public void setAlumnoPlanes(Set<AlumnoPlan> alumnoPlanes) {
 		this.alumnoPlanes = alumnoPlanes;
 	}
 
 
-	public List<AlumnoCurso> getAlumnoCursos() {
+	public Set<AlumnoCurso> getAlumnoCursos() {
 		return alumnoCursos;
 	}
 
 
-	public void setAlumnoCursos(List<AlumnoCurso> alumnoCursos) {
+	public void setAlumnoCursos(Set<AlumnoCurso> alumnoCursos) {
 		this.alumnoCursos = alumnoCursos;
 	}
 

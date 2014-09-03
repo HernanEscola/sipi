@@ -13,8 +13,19 @@ import java.sql.Date;
 //
 
 
+
+
+
+
 import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
+import enumerates.EEstado;
+import enumerates.EEstadoInscripcion;
+import enumerates.EPrioridad;
 
 @Entity
 public class Inscripcion {
@@ -22,8 +33,22 @@ public class Inscripcion {
 	private int duracionDiasPrioridad;
 	@ManyToOne
 	private Cuatrimestre cuatrimestre;
+	@Enumerated
 	private EEstadoInscripcion estado;
 
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
 	public Inscripcion() {
 		// TODO Auto-generated constructor stub
 	}
@@ -55,18 +80,15 @@ public class Inscripcion {
 		this.estado = estado;
 	}
 
-	public EPrioridad darPrioridad(Alumno alumno) {
-		return null;
-
-	}
-
-	public EEstado getEstado() {
-		return null;
-
-	}
 
 	public Date getFechaInicioByPrioridad(EPrioridad p) {
 		return fechaInicio;
 
 	}
+
+	public EEstadoInscripcion getEstado() {
+		return estado;
+	}
+	
+	
 }

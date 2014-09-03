@@ -1,12 +1,13 @@
 package app;
 
+import hbt.HibernateUtil;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Date;
 import java.util.Vector;
 
 import common.CommonUtils;
-
 import bean.*;
 import bean.dao.*;
 import bean.dto.*;
@@ -26,20 +27,22 @@ public class Sistema implements Serializable {
 	protected static ReservaDAO reservaDAO;
 	protected static TarifaDAO tarifaDAO;
 	protected static DisponibilidadDAO disponibilidadDAO;
-
+ 
+	
+	
+	public static void main(String[] args) {
+		HibernateUtil.getSession();
+		
+		PersistenciaFake.EjecutarFakes();
+		
+		
+		System.out.println("joya");
+	}
+	
 	protected Sistema() {
-		clienteDAO = ClienteDAO.getInstancia();
-		datosPagoDAO = DatosPagoDAO.getInstancia();
-		habitacionDAO = HabitacionDAO.getInstancia();
-		hotelDAO = HotelDAO.getInstancia();
-		impuestoDAO = ImpuestoDAO.getInstancia();
-		promocionDAO = PromocionDAO.getInstancia();
-		reservaDAO = ReservaDAO.getInstancia();
-		tarifaDAO = TarifaDAO.getInstancia();
-		disponibilidadDAO = DisponibilidadDAO.getInstancia();
 
 		try {
-			PersistenciaFake.EjecutarFakes();
+			//PersistenciaFake.EjecutarFakes();
 
 			// ---- SOLO PRUEBAS DE METODOS!!!! ----
 			// altaPromocionNochesLibres(1, 2, 10);

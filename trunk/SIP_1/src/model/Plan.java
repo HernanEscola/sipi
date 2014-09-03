@@ -1,8 +1,15 @@
 package model;
-import java.util.List;
+import java.util.Set;
 
+import javax.persistence.Entity;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+
+import enumerates.EEstadoPlan;
 
 //
 //
@@ -17,13 +24,26 @@ import javax.persistence.OneToMany;
 
 
 
-
+@Entity
 public class Plan {
 	private Integer Año;
-	@OneToMany
-	private List<Materia> materias;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	private Set<Materia> materias;
 	@Enumerated
 	private EEstadoPlan Estado;
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	
 	public Plan() {
 		// TODO Auto-generated constructor stub
@@ -37,11 +57,11 @@ public class Plan {
 		Año = año;
 	}
 
-	public List<Materia> getMaterias() {
+	public Set<Materia> getMaterias() {
 		return materias;
 	}
 
-	public void setMaterias(List<Materia> materias) {
+	public void setMaterias(Set<Materia> materias) {
 		this.materias = materias;
 	}
 

@@ -1,8 +1,12 @@
 package model;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 //
@@ -20,9 +24,20 @@ import javax.persistence.OneToMany;
 public class Grilla {
 	public String año;
 	public String cuatrimestre;
-	@OneToMany
-	public List<ItemGrilla> grilla;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	public Set<ItemGrilla> grilla;
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
 
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	public Grilla() {
 		// TODO Auto-generated constructor stub
 	}
@@ -43,11 +58,11 @@ public class Grilla {
 		this.cuatrimestre = cuatrimestre;
 	}
 
-	public List<ItemGrilla> getGrilla() {
+	public Set<ItemGrilla> getGrilla() {
 		return grilla;
 	}
 
-	public void setGrilla(List<ItemGrilla> grilla) {
+	public void setGrilla(Set<ItemGrilla> grilla) {
 		this.grilla = grilla;
 	}
 
