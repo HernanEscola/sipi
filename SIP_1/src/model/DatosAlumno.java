@@ -1,7 +1,10 @@
 package model;
+
 import java.sql.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 //
 //
@@ -14,78 +17,106 @@ import javax.persistence.Entity;
 //
 //
 
-
-
 @Entity
 public class DatosAlumno {
-	private  String nombre;
-	private  String apellido;
-	public  String dni;
-	public  Date fechaNacimiento;
-	public  Date fechaInscripcion;
-	public  String libreta;
-	public  String domicilio;
-	public  String telefono;
-	public  String password;
+	private String nombre;
+	private String apellido;
+	public String dni;
+	public Date fechaNacimiento;
+	public Date fechaInscripcion;
+	public String libreta;
+	public String domicilio;
+	public String telefono;
+	public String password;
 	
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
+
 	public DatosAlumno() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public String getNombre() {
 		return nombre;
 	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 	public String getApellido() {
 		return apellido;
 	}
+
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+
 	public String getDni() {
 		return dni;
 	}
+
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
+
 	public Date getFechaNacimiento() {
 		return fechaNacimiento;
 	}
+
 	public void setFechaNacimiento(Date fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
+
 	public Date getFechaInscripcion() {
 		return fechaInscripcion;
 	}
+
 	public void setFechaInscripcion(Date fechaInscripcion) {
 		this.fechaInscripcion = fechaInscripcion;
 	}
+
 	public String getLibreta() {
 		return libreta;
 	}
+
 	public void setLibreta(String libreta) {
 		this.libreta = libreta;
 	}
+
 	public String getDomicilio() {
 		return domicilio;
 	}
+
 	public void setDomicilio(String domicilio) {
 		this.domicilio = domicilio;
 	}
+
 	public String getTelefono() {
 		return telefono;
 	}
+
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
+
 }

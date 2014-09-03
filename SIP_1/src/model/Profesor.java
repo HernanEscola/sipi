@@ -1,7 +1,9 @@
 package model;
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 //
@@ -19,9 +21,10 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Profesor extends Usuario{
-	@OneToMany
-	public List<Curso> cursosProfesor;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	public Set<Curso> cursosProfesor;
 
+	
 	public Profesor() {
 		super();
 	}

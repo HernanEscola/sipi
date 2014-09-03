@@ -3,6 +3,8 @@ package model;
 import java.sql.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 //
 //
@@ -23,6 +25,19 @@ public class ItemGrilla {
 	public Date horarioInicio;
 	public Date horarioFinal;
 
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
 	public ItemGrilla() {
 		// TODO Auto-generated constructor stub
 	}

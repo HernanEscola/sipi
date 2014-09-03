@@ -14,6 +14,13 @@ import javax.persistence.Enumerated;
 //
 
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import enumerates.EDia;
+import enumerates.EHoraCatedra;
+
+
 
 @Entity
 public class ItemHorarioCursada {
@@ -23,6 +30,19 @@ public class ItemHorarioCursada {
 	private EHoraCatedra desde;
 	@Enumerated
 	private EHoraCatedra hasta;
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
 	public ItemHorarioCursada() {
 		// TODO Auto-generated constructor stub
 	}

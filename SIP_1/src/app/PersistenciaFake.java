@@ -1,11 +1,18 @@
 package app;
 
+import hbt.HibernateUtil;
+
 import java.util.Date;
 
-import bean.Cliente;
-import bean.Habitacion;
-import bean.Hotel;
-import bean.Impuesto;
+
+
+
+
+import org.hibernate.Session;
+
+import bean.dao.GenericDAO;
+import model.Alumno;
+
 
 public class PersistenciaFake extends Sistema {
 	
@@ -15,142 +22,24 @@ public class PersistenciaFake extends Sistema {
 	private static final long serialVersionUID = 1L;
 	
 
-	public static void EjecutarFakes() throws NumberFormatException, Exception{
-		Sistema.getInstance();
-		
-		creacionClientesFake();
-		creacionHotelesFake();
-		relacionHotelesImpuesto();
-		creacionHabitacionesFake();
-		relacionHotelesHabitaciones();
+	public static void EjecutarFakes(){
+
+		creacionAlumno();
 	}
 
-	private static void creacionClientesFake() {
+	private static void creacionAlumno() {
 		// 1
-		Cliente c = new Cliente();
-		c.setApellido("Michelotti");
-		c.setDocumento("35275265");
-		c.setEmail("jimiche@gmail.com");
-		c.setNombre("Juan Ignacio");
-		c.setTelefono("46411783");
-		clienteDAO.saveCliente(c);
-
-		// 2
-		c = new Cliente();
-		c.setApellido("Multedo Rodio");
-		c.setDocumento("34546783");
-		c.setEmail("amultedo@gmail.com");
-		c.setNombre("Adriano Mauro");
-		c.setTelefono("45685969");
-		clienteDAO.saveCliente(c);
-
-		// 3
-		c = new Cliente();
-		c.setApellido("Ottaviano");
-		c.setDocumento("40308123");
-		c.setEmail("ignasephirot@gmail.com");
-		c.setNombre("Ignacio");
-		c.setTelefono("46421892");
-		clienteDAO.saveCliente(c);
-
-		// 4
-		c = new Cliente();
-		c.setApellido("Menendez");
-		c.setDocumento("27678901");
-		c.setEmail("rmenendez@gmail.com");
-		c.setNombre("Ramiro");
-		c.setTelefono("1564485812");
-		clienteDAO.saveCliente(c);
-
-		// 5
-		c = new Cliente();
-		c.setApellido("Fabregas");
-		c.setDocumento("24786123");
-		c.setEmail("cfabregas@hotmail.com.ar");
-		c.setNombre("Carla");
-		c.setTelefono("03534535172");
-		clienteDAO.saveCliente(c);
-		
-		// 6
-		c = new Cliente();
-		c.setApellido("Vazquez");
-		c.setDocumento("123421232");
-		c.setEmail("cvazquez@hotmail.com.ar");
-		c.setNombre("Carolina");
-		c.setTelefono("15439075");
-		clienteDAO.saveCliente(c);
-		
-		// 7
-		c = new Cliente();
-		c.setApellido("Messi");
-		c.setDocumento("2687621234");
-		c.setEmail("pulga_messi@hotmail.com.ar");
-		c.setNombre("Pulga");
-		c.setTelefono("30216893");
-		clienteDAO.saveCliente(c);
-		
-		// 8
-		c = new Cliente();
-		c.setApellido("Fabregas");
-		c.setDocumento("24786123");
-		c.setEmail("cfabregas@hotmail.com.ar");
-		c.setNombre("Carla");
-		c.setTelefono("03534535172");
-		clienteDAO.saveCliente(c);
-		
-		// 9
-		c = new Cliente();
-		c.setApellido("Fernandez");
-		c.setDocumento("23745978");
-		c.setEmail("fernandezjose@hotmail.com.ar");
-		c.setNombre("Jose");
-		c.setTelefono("1532653891");
-		clienteDAO.saveCliente(c);
-		
-		// 10
-		c = new Cliente();
-		c.setApellido("Martiniano");
-		c.setDocumento("16543128");
-		c.setEmail("mmartiniano@gmail.com");
-		c.setNombre("Martin");
-		c.setTelefono("1558567698");
-		clienteDAO.saveCliente(c);
-		
-		// 11
-		c = new Cliente();
-		c.setApellido("Vargas");
-		c.setDocumento("36412890");
-		c.setEmail("carovargas@hotmail.com.ar");
-		c.setNombre("Carolina");
-		c.setTelefono("46421321");
-		clienteDAO.saveCliente(c);
-		
-		// 12
-		c = new Cliente();
-		c.setApellido("Lopez");
-		c.setDocumento("26786133");
-		c.setEmail("lopes_m_90@gmail.com");
-		c.setNombre("Mariano");
-		c.setTelefono("44532100");
-		clienteDAO.saveCliente(c);
-		
-		// 13
-		c = new Cliente();
-		c.setApellido("Di Domenico");
-		c.setDocumento("8339990");
-		c.setEmail("ivan_didomenico@hotmail.com.ar");
-		c.setNombre("Ivan");
-		c.setTelefono("1564485812");
-		clienteDAO.saveCliente(c);
-		
-		// 14
-		c = new Cliente();
-		c.setApellido("Jalil");
-		c.setDocumento("33987001");
-		c.setEmail("marceloj@hotmail.com.ar");
-		c.setNombre("Marcelo");
-		c.setTelefono("45679801");
-		clienteDAO.saveCliente(c);
+		Alumno a = new Alumno();
+		a.setApellido("Escola");
+		a.setDireccion("Mi casa abs");
+		a.setNroDocumento("35156910");
+		GenericDAO dao = GenericDAO.getInstancia();
+		try {
+			dao.registrar(a);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
 
 	}
 

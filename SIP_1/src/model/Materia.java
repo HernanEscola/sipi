@@ -1,9 +1,12 @@
 package model;
 
-import java.util.List;
-import java.util.Vector;
+import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 //
@@ -19,31 +22,44 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Materia {
-	@OneToMany
-	public List<Materia> correlativas;
-	@OneToMany
-	public List<Curso> cursosMateria;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	public Set<Materia> correlativas;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	public Set<Curso> cursosMateria;
 	public int horasCatedra;
-	@OneToMany
-	public List<Profesor> profesoresHab;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	public Set<Profesor> profesoresHab;
 
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
 	public Materia() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public List<Materia> getCorrelativas() {
+	public Set<Materia> getCorrelativas() {
 		return correlativas;
 	}
 
-	public void setCorrelativas(List<Materia> correlativas) {
+	public void setCorrelativas(Set<Materia> correlativas) {
 		this.correlativas = correlativas;
 	}
 
-	public List<Curso> getCursosMateria() {
+	public Set<Curso> getCursosMateria() {
 		return cursosMateria;
 	}
 
-	public void setCursosMateria(List<Curso> cursosMateria) {
+	public void setCursosMateria(Set<Curso> cursosMateria) {
 		this.cursosMateria = cursosMateria;
 	}
 
@@ -55,11 +71,11 @@ public class Materia {
 		this.horasCatedra = horasCatedra;
 	}
 
-	public List<Profesor> getProfesoresHab() {
+	public Set<Profesor> getProfesoresHab() {
 		return profesoresHab;
 	}
 
-	public void setProfesoresHab(List<Profesor> profesoresHab) {
+	public void setProfesoresHab(Set<Profesor> profesoresHab) {
 		this.profesoresHab = profesoresHab;
 	}
 

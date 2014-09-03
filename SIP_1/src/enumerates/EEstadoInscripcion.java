@@ -1,4 +1,4 @@
-package model;
+package enumerates;
 
 public enum EEstadoInscripcion {
 

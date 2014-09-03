@@ -2,7 +2,11 @@ package model;
 
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
+import enumerates.ETipoEstadoMateria;
 
 //
 //
@@ -17,12 +21,35 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class AlumnoCurso {
+
 	@Enumerated
 	private ETipoEstadoMateria estado;
 	@ManyToOne
 	private Materia materia;
 	@ManyToOne
 	private Nota nota;
+
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	public Nota getNota() {
+		return nota;
+	}
+
+	public void setNota(Nota nota) {
+		this.nota = nota;
+	}
+
+
 
 	public AlumnoCurso() {
 		// TODO Auto-generated constructor stub

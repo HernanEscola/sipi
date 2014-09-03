@@ -1,8 +1,12 @@
 package model;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -23,17 +27,30 @@ public class Curso {
 	@ManyToOne
 	private Profesor profesor;
 	private String aula;
-	@OneToMany
-	private List<Alumno> alumnos;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	private Set<Alumno> alumnos;
+	@ManyToOne
 	private Cuatrimestre cuatrimestre;
-	@OneToMany
-	private List<ItemListaDeEspera> listaDeEspera;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	private Set<ItemListaDeEspera> SetaDeEspera;
 	private int Capacidad;
-	@OneToMany
-	private List<ItemHorarioCursada> horarioCursada;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	private Set<ItemHorarioCursada> horarioCursada;
 	@ManyToOne
 	private Materia materia;
 	private String codigo;
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 
 	public Curso() {
 		// TODO Auto-generated constructor stub
@@ -63,11 +80,11 @@ public class Curso {
 		this.aula = aula;
 	}
 
-	public List<Alumno> getAlumnos() {
+	public Set<Alumno> getAlumnos() {
 		return alumnos;
 	}
 
-	public void setAlumnos(List<Alumno> alumnos) {
+	public void setAlumnos(Set<Alumno> alumnos) {
 		this.alumnos = alumnos;
 	}
 
@@ -79,12 +96,12 @@ public class Curso {
 		this.cuatrimestre = cuatrimestre;
 	}
 
-	public List<ItemListaDeEspera> getListaDeEspera() {
-		return listaDeEspera;
+	public Set<ItemListaDeEspera> getSetaDeEspera() {
+		return SetaDeEspera;
 	}
 
-	public void setListaDeEspera(List<ItemListaDeEspera> listaDeEspera) {
-		this.listaDeEspera = listaDeEspera;
+	public void setSetaDeEspera(Set<ItemListaDeEspera> SetaDeEspera) {
+		this.SetaDeEspera = SetaDeEspera;
 	}
 
 	public int getCapacidad() {
@@ -95,11 +112,11 @@ public class Curso {
 		Capacidad = capacidad;
 	}
 
-	public List<ItemHorarioCursada> getHorarioCursada() {
+	public Set<ItemHorarioCursada> getHorarioCursada() {
 		return horarioCursada;
 	}
 
-	public void setHorarioCursada(List<ItemHorarioCursada> horarioCursada) {
+	public void setHorarioCursada(Set<ItemHorarioCursada> horarioCursada) {
 		this.horarioCursada = horarioCursada;
 	}
 

@@ -2,6 +2,8 @@ package model;
 import java.sql.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 //
 //
@@ -20,6 +22,18 @@ import javax.persistence.Entity;
 public class Cuatrimestre {
 	private Date fechaInicio;
 	private Date fechaFin;
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	public Cuatrimestre() {
 		// TODO Auto-generated constructor stub
 	}

@@ -13,6 +13,8 @@ import javax.persistence.Entity;
 //  @ Author : 
 //
 //
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 
 
@@ -20,6 +22,19 @@ import javax.persistence.Entity;
 public class Reporte {
 	private Date fecha;
 	private Byte[] archivoReporte;
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	
 	public Reporte() {
 		// TODO Auto-generated constructor stub

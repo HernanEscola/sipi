@@ -1,8 +1,12 @@
 package model;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 //
@@ -19,9 +23,21 @@ import javax.persistence.OneToMany;
 @Entity
 public class Carrera {
 	public String nombre;
-	@OneToMany
-	public List<Plan> curricula;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	public Set<Plan> curricula;
+	@Id
+	@GeneratedValue
+	private Long id;
+	
+	public Long getId() {
+		return id;
+	}
 
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	
 	public Carrera() {
 		// TODO Auto-generated constructor stub
 	}
@@ -34,11 +50,11 @@ public class Carrera {
 		this.nombre = nombre;
 	}
 
-	public List<Plan> getCurricula() {
+	public Set<Plan> getCurricula() {
 		return curricula;
 	}
 
-	public void setCurricula(List<Plan> curricula) {
+	public void setCurricula(Set<Plan> curricula) {
 		this.curricula = curricula;
 	}
 
