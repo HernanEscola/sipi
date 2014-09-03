@@ -1,5 +1,7 @@
 package model;
-import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 //
 //
@@ -12,10 +14,30 @@ import java.util.List;
 //
 //
 
-
-
-
+@Entity
 public class ItemListaDeEspera {
+	@ManyToOne
 	private Alumno alumno;
 	private int nroOrden;
+
+	public ItemListaDeEspera() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Alumno getAlumno() {
+		return alumno;
+	}
+
+	public void setAlumno(Alumno alumno) {
+		this.alumno = alumno;
+	}
+
+	public int getNroOrden() {
+		return nroOrden;
+	}
+
+	public void setNroOrden(int nroOrden) {
+		this.nroOrden = nroOrden;
+	}
+
 }

@@ -1,6 +1,10 @@
 package model;
+
 import java.util.List;
 import java.util.Vector;
+
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 
 //
 //
@@ -13,16 +17,53 @@ import java.util.Vector;
 //
 //
 
-
-
-
+@Entity
 public class Materia {
+	@OneToMany
 	public List<Materia> correlativas;
+	@OneToMany
 	public List<Curso> cursosMateria;
 	public int horasCatedra;
+	@OneToMany
 	public List<Profesor> profesoresHab;
-	
+
+	public Materia() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public List<Materia> getCorrelativas() {
+		return correlativas;
+	}
+
+	public void setCorrelativas(List<Materia> correlativas) {
+		this.correlativas = correlativas;
+	}
+
+	public List<Curso> getCursosMateria() {
+		return cursosMateria;
+	}
+
+	public void setCursosMateria(List<Curso> cursosMateria) {
+		this.cursosMateria = cursosMateria;
+	}
+
+	public int getHorasCatedra() {
+		return horasCatedra;
+	}
+
+	public void setHorasCatedra(int horasCatedra) {
+		this.horasCatedra = horasCatedra;
+	}
+
+	public List<Profesor> getProfesoresHab() {
+		return profesoresHab;
+	}
+
+	public void setProfesoresHab(List<Profesor> profesoresHab) {
+		this.profesoresHab = profesoresHab;
+	}
+
 	public void planVigente() {
-	
+
 	}
 }
