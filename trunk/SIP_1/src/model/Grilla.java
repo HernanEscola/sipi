@@ -1,5 +1,9 @@
 package model;
+
 import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 
 //
 //
@@ -12,11 +16,39 @@ import java.util.List;
 //
 //
 
-
-
-
+@Entity
 public class Grilla {
-	public  String año;
-	public  String cuatrimestre;
-	public  List<ItemGrilla> grilla;
+	public String año;
+	public String cuatrimestre;
+	@OneToMany
+	public List<ItemGrilla> grilla;
+
+	public Grilla() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getAño() {
+		return año;
+	}
+
+	public void setAño(String año) {
+		this.año = año;
+	}
+
+	public String getCuatrimestre() {
+		return cuatrimestre;
+	}
+
+	public void setCuatrimestre(String cuatrimestre) {
+		this.cuatrimestre = cuatrimestre;
+	}
+
+	public List<ItemGrilla> getGrilla() {
+		return grilla;
+	}
+
+	public void setGrilla(List<ItemGrilla> grilla) {
+		this.grilla = grilla;
+	}
+
 }
