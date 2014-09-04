@@ -1,5 +1,6 @@
 package model;
 
+import java.beans.Transient;
 import java.sql.Date;
 import java.util.Set;
 
@@ -10,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 import enumerates.EEstado;
+import enumerates.ETipoEstadoMateria;
 
 //
 //
@@ -22,17 +24,17 @@ import enumerates.EEstado;
 //
 //
 
-
-
 @Entity
-public class Alumno extends Usuario{
-	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+public class Alumno extends Usuario {
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
 	private Set<AlumnoPlan> alumnoPlanes;
-	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
 	private Set<AlumnoCurso> alumnoCursos;
 	private Integer prioridad;
-	public Date fechaNacimiento ;
-	private Date fechaInscripcion ;
+	public Date fechaNacimiento;
+	private Date fechaInscripcion;
 	private String nroLibreta;
 	@Enumerated
 	private EEstado estado;
@@ -40,124 +42,101 @@ public class Alumno extends Usuario{
 	private String telefono;
 	private String sexo;
 	private String nacionalidad;
-	
-	
+
 	@Override
 	public String getRol() {
 		return "alumno";
 	}
 
-
 	public Set<AlumnoPlan> getAlumnoPlanes() {
 		return alumnoPlanes;
 	}
-
 
 	public void setAlumnoPlanes(Set<AlumnoPlan> alumnoPlanes) {
 		this.alumnoPlanes = alumnoPlanes;
 	}
 
-
 	public Set<AlumnoCurso> getAlumnoCursos() {
 		return alumnoCursos;
 	}
-
 
 	public void setAlumnoCursos(Set<AlumnoCurso> alumnoCursos) {
 		this.alumnoCursos = alumnoCursos;
 	}
 
-
 	public Integer getPrioridad() {
 		return prioridad;
 	}
-
 
 	public void setPrioridad(Integer prioridad) {
 		this.prioridad = prioridad;
 	}
 
-
 	public Date getFechaNacimiento() {
 		return fechaNacimiento;
 	}
-
 
 	public void setFechaNacimiento(Date fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-
 	public Date getFechaInscripcion() {
 		return fechaInscripcion;
 	}
-
 
 	public void setFechaInscripcion(Date fechaInscripcion) {
 		this.fechaInscripcion = fechaInscripcion;
 	}
 
-
 	public String getNroLibreta() {
 		return nroLibreta;
 	}
-
 
 	public void setNroLibreta(String nroLibreta) {
 		this.nroLibreta = nroLibreta;
 	}
 
-
 	public EEstado getEstado() {
 		return estado;
 	}
-
 
 	public void setEstado(EEstado estado) {
 		this.estado = estado;
 	}
 
-
 	public String getDireccion() {
 		return direccion;
 	}
-
 
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
 
-
 	public String getTelefono() {
 		return telefono;
 	}
-
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 
-
 	public String getSexo() {
 		return sexo;
 	}
-
 
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
 
-
 	public String getNacionalidad() {
 		return nacionalidad;
 	}
-
 
 	public void setNacionalidad(String nacionalidad) {
 		this.nacionalidad = nacionalidad;
 	}
 	
 	
-	
-	
+
+
 }

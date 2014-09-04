@@ -107,7 +107,6 @@ public abstract class HibernateDao<T> {
 	public List<T> findAll() throws Exception {
 		try {
 			Session session = getSession();
-			session.beginTransaction();
 			String clase = getPersistentClass().getName();
 			Query query = getSession().createQuery("FROM " + clase);
 			List<T> list = query.list();
@@ -123,7 +122,6 @@ public abstract class HibernateDao<T> {
 	public T findById(Serializable id) throws Exception {
 		try{
 			Session session = getSession();
-			session.beginTransaction();
 			T ret = (T) getSession().get(getPersistentClass(), id);
 			session.close();
 			return ret;
@@ -135,7 +133,6 @@ public abstract class HibernateDao<T> {
 	public static Object findById(Class c, Serializable id) throws Exception {
 		try{
 			Session session = getSession();
-			session.beginTransaction();
 			Object ret = (Object) getSession().get(c, id);
 			session.close();
 			return ret;
@@ -147,7 +144,6 @@ public abstract class HibernateDao<T> {
 	public static List findAll(Class c) throws Exception {
 		try {
 			Session session = getSession();
-			session.beginTransaction();
 			String clase = c.getName();
 			Query query = getSession().createQuery("FROM " + clase);
 			List list = query.list();

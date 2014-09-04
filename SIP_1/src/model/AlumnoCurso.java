@@ -25,7 +25,7 @@ public class AlumnoCurso {
 	@Enumerated
 	private ETipoEstadoMateria estado;
 	@ManyToOne
-	private Materia materia;
+	private Curso curso;
 	@ManyToOne
 	private Nota nota;
 
@@ -63,12 +63,14 @@ public class AlumnoCurso {
 		this.estado = estado;
 	}
 
-	public Materia getMateria() {
-		return materia;
+	public Curso getCurso() {
+		return curso;
 	}
 
-	public void setMateria(Materia materia) {
-		this.materia = materia;
+	public void setCurso(Curso curso) {
+		this.curso = curso;
 	}
+
+	
 
 }
