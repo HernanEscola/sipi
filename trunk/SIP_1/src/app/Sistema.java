@@ -3,14 +3,41 @@ package app;
 import hbt.HibernateUtil;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.Date;
+import java.util.List;
 import java.util.Vector;
 
+import model.Alumno;
+import model.AlumnoCurso;
+import model.AlumnoPlan;
+import model.Curso;
+import model.Grilla;
+import model.Inscripcion;
+import model.ItemGrilla;
+import model.Usuario;
+import util.FechaUtil;
+import bean.Cliente;
+import bean.DatosPago;
+import bean.Habitacion;
+import bean.Hotel;
+import bean.Impuesto;
+import bean.Promocion;
+import bean.PromocionDescuento;
+import bean.PromocionNochesLibres;
+import bean.Reserva;
+import bean.dao.GenericDAO;
+import bean.dao.UsuarioDAO;
+import bean.dto.ClienteDTO;
+import bean.dto.DatosPagoDTO;
+import bean.dto.HabitacionDTO;
+import bean.dto.HotelDTO;
+import bean.dto.PromocionDTO;
+import bean.dto.ReservaDTO;
+
 import common.CommonUtils;
-import bean.*;
-import bean.dao.*;
-import bean.dto.*;
+
+import enumerates.EEstadoInscripcion;
+import enumerates.ETipoEstadoMateria;
 
 public class Sistema implements Serializable {
 
@@ -18,17 +45,8 @@ public class Sistema implements Serializable {
 
 	private static final Sistema sistemaGDS = new Sistema();
 
-	protected static ClienteDAO clienteDAO;
-	protected static DatosPagoDAO datosPagoDAO;
-	protected static HabitacionDAO habitacionDAO;
-	protected static HotelDAO hotelDAO;
-	protected static ImpuestoDAO impuestoDAO;
-	protected static PromocionDAO promocionDAO;
-	protected static ReservaDAO reservaDAO;
-	protected static TarifaDAO tarifaDAO;
-	protected static DisponibilidadDAO disponibilidadDAO;
- 
-	
+
+	private UsuarioDAO usuarioDao;
 	
 	public static void main(String[] args) {
 		HibernateUtil.getSession();
@@ -38,6 +56,79 @@ public class Sistema implements Serializable {
 		
 		System.out.println("joya");
 	}
+	
+	public Usuario findUsuarioByUserNameAndPassword(String nroDoc, String pass) throws Exception{
+		return usuarioDao.findUsuarioByUserNameAndPass(nroDoc, pass);
+	}
+	
+	public void abrirInscripciones(String fechaInicio, String fechaCierre)throws Exception{
+		List<Alumno> alumnos = GenericDAO.findAll(Alumno.class);
+		
+		//calculo Las prioridades de los alumnos
+		for(Alumno a : alumnos){
+			a.setPrioridad(caclularPrioridadDeAlumno(a));
+		}
+		
+		Inscripcion inscripcion = new Inscripcion();
+		//
+		inscripcion.setCuatrimestre(CuatrimestreDao.findCuatrimestreActual());
+		inscripcion.setDuracionDiasPrioridad(calcularDuracionInscripcion(fechaInicio, fechaCierre));
+		inscripcion.setEstado(EEstadoInscripcion.Abierta);
+		inscripcion.setFechaInicio(FechaUtil.getSqlDateFromString(fechaInicio));
+		
+		inscripcion.setDuracionDiasPrioridad(duracionDiasPrioridad);
+		
+		// abro los cursos
+		Grilla grilla = null;
+		
+		List<Curso> cursos;
+		for(ItemGrilla ig : grilla.getGrilla()){
+			ig.getCurso().set
+		}
+		//Informo a los alumnos
+			
+		InscripcionDao.registrarInscripcion(inscripcion, alumnos, cursos);
+	}
+	
+	private int calcularDuracionInscripcion(String fechaInicio,
+			String fechaCierre) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	private Integer caclularPrioridadDeAlumno(Alumno a){
+			Float porcentajeMax = 0F;
+
+			for (AlumnoPlan ap : a.getAlumnoPlanes()) {
+				Float porcentaje;
+				int cantidadAprobada = 0;
+				for (AlumnoCurso ac : a.getAlumnoCursos()) {
+					if (ac.getEstado().equals(ETipoEstadoMateria.finalAprobado)
+							&& ap.getPlan().getMaterias()
+									.contains(ac.getCurso().getMateria())) {
+						cantidadAprobada++;
+					}
+				}
+				porcentaje = (ap.getPlan().getMaterias().size() / cantidadAprobada) * 100F;
+				if (porcentaje > porcentajeMax) {
+					porcentajeMax = porcentaje;
+				}
+			}
+
+			if(porcentajeMax >= 80){
+				return 1;
+			}else if(porcentajeMax < 80 && porcentajeMax >= 60){
+				return 2;
+			}else if(porcentajeMax < 60 && porcentajeMax >= 40){
+				return 3;
+			}else if(porcentajeMax < 40 && porcentajeMax >= 20){
+				return 4;
+			}else if(porcentajeMax < 20){
+				return 5;
+			}
+			return porcentajeMax;
+		}
+		
 	
 	protected Sistema() {
 

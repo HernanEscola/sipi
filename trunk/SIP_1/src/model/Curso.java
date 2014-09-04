@@ -28,7 +28,7 @@ public class Curso {
 	private Profesor profesor;
 	private String aula;
 	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
-	private Set<Alumno> alumnos;
+	private Set<AlumnoCurso> alumnos;
 	@ManyToOne
 	private Cuatrimestre cuatrimestre;
 	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
@@ -80,11 +80,12 @@ public class Curso {
 		this.aula = aula;
 	}
 
-	public Set<Alumno> getAlumnos() {
+
+	public Set<AlumnoCurso> getAlumnos() {
 		return alumnos;
 	}
 
-	public void setAlumnos(Set<Alumno> alumnos) {
+	public void setAlumnos(Set<AlumnoCurso> alumnos) {
 		this.alumnos = alumnos;
 	}
 

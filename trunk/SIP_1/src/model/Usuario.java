@@ -24,8 +24,15 @@ public abstract class Usuario {
 	private String apellido;
 	@Column
 	private String mail;
-	@Column
+	/*@Column
 	private String tipoDocumento;
+	public String getTipoDocumento() {
+		return tipoDocumento;
+	}
+
+	public void setTipoDocumento(String tipoDocumento) {
+		this.tipoDocumento = tipoDocumento;
+	}*/
 
 	@Id
 	@GeneratedValue
@@ -87,13 +94,6 @@ public abstract class Usuario {
 		this.mail = mail;
 	}
 
-	public String getTipoDocumento() {
-		return tipoDocumento;
-	}
-
-	public void setTipoDocumento(String tipoDocumento) {
-		this.tipoDocumento = tipoDocumento;
-	}
 
 	public void setRol(String rol) {
 		this.rol = rol;
