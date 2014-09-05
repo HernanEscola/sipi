@@ -1,0 +1,15 @@
+.ui-selectmenu {
+    display: inline;
+    height: 1.77em;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    margin-right:2px;
+}
+
+.ui-selectmenu-menu .ui-selectmenu-group .ui-selectmenu-group-label {
+    display: inline;
+    font-weight: bold;
+    line-height: 1.4em;
+    padding: 0.6em 0.5em 0;
+}

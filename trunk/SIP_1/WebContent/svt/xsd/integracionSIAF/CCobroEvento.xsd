@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="CEvento.xsd"/>
+	
+	<xs:simpleType name="ETipoRetencionXml">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="IVA" />
+			<xs:enumeration value="IIBB" />
+			<xs:enumeration value="IM" /> <!-- Impuesto Municipal -->
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:element name="CCobroEventoXml">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:long" minOccurs="0" />
+				<xs:element name="nroCobro" type="xs:string" minOccurs="0" />
+				<xs:element name="nroFactura" type="xs:string" minOccurs="0" />
+				<xs:element name="fecha" type="xs:date" minOccurs="1"/>
+				<xs:element name="tipoRetencion" type="ETipoRetencionXml" minOccurs="0" />
+				<xs:element name="idFactura" type="xs:long" minOccurs="0" />
+				<xs:element name="montoRetencion" type="xs:decimal" minOccurs="0" />
+				<xs:element name="importe" type="xs:decimal" minOccurs="0" />
+				<xs:element name="evento" type="CEventoXml" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

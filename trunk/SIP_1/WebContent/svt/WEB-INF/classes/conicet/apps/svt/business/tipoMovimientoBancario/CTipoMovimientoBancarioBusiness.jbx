@@ -1,0 +1,8 @@
+[PropertyInfo]
+tipoMovB,CTipoMovimientoBancario,false,false, , ,true,<default>
+tipoMovimientoBancario,conicet.apps.svt.object.tipoMovimientoBancario.CTipoMovimientoBancario,false,false,tipoMovimientoBancario,tipoMovimientoBancario,true,<default>
+[IconNames]
+
+
+
+

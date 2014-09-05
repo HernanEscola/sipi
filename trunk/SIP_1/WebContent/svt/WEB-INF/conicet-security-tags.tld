@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+  "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+  <tlibversion>1.0</tlibversion>
+  <jspversion>1.1</jspversion>
+  <shortname>csecurity</shortname>
+  <info>Tags de seguridad</info>
+
+  <tag>
+    <name>hasFuncion</name>
+    <tagclass>conicet.apps.svt.util.security.CtagCheckFuncion</tagclass>
+    <info>Evalua su contenido sÃ³lo si el usuario logueado tiene alguna de las funciones especificadas.</info>
+    <attribute>
+      <name>funcion</name>
+      <required>yes</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <name>hasNotFunction</name>
+    <tagclass>conicet.apps.svt.util.security.CtagCheckNoFunction</tagclass>
+    <info>Evalua su contenido sólo si el usuario logueado no tiene ninguna de las funciones especificadas.</info>
+    <attribute>
+      <name>funcion</name>
+      <required>yes</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+</taglib>
+

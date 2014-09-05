@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="cErrorHandlerActionForm" type="conicet.apps.svt.web.error.form.CErrorHandlerActionForm" />
+		<form-bean name="cBitacoraActionForm" type="conicet.apps.svt.web.bitacora.form.CBitacoraActionForm" />
+		<form-bean name="cBitacoraMostrarActionForm" type="conicet.apps.svt.web.bitacora.form.CBitacoraMostrarActionForm" />
+		<form-bean name="cLogActionForm" type="conicet.apps.svt.web.log.form.CLogActionForm" />
+		<form-bean name="cLogMostrarActionForm" type="conicet.apps.svt.web.log.form.CLogMostrarActionForm" />
+		<form-bean name="cUsuarioForm" type="conicet.apps.svt.web.usuario.form.CUsuarioForm" />
+		<form-bean name="cUsuarioIntranetSeleccionarActionForm" type="conicet.apps.svt.web.usuario.form.CUsuarioIntranetSeleccionarActionForm" />
+		<form-bean name="cUsuarioBuscarActionForm" type="conicet.apps.svt.web.usuario.form.CUsuarioBuscarActionForm" />
+		<form-bean name="cUsuarioElegirActionForm" type="conicet.apps.svt.web.usuario.form.CUsuarioElegirActionForm" />
+		<form-bean name="cConfigurarListadoActionForm" type="conicet.apps.svt.web.base.form.CConfigurarListadoActionForm" />
+		<form-bean name="cUsuarioPerfilActionForm" type="conicet.apps.svt.web.usuario.form.CUsuarioPerfilActionForm" />
+		<form-bean name="cRolBuscarActionForm" type="conicet.apps.svt.web.funcionRol.form.CRolBuscarActionForm" />
+		<form-bean name="cFuncionRolSeleccionarActionForm" type="conicet.apps.svt.web.funcionRol.form.CFuncionRolSeleccionarActionForm" />
+		<form-bean name="cWSTokenGeneratorForm" type="conicet.apps.siuvt.web.wsTokenGenerator.form.CWSTokenGeneratorForm" />
+	</form-beans>
+	<global-forwards>
+		<forward name="error_fatal" path=".errorFatalDef" />
+		<forward name="index" path=".indexDef" />
+		<forward name="normativa" path=".normativaDef" />
+	</global-forwards>
+	<action-mappings>
+		<action forward=".indexDef" path="/index" />
+		<action forward=".normativaDef" path="/normativa" />
+
+		<action input=".errorFatalDef" name="cErrorHandlerActionForm" path="/errorHandlerAction" type="conicet.apps.svt.web.error.action.CErrorHandlerAction" />
+		<action name="cBitacoraMostrarActionForm" path="/cBitacoraMostrarAction" scope="session" type="conicet.apps.svt.web.bitacora.action.CBitacoraMostrarAction">
+			<forward name="mostrarRecientes" path=".bitacoraVerDef" />
+			<forward name="mostrarTodos" path=".bitacoraVerDef" />
+			<forward name="mostrarDetalle" path=".bitacoraVerDef" />
+		</action>
+		<action name="cBitacoraActionForm" path="/cBitacoraAction" scope="session" type="conicet.apps.svt.web.bitacora.action.CBitacoraAction">
+			<forward name="mostrar" path="/cBitacoraMostrarAction.do" />
+		</action>
+		<action name="cLogActionForm" path="/cLogAction" scope="session" type="conicet.apps.svt.web.log.action.CLogAction">
+			<forward name="mostrar" path="/cLogMostrarAction.do" />
+		</action>
+		<action name="cLogMostrarActionForm" path="/cLogMostrarAction" scope="session" type="conicet.apps.svt.web.log.action.CLogMostrarAction">
+			<forward name="mostrar" path=".logVerDef" />
+		</action>
+		<action input=".usuarioAltaDef" parameter="btnSubmit" name="cUsuarioForm" path="/cUsuarioAltaAction" scope="session"
+			type="conicet.apps.svt.web.usuario.action.CUsuarioAltaAction" validate="true">
+			<forward name="formulario" path=".usuarioAltaDef" />
+			<forward name="listado" path="/cUsuarioBuscarAction.do?method=refrescar" />
+			<forward name="gestorDetalle" path="/cGestorDetalleAction.do?accion=ini" />
+			<forward name="entidadDetalle" path="/cEntidadDetalleAction.do?accion=ini" />
+			<forward name="listadoRecientes" path="/cUsuarioBuscarAction.do?method=altasdeldia" />
+			<forward name="cUsuarioBuscarAction" path="/cUsuarioBuscarAction.do?method=refrescar" />
+		</action>
+		<action input=".usuarioBuscarDef" parameter="btnSubmit" name="cUsuarioBuscarActionForm" path="/cUsuarioBuscarAction" scope="session"
+			type="conicet.apps.svt.web.usuario.action.CUsuarioBuscarAction" validate="true">
+			<forward name="formulario" path=".usuarioBuscarDef" />
+			<forward name="listado" path=".usuarioBuscarDef" />
+			<forward name="detalle" path="/cUsuarioDetalleAction.do?method=init" />
+			<forward name="alta" path="/cUsuarioAltaAction.do?method=init" />
+		</action>
+		<action name="cUsuarioForm" parameter="btnSubmit" path="/cUsuarioDetalleAction" scope="session" type="conicet.apps.svt.web.usuario.action.CUsuarioDetalleAction"
+			validate="false">
+			<forward name="formulario" path=".usuarioDetalleDef" />
+			<forward name="cUsuarioBuscarAction" path=".usuarioBuscarDef" />
+			<forward name="volver" path=".usuarioBuscarDef" />
+			<forward name="listado" path="/cUsuarioBuscarAction.do?method=refrescar" />
+			<forward name="eliminar" path="/cUsuarioEliminarAction.do?method=initFromDetalle" />
+			<forward name="habilitar" path="/cUsuarioHabilitarAction.do?method=initFromDetalle" />
+			<forward name="deshabilitar" path="/cUsuarioHabilitarAction.do?method=initFromDetalle" />
+			<forward name="gestorDetalle" path="/cGestorDetalleAction.do?accion=ini" />
+			<forward name="entidadDetalle" path="/cEntidadDetalleAction.do?accion=ini" />
+		</action>
+		<action name="cUsuarioForm" parameter="btnSubmit" path="/cUsuarioEliminarAction" scope="session" type="conicet.apps.svt.web.usuario.action.CUsuarioEliminarAction"
+			validate="false">
+			<forward name="formulario" path=".usuarioEliminarDef" />
+			<forward name="detalle" path="/cUsuarioDetalleAction.do?method=refrescar" />
+			<forward name="listado" path="/cUsuarioBuscarAction.do?method=refrescar" />
+			<forward name="detalleGestor" path="/cGestorDetalleAction.do?accion=ini" />
+			<forward name="entidadDetalle" path="/cEntidadDetalleAction.do?accion=ini" />
+			<forward name="gestorDetalle" path="/cGestorDetalleAction.do?accion=ini" />
+			<forward name="listadoRecientes" path="/cUsuarioBuscarAction.do?method=altasdeldia" />
+		</action>
+		<action name="cUsuarioForm" parameter="btnSubmit" path="/cUsuarioHabilitarAction" scope="session" type="conicet.apps.svt.web.usuario.action.CUsuarioHabilitarAction"
+			validate="false">
+			<forward name="formulario" path=".usuarioHabilitarDef" />
+			<forward name="detalle" path="/cUsuarioDetalleAction.do?method=refrescar" />
+			<forward name="habilitar" path=".usuarioHabilitarDef" />
+			<forward name="listado" path="/cUsuarioBuscarAction.do?method=refrescar" />
+			<forward name="detalleGestor" path="/cGestorDetalleAction.do?accion=ini" />
+			<forward name="entidadDetalle" path="/cEntidadDetalleAction.do?accion=ini" />
+			<forward name="gestorDetalle" path="/cGestorDetalleAction.do?accion=ini" />
+			<forward name="detalleEntidad" path="/cEntidadDetalleAction.do?accion=ini" />
+			<forward name="listadoRecientes" path="/cUsuarioBuscarAction.do?method=altasdeldia" />
+		</action>
+		<action input=".usuarioElegirDef" name="cUsuarioElegirActionForm" path="/cUsuarioElegirAction" scope="session"
+			type="conicet.apps.svt.web.usuario.action.CUsuarioElegirAction" validate="true">
+			<forward name="listado" path=".usuarioElegirDef" />
+		</action>
+		<action input=".configurarListadoDef" name="cConfigurarListadoActionForm" path="/cConfigurarListadoAction" scope="session"
+			type="conicet.apps.svt.web.base.action.CConfigurarListadoAction" validate="true">
+			<forward name="formulario" path=".configurarListadoDef" />
+			<forward name="OFERTA_TECNOLOGICA_Volver" path=".ofertaTecnologicaBuscarDef" />
+			<forward name="OFERTA_TECNOLOGICA_Grabar" path="/cOfertaTecnologicaBuscarAction.do?accion=refrescar" />
+			<forward name="OT_STAN_Volver" path="/cOfertaTecnologicaBuscarAction.do?accion=refrescar" />
+			<forward name="OT_STAN_Grabar" path="/cOfertaTecnologicaBuscarAction.do?accion=refrescar" />
+			<forward name="OT_PROPIEDAD_Volver" path="/cOfertaTecnologicaBuscarAction.do?accion=refrescar" />
+			<forward name="OT_PROPIEDAD_Grabar" path="/cOfertaTecnologicaBuscarAction.do?accion=refrescar" />
+			<forward name="OT_CONOCIMIENTO_Volver" path="/cOfertaTecnologicaBuscarAction.do?accion=refrescar" />
+			<forward name="OT_CONOCIMIENTO_Grabar" path="/cOfertaTecnologicaBuscarAction.do?accion=refrescar" />
+		</action>
+
+		<action input=".usuarioPerfilDef" parameter="btnSubmit" name="cUsuarioPerfilActionForm" path="/cUsuarioPerfilAction" scope="session"
+			type="conicet.apps.svt.web.usuario.action.CUsuarioPerfilAction" validate="true">
+			<forward name="formulario" path=".usuarioPerfilDef" />
+			<forward name="index" path=".indexDef" />
+		</action>
+		<action input=".rolBuscarDef" parameter="btnSubmit" name="cRolBuscarActionForm" path="/cRolBuscarAction" scope="session"
+			type="conicet.apps.svt.web.funcionRol.action.CRolBuscarAction" validate="true">
+			<forward name="formulario" path=".rolBuscarDef" />
+			<forward name="detalle" path="/cFuncionRolSeleccionarAction.do?method=init" />
+		</action>
+		<action input=".funcionRolSeleccionarDef" parameter="btnSubmit" name="cFuncionRolSeleccionarActionForm" path="/cFuncionRolSeleccionarAction"
+			scope="session" type="conicet.apps.svt.web.funcionRol.action.CFuncionRolSeleccionarAction" validate="true">
+			<forward name="formulario" path=".funcionRolSeleccionarDef" />
+			<forward name="cRolBuscarAction" path="/cRolBuscarAction.do?method=refrescar" />
+		</action>
+		<action input=".wsTokenGeneratorDef" parameter="btnSubmit" name="cWSTokenGeneratorForm" path="/cWSTokenGenerator" scope="session"
+			type="conicet.apps.siuvt.web.wsTokenGenerator.action.CWSTokenGeneratorAction" validate="false">
+			<forward name="formulario" path=".wsTokenGeneratorDef" />
+			<forward name="index" path=".indexDef" />
+		</action>
+		
+
+
+	</action-mappings>
+	<message-resources parameter="conicet.apps.svt.util.resource.strutsResources" />
+</struts-config>

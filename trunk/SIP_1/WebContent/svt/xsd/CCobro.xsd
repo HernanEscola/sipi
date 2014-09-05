@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+	<xs:simpleType name="ETipoRetencionXml">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="IVA" />
+			<xs:enumeration value="IIBB" />
+			<xs:enumeration value="IM" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="CFacturaCobroXml">
+		<xs:sequence>
+			<xs:element name="letra" type="xs:string" minOccurs="1" />
+			<xs:element name="puntoVenta" type="xs:string" minOccurs="1" />
+			<xs:element name="numero" type="xs:string" minOccurs="1" />
+			<xs:element name="importe" type="xs:decimal" minOccurs="1" />
+			<xs:element name="retencionFacturasCobros" type="CRetencionFacturaCobro" maxOccurs="unbounded" minOccurs="1" />	
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="CRetencionFacturaCobro">
+		<xs:sequence>
+			<xs:element name="tipoRetencion" type="ETipoRetencionXml" minOccurs="1" />
+			<xs:element name="importe" type="xs:decimal" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CCobroXml">
+		<xs:sequence>
+			<xs:element name="cuitUVT" type="xs:string" minOccurs="1" />
+			<xs:element name="cobroFecha" type="xs:date" minOccurs="1" maxOccurs="1" />
+			<xs:element name="cobroNro" type="xs:string" minOccurs="1" />
+			<xs:element name="observaciones" type="xs:string" minOccurs="0" />			
+			<xs:element name="provincia" type="xs:string" minOccurs="0" />
+			<xs:element name="importe" type="xs:decimal" maxOccurs="1" minOccurs="1"/>
+			<xs:element name="facturasCobros" type="CFacturaCobroXml" maxOccurs="unbounded" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

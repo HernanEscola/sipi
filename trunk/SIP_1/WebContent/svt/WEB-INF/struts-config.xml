@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+  <plug-in className="org.apache.struts.tiles.TilesPlugin">
+    <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml,/WEB-INF/tiles-defs-instrumento.xml,/WEB-INF/tiles-defs-oferta.xml,/WEB-INF/tiles-defs-economica.xml,/WEB-INF/tiles-defs-administracion.xml,/WEB-INF/tiles-defs-prestador.xml,/WEB-INF/tiles-defs-contratacion.xml" />
+  </plug-in>
+  <plug-in className="conicet.apps.svt.batch.QuartzPlugin" />
+</struts-config>

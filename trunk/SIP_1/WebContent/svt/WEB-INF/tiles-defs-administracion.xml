@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+              "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+              "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+  <definition extends=".baseDef" name=".tipoEgresoAltaDef">
+    <put name="body" value="/jsp/tipoEgresoAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".tipoEgresoBuscarDef">
+    <put name="body" value="/jsp/tipoEgresoBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".tipoEgresoListarDef">
+    <put name="body" value="/jsp/tipoEgresoListar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".tipoEgresoDetalleDef">
+    <put name="body" value="/jsp/tipoEgresoDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".tipoEgresoEliminarDef">
+    <put name="body" value="/jsp/tipoEgresoEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".tipoEgresoModificarDef">
+    <put name="body" value="/jsp/tipoEgresoModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".personaAltaDef">
+    <put name="body" value="/jsp/personaAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".personaSeleccionarDef">
+    <put name="body" value="/jsp/personaSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".personaDetalleDef">
+    <put name="body" value="/jsp/personaDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".convenioMarcoBuscarDef">
+    <put name="body" value="/jsp/convenioMarcoBuscar.jsp" />
+  </definition>
+  <definition extends=".bitacoraDef" name=".convenioMarcoDetalleDef">
+    <put name="body" value="/jsp/convenioMarcoDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".convenioMarcoAltaDef">
+    <put name="body" value="/jsp/convenioMarcoAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".convenioMarcoModificarDef">
+    <put name="body" value="/jsp/convenioMarcoModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".convenioMarcoEliminarDef">
+    <put name="body" value="/jsp/convenioMarcoEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".convenioMarcoSeleccionarDef">
+    <put name="body" value="/jsp/convenioMarcoSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".tipoEgresoHabilitarDef">
+    <put name="body" value="/jsp/tipoEgresoHabilitar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".convenioMarcoHabilitarDef">
+    <put name="body" value="/jsp/convenioMarcoHabilitar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".administracionPrestadoresDef">
+    <put name="body" value="/jsp/administracionPrestadores.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".administracionPrestadoresBuscarDef">
+    <put name="body" value="/jsp/administracionPrestadoresBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".administracionPrestadoresModificarDef">
+    <put name="body" value="/jsp/administracionPrestadoresModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".administracionPrestadoresAutorizacionDef">
+    <put name="body" value="/jsp/administracionPrestadoresAutorizacion.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".valorManoObraDetalleDef">
+    <put name="body" value="/jsp/valorManoObraDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".valorManoObraModificarDef">
+    <put name="body" value="/jsp/valorManoObraModificar.jsp" />
+  </definition>
+  
+   <definition extends=".baseDef" name=".reporteMensualUvtsDef">
+    <put name="body" value="/jsp/reporteMensualUvts.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".formularioTest1">
+	    <put name="body" value="/jsp/test.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".entidadExternaRelacionBuscarDef">
+    <put name="body" value="/jsp/entidadExternaRelacion/entidadExternaRelacionBuscar.jsp" />
+  </definition>
+  
+  
+   <definition path="/jsp/test.jsp" name=".formularioTest">
+
+  </definition>
+  
+  <definition extends=".baseDef" name=".formularioTest2">
+    <put name="body" value="/jsp/test2.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".contactoBuscarDef">
+    <put name="body" value="/jsp/contacto/contactoBuscar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".contactoAltaDef">
+    <put name="body" value="/jsp/contacto/contactoAlta.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".contactoDetalleDef">
+    <put name="body" value="/jsp/contacto/contactoDetalle.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".contactoModificarDef">
+    <put name="body" value="/jsp/contacto/contactoModificar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".contactoEliminarDef">
+    <put name="body" value="/jsp/contacto/contactoEliminar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".sectorAltaDef">
+    <put name="body" value="/jsp/sector/sectorAlta.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".sectorHabilitarDef">
+    <put name="body" value="/jsp/sector/sectorHabilitar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".sectorBuscarDef">
+    <put name="body" value="/jsp/sector/sectorBuscar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".sectorModificarDef">
+    <put name="body" value="/jsp/sector/sectorModificar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".sectorEliminarDef">
+    <put name="body" value="/jsp/sector/sectorEliminar.jsp" />
+  </definition>
+  
+  <definition extends=".logDef" name=".sectorDetalleDef">
+    <put name="body" value="/jsp/sector/sectorDetalle.jsp" />
+  </definition>
+  
+</tiles-definitions>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<!-- Los tiles def se encuentran en ECONOMICA -->
+	<form-beans>
+		<form-bean name="cTransferenciaComisionForm" type="conicet.apps.svtp.web.egreso.form.CTransferenciaComisionForm" />
+		<form-bean name="cTransferenciaContraparteForm" type="conicet.apps.svtp.web.egreso.form.CTransferenciaContraparteForm" />
+		<form-bean name="cTransferenciaProductividadForm" type="conicet.apps.svtp.web.egreso.form.CTransferenciaProductividadForm" />
+		<form-bean name="cTransferenciaUDForm" type="conicet.apps.svtp.web.egreso.form.CTransferenciaUDForm" />
+		<form-bean name="cEgresoBuscarActionForm" type="conicet.apps.svtp.web.egreso.form.CEgresoBuscarActionForm" />
+		<form-bean name="cCobroItemSeleccionarForm" type="conicet.apps.siuvt.web.egreso.form.CCobroItemSeleccionarTransferenciaActionForm" />
+		<form-bean name="cEjecucionGastosUDForm" type="conicet.apps.svtp.web.egreso.form.CEjecucionGastosUDForm" />
+	</form-beans>
+
+	<action-mappings>
+
+
+		<!-- CobroItem seleccionar de EGRESOS -->
+
+		<action input=".cobroItemSeleccionarDef" parameter="btnSubmit" name="cCobroItemSeleccionarForm" path="/cCobroItemSeleccionar" scope="session"
+			type="conicet.apps.siuvt.web.egreso.action.CCobroItemSeleccionarTransferenciaAction" validate="true">
+			<forward name="formulario" path=".cobroItemSeleccionarDef" />
+			<forward name="detalle" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="cTransferenciaComisionAltaAction" path="/cTransferenciaComisionAltaAction.do?method=volverSeleccionar" />
+			<forward name="cTransferenciaContraparteAltaAction" path="/cTransferenciaContraparteAltaAction.do?method=volverSeleccionar" />
+			<forward name="cTransferenciaProductividadAltaAction" path="/cTransferenciaProductividadAltaAction.do?method=volverSeleccionar" />
+			<forward name="cTransferenciaUDAltaAction" path="/cTransferenciaUDAltaAction.do?method=volverSeleccionar" />
+			<forward name="cEjecucionGastosUDAltaAction" path="/cEjecucionGastosUDAltaAction.do?method=volverSeleccionar" />
+			<forward name="cTransferenciaComisionModificarAction" path="/cTransferenciaComisionModificarAction.do?method=volverSeleccionar" />
+			<forward name="cTransferenciaContraparteModificarAction" path="/cTransferenciaContraparteModificarAction.do?method=volverSeleccionar" />
+			<forward name="cTransferenciaProductividadModificarAction" path="/cTransferenciaProductividadModificarAction.do?method=volverSeleccionar" />
+			<forward name="cTransferenciaUDModificarAction" path="/cTransferenciaUDModificarAction.do?method=volverSeleccionar" />
+			<forward name="cEjecucionGastosUDModificarAction" path="/cEjecucionGastosUDModificarAction.do?method=volverSeleccionar" />
+		</action>
+
+
+
+
+		<!-- ALTA EGRESOSO -->
+
+		<action forward=".transferenciaAlta" path="/transferenciaAlta" />
+
+		<action path="/cTransferenciaComisionAltaAction" input=".transferenciaComisionDef" parameter="btnSubmit" name="cTransferenciaComisionForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaComisionAltaAction" validate="true">
+			<forward name="formulario" path=".transferenciaComisionDef" />
+			<forward name="seleccionar" path="/cCobroItemSeleccionar.do?method=init" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="listado" path=".transferenciaBuscarDef" />
+			<forward name="listadoRecientes" path="/cTransferenciaBuscarAction.do?method=altasdeldia" />
+		</action>
+
+		<action path="/cTransferenciaContraparteAltaAction" input=".transferenciaContraparteDef" parameter="btnSubmit" name="cTransferenciaContraparteForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaAltaAction" validate="true">
+			<forward name="formulario" path=".transferenciaContraparteDef" />
+			<forward name="seleccionar" path="/cCobroItemSeleccionar.do?method=init" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+			<forward name="listadoRecientes" path="/cTransferenciaBuscarAction.do?method=altasdeldia" />
+		</action>
+
+		<action path="/cTransferenciaProductividadAltaAction" input=".transferenciaProductividadDef" parameter="btnSubmit" name="cTransferenciaProductividadForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaAltaAction" validate="true">
+			<forward name="formulario" path=".transferenciaProductividadDef" />
+			<forward name="seleccionar" path="/cCobroItemSeleccionar.do?method=init" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+			<forward name="listadoRecientes" path="/cTransferenciaBuscarAction.do?method=altasdeldia" />
+		</action>
+
+		<action path="/cTransferenciaUDAltaAction" input=".transferenciaUDDef" parameter="btnSubmit" name="cTransferenciaUDForm" scope="session"
+			type="conicet.apps.siuvt.web.egreso.action.CTransferenciaAltaAction" validate="true">
+			<forward name="formulario" path=".transferenciaUDDef" />
+			<forward name="seleccionar" path="/cCobroItemSeleccionar.do?method=init" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+			<forward name="listadoRecientes" path="/cTransferenciaBuscarAction.do?method=altasdeldia" />
+		</action>
+
+		<action path="/cEjecucionGastosUDAltaAction" input=".ejecucionGastosUDDef" parameter="btnSubmit" name="cEjecucionGastosUDForm" scope="session"
+			type="conicet.apps.siuvt.web.egreso.action.CEjecucionGastosAltaAction" validate="true">
+			<forward name="formulario" path=".ejecucionGastosUDDef" />
+			<forward name="seleccionar" path="/cCobroItemSeleccionar.do?method=init" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="listado" path="/cEjecucionGastosBuscarAction.do?method=refrescar" />
+			<forward name="listadoRecientes" path="/cEjecucionGastosBuscarAction.do?method=altasdeldia" />
+		</action>
+
+		<!-- MODIFICAR EGRESOS -->
+
+		<action path="/cTransferenciaComisionModificarAction" input=".transferenciaComisionDef" parameter="btnSubmit" name="cTransferenciaComisionForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaModificarAction" validate="true">
+			<forward name="formulario" path=".transferenciaComisionDef" />
+			<forward name="seleccionar" path="/cCobroItemSeleccionar.do?method=init" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="detalle" path="/cTransferenciaComisionDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+
+		</action>
+
+		<action path="/cTransferenciaContraparteModificarAction" input=".transferenciaContraparteDef" parameter="btnSubmit" name="cTransferenciaContraparteForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaModificarAction" validate="true">
+			<forward name="formulario" path=".transferenciaContraparteDef" />
+			<forward name="seleccionar" path="/cCobroItemSeleccionar.do?method=init" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="detalle" path="/cTransferenciaContraparteDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+		</action>
+
+		<action path="/cTransferenciaProductividadModificarAction" input=".transferenciaProductividadDef" parameter="btnSubmit" name="cTransferenciaProductividadForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaModificarAction" validate="true">
+			<forward name="formulario" path=".transferenciaProductividadDef" />
+			<forward name="seleccionar" path="/cCobroItemSeleccionar.do?method=init" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="detalle" path="/cTransferenciaProductividadDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+		</action>
+
+		<action path="/cTransferenciaUDModificarAction" input=".transferenciaUDDef" parameter="btnSubmit" name="cTransferenciaUDForm" scope="session"
+			type="conicet.apps.siuvt.web.egreso.action.CTransferenciaModificarAction" validate="true">
+			<forward name="formulario" path=".transferenciaUDDef" />
+			<forward name="seleccionar" path="/cCobroItemSeleccionar.do?method=init" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="detalle" path="/cTransferenciaUDDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+		</action>
+
+
+		<action path="/cEjecucionGastosUDModificarAction" input=".ejecucionGastosUDDef" parameter="btnSubmit" name="cEjecucionGastosUDForm" scope="session"
+			type="conicet.apps.siuvt.web.egreso.action.CEjecucionGastosModificarAction" validate="true">
+			<forward name="formulario" path=".ejecucionGastosUDDef" />
+			<forward name="seleccionar" path="/cCobroItemSeleccionar.do?method=init" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="detalle" path="/cEjecucionGastosUDDetalleAction.do?method=init" />
+			<forward name="listado" path="/cEjecucionGastosBuscarAction.do?method=refrescar" />
+		</action>
+
+		<!-- ELIMINAR EGRESOS -->
+
+		<action path="/cTransferenciaComisionEliminarAction" input=".transferenciaComisionDef" parameter="btnSubmit" name="cTransferenciaComisionForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaEliminarAction" validate="false">
+			<forward name="formulario" path=".transferenciaComisionDef" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="detalle" path="/cTransferenciaComisionDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+		</action>
+
+		<action path="/cTransferenciaContraparteEliminarAction" input=".transferenciaContraparteDef" parameter="btnSubmit" name="cTransferenciaContraparteForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaEliminarAction" validate="false">
+			<forward name="formulario" path=".transferenciaContraparteDef" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="detalle" path="/cTransferenciaContraparteDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+		</action>
+
+		<action path="/cTransferenciaProductividadEliminarAction" input=".transferenciaProductividadDef" parameter="btnSubmit" name="cTransferenciaProductividadForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaEliminarAction" validate="false">
+			<forward name="formulario" path=".transferenciaProductividadDef" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="detalle" path="/cTransferenciaProductividadDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+		</action>
+
+		<action path="/cTransferenciaUDEliminarAction" input=".transferenciaUDDef" parameter="btnSubmit" name="cTransferenciaUDForm" scope="session"
+			type="conicet.apps.siuvt.web.egreso.action.CTransferenciaEliminarAction" validate="false">
+			<forward name="formulario" path=".transferenciaUDDef" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="detalle" path="/cTransferenciaUDDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+		</action>
+
+		<action path="/cEjecucionGastosUDEliminarAction" input=".ejecucionGastosUDDef" parameter="btnSubmit" name="cEjecucionGastosUDForm" scope="session"
+			type="conicet.apps.siuvt.web.egreso.action.CEgresoEliminarAction" validate="false">
+			<forward name="formulario" path=".ejecucionGastosUDDef" />
+			<forward name="detalleCobro" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="detalle" path="/cEjecucionGastosUDDetalleAction.do?method=init" />
+			<forward name="listado" path="/cEjecucionGastosBuscarAction.do?method=refrescar" />
+		</action>
+
+
+		<!-- BUSCAR TRANSFERENCIAS -->
+
+		<action path="/cTransferenciaBuscarAction" input=".transferenciaBuscarDef" parameter="btnSubmit" name="cEgresoBuscarActionForm" scope="session"
+			type="conicet.apps.svt.web.egreso.action.CTransferenciaBuscarAction" validate="true">
+			<forward name="formulario" path=".transferenciaBuscarDef" />
+			<forward name="detalleCC" path="/cTransferenciaComisionDetalleAction.do?method=init" />
+			<forward name="detalleCU" path="/cTransferenciaComisionDetalleAction.do?method=init" />
+			<forward name="detalleCUP" path="/cTransferenciaComisionDetalleAction.do?method=init" />
+			<forward name="detalleCP" path="/cTransferenciaContraparteDetalleAction.do?method=init" />
+			<forward name="detalleUD" path="/cTransferenciaUDDetalleAction.do?method=init" />
+			<forward name="detallePR" path="/cTransferenciaProductividadDetalleAction.do?method=init" />
+			<forward name="detallePRP" path="/cTransferenciaProductividadDetalleAction.do?method=init" />
+			<forward name="alta" path="/transferenciaAlta.do" />
+		</action>
+
+
+		<!-- BUSCAR EJECUCION GASTOS -->
+
+		<action path="/cEjecucionGastosBuscarAction" input=".ejecucionGastosBuscarDef" parameter="btnSubmit" name="cEgresoBuscarActionForm" scope="session"
+			type="conicet.apps.svt.web.egreso.action.CEjecucionGastosBuscarAction" validate="true">
+			<forward name="formulario" path=".ejecucionGastosBuscarDef" />
+			<forward name="detalleEG" path="/cEjecucionGastosUDDetalleAction.do?method=init" />
+			<forward name="alta" path="/cEjecucionAltaAction.do?method=init" />
+		</action>
+
+
+		<!-- DETALLE EGRESOS -->
+
+		<action path="/cTransferenciaComisionDetalleAction" input=".transferenciaComisionDef" parameter="btnSubmit" name="cTransferenciaComisionForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaDetalleAction" validate="false">
+			<forward name="formulario" path=".transferenciaComisionDef" />
+			<forward name="detalle" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+			<forward name="eliminar" path="/cTransferenciaComisionEliminarAction.do?method=init" />
+			<forward name="modificar" path="/cTransferenciaComisionModificarAction.do?method=init" />
+			<forward name="cFacturaDetalleAction" path="/cFacturaDetalleAction.do?method=refrescar" />
+			<forward name="cCobroDetalleAction" path=".cobroDetalleDef" />
+		</action>
+
+		<action path="/cTransferenciaContraparteDetalleAction" input=".transferenciaContraparteDef" parameter="btnSubmit" name="cTransferenciaContraparteForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaDetalleAction" validate="false">
+			<forward name="formulario" path=".transferenciaContraparteDef" />
+			<forward name="detalle" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+			<forward name="eliminar" path="/cTransferenciaContraparteEliminarAction.do?method=init" />
+			<forward name="modificar" path="/cTransferenciaContraparteModificarAction.do?method=init" />
+			<forward name="cFacturaDetalleAction" path="/cFacturaDetalleAction.do?method=refrescar" />
+			<forward name="cCobroDetalleAction" path=".cobroDetalleDef" />
+		</action>
+
+		<action path="/cTransferenciaProductividadDetalleAction" input=".transferenciaProductividadDef" parameter="btnSubmit" name="cTransferenciaProductividadForm"
+			scope="session" type="conicet.apps.siuvt.web.egreso.action.CTransferenciaDetalleAction" validate="false">
+			<forward name="formulario" path=".transferenciaProductividadDef" />
+			<forward name="detalle" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+			<forward name="eliminar" path="/cTransferenciaProductividadEliminarAction.do?method=init" />
+			<forward name="modificar" path="/cTransferenciaProductividadModificarAction.do?method=init" />
+			<forward name="cFacturaDetalleAction" path="/cFacturaDetalleAction.do?method=refrescar" />
+			<forward name="cCobroDetalleAction" path=".cobroDetalleDef" />
+		</action>
+
+		<action path="/cTransferenciaUDDetalleAction" input=".transferenciaUDDef" parameter="btnSubmit" name="cTransferenciaUDForm" scope="session"
+			type="conicet.apps.siuvt.web.egreso.action.CTransferenciaDetalleAction" validate="false">
+			<forward name="formulario" path=".transferenciaUDDef" />
+			<forward name="detalle" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="listado" path="/cTransferenciaBuscarAction.do?method=refrescar" />
+			<forward name="eliminar" path="/cTransferenciaUDEliminarAction.do?method=init" />
+			<forward name="modificar" path="/cTransferenciaUDModificarAction.do?method=init" />
+			<forward name="cFacturaDetalleAction" path="/cFacturaDetalleAction.do?method=refrescar" />
+			<forward name="cCobroDetalleAction" path=".cobroDetalleDef" />
+		</action>
+
+
+		<action path="/cEjecucionGastosUDDetalleAction" input=".ejecucionGastosUDDef" parameter="btnSubmit" name="cEjecucionGastosUDForm" scope="session"
+			type="conicet.apps.siuvt.web.egreso.action.CEgresoDetalleAction" validate="false">
+			<forward name="formulario" path=".ejecucionGastosUDDef" />
+			<forward name="detalle" path="/cCobroDetalleAction.do?method=init" />
+			<forward name="listado" path="/cEjecucionGastosBuscarAction.do?method=refrescar" />
+			<forward name="eliminar" path="/cEjecucionGastosUDEliminarAction.do?method=init" />
+			<forward name="modificar" path="/cEjecucionGastosUDModificarAction.do?method=init" />
+			<forward name="cFacturaDetalleAction" path="/cFacturaDetalleAction.do?method=refrescar" />
+			<forward name="cCobroDetalleAction" path=".cobroDetalleDef" />
+		</action>
+
+	</action-mappings>
+
+</struts-config>
+

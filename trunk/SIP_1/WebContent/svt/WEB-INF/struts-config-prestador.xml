@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="cOfertaAceptarListarActionForm" type="conicet.apps.svt.web.moduloPrestador.form.COfertaAceptarListarActionForm" />
+    <form-bean name="cOfertaTecnologicaAceptarModificacionesActionForm" type="conicet.apps.svt.web.moduloPrestador.form.COfertaTecnologicaAceptarModificacionesActionForm" />
+    <form-bean name="cCostoAceptarModificacionesActionForm" type="conicet.apps.svt.web.moduloPrestador.form.CCostoAceptarModificacionesActionForm" />
+    <form-bean name="cEquipoAceptarModificacionesActionForm" type="conicet.apps.svt.web.moduloPrestador.form.CEquipoAceptarModificacionesActionForm" />
+    <form-bean name="cOfertaAceptarEliminacionActionForm" type="conicet.apps.svt.web.moduloPrestador.form.COfertaAceptarEliminacionActionForm" />
+    <form-bean name="cOfertaAceptarAltaActionForm" type="conicet.apps.svt.web.moduloPrestador.form.COfertaAceptarAltaActionForm" />
+  </form-beans>
+  <action-mappings>
+    <action input=".ofertaAceptarListarDef" name="cOfertaAceptarListarActionForm" path="/cOfertaAceptarListarAction" scope="session" type="conicet.apps.svt.web.moduloPrestador.action.COfertaAceptarListarAction" >
+   	  <forward name="formulario" path=".ofertaAceptarListarDef" />
+   	  <forward name="aceptarAlta" path="/cOfertaAceptarAltaAction.do?accion=ini" />
+     	<forward name="aceptarModificaciones" path="/cOfertaTecnologicaAceptarModificacionesAction.do?accion=ini" />
+     	<forward name="procesarEliminacion" path="/cOfertaAceptarEliminacionAction.do?accion=ini" />
+    </action>
+    <action input="/cOfertaTecnologicaAceptarModificacionesAction.do?accion=inputValidation" name="cOfertaTecnologicaAceptarModificacionesActionForm" path="/cOfertaTecnologicaAceptarModificacionesAction" scope="session" type="conicet.apps.svt.web.moduloPrestador.action.COfertaTecnologicaAceptarModificacionesAction" validate="true" >
+   	  <forward name="Desarrollos y Conocimientos" path=".conocimientoAceptarModificacionesDef" />
+   	  <forward name="Propiedad Intelectual" path=".propiedadAceptarModificacionesDef" />
+     	<forward name="STAN" path=".stanAceptarModificacionesDef" />
+     	<forward name="costoDetalle" path="/cCostoDetalleAction.do?accion=ini" />
+     	<forward name="costoAceptarModificaciones" path="/cCostoAceptarModificacionesAction.do?accion=ini" />
+     	<forward name="equipoDetalle" path="/cEquipoDetalleAction.do?method=init" />
+      <forward name="equipoAceptarModificaciones" path="/cEquipoAceptarModificacionesAction.do?accion=ini" />
+     	<forward name="listadoAceptacion" path="/cOfertaAceptarListarAction.do?accion=refrescar" />
+     	<forward name="detalleEntidad" path="/cEntidadDetalleAction.do?accion=ini" />
+    </action>
+    <action name="cCostoAceptarModificacionesActionForm" path="/cCostoAceptarModificacionesAction" scope="session" type="conicet.apps.svt.web.moduloPrestador.action.CCostoAceptarModificacionesAction">
+    	<forward name="formulario" path=".costoAceptarModificacionesDef" />
+    	<forward name="stanAceptarModificaciones" path="/cOfertaTecnologicaAceptarModificacionesAction.do?accion=aceptarCosto" />
+    </action>
+    <action name="cEquipoAceptarModificacionesActionForm" path="/cEquipoAceptarModificacionesAction" scope="session" type="conicet.apps.svt.web.moduloPrestador.action.CEquipoAceptarModificacionesAction">
+      <forward name="formulario" path=".equipoAceptarModificacionesDef" />
+      <forward name="detalleEntidad" path="/cEntidadDetalleAction.do?accion=ini" />
+      <forward name="aceptarOferta" path="/cOfertaTecnologicaAceptarModificacionesAction.do?accion=aceptarEquipo" />
+    </action>
+    <action input=".ofertaAceptarEliminacionDef" name="cOfertaAceptarEliminacionActionForm" path="/cOfertaAceptarEliminacionAction" scope="session" type="conicet.apps.svt.web.moduloPrestador.action.COfertaAceptarEliminacionAction">
+      <forward name="formulario" path=".ofertaAceptarEliminacionDef" />
+      <forward name="listado" path="/cOfertaAceptarListarAction.do?accion=refrescar" />
+      <forward name="costoDetalle" path="/cCostoDetalleAction.do?accion=ini" />
+      <forward name="equipoDetalle" path="/cEquipoDetalleAction.do?method=init" />
+      <forward name="entidadDetalle" path="/cEntidadDetalleAction.do?accion=ini" />
+    </action>
+    <action input=".ofertaAceptarAltaDef" name="cOfertaAceptarAltaActionForm" path="/cOfertaAceptarAltaAction" scope="session" type="conicet.apps.svt.web.moduloPrestador.action.COfertaAceptarAltaAction">
+      <forward name="formulario" path=".ofertaAceptarAltaDef" />
+      <forward name="listado" path="/cOfertaAceptarListarAction.do?accion=refrescar" />
+      <forward name="costoDetalle" path="/cCostoDetalleAction.do?accion=ini" />
+      <forward name="entidadDetalle" path="/cEntidadDetalleAction.do?accion=ini" />
+      <forward name="equipoDetalle" path="/cEquipoDetalleAction.do?method=init" />
+    </action>
+    <action path="/cOfertaTecnologicaPDFAction" type="conicet.apps.svtp.web.ofertaTecnologica.action.COfertaTecnologicaPDFAction" />
+  </action-mappings>
+</struts-config>

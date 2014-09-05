@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:include schemaLocation="CFactura.xsd" />
+	<xs:include schemaLocation="CEntidad.xsd" />
+
+	<xs:simpleType name="ETipoDistribucionXml">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PRO" /> <!-- Productividad -->
+			<xs:enumeration value="CON" /> <!-- Comision Conicet -->
+			<xs:enumeration value="ICO" /> <!-- Instituto Contraparte -->
+			<xs:enumeration value="UVT" /> <!-- Comision UVT -->
+			<xs:enumeration value="UVC" /> <!-- Comision UVT Central ( solo delegaciones y puntos de Facturacion) -->
+			<xs:enumeration value="COS" /> <!-- Costos -->
+			<xs:enumeration value="RET" /> <!-- Retenciones -->
+			<xs:enumeration value="INS" /> <!-- Unidad Divisional -->
+			<xs:enumeration value="UVD" /> <!-- Comisión UVT Delegación ( para puntos de Facturacion) -->
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="ETipoCliente">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="UVT" /> <!-- Productividad -->
+			<xs:enumeration value="Prestador" /> <!-- Comision Conicet -->
+		</xs:restriction>
+	</xs:simpleType>
+
+
+	<xs:simpleType name="ETipoMonedaXml"><!-- ORDEN = identificador -->
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Dummy" /> <!--0- No USAR -->
+			<xs:enumeration value="DOLAR" /> <!--1- Dólar estadounidense ; U$S -->
+			<xs:enumeration value="EURO" /> <!--3- Euro ; €; -->
+			<xs:enumeration value="REAL" /> <!--4- Real ; R$ -->
+			<xs:enumeration value="LIBRA" /> <!--5- Libra ; £ -->
+			<xs:enumeration value="FRANCO_SUIZO" /> <!--6- Franco Suizo ; Fr -->
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ETipoServicioXml"> <!-- ORDEN = identificador -->
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Dummy" /> <!--0- No USAR -->
+			<xs:enumeration value="STAN_SERVICIO" /> <!--1- Stan-Servicio -->
+			<xs:enumeration value="STAN_ASESORAMIENTO" /> <!--2- Stan-Asesoramiento -->
+			<xs:enumeration value="CONVENIO" /> <!--3- Convenio -->
+			<xs:enumeration value="ASESORIA_INDIVIDUAL" /> <!--4- Asesorías Individuales -->
+			<xs:enumeration value="REGALIA" /> <!--5- Regalías -->
+			<xs:enumeration value="INVESTIGADOR_EN_EMPRESA" /> <!--6- Investigador en empresas -->
+			<xs:enumeration value="OTROS_INGRESOS" /> <!--7- Otros Ingresos -->
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="CFacturaCompletaXml">
+		<xs:complexContent>
+			<xs:extension base="CFacturaXml">
+				<xs:sequence>
+					<xs:element name="distribucion" type="CFacturaItemDistribucionXml" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element name="tipoServicio" type="ETipoServicioXml" minOccurs="1" />
+					<xs:element name="detalle" type="xs:string" minOccurs="0" />
+					<xs:element name="prestador" type="CEntidadXml" minOccurs="1" />
+					<xs:element name="importeOtraMoneda" type="xs:decimal" minOccurs="0" />
+					<xs:element name="tipoMoneda" type="ETipoMonedaXml" minOccurs="0" />
+					<xs:element name="porcentajeIva" type="xs:decimal" minOccurs="0" />
+					<xs:element name="datosIdentificacionServicio" type="xs:string" minOccurs="0" />
+					<xs:element name="clienteDe" type="ETipoCliente" minOccurs="0" />
+					<xs:element name="cuitUVT" type="xs:string" minOccurs="1" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CFacturaItemDistribucionXml">
+		<xs:sequence>
+			<xs:element name="tipo" type="ETipoDistribucionXml" minOccurs="1" />
+			<xs:element name="importe" type="xs:decimal" minOccurs="1" />
+			<xs:element name="porcentaje" type="xs:decimal" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="CFacturaItemDistribucionProductividadXml">
+		<xs:complexContent>
+			<xs:extension base="CFacturaItemDistribucionXml">
+				<xs:sequence>
+						<xs:element name="beneficiario" type="CPersonaXml" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CFacturaItemDistribucionContraparteXml">
+		<xs:complexContent>
+			<xs:extension base="CFacturaItemDistribucionXml">
+				<xs:sequence>
+					<xs:element name="contraparte" type="COrganismoXml" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+
+
+
+	<xs:element name="facturaCompleta" type="CFacturaCompletaXml" />
+
+</xs:schema>

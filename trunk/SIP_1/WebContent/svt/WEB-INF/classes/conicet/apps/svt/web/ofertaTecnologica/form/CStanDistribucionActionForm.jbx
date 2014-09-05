@@ -1,0 +1,14 @@
+[PropertyInfo]
+colTipoEgreso,Collection,false,false, , ,true,<default>
+CStanDistribucion,Collection,false,false, , ,true,<default>
+importePorcentual,String,false,false, , ,true,<default>
+porcentaje,String,false,false, , ,true,<default>
+precioBase,String,false,false, , ,true,<default>
+stanCategoria,CStanCategoria,false,false, , ,true,<default>
+stanDistribucion,Collection,false,false, , ,true,<default>
+tipoEgreso,String,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

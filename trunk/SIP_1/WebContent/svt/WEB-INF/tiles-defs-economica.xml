@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+              "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+              "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+  <definition extends=".baseDef" name=".cuentaAltaDef">
+    <put name="body" value="/jsp/cuentaAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".cuentaBuscarDef">
+    <put name="body" value="/jsp/cuentaBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".cuentaListarDef">
+    <put name="body" value="/jsp/cuentaListar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".cuentaDetalleDef">
+    <put name="body" value="/jsp/cuentaDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".cuentaEliminarDef">
+    <put name="body" value="/jsp/cuentaEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".cuentaModificarDef">
+    <put name="body" value="/jsp/cuentaModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".facturaAltaDesdeOFDef">
+    <put name="body" value="/jsp/ordenFacturacion/ordenFacturacionBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".facturaAltaDef">
+    <put name="body" value="/jsp/facturaAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".facturaBuscarDef">
+    <put name="body" value="/jsp/facturaBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".facturaListarDef">
+    <put name="body" value="/jsp/facturaListar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".facturaDetalleDef">
+    <put name="body" value="/jsp/facturaDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".facturaEliminarDef">
+    <put name="body" value="/jsp/facturaEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".facturaModificarDef">
+    <put name="body" value="/jsp/facturaModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".cobroAltaDef">
+    <put name="body" value="/jsp/cobroAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".cobroModificarDef">
+    <put name="body" value="/jsp/cobroModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".cobroBuscarDef">
+    <put name="body" value="/jsp/cobroBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".transferenciaBancariaAltaDef">
+    <put name="body" value="/jsp/transferenciaBancariaAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".transferenciaBancariaBuscarDef">
+    <put name="body" value="/jsp/transferenciaBancariaBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".transferenciaBancariaDetalleDef">
+    <put name="body" value="/jsp/transferenciaBancariaDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".transferenciaBancariaEliminarDef">
+    <put name="body" value="/jsp/transferenciaBancariaEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".transferenciaBancariaModificarDef">
+    <put name="body" value="/jsp/transferenciaBancariaModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".movimientoBancarioAltaDef">
+    <put name="body" value="/jsp/movimientoBancarioAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".movimientoBancarioBuscarDef">
+    <put name="body" value="/jsp/movimientoBancarioBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".movimientoBancarioListarDef">
+    <put name="body" value="/jsp/movimientoBancarioListar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".movimientoBancarioDetalleDef">
+    <put name="body" value="/jsp/movimientoBancarioDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".movimientoBancarioEliminarDef">
+    <put name="body" value="/jsp/movimientoBancarioEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".movimientoBancarioModificarDef">
+    <put name="body" value="/jsp/movimientoBancarioModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".instrumentoPendienteSeleccionarDef">
+    <put name="body" value="/jsp/instrumentoPendienteSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".cobroDetalleDef">
+    <put name="body" value="/jsp/cobroDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".cobroEliminarDef">
+    <put name="body" value="/jsp/cobroEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".facturaAnularDef">
+    <put name="body" value="/jsp/facturaAnular.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratacionPendienteSeleccionarDef">
+    <put name="body" value="/jsp/contratacionPendienteSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratacionPendienteDetalleSeleccionarDef">
+    <put name="body" value="/jsp/contratacionPendienteDetalleSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".comprobanteAltaDef">
+    <put name="body" value="/jsp/comprobanteAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".proveedorSeleccionarDef">
+    <put name="body" value="/jsp/proveedorSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".comprobanteContPendSeleccionarDef">
+    <put name="body" value="/jsp/comprobanteContPendSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".comprobanteContDetPendSeleccionarDef">
+    <put name="body" value="/jsp/comprobanteContDetPendSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".comprobanteBuscarDef">
+    <put name="body" value="/jsp/comprobanteBuscar.jsp" />
+  </definition>
+    <definition extends=".baseDef" name=".comprobanteDetalleDef">
+    <put name="body" value="/jsp/comprobanteDetalle.jsp" />
+  </definition>
+    <definition extends=".baseDef" name=".comprobanteAnularDef">
+    <put name="body" value="/jsp/comprobanteAnular.jsp" />
+  </definition>
+    <definition extends=".baseDef" name=".pagoAltaDef">
+    <put name="body" value="/jsp/pagoAlta.jsp" />
+  </definition>
+    <definition extends=".baseDef" name=".pagoMultipleAltaDef">
+    <put name="body" value="/jsp/pagoMultipleAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".comprobantePendienteSeleccionarDef">
+    <put name="body" value="/jsp/comprobantePendienteSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".seleccionProductividadDef">
+    <put name="body" value="/jsp/seleccionProductividad.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".facturasSeleccionarDef">
+    <put name="body" value="/jsp/facturasSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".distribucionCobroDef">
+    <put name="body" value="/jsp/distribucionCobro.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".transferenciaComisionDef">
+    <put name="body" value="/jsp/transferenciaComision.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".transferenciaContraparteDef">
+    <put name="body" value="/jsp/transferenciaContraparte.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".transferenciaProductividadDef">
+    <put name="body" value="/jsp/transferenciaProductividad.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".transferenciaUDDef">
+    <put name="body" value="/jsp/transferenciaUD.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".ejecucionGastosUDDef">
+    <put name="body" value="/jsp/ejecucionGastosUD.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".transferenciaBuscarDef">
+    <put name="body" value="/jsp/transferenciaBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".transferenciaConicetBuscarDef">
+    <put name="body" value="/jsp/transferenciaConicetBuscar.jsp" />
+  </definition>
+    
+  
+  <definition extends=".baseDef" name=".ejecucionGastosBuscarDef">
+    <put name="body" value="/jsp/ejecucionGastosBuscar.jsp" />
+  </definition>
+  
+  
+  <definition extends=".baseDef" name=".cobroItemSeleccionarDef">
+    <put name="body" value="/jsp/cobroItemDistribucionSeleccionar.jsp" />
+  </definition>
+  
+  
+   <definition extends=".baseDef" name=".transferenciaAlta">
+    <put name="body" value="/jsp/transferenciaAlta.jsp" />
+  </definition>
+  
+   <definition extends=".baseDef" name=".informeAltaDef">
+    <put name="body" value="/jsp/informeAlta.jsp" />
+  </definition>  
+   <definition extends=".baseDef" name=".informeBuscarDef">
+    <put name="body" value="/jsp/informeBuscar.jsp" />
+  </definition>
+   <definition extends=".baseDef" name=".informeDetalleDef">
+    <put name="body" value="/jsp/informeDetalle.jsp" />
+  </definition>
+   <definition extends=".baseDef" name=".informeModificarDef">
+    <put name="body" value="/jsp/informeModificar.jsp" />
+  </definition>
+     <definition extends=".baseDef" name=".informeRapidoDef">
+    <put name="body" value="/jsp/informeRapido.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".seleccionContraparteDef">
+    <put name="body" value="/jsp/seleccionContraparte.jsp" />
+  </definition>
+   <definition extends=".baseDef" name=".informeProductividadBuscarDef">
+    <put name="body" value="/jsp/informeProductividadBuscar.jsp" />
+  </definition>
+  
+    <definition extends=".baseDef" name=".cobroReporteDef">
+    <put name="body" value="/jsp/cobroReporte.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".cobroListadoDef">
+    <put name="body" value="/jsp/cobroListado.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".facturaListadoDef">
+    <put name="body" value="/jsp/facturaListado.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".pendienteListadoDef">
+    <put name="body" value="/jsp/pendienteListado.jsp" />
+  </definition>
+     <definition extends=".baseDef" name=".saldoInicialDetalleDef">
+    <put name="body" value="/jsp/saldoInicialDetalle.jsp" />
+  </definition>
+     <definition extends=".baseDef" name=".disponibilidadFondosBuscarDef">
+    <put name="body" value="/jsp/disponibilidadFondosBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".administrarOFDef">
+    <put name="body" value="/jsp/ordenFacturacion/administrarOF.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".reporteContabilidadBuscarDef">
+    <put name="body" value="/jsp/reporteContabilidadBuscar.jsp" />
+  </definition>  
+   <definition extends=".baseDef" name=".saldoInicialBuscarDef">
+    <put name="body" value="/jsp/saldoInicialBuscar.jsp" />
+  </definition>
+   <definition extends=".baseDef" name=".saldoInicialDetalleDef">
+    <put name="body" value="/jsp/saldoInicialDetalle.jsp" />
+  </definition>
+   <definition extends=".baseDef" name=".saldoInicialAltaDef">
+    <put name="body" value="/jsp/saldoInicialAlta.jsp" />
+  </definition>
+   <definition extends=".baseDef" name=".saldoInicialModificarDef">
+    <put name="body" value="/jsp/saldoInicialModificar.jsp" />
+  </definition>
+   <definition extends=".baseDef" name=".saldoInicialEliminarDef">
+    <put name="body" value="/jsp/saldoInicialEliminar.jsp" />
+  </definition>
+  
+  
+</tiles-definitions>

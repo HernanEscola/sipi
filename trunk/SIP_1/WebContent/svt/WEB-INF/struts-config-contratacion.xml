@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="cPrecioOfertaAltaActionForm" type="conicet.apps.svt.web.presupuesto.form.CPrecioOfertaAltaActionForm" />
+    <form-bean name="cPrecioOfertaDetalleActionForm" type="conicet.apps.svt.web.presupuesto.form.CPrecioOfertaDetalleActionForm" />
+    <form-bean name="cPresupuestoActionForm" type="conicet.apps.svt.web.presupuesto.form.CPresupuestoActionForm" />
+    <form-bean name="cPresupuestoBuscarActionForm" type="conicet.apps.svt.web.presupuesto.form.CPresupuestoBuscarActionForm" />
+    <form-bean name="cOFPresupuestoBuscarActionForm" type="conicet.apps.svt.web.ordenFacturacion.form.COFPresupuestoBuscarActionForm" />
+    <form-bean name="cPrecioOfertaModificarActionForm" type="conicet.apps.svt.web.presupuesto.form.CPrecioOfertaModificarActionForm" />
+    <form-bean name="cPruebaActionForm" type="conicet.apps.svt.web.dispatcher.form.CPruebaActionForm" />
+    <form-bean name="cPrestadorBuscarDispatchActionForm" type="conicet.apps.svt.web.dispatcher.form.CPrestadorBuscarActionForm" />
+    <form-bean name="cPrecioSugeridoAltaActionForm" type="conicet.apps.svt.web.precioSugerido.form.CPrecioSugeridoAltaActionForm" />
+    <form-bean name="cPrecioSugeridoModificarActionForm" type="conicet.apps.svt.web.precioSugerido.form.CPrecioSugeridoModificarActionForm" />
+    <form-bean name="cPrecioSugeridoDetaActionForm" type="conicet.apps.svt.web.precioSugerido.form.CPrecioSugeridoDetaActionForm" />
+    <form-bean name="cPrecioSugeridoBuscarActionForm" type="conicet.apps.svt.web.precioSugerido.form.CPrecioSugeridoBuscarActionForm" />
+    <form-bean name="cCostoSeleccionarPrecioSugeridoActionForm" type="conicet.apps.svt.web.precioSugerido.form.CCostoSeleccionarPrecioSugeridoActionForm" />
+    <form-bean name="cPrecioSugeridoEliminarActionForm" type="conicet.apps.svt.web.precioSugerido.form.CPrecioSugeridoEliminarActionForm" />
+    <form-bean name="cPrecioSugeridoHabilitarActionForm" type="conicet.apps.svt.web.precioSugerido.form.CPrecioSugeridoHabilitarActionForm" />
+    <form-bean name="cCostoPrecioSeleccionarActionForm" type="conicet.apps.svt.web.presupuesto.form.CCostoPrecioSeleccionarActionForm" />
+  </form-beans>
+  <action-mappings>
+    <action input=".precioOfertaAltaDef" name="cPrecioOfertaAltaActionForm" path="/cPrecioOfertaAltaAction" scope="session" type="conicet.apps.svt.web.presupuesto.action.CPrecioOfertaAltaAction" validate="true">
+      <forward name="formulario" path=".precioOfertaAltaDef" />
+      <forward name="detalleOferta" path="/cOfertaTecnologicaDetalleAction.do?accion=ini" />
+      <forward name="detalleCosto" path="/cCostoDetalleAction.do?accion=ini" />
+      <forward name="detalleEntidad" path="/cEntidadDetalleAction.do?accion=ini" />
+      <forward name="presupuestoAlta" path="/cPresupuestoAltaAction.do?accion=agregarPrecio"/>
+      <forward name="presupuestoModificar" path="/cPresupuestoModificarAction.do?accion=agregarPrecio"/>
+    </action>
+    <action name="cPrecioOfertaDetalleActionForm" path="/cPrecioOfertaDetalleAction" scope="session" type="conicet.apps.svt.web.presupuesto.action.CPrecioOfertaDetalleAction">
+      <forward name="formulario" path=".precioOfertaDetalleDef" />
+      <forward name="detalleOferta" path="/cOfertaTecnologicaDetalleAction.do?accion=ini" />
+      <forward name="detalleCosto" path="/cCostoDetalleAction.do?accion=ini" />
+      <forward name="detalleEntidad" path="/cEntidadDetalleAction.do?accion=ini" />
+      <forward name="presupuestoAlta" path="/cPresupuestoAltaAction.do?accion=agregarOfertas"/>
+      <forward name="presupuestoDetalle" path=".presupuestoDetalleDef"/>
+      <forward name="presupuestoEliminar" path=".presupuestoEliminarDef"/>
+      <forward name="presupuestoHabilitarDeshabilitar" path=".presupuestoHabilitarDeshabilitarDef"/>
+      <forward name="presupuestoBuscar" path="/cPresupuestoBuscarAction.do?accion=refrescar"/>
+    </action>
+    <action input=".presupuestoBuscarDef" name="cPresupuestoBuscarActionForm" path="/cPresupuestoBuscarAction" scope="session" type="conicet.apps.svt.web.presupuesto.action.CPresupuestoBuscarAction" validate="true">
+      <forward name="formulario" path=".presupuestoBuscarDef" />
+      <forward name="detalle" path="/cPresupuestoDetalleAction.do?accion=ini" />
+      <forward name="configurarListado" path="/cConfigurarListadoAction.do?accion=ini"/>      
+      <forward name="listado" path=".presupuestoBuscarDef" />
+      <forward name="alta" path="/cPresupuestoAltaAction.do?accion=ini" />
+      <forward name="volverBusqueda" path="/cPresupuestoBuscarAction.do?accion=ini" />
+    </action>
+    <action input=".ordenFacturacionBuscarDef" name="cOFPresupuestoBuscarActionForm" path="/cOFPresupuestoBuscarAction" scope="session" type="conicet.apps.svt.web.ordenFacturacion.action.COFPresupuestoBuscarAction" validate="true">
+      <forward name="formulario" path=".ordenFacturacionBuscarDef" />
+      <forward name="detalle" path="/cPresupuestoDetalleAction.do?accion=ini" />
+      <forward name="configurarListado" path="/cConfigurarListadoAction.do?accion=ini"/>      
+      <forward name="listado" path=".ordenFacturacionBuscarDef" />
+      <forward name="alta" path="/cPresupuestoAltaAction.do?accion=ini" />
+      <forward name="volverBusqueda" path="/cOFPresupuestoBuscarAction.do?accion=ini" />
+    </action>
+
+    <action input=".presupuestoAltaDef" parameter="btnSubmit" name="cPresupuestoActionForm" path="/cPresupuestoAltaAction" scope="session" type="conicet.apps.svt.web.presupuesto.action.CPresupuestoAltaAction" validate="true">
+      <forward name="formulario" path=".presupuestoAltaDef" />
+      <forward name="listadoRecientes" path="/cPresupuestoBuscarAction.do?accion=refrescar&amp;btnSubmit=listadoRecientes"/>
+      <forward name="presupuestoBuscar" path="/cPresupuestoBuscarAction.do?accion=refrescar"/>
+      <forward name="presupuestoDetalle" path="/cPresupuestoDetalleAction.do?accion=ini"/>
+      <forward name="seleccionarContacto" path="/cContactoSeleccionarAction.do?method=init" />
+      
+      <forward name="seleccionarOferta" path="/cOfertaTecnologicaSeleccionarAction.do?accion=ini"/>
+      <forward name="seleccionarCostosPrecios" path="/cCostoPrecioSeleccionarAction.do?btnSubmit=refrescar"/>
+      <forward name="seleccionarGestor" path="/cUvtSeleccionarAction.do?accion=ini"/>
+      <forward name="precioAlta" path="/cPrecioOfertaAltaAction.do?accion=ini"/>
+      <forward name="detalleGestor" path="/cGestorDetalleAction.do?accion=ini"/>
+      <forward name="detalleContratante" path="/cContratanteDetalleAction.do?accion=ini"/>
+    </action>
+    <action input=".precioOfertaModificarDef" name="cPrecioOfertaModificarActionForm" path="/cPrecioOfertaModificarAction" scope="session" type="conicet.apps.svt.web.presupuesto.action.CPrecioOfertaModificarAction">
+      <forward name="formulario" path=".precioOfertaModificarDef" />
+      <forward name="detalleOferta" path="/cOfertaTecnologicaDetalleAction.do?accion=ini" />
+      <forward name="detalleCosto" path="/cCostoDetalleAction.do?accion=ini" />
+      <forward name="detalleEntidad" path="/cEntidadDetalleAction.do?accion=ini" />
+      <forward name="presupuestoModificar" path="/cPresupuestoModificarAction.do?accion=agregarPrecio"/>
+    </action>
+    <action input=".presupuestoDetalleDef" name="cPresupuestoActionForm" path="/cPresupuestoDetalleAction" scope="session" type="conicet.apps.svt.web.presupuesto.action.CPresupuestoDetalleAction" validate="true">
+      <forward name="formulario" path=".presupuestoDetalleDef" />
+      <forward name="presupuestoBuscar" path="/cPresupuestoBuscarAction.do?accion=refrescar"/>
+      <forward name="ordenFacturacionBuscar" path=".ordenFacturacionBuscarDef"/>
+      <forward name="presupuestoModificar" path="/cPresupuestoModificarAction.do?accion=ini"/>
+      <forward name="contratanteDetalle" path="/cContratanteDetalleAction.do?accion=ini"/>
+      <forward name="precioDetalle" path="/cPrecioOfertaDetalleAction.do?accion=ini"/>
+      <forward name="gestorDetalle" path="/cGestorDetalleAction.do?accion=ini"/>
+      <forward name="presupuestoEliminar" path="/cPresupuestoEliminarAction.do?accion=ini"/>
+      <forward name="presupuestoCopiar" path="/cPresupuestoAltaAction.do?accion=copiar"/>
+      <forward name="presupuestoHabilitar" path="/cPresupuestoHabilitarDeshabilitarAction.do?accion=ini"/>
+      <forward name="presupuestoDeshabilitar" path="/cPresupuestoHabilitarDeshabilitarAction.do?accion=ini"/>
+      <forward name="listadoOriginal" path=".presupuestoBuscarDef"/>
+      <forward name="presupuestoBuscar" path="/cPresupuestoBuscarAction.do?accion=refrescar"/>
+      <forward name="contratanteAnalisisDetalle" path=".contratanteAnalisisDetalleDef"/>
+      <forward name="administrarOF" path="/cAdministrarOFAction.do?method=init"/>
+
+    </action>
+	  <action input=".presupuestoModificarDef" name="cPresupuestoActionForm" path="/cPresupuestoModificarAction" scope="session" type="conicet.apps.svt.web.presupuesto.action.CPresupuestoModificarAction" validate="true">
+	    <forward name="formulario" path=".presupuestoModificarDef" />
+        <forward name="seleccionarContacto" path="/cContactoSeleccionarAction.do?method=init" />
+	    
+	    <forward name="seleccionarOferta" path="/cOfertaTecnologicaSeleccionarAction.do?accion=ini"/>
+        <forward name="seleccionarCostosPrecios" path="/cCostoPrecioSeleccionarAction.do?btnSubmit=refrescar"/>
+	    <forward name="seleccionarGestor" path="/cUvtSeleccionarAction.do?accion=ini"/>
+	    <forward name="precioModificar" path="/cPrecioOfertaModificarAction.do?accion=ini"/>
+	    <forward name="precioAlta" path="/cPrecioOfertaAltaAction.do?accion=ini"/>
+	    <forward name="presupuestoDetalle" path="/cPresupuestoDetalleAction.do?accion=ini"/>
+        <forward name="listado" path="/cPresupuestoBuscarAction.do?accion=refrescar"/>
+	    <forward name="detalleGestor" path="/cGestorDetalleAction.do?accion=ini"/>
+        <forward name="detalleContratante" path="/cContratanteDetalleAction.do?accion=ini"/>
+	  </action>
+    <action path="/cPresupuestoPDFAction" type="conicet.apps.svt.web.presupuesto.action.CPresupuestoPDFAction" />
+    <action path="/cOrdenFacturacionPDFAction" type="conicet.apps.svt.web.presupuesto.action.COrdenFacturacionPDFAction" />
+    
+    <action input=".presupuestoEliminarDef" name="cPresupuestoActionForm" path="/cPresupuestoEliminarAction" scope="session" type="conicet.apps.svt.web.presupuesto.action.CPresupuestoEliminarAction" validate="true">
+      <forward name="formulario" path=".presupuestoEliminarDef" />
+      <forward name="contratanteDetalle" path="/cContratanteDetalleAction.do?accion=ini"/>
+      <forward name="precioDetalle" path="/cPrecioOfertaDetalleAction.do?accion=ini"/>
+      <forward name="gestorDetalle" path="/cGestorDetalleAction.do?accion=ini"/>
+      <forward name="presupuestoDetalle" path="/cPresupuestoDetalleAction.do?accion=ini"/>
+      <forward name="listado" path="/cPresupuestoBuscarAction.do?accion=refrescar"/>
+    </action>
+    <action input=".presupuestoHabilitarDeshabilitarDef" name="cPresupuestoActionForm" path="/cPresupuestoHabilitarDeshabilitarAction" scope="session" type="conicet.apps.svt.web.presupuesto.action.CPresupuestoHabilitarDeshabilitarAction" validate="true">
+      <forward name="formulario" path=".presupuestoHabilitarDeshabilitarDef" />
+      <forward name="presupuestoDetalle" path="/cPresupuestoDetalleAction.do?accion=ini"/>
+      <forward name="listado" path="/cPresupuestoBuscarAction.do?accion=refrescar"/>
+      <forward name="contratanteDetalle" path="/cContratanteDetalleAction.do?accion=ini"/>
+      <forward name="precioDetalle" path="/cPrecioOfertaDetalleAction.do?accion=ini"/>
+      <forward name="gestorDetalle" path="/cGestorDetalleAction.do?method=ini"/>     
+    </action>
+    
+    <action path="/cPruebaAction" parameter="method" input=".pruebaDef" name="cPruebaActionForm" scope="session" type="conicet.apps.svt.web.dispatcher.action.CPruebaAction" validate="false">
+      <forward name="formulario" path=".pruebaDef" />
+    </action>
+    <action path="/cPrestadorBuscarDispatchAction" parameter="btnSubmit" input=".prestadorBuscarDispatchDef" name="cPrestadorBuscarDispatchActionForm" scope="session" type="conicet.apps.svt.web.dispatcher.action.CPrestadorBuscarAction" validate="false">
+      <forward name="formulario" path=".prestadorBuscarDispatchDef" />
+      <forward name="detalle" path="/cPrestadorDetalleAction.do?accion=ini" />
+    </action>
+    
+    
+    <action input=".precioSugeridoAltaDef" parameter="btnSubmit" name="cPrecioSugeridoAltaActionForm" path="/cPrecioSugeridoAltaAction" scope="session" type="conicet.apps.svt.web.precioSugerido.action.CPrecioSugeridoAltaAction" validate="true">
+      <forward name="formulario" path=".precioSugeridoAltaDef" />
+      <forward name="altaCfm" path=".precioSugeridoAltaDef" />
+      <forward name="listado" path=".precioSugeridoBuscarDef" />
+      <forward name="listadoRecientes" path="/cPrecioSugeridoBuscarAction.do?method=altasDelDia" />
+	  <forward name="cPrecioSugeridoBuscarAction" path="/cPrecioSugeridoBuscarAction.do?method=refrescar" />     
+      <forward name="seleccionar" path="/cCostoSeleccionarPrecioSugeridoAction.do?method=init" />
+      <forward name="detalleCosto" path="/cCostoDetalleAction.do?accion=ini" />
+    </action>
+    
+    <action input=".precioSugeridoDetaDef" parameter="btnSubmit" name="cPrecioSugeridoDetaActionForm" path="/cPrecioSugeridoDetaAction" scope="session" type="conicet.apps.svt.web.precioSugerido.action.CPrecioSugeridoDetaAction" validate="true">
+      <forward name="formulario" path=".precioSugeridoDetaDef" />
+	  <forward name="cPrecioSugeridoBuscarAction" path="/cPrecioSugeridoBuscarAction.do?method=refrescar" />     
+      <forward name="listado" path=".precioSugeridoBuscarDef" />
+      <forward name="modificar" path="/cPrecioSugeridoModificarAction.do?method=init" />
+      <forward name="eliminar" path="/cPrecioSugeridoEliminarAction.do?method=init" />
+      <forward name="habilitar" path="/cPrecioSugeridoHabilitarAction.do?method=init" />
+      <forward name="deshabilitar" path="/cPrecioSugeridoHabilitarAction.do?method=init" />
+      <forward name="detalleCosto" path="/cCostoDetalleAction.do?accion=ini" />
+    </action>
+
+    <action input=".precioSugeridoEliminarDef" parameter="btnSubmit" name="cPrecioSugeridoEliminarActionForm" path="/cPrecioSugeridoEliminarAction" scope="session" type="conicet.apps.svt.web.precioSugerido.action.CPrecioSugeridoEliminarAction" validate="true">
+      <forward name="formulario" path=".precioSugeridoEliminarDef" />
+	  <forward name="listado" path="/cPrecioSugeridoBuscarAction.do?method=refrescar" />   
+      <forward name="detalle" path=".precioSugeridoDetaDef" />
+      <forward name="detalleCosto" path="/cCostoDetalleAction.do?accion=ini" />
+    </action>
+    
+    <action input=".precioSugeridoHabilitarDef" parameter="btnSubmit" name="cPrecioSugeridoHabilitarActionForm" path="/cPrecioSugeridoHabilitarAction" scope="session" type="conicet.apps.svt.web.precioSugerido.action.CPrecioSugeridoHabilitarAction" validate="true">
+      <forward name="formulario" path=".precioSugeridoHabilitarDef" />
+	  <forward name="listado" path="/cPrecioSugeridoBuscarAction.do?method=refrescar" />   
+      <forward name="detalle" path=".precioSugeridoDetaDef" />
+      <forward name="detalleCosto" path="/cCostoDetalleAction.do?accion=ini" />
+    </action>
+
+    <action input=".precioSugeridoModificarDef" parameter="btnSubmit" name="cPrecioSugeridoModificarActionForm" path="/cPrecioSugeridoModificarAction" scope="session" type="conicet.apps.svt.web.precioSugerido.action.CPrecioSugeridoModificarAction" validate="true">
+      <forward name="formulario" path=".precioSugeridoModificarDef" />
+      <forward name="modificar" path="/cPrecioSugeridoModificarAction.do?method=init" />
+	  <forward name="listado" path="/cPrecioSugeridoBuscarAction.do?method=refrescar" />
+	  <forward name="detalle" path=".precioSugeridoDetaDef" />
+      <forward name="seleccionar" path="/cCostoSeleccionarPrecioSugeridoAction.do?method=init" />
+   	  <forward name="detalleCosto" path="/cCostoDetalleAction.do?accion=ini" />
+    </action>
+    <action input=".precioSugeridoBuscarDef"  parameter="btnSubmit" name="cPrecioSugeridoBuscarActionForm"  path="/cPrecioSugeridoBuscarAction" scope="session" type="conicet.apps.svt.web.precioSugerido.action.CPrecioSugeridoBuscarAction"  validate="true">
+      <forward name="formulario" path=".precioSugeridoBuscarDef" />
+      <forward name="listado" path=".precioSugeridoBuscarDef" />
+      <forward name="alta" path="/cPrecioSugeridoAltaAction.do?method=init" />
+      <forward name="detalle" path="/cPrecioSugeridoDetaAction.do?method=init" />
+    </action>
+    
+    <action input=".costoSeleccionarPrecioSugeridoDef" parameter="btnSubmit" name="cCostoSeleccionarPrecioSugeridoActionForm" path="/cCostoSeleccionarPrecioSugeridoAction" scope="session" type="conicet.apps.svt.web.precioSugerido.action.CCostoSeleccionarPrecioSugeridoAction" validate="true">
+      <forward name="formulario" path=".costoSeleccionarPrecioSugeridoDef" />
+      <forward name="cPrecioSugeridoAltaAction" path="/cPrecioSugeridoAltaAction.do?method=volverSeleccionar" />
+      <forward name="cPrecioSugeridoModificarAction" path="/cPrecioSugeridoModificarAction.do?method=volverSeleccionar" />
+    </action>
+    
+    <action input=".costoPrecioSeleccionarDef" parameter="btnSubmit" name="cCostoPrecioSeleccionarActionForm" path="/cCostoPrecioSeleccionarAction" scope="session" type="conicet.apps.svt.web.presupuesto.action.CCostoPrecioSeleccionarAction" validate="true">
+      <forward name="formulario" path=".costoPrecioSeleccionarDef" />
+      <forward name="presupuestoAlta" path="/cPresupuestoAltaAction.do?accion=agregarCostosPrecios" />
+      <forward name="presupuestoModificar" path="/cPresupuestoModificarAction.do?accion=agregarCostosPrecios" />
+      
+    </action>
+  
+    
+  </action-mappings>
+</struts-config>

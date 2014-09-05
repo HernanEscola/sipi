@@ -1,0 +1,8 @@
+[PropertyInfo]
+movimientoBancario,CMovimientoBancario,false,false, , ,false,<default>
+tipoMovimientoBancario,CTipoMovimientoBancario,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

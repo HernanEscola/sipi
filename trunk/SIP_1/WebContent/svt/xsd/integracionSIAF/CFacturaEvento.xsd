@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="CContratanteEvento.xsd"/>
+<xs:include schemaLocation="CEvento.xsd"/>
+
+
+	
+	<xs:element name="CFacturaEventoXml">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:long" minOccurs="0" />
+				<xs:element name="nroFactura" type="xs:string" minOccurs="0" />
+				<xs:element name="importe" type="xs:decimal" minOccurs="1" />
+				<xs:element name="fecha" type="xs:date" minOccurs="1"/>
+				<xs:element name="contratante" type="CContratanteEventoXml" minOccurs="1" />
+				<xs:element name="tipoServicioId" type="xs:int" minOccurs="0" />
+				<xs:element name="tipoServicioDescripcion" type="xs:string" minOccurs="0" />
+				<xs:element name="detalle" type="xs:string" minOccurs="0" />
+				<xs:element name="evento" type="CEventoXml"/>
+				<xs:element name="uvt" type="CUvtXml"/>
+				<xs:element name="clienteDe" type="xs:string" minOccurs="0" />
+				<xs:element name="usrMod" type="xs:string" minOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="CUvtXml">
+		<xs:sequence>
+			<xs:element name="cuit" type="xs:string" minOccurs="1" />
+			<xs:element name="descripcion" type="xs:string" minOccurs="1" />
+			<xs:element name="puntoVenta" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="svt" basedir=".">
+
+  <property file="build.properties"/>
+  <property environment="env"/>	
+  <property name="Tomcat.home" value="${env.TOMCAT_HOME}"/>
+  
+  <property name="application.home" value="C:/desarrollo/apps" />	
+  <property name="project.home" value="C:/desarrollo/apps/${webapp.name}"/>
+  <property name="project.home.web" value="${project.home}/${webapp.name}"/>
+
+
+  <property name="Catalina.home" value="${env.CATALINA_HOME}"/>
+  <property name="jdk.home" value="${env.JAVA_HOME}"/>
+  <property name="Ant.home" value="${env.ANT_HOME}"/>
+  <property name="src" value="${project.home}/src"/>
+  <property name="doc" value="${project.home}/Antdoc"/>
+  <property name="dest" value="${project.home.web}/WEB-INF/classes"/>
+  <property name="lib" value="${project.home.web}/WEB-INF/lib"/>
+  <property name="Generated.Source" value="${dest}/Temporary_Files"/>
+  
+  <property name="lib.project" value="${project.home.web}/WEB-INF/lib"/>
+  <property name="common.lib.home" value="${Tomcat.home}/common/lib"/>
+
+  <path id="project.class.path">
+    <pathelement location="${dest}"/>
+    <pathelement location="${lib.project.svt-lib}/*.jar"/>
+  	<!-- pathelement location="${lib.project.strutsLayout}/*.jar"/ -->
+  	<!-- pathelement location="${lib.project.hibernate}/*.jar"/>
+  	<pathelement location="${lib.project.poi}/*.jar"/>
+    <pathelement location="${lib.project.iText}/*.jar"/>
+    <pathelement location="${lib.project.jstl}/*.jar"/>
+    <pathelement location="${lib.project.log4j}/*.jar"/>
+    <pathelement location="${lib.project.displayTags}/*.jar"/>
+    <pathelement location="${lib.project.ehcache}/*.jar"/>
+    <pathelement location="${lib.project.auth}/*.jar"/>
+  	<pathelement location="${lib.project.authHelper}/*.jar"/>
+  	<pathelement location="${lib.project.global}/*.jar"/>
+  	<pathelement location="${lib.project.globalObject}/*.jar"/>
+    <pathelement location="${lib.project.batch}/*.jar"/>
+  	<pathelement location="${lib.project.cglib}/*.jar"/>
+  	<pathelement location="${lib.project.commons}/*.jar"/>
+  	<pathelement location="${lib.project.jsonsimple}/*.jar"/ -->
+  </path>
+
+  <patternset id="dest.exclude">
+    <exclude name="Temporary_Files/"/>
+    <exclude name="Generated Source/"/>
+    <exclude name="package cache/"/>
+    <exclude name="dependency cache/"/>
+    <exclude name="jsp cache/"/>
+  </patternset>
+
+  <target name="init" description="Crea el directorio classes">
+    <mkdir dir="${dest}"/>
+    <!--mkdir dir="${Generated.Source}"/-->
+  </target>
+
+  <target depends="init" name="javacompile">
+    <javac classpathref="project.class.path" debug="true" source="1.5" failonerror="true" deprecation="true" destdir="${dest}" nowarn="false" target="1.5">
+      <src path="${src}"/>
+      <!--src path="${Generated.Source}"/-->
+    </javac>
+  </target>
+	
+  <target depends="javacompile" name="compile"/>
+	
+  <target name="cleanup">
+    <delete file="${webapp.war}"/>
+    <delete failonerror="false" includeemptydirs="true">
+      <fileset dir="${dest}"/>
+    </delete>
+  </target>
+	
+  <target depends="cleanup" name="clean"/>
+	
+  <target name="deploy"/>
+	
+  <target depends="compile,package,deploy" name="make"/>
+	
+  <target depends="clean,make" name="rebuild"/>
+	
+  <target depends="WebModuleNode,javadoc,resource" name="package"/>
+	
+  <target depends="resource" name="WebModuleNode">
+    <war compress="false" destfile="C:/Wars Generados/${webapp.war}" webxml="${project.home.web}/WEB-INF/web.xml">
+      <fileset dir="${project.home.web}">
+        <include name="WEB-INF/*.dtd"/>
+        <include name="WEB-INF/*.properties"/>
+        <include name="WEB-INF/*.tld"/>
+        <include name="WEB-INF/*.xml"/>
+      </fileset>
+      <fileset dir="${project.home.web}">
+        <include name="imagenes/**"/>
+      </fileset>
+      <fileset dir="${project.home.web}">
+        <include name="index.jsp"/>
+      	<include name="salir.jsp"/>
+      </fileset>
+    	<fileset dir="${project.home.web}">
+    	  <include name="manuales/*.pdf"/>
+    	  <include name="manuales/*.xls"/>
+    	</fileset>
+      <fileset dir="${project.home.web}" description="agrego recursivamente todos los arch y directorios dentro de js">
+        <include name="js/**/*"/>
+      </fileset>
+      <fileset dir="${project.home.web}">
+        <include name="jsp/**/*"/>
+      </fileset>
+      <fileset dir="${project.home.web}">
+        <include name="styles/**/*"/>
+      </fileset>
+      <classes dir="${dest}">
+        <patternset refid="dest.exclude"/>
+        <include name="**/*.*"/>
+      </classes>
+      
+    	<lib dir="${lib}">
+    	  <include name="*.jar"/>
+    	</lib>
+    </war>
+  </target>
+  <target name="resource">
+    <copy todir="${dest}">
+      <fileset dir="${src}">
+        <include name="**/*.xmi"/>
+        <include name="**/*.au"/>
+        <include name="**/*.midi"/>
+        <include name="**/*.gif"/>
+        <include name="**/*.xml"/>
+        <include name="**/*.properties"/>
+        <include name="**/*.aiff"/>
+        <include name="**/*.jpe"/>
+        <include name="**/*.jpeg"/>
+        <include name="**/*.rmf"/>
+        <include name="**/*.wav"/>
+        <include name="**/*.mid"/>
+        <include name="**/*.png"/>
+        <include name="**/*.jpg"/>
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="javadoc">
+  </target>
+
+  <target name="mail">
+    <mail mailhost="${smtp.server}"  mailport="25" subject="Mi Voto">
+
+      <to address="voliveros@conicet.gov.ar" name="Vanesa Oliveros"/>
+      <to address="hteolis@conicet.gov.ar" name="Teolis El Beto"/>
+      <to address="vsavino@conicet.gov.ar" name="Vanesa Savino"/>
+      <to address="mkfuri@conicet.gov.ar" name="Mariano Kfuri"/>
+      <to address="rfinkel@conicet.gov.ar" name="Rafita"/>
+      <to address="mabbiati@conicet.gov.ar" name="Maria Cristina Abbiati"/>
+      <to address="jspairani@conicet.gov.ar" name="Julio Spairani"/>
+      <to address="fcoluccia@conicet.gov.ar" name="Flavio Coluccia"/>
+      <to address="dkux@conicet.gov.ar" name="Daniel Kux"/>
+      <cc address="akchiriff@conicet.gov.ar" name="Ana Karina Chiriff"/>
+      <cc address="lhammoe@conicet.gov.ar" name="Luchi"/>
+      <cc address="hhernand@conicet.gov.ar" name="Tito"/>	
+
+      <!--fileset file="C:/sasaf.war">
+      </fileset-->
+    </mail>
+  </target>
+	<target name="jar"  depends="javacompile">
+	  <jar destfile="svt.jar" basedir="${dest}"></jar>
+	</target>
+	  
+	<target name="build-jar" depends="jar">
+	  <copy file="svt.jar" todir="../../../../../../required libraries/Conicet" overwrite="true"/>
+	  <copy file="svt.jar" todir="${application.home}/svtp/svtp/WEB-INF/lib" overwrite="true"/>
+	  <delete file="svt.jar"/>
+	</target>
+	
+	<!-- VER ESTO PUEDE SERVIR EN UN FUTURO -->
+	<target name="synchronizeStyles">
+  	  <sync todir="${application.home}/svtp/svtp/styles">
+  	  	<fileset dir="${project.home.web}/styles">
+  		<include name="**/*" />
+  	  	</fileset>	
+    		  <preserveintarget>
+  	  	    <include name="**/CVS/**"/>
+  	  	  </preserveintarget>
+  	  </sync>
+	  <sync todir="${application.home}/siuvt/siuvt/styles">
+		  	  	<fileset dir="${project.home.web}/styles">
+		  		<include name="**/*" />
+		  	  	</fileset>	
+		    		  <preserveintarget>
+		  	  	    <include name="**/CVS/**"/>
+		  	  	  </preserveintarget>
+	  </sync>
+	</target>
+	
+	<target name="synchronizeJs">
+	    <sync todir="${application.home}/svtp/svtp/js">
+	      <fileset dir="${project.home.web}/js">
+	    <include name="**/*" />
+	      </fileset>  
+	        <preserveintarget>
+	          <include name="**/CVS/**"/>
+	        </preserveintarget>
+	    </sync>
+		 <sync todir="${application.home}/siuvt/siuvt/js">
+			      <fileset dir="${project.home.web}/js">
+			    <include name="**/*" />
+			      </fileset>  
+			        <preserveintarget>
+			          <include name="**/CVS/**"/>
+			        </preserveintarget>
+			    </sync>
+	</target>
+	
+	<target name="synchronizeJsp">
+	      <sync todir="${application.home}/svtp/svtp/jsp">
+	        <fileset dir="${project.home.web}/jsp">
+	          <include name="**/*" />
+	        </fileset>  
+	        <preserveintarget>
+	            <include name="**/CVS/**"/>
+	        </preserveintarget> 
+	      </sync>
+		  <sync todir="${application.home}/siuvt/siuvt/jsp">
+			        <fileset dir="${project.home.web}/jsp">
+			          <include name="**/*" />
+			        </fileset>  
+			        <preserveintarget>
+			            <include name="**/CVS/**"/>
+			        </preserveintarget> 
+			      </sync>
+	</target>
+	
+	<target name="synchronizeClasses">
+	        <sync todir="${application.home}/svtp/svtp/WEB-INF/classes/conicet">
+	          <fileset dir="${project.home.web}/WEB-INF/classes/conicet">
+	            <include name="**/*" />
+	          </fileset>  
+	        </sync>
+		 <sync todir="${application.home}/siuvt/siuvt/WEB-INF/classes/conicet">
+			          <fileset dir="${project.home.web}/WEB-INF/classes/conicet">
+			            <include name="**/*" />
+			          </fileset>  
+			        </sync>
+  </target>
+	
+	<!-- Esta tarea es similar a la de arriba pero excluía la carpeta layout porque podía tener archivos
+	diferentes entre SVT y SVTP
+	<target name="synchronizeJsp">
+      <sync todir="${application.home}/svtp/svtp/jsp">
+        <fileset dir="${project.home.web}/jsp">
+          <include name="*.jsp" />
+        	<include name="entidades/*.jsp" />
+        </fileset>  
+        <preserveintarget>
+            <include name="**/CVS/**"/>
+        	  <include name="**/layout/**"/>
+        </preserveintarget> 
+      </sync>
+  </target>
+  -->
+	
+	<target name="synchronizeLibs">
+		        <sync todir="${application.home}/svtp/svtp/WEB-INF/lib">
+		          <fileset dir="${project.home.web}/WEB-INF/lib">
+		            <include name="**/*" />
+		          </fileset>  
+		        </sync>
+		        <sync todir="${application.home}/siuvt/siuvt/WEB-INF/lib">
+				          <fileset dir="${project.home.web}/WEB-INF/lib">
+				            <include name="**/*" />
+				          </fileset>  
+				        </sync>
+	  </target>
+	
+	<target name="synchronize" depends="synchronizeStyles,synchronizeJs,synchronizeJsp,synchronizeClasses,synchronizeLibs" />
+</project>

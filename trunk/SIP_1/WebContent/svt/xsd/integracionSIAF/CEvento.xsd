@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="ETipoEventoXml">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A" />
+			<xs:enumeration value="M" />
+			<xs:enumeration value="E" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:element name="CEventoTypeXml" type="CEventoXml">
+	</xs:element>
+		<xs:complexType name="CEventoXml">
+			<xs:sequence>
+				<xs:element name="idAProcesar" type="xs:int" />
+				<xs:element name="tipoEvento" type="ETipoEventoXml"/>
+			</xs:sequence>
+		</xs:complexType>
+	
+</xs:schema>

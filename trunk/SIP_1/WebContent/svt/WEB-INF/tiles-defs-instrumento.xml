@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+              "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+              "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+  <definition extends=".baseDef" name=".contratanteAltaDef">
+    <put name="body" value="/jsp/contratanteAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratanteAltaCfmDef">
+    <put name="body" value="/jsp/contratanteAltaCfm.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratanteBuscarDef">
+    <put name="body" value="/jsp/contratanteBuscar.jsp" />
+  </definition>
+    <definition extends=".baseDef" name=".facturaDetalleDef">
+    <put name="body" value="/jsp/facturaDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratanteAnalisisBuscarDef">
+    <put name="body" value="/jsp/contratanteAnalisis/contratanteAnalisisBuscar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".contratanteAnalisisDetalleDef">
+    <put name="body" value="/jsp/contratanteAnalisis/contratanteAnalisisDetalle.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".contratanteListarDef">
+    <put name="body" value="/jsp/contratanteListar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratanteDetalleDef">
+    <put name="body" value="/jsp/contratanteDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratanteModificarDef">
+    <put name="body" value="/jsp/contratanteModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratanteEliminarDef">
+    <put name="body" value="/jsp/contratanteEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratanteHabilitarDef">
+    <put name="body" value="/jsp/contratanteHabilitar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".gestorBuscarDef">
+    <put name="body" value="/jsp/gestorBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".gestorListarDef">
+    <put name="body" value="/jsp/gestorListar.jsp" />
+  </definition>
+  <definition extends=".logDef" name=".gestorDetalleDef">
+    <put name="body" value="/jsp/gestorDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".gestorEliminarDef">
+    <put name="body" value="/jsp/gestorEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".gestorModificarDef">
+    <put name="body" value="/jsp/gestorModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".gestorModificarCfmDef">
+    <put name="body" value="/jsp/gestorModificarCfm.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".asesoriaAltaDef">
+    <put name="body" value="/jsp/asesoriaAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratacionStanAltaDef">
+    <put name="body" value="/jsp/contratacionStanAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".instrumentoAgregarDef">
+    <put name="body" value="/jsp/instrumentoAgregar.jsp" />
+  </definition>
+    <definition extends=".baseDef" name=".contratanteSeleccionDef">
+    <put name="body" value="/jsp/contratanteSeleccion.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".contratacionBuscarDef">
+    <put name="body" value="/jsp/contratacionBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratacionTipoSeleccionarDef">
+    <put name="body" value="/jsp/contratacionTipoSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".uvtAltaDef">
+    <put name="body" value="/jsp/uvtAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".sectorAltaCfmDef">
+    <put name="body" value="/jsp/sectorAltaCfm.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratacionStanModificarDef">
+    <put name="body" value="/jsp/contratacionStanModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".uvtAltaCfmDef">
+    <put name="body" value="/jsp/uvtAltaCfm.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contratanteModificarCfmDef">
+    <put name="body" value="/jsp/contratanteModificarCfm.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".gestorSeleccionarDef">
+    <put name="body" value="/jsp/gestorSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".convenioAltaDef">
+    <put name="body" value="/jsp/convenioAlta.jsp" />
+  </definition>
+  <definition extends=".bitacoraLogDef" name=".contratacionDetalleDef">
+    <put name="body" value="/jsp/contratacionDetalle.jsp" />
+  </definition>
+  <definition extends=".bitacoraDef" name=".contratacionEliminarDef">
+    <put name="body" value="/jsp/contratacionEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".convenioModificarDef">
+    <put name="body" value="/jsp/convenioModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".asesoriaModificarDef">
+    <put name="body" value="/jsp/asesoriaModificar.jsp" />
+  </definition>
+  <definition extends=".selectDef" name=".gestorElegirDef">
+    <put name="body" value="/jsp/gestorElegir.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".uvtSeleccionarDef">
+    <put name="body" value="/jsp/uvtSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".gestorHabilitarDef">
+    <put name="body" value="/jsp/gestorHabilitar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".contactoSeleccionarDef">
+    <put name="body" value="/jsp/contactoSeleccionar.jsp" />
+  </definition>
+   <definition extends=".bitacoraDef" name=".instrumentoDetalleDef">
+    <put name="body" value="/jsp/instrumento/instrumentoDetalle.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".convenioDef">
+    <put name="body" value="/jsp/instrumento/convenio.jsp" />
+  </definition>
+  
+  
+  
+  <definition extends=".baseDef" name=".contratanteAnalisisBuscarDef">
+    <put name="body" value="/jsp/contratanteAnalisis/contratanteAnalisisBuscar.jsp" />
+  </definition>
+  
+
+  <definition extends=".baseDef" name=".instrumentoBuscarDef">
+    <put name="body" value="/jsp/instrumento/instrumentoBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".pdtsBuscarDef">
+    <put name="body" value="/jsp/instrumento/pdtsBuscar.jsp" />
+  </definition>  
+   <definition extends=".bitacoraDef" name=".pdtsDetalleDef">
+    <put name="body" value="/jsp/instrumento/pdtsDetalle.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".pdtsDef">
+    <put name="body" value="/jsp/instrumento/pdts.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".modificarConvenioPdtDef">
+    <put name="body" value="/jsp/instrumento/convenioPdtModificar.jsp" />
+  </definition>
+
+
+
+  <definition extends=".baseDef" name=".convenioItemTramiteAltaDef">
+    <put name="body" value="/jsp/convenio/convenioItemTramiteAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".convenioItemTramiteModificarDef">
+    <put name="body" value="/jsp/convenio/convenioItemTramiteModificar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".instrumentoParticipacionDef">
+    <put name="body" value="/jsp/instrumento/instrumentoParticipacion/instrumentoParticipacion.jsp" />
+  </definition>
+
+  <definition extends=".baseDef" name=".asesoriaBuscarDef">
+    <put name="body" value="/jsp/asesoria/asesoriaBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".asesorAntecedenteBuscarDef">
+    <put name="body" value="/jsp/asesoria/informeAntecedentes.jsp" />
+  </definition>
+
+  <definition extends=".baseDef" name=".asesoriaDetalleDef">
+    <put name="body" value="/jsp/asesoria/asesoriaDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".asesoriaHabilitarDef">
+    <put name="body" value="/jsp/asesoria/asesoriaHabilitar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".asesoriaAltaDef">
+    <put name="body" value="/jsp/asesoria/asesoriaAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".asesoriaModificarDef">
+    <put name="body" value="/jsp/asesoria/asesoriaModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".asesoriaEntidadDetalleDef">
+    <put name="body" value="/jsp/asesoria/asesoriaEntidadDetalle.jsp" />
+  </definition>
+
+  <definition extends=".baseDef" name=".minutaBuscarDef">
+    <put name="body" value="/jsp/minuta/minutaBuscar.jsp" />
+  </definition>
+
+  <definition extends=".baseDef" name=".minutaDetalleDef">
+    <put name="body" value="/jsp/minuta/minutaDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".minutaEliminarDef">
+    <put name="body" value="/jsp/minuta/minutaEliminar.jsp" />
+  </definition>
+
+  <definition extends=".baseDef" name=".minutaAltaDef">
+    <put name="body" value="/jsp/minuta/minutaAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".minutaModificarDef">
+    <put name="body" value="/jsp/minuta/minutaModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".asesoriaSeleccionarDef">
+    <put name="body" value="/jsp/asesoria/asesoriaSeleccionar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".hojaRutaAltaDef">
+    <put name="body" value="/jsp/instrumento/hojaRuta/hojaRutaAlta.jsp" />
+  </definition>  
+  <definition extends=".baseDef" name=".hitoDef">
+    <put name="body" value="/jsp/instrumento/hito/hito.jsp" />
+  </definition>  	
+  <definition extends=".baseDef" name=".hitoBuscarDef">
+    <put name="body" value="/jsp/instrumento/hito/hitoBuscar.jsp" />
+  </definition>	
+</tiles-definitions>

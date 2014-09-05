@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+<xs:include schemaLocation="CEntidad.xsd"/>
+
+	<xs:complexType name="CUvtXml">
+		<xs:sequence>
+			<xs:element name="cuit" type="xs:string" minOccurs="1" />
+			<xs:element name="descripcion" type="xs:string" minOccurs="1" />
+			<xs:element name="puntoVenta" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="EEstadoEgresoXml">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="N" />
+			<xs:enumeration value="A" />
+			<xs:enumeration value="E" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ETipoEgresoXml">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EG" />
+			<xs:enumeration value="CC" />
+			<xs:enumeration value="CU" />
+			<xs:enumeration value="CUP" />
+			<xs:enumeration value="CP" />
+			<xs:enumeration value="UD" />
+			<xs:enumeration value="PR" />
+			<xs:enumeration value="PRP" />
+			<xs:enumeration value="DUMMY" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="CEgresoXml">
+		<xs:sequence>
+			<xs:element name="id" type="xs:long" minOccurs="1" />
+			<xs:element name="cuit" type="xs:string" minOccurs="0" /> <!-- (ID de personas) -->
+			<xs:element name="descripcion" type="xs:string" minOccurs="1" /> <!--(ID de Organismos) Sigla para organismos, Denominación para grupos y "Apellido, Nombre" para personas. -->
+			<xs:element name="tipo" type="ETipoEgresoXml" minOccurs="1" />
+			<xs:element name="estado" type="EEstadoEgresoXml" minOccurs="1" />
+			<xs:element name="monto" type="xs:decimal" minOccurs="0" />
+			<xs:element name="fecha" type="xs:date" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CEjecucionGastosXml">
+		<xs:complexContent>
+			<xs:extension base="CEgresoXml">
+				<xs:sequence>
+					<xs:element name="entidad" type="CEntidadXml" minOccurs="1" />				
+					<xs:element name="tipoComprobante" type="xs:string" minOccurs="0" />
+					<xs:element name="numero" type="xs:string" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CTransferenciaComisionXml">
+		<xs:complexContent>
+			<xs:extension base="CEgresoXml">
+				<xs:sequence>
+					<xs:element name="uvt" type="CUvtXml" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CTransferenciaContraparteXml">
+		<xs:complexContent>
+			<xs:extension base="CEgresoXml">
+				<xs:sequence>
+					<xs:element name="contraparte" type="COrganismoXml" minOccurs="1" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CTransferenciaProductividadXml">
+		<xs:complexContent>
+			<xs:extension base="CEgresoXml">
+				<xs:sequence>
+					<xs:element name="persona" type="CPersonaXml" minOccurs="1" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CTransferenciaUDXml">
+		<xs:complexContent>
+			<xs:extension base="CEgresoXml">
+				<xs:sequence>
+					<xs:element name="entidad" type="CEntidadXml" minOccurs="1" />
+					<xs:element name="montoBeneficio" type="xs:decimal" minOccurs="0" />
+					<xs:element name="montoCostos" type="xs:decimal" minOccurs="0" />
+
+					
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>	
+	
+</xs:schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="ETipoContratanteXml">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CF" />
+			<xs:enumeration value="OTROS" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element  name="CContratanteTypeEventoXml" type="CContratanteEventoXml"> 
+	</xs:element>
+
+		<xs:complexType name="CContratanteEventoXml">
+			<xs:sequence>
+				<xs:element name="id" type="xs:long" />
+				<xs:element name="tipo" type="ETipoContratanteXml" minOccurs="1" maxOccurs="1" />
+				<xs:element name="documentoCuit" type="xs:string" minOccurs="0" />
+				<xs:element name="nombreRazonSocial" type="xs:string" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+		
+
+</xs:schema>

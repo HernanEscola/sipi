@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-2.0.dtd">
+
+<hibernate-configuration>
+
+  <session-factory>
+    <mapping resource="conicet/framework/hibernate3/object/partido/CPartido.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/localidad/CLocalidad.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/provincia/CProvincia.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/pais/CPais.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/persona/CPersona.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/mail/CMail.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/escalafon/CEscalafon.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/telefono/CTelefono.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/lugarDeTrabajo/CLugarDeTrabajo.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/lugarDeTrabajo/CLugarDeTrabajoArbol.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/campoAplicacion/CCampoAplicacion.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/disciplinaPrimaria/CDisciplinaPrimaria.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/disciplinaDesagregada/CDisciplinaDesagregada.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/personaDatosAdicionales/CDatosAdicionalesPersona.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/categoria/CCategoria.hbm.xml" />
+    <mapping resource="conicet/framework/hibernate3/object/usuarioSarauth/IUsuarioObject.hbm.xml" />
+    <mapping resource="conicet/framework/file/object/configuracion/CConfiguracionPropiedad.hbm.xml" />
+    
+    <!-- Mapeos de las tablas de SVT -->
+    <mapping resource="conicet/apps/svt/object/prestador/CPrestador.hbm.xml" />
+    <!--mapping resource="conicet/apps/svt/object/tipoPrestador/CTipoPrestador.hbm.xml" /-->
+    <mapping resource="conicet/apps/svt/object/tipoContratante/CTipoContratante.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/contratanteMail/CContratanteMail.hbm.xml" ></mapping>
+    <mapping resource="conicet/apps/svt/object/contratante/CContratante.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/categoriaIva/CCategoriaIva.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoGestor/CTipoGestor.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/gestor/CGestor.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/ofertaTecnologica/COfertaTecnologica.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/otDisciplinaPrimaria/COtDisciplinaPrimaria.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/otDisciplinaDesagregada/COtDisciplinaDesagregada.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/otCampoAplicacion/COtCampoAplicacion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/otEquipo/COtEquipo.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/equipo/CEquipo.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoOferta/CTipoOferta.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoEstado/CTipoEstado.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoMoneda/CTipoMoneda.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoAgrupacion/CTipoAgrupacion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/contratacion/CContratacion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/contratoContratante/CContratoContratante.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/instrumentoEstado/CInstrumentoEstado.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/instrumento/CInstrumento.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/instrumentoCompromisoPago/CInstrumentoCompromisoPago.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/instrumentoDistribucion/CInstrumentoDistribucion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/stanCategoria/CStanCategoria.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/stanDistribucion/CStanDistribucion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/stanComisiones/CStanComisiones.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoEgreso/CTipoEgreso.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/stanCosto/CStanCosto.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/stanCosto/CStanCostoComposicion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/stanCosto/CStanCostoDistribucion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/clasificacionOnu/CClasificacionOnu.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/otClasificacionOnu/COtClasificacionOnu.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoContacto/CTipoContacto.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/grupoPersona/CGrupoPersona.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/grupoEgreso/CGrupoEgreso.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/instrumentoGestor/CInstrumentoGestor.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoPropiedad/CTipoPropiedad.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/propiedadInventor/CPropiedadInventor.hbm.xml"/>
+    <mapping resource="conicet/apps/svt/object/tipoContratacion/CTipoContratacion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/convenioMarco/CConvenioMarco.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/otGestor/COtGestor.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/entidadGestor/CEntidadGestor.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/entidadConvenioMarco/CEntidadConvenioMarco.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoConvenio/CTipoConvenio.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/admPrestadores/CEntidadOrganismoAdm.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoConvenioMarco/CTipoConvenioMarco.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/unidadPrestacion/CUnidadPrestacion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/vistaListado/CVistaListado.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/vistaUsuario/CVistaUsuario.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/organismoDirAcademico/COrganismoDirAcademico.hbm.xml" />
+   
+
+    <!-- Mapeos de las tablas de SVT Gesti?n Economica -->
+    <mapping resource="conicet/apps/svt/object/facturaDetalle/CFacturaDetalle.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/factura/CFactura.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/cobroDetalle/CCobroDetalle.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/cobro/CCobro.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/pagoDetalle/CPagoDetalle.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/pago/CPago.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/cuenta/CCuenta.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoCuenta/CTipoCuenta.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/transferenciaBancaria/CTransferenciaBancaria.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/cuentaMes/CCuentaMes.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/movimientoBancario/CMovimientoBancario.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoMovimientoBancario/CTipoMovimientoBancario.hbm.xml"/>
+    <mapping resource="conicet/apps/svt/object/tipoServicioConvenioMarco/CTipoServicioConvenioMarco.hbm.xml"/>
+    <mapping resource="conicet/apps/svt/object/bitacora/CBitacora.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/bitacoraElemento/CBitacoraElemento.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/entidad/CEntidad.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoEntidad/CTipoEntidad.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/propiedadInventorDistribucion/CPropiedadInventorDistribucion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/inventorDistribucion/CInventorDistribucion.hbm.xml" />
+    
+    <!--INVENTORES-->
+    <!--mapping resource="conicet/apps/svt/object/inventor/CInventor.hbm.xml" /-->
+
+    <!--co-titulares-->
+    <!--mapping resource="conicet/apps/svt/object/coTitular/CCoTitular.hbm.xml" /-->
+    <mapping resource="conicet/apps/svt/object/propiedadCoTitular/CPropiedadCoTitular.hbm.xml" />
+
+    <mapping resource="conicet/apps/svt/object/convenioMarcoItem/CConvenioMarcoItem.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoComparador/CTipoComparador.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/estadoTipoOferta/CEstadoTipoOferta.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/propiedadInstancias/CInstanciasTipoPropiedadIntelectual.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/propiedadInstancias/CTipoInstancia.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/propiedadInstancias/CPropiedadInstancia.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/instrumentoDistribucion/CInstrumentoComisiones.hbm.xml" />
+
+    <!--logs-->
+    <mapping resource="conicet/apps/svt/object/logEquipo/CLogEquipo.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/logContratante/CLogContratante.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/logOfertaTecnologica/CLogOfertaTecnologica.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/logEntidad/CLogEntidad.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/logGestor/CLogGestor.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/organismoRegistro/COrganismoRegistro.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/funcion/CFuncion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoUsuarioSvt/CTipoUsuarioSvt.hbm.xml"/>
+    <mapping resource="conicet/apps/svt/object/usuarioSvt/CUsuarioSvt.hbm.xml"/>
+    <mapping resource="conicet/apps/svt/object/funcionRol/CFuncionRol.hbm.xml"/>
+    <mapping resource="conicet/apps/svt/object/rol/CRol.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/rolAsigna/CRolAsigna.hbm.xml"/>
+    <mapping resource="conicet/apps/svt/object/logContratacion/CLogContratacion.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/logInstrumento/CLogInstrumento.hbm.xml" />
+    
+    <!--egresos-->
+    <mapping resource="conicet/apps/svt/object/comprobante/CComprobante.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/proveedor/CProveedor.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/tipoComprobante/CTipoComprobante.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/egresoTipoComprobante/CEgresoTipoComprobante.hbm.xml" />
+    <mapping resource="conicet/apps/svt/object/comprobanteDetalle/CComprobanteDetalle.hbm.xml" />
+    
+    <!-- Módulo Prestador -->
+    <mapping resource="conicet/apps/svtp/object/ofertaTecnologica/COfertaTecnologica.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/otCampoAplicacion/COtCampoAplicacion.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/otClasificacionOnu/COtClasificacionOnu.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/otDisciplinaDesagregada/COtDisciplinaDesagregada.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/otDisciplinaPrimaria/COtDisciplinaPrimaria.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/otEquipo/COtEquipo.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/stanCategoria/CStanCategoria.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/stanComisiones/CStanComisiones.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/stanCosto/CStanCosto.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/stanCosto/CStanCostoComposicion.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/stanCosto/CStanCostoDistribucion.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/stanDistribucion/CStanDistribucion.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/propiedadInventorDistribucion/CPropiedadInventorDistribucion.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/propiedadInventor/CPropiedadInventor.hbm.xml"/>
+    <mapping resource="conicet/apps/svtp/object/propiedadInstancias/CPropiedadInstancia.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/inventorDistribucion/CInventorDistribucion.hbm.xml"/>
+    <mapping resource="conicet/apps/svtp/object/propiedadCoTitular/CPropiedadCoTitular.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/equipo/CEquipo.hbm.xml" />
+    <mapping resource="conicet/apps/svtp/object/otAceptacion/COfertaTipoProperty.hbm.xml"/>
+    <mapping resource="conicet/apps/svtp/object/otAceptacion/COfertaPropertyEstado.hbm.xml"/>
+    <mapping resource="conicet/apps/svtp/object/envioOfertaPrestador/CEnvioOfertaPrestador.hbm.xml" />
+
+  </session-factory>
+</hibernate-configuration>

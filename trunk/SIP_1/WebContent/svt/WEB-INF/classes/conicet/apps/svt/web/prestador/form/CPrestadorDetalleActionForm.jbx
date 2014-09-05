@@ -1,0 +1,9 @@
+[PropertyInfo]
+CPrestador,CPrestador,false,false, , ,true,<default>
+prestador,CPrestador,false,false, , ,true,<default>
+tipo,String,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

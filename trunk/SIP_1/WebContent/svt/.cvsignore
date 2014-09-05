@@ -1,0 +1,47 @@
+bak
+classes
+svt.jpx.local
+Commons.library
+Jars.library
+doc
+Auth.library
+Struts 1.2.9.library
+GlobalObject.library
+Tomcat
+Tomcat_5.0
+cglib.library
+globalObjects.library
+svt.war
+hibernate 2.library
+svt
+.#.cvsignore.1.7
+Servlet.library
+svtddd
+.#Auth.library.1.1
+.#Commons.library.1.1.1.1
+.#Jars.library.1.1.1.1
+.#Servlet.library.1.2
+.#Struts 1.2.9.library.1.1
+iText.library
+Copy_of_Tomcat
+Struts-layout-1.2.library
+svt.oif
+.#Auth.library.1.2
+.#Commons.library.1.2
+.#Jars.library.1.2
+.#Servlet.library.1.3
+.#Struts 1.2.9.library.1.2
+Auth Helper.library
+Display Tags 1.1.library
+Log4j 1.2.13.library
+Xerces 2.6.2.library
+batch.library
+conicet global.library
+ehcache.library
+hibernate.library
+poi.library
+.myeclipse
+.settings
+.myumldata
+.classpath
+.project

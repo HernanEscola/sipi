@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+
+	<xs:simpleType name="ETipoEntidadXml">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PERSONA" />
+			<xs:enumeration value="ORGANISMO" />
+			<xs:enumeration value="CONTRAPARTE" />
+			<xs:enumeration value="GRUPO" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="CEntidadXml">
+		<xs:sequence>
+			<xs:element name="idEntidadExterna" type="xs:long" minOccurs="1" />
+			<xs:element name="cuit" type="xs:string" minOccurs="0" /> <!-- (ID de personas) -->
+			<xs:element name="descripcion" type="xs:string" minOccurs="1" /> <!--(ID de Organismos) Sigla para organismos, Denominación para grupos y "Apellido, Nombre" para personas. -->
+			<xs:element name="tipo" type="ETipoEntidadXml" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CPersonaXml">
+		<xs:complexContent>
+			<xs:extension base="CEntidadXml">
+				<xs:sequence>
+					<xs:element name="documento" type="xs:string" minOccurs="0" />
+					<xs:element name="apellido" type="xs:string" minOccurs="0" />
+					<xs:element name="nombre" type="xs:string" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="CGrupoXml">
+		<xs:complexContent>
+			<xs:extension base="CEntidadXml">
+				<xs:sequence>
+					<xs:element name="integrantes" type="CPersonaXml" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element name="jefeGrupo" type="CPersonaXml" minOccurs="1" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="COrganismoXml">
+		<xs:complexContent>
+			<xs:extension base="CEntidadXml">
+				<xs:sequence>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+</xs:schema>

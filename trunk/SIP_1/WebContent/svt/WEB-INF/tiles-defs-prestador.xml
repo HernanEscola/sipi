@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+              "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+              "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+  <definition extends=".baseDef" name=".ofertaAceptarListarDef">
+    <put name="body" value="/jsp/ofertaAceptarListar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".conocimientoAceptarModificacionesDef">
+    <put name="body" value="/jsp/conocimientoAceptarModificaciones.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".stanAceptarModificacionesDef">
+    <put name="body" value="/jsp/stanAceptarModificaciones.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".propiedadAceptarModificacionesDef">
+    <put name="body" value="/jsp/propiedadAceptarModificaciones.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".costoAceptarModificacionesDef">
+    <put name="body" value="/jsp/costoAceptarModificaciones.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".equipoAceptarModificacionesDef">
+    <put name="body" value="/jsp/equipoAceptarModificaciones.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".ofertaAceptarEliminacionDef">
+    <put name="body" value="/jsp/ofertaAceptarEliminacion.jsp"/>
+  </definition>
+  <definition extends=".baseDef" name=".ofertaAceptarAltaDef">
+    <put name="body" value="/jsp/ofertaAceptarAlta.jsp"/>
+  </definition>
+</tiles-definitions>

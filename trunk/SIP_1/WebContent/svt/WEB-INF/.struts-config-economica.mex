@@ -1,0 +1,1735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/cCuentaAltaAction.do" location="267,2904" dimension="308,88" />
+  <StrutsActivity path="/cCuentaBuscarAction.do" location="0,3092" dimension="321,88" />
+  <StrutsActivity path="/cCuentaDetalleAction.do" location="333,3280" dimension="322,88" />
+  <StrutsActivity path="/cCuentaEliminarAction.do" location="264,3468" dimension="325,88" />
+  <StrutsActivity path="/cCuentaModificarAction.do" location="707,3468" dimension="332,88" />
+  <StrutsActivity path="/cFacturaAltaAction.do" location="3719,0" dimension="312,88" />
+  <StrutsActivity path="/cFacturaBuscarAction.do" location="1159,208" dimension="325,88" />
+  <StrutsActivity path="/cFacturaDetalleAction.do" location="2207,476" dimension="326,88" />
+  <StrutsActivity path="/cFacturaEliminarAction.do" location="2460,744" dimension="329,88" />
+  <StrutsActivity path="/cFacturaAnularAction.do" location="2889,744" dimension="324,88" />
+  <StrutsActivity path="/cFacturaModificarAction.do" location="3313,744" dimension="336,88" />
+  <StrutsActivity path="/cCobroAltaAction.do" location="1901,1310" dimension="304,88" />
+  <StrutsActivity path="/cCobroBuscarAction.do" location="457,744" dimension="317,88" />
+  <StrutsActivity path="/cTransferenciaBancariaAltaAction.do" location="650,2018" dimension="380,88" />
+  <StrutsActivity path="/cTransferenciaBancariaBuscarAction.do" location="923,2226" dimension="393,88" />
+  <StrutsActivity path="/cTransferenciaBancariaDetalleAction.do" location="620,2414" dimension="394,88" />
+  <StrutsActivity path="/cTransferenciaBancariaEliminarAction.do" location="504,2602" dimension="397,88" />
+  <StrutsActivity path="/cTransferenciaBancariaModificarAction.do" location="0,2602" dimension="404,88" />
+  <StrutsActivity path="/cMovimientoBancarioAltaAction.do" location="1811,2018" dimension="368,88" />
+  <StrutsActivity path="/cMovimientoBancarioBuscarAction.do" location="2081,2206" dimension="381,88" />
+  <StrutsActivity path="/cMovimientoBancarioDetalleAction.do" location="1694,2414" dimension="382,88" />
+  <StrutsActivity path="/cMovimientoBancarioEliminarAction.do" location="1880,2602" dimension="385,88" />
+  <StrutsActivity path="/cMovimientoBancarioModificarAction.do" location="1361,2602" dimension="392,88" />
+  <StrutsActivity path="/cCobroDetalleAction.do" location="1237,1012" dimension="318,88" />
+  <StrutsActivity path="/cCobroEliminarAction.do" location="1480,1310" dimension="321,88" />
+  <StrutsActivity path="/cCobroMultipleAltaAction.do" location="1994,1736" dimension="340,88" />
+  <StrutsActivity path="/cFacturaPendienteSeleccionarAction.do" location="370,1548" dimension="395,88" />
+  <StrutsActivity path="/cFacturaPendienteDetalleAction.do" location="0,1736" dimension="374,88" />
+  <StrutsActivity path="/cCobroMultipleModificarAction.do" location="726,1310" dimension="364,88" />
+  <StrutsActivity path="/cContratacionPendienteSeleccionarAction.do" location="3581,1012" dimension="420,88" />
+  <StrutsActivity path="/cContratacionPendienteDetalleSeleccionarAction.do" location="3843,1310" dimension="453,88" />
+  <StrutsActivity path="/cCobroAnularAction.do" location="950,850" dimension="316,88" />
+  <StrutsActivity path="/cComprobanteAltaAction.do" location="50,450" dimension="368,88" />
+  <StrutsActivity path="/cProveedorSeleccionarAction.do" location="650,450" dimension="375,88" />
+  <StrutsActivity path="/cComprobanteContPendSeleccionarAction.do" location="1250,450" dimension="420,88" />
+  <StrutsActivity path="/cComprobanteContDetPendSeleccionarAction.do" location="1850,650" dimension="461,88" />
+  <StrutsActivity path="/cComprobanteBuscarAction.do" location="50,650" dimension="351,88" />
+  <StrutsActivity path="/cComprobanteDetalleAction.do" location="950,650" dimension="352,88" />
+  <StrutsActivity path="/cComprobanteModificarAction.do" location="1250,1750" dimension="362,88" />
+  <StrutsActivity path="/cComprobanteAnularAction.do" location="650,1150" dimension="350,88" />
+  <StrutsActivity path="/cPagoAltaAction.do" location="1850,450" dimension="297,88" />
+  <StrutsActivity path="/cPagoMultipleAltaAction.do" location="2450,1250" dimension="333,88" />
+  <StrutsActivity path="/cComprobantePendienteSeleccionarAction.do" location="2750,450" dimension="421,88" />
+  <StrutsActivity path=".cuentaAltaDef" location="421,3111" dimension="102,49" />
+  <StrutsActivity path=".cuentaBuscarDef" location="49,3487" dimension="115,49" />
+  <StrutsActivity path=".cuentaDetalleDef" location="607,3656" dimension="116,49" />
+  <StrutsActivity path=".cuentaEliminarDef" location="388,3656" dimension="119,49" />
+  <StrutsActivity path=".cuentaListarDef" location="179,3656" dimension="109,49" />
+  <StrutsActivity path=".cuentaModificarDef" location="831,3656" dimension="126,49" />
+  <StrutsActivity path=".facturaAltaDef" location="3942,227" dimension="104,49" />
+  <StrutsActivity path=".facturaBuscarDef" location="153,1567" dimension="117,49" />
+  <StrutsActivity path=".facturaDetalleDef" location="2491,1567" dimension="118,49" />
+  <StrutsActivity path=".facturaEliminarDef" location="2578,1031" dimension="121,49" />
+  <StrutsActivity path=".facturaAnularDef" location="3005,1031" dimension="116,49" />
+  <StrutsActivity path=".facturaModificarDef" location="3342,1031" dimension="128,49" />
+  <StrutsActivity path=".cobroAltaDef" location="2005,1567" dimension="96,49" />
+  <StrutsActivity path=".cobroBuscarDef" location="423,1329" dimension="109,49" />
+  <StrutsActivity path=".transferenciaBancariaAltaDef" location="619,2245" dimension="174,49" />
+  <StrutsActivity path=".transferenciaBancariaBuscarDef" location="1034,2810" dimension="187,49" />
+  <StrutsActivity path=".transferenciaBancariaDetalleDef" location="962,2621" dimension="188,49" />
+  <StrutsActivity path=".transferenciaBancariaEliminarDef" location="507,2810" dimension="191,49" />
+  <StrutsActivity path=".transferenciaBancariaModificarDef" location="70,2810" dimension="198,49" />
+  <StrutsActivity path=".movimientoBancarioAltaDef" location="1817,2225" dimension="164,49" />
+  <StrutsActivity path=".movimientoBancarioBuscarDef" location="2365,2621" dimension="177,49" />
+  <StrutsActivity path=".movimientoBancarioDetalleDef" location="1704,2790" dimension="178,49" />
+  <StrutsActivity path=".movimientoBancarioEliminarDef" location="1982,2790" dimension="181,49" />
+  <StrutsActivity path=".movimientoBancarioModificarDef" location="1416,2790" dimension="188,49" />
+  <StrutsActivity path=".cobroDetalleDef" location="1422,1567" dimension="110,49" />
+  <StrutsActivity path=".facturaListarByCobroDef" location="1190,1329" dimension="152,49" />
+  <StrutsActivity path=".cobroEliminarDef" location="1664,1567" dimension="113,49" />
+  <StrutsActivity path=".cobroMultipleAltaDef" location="2098,1924" dimension="132,49" />
+  <StrutsActivity path=".facturaPendienteSeleccionarDef" location="474,1755" dimension="187,49" />
+  <StrutsActivity path=".facturaPendienteDetalleDef" location="104,1924" dimension="166,49" />
+  <StrutsActivity path=".cobroMultipleModificarDef" location="1041,1567" dimension="156,49" />
+  <StrutsActivity path=".contratacionPendienteSeleccionarDef" location="3531,1329" dimension="212,49" />
+  <StrutsActivity path=".contratacionPendienteDetalleSeleccionarDef" location="3915,1567" dimension="245,49" />
+  <StrutsActivity path=".cobroAnularDef" location="1850,850" dimension="108,49" />
+  <StrutsActivity path="/cEntidadDetalleAction.do" location="350,950" dimension="163,75" />
+  <StrutsActivity path="/cEntidadSeleccionarAction.do" location="2150,850" dimension="184,75" />
+  <StrutsActivity path="/cGestorSeleccionarAction.do" location="50,950" dimension="180,75" />
+  <StrutsActivity path=".comprobanteAltaDef" location="650,950" dimension="132,49" />
+  <StrutsActivity path="/cGestorDetalleAction.do" location="350,1150" dimension="159,75" />
+  <StrutsActivity path="/cOtroOrganismoSeleccionarAction.do" location="1850,950" dimension="221,75" />
+  <StrutsActivity path="/cProveedorDetalleAction.do" location="950,1750" dimension="177,75" />
+  <StrutsActivity path=".proveedorSeleccionarDef" location="2150,1050" dimension="154,49" />
+  <StrutsActivity path="/cProveedorAltaAction.do" location="50,1150" dimension="163,75" />
+  <StrutsActivity path=".comprobanteContPendSeleccionarDef" location="1550,1150" dimension="214,49" />
+  <StrutsActivity path=".comprobanteContDetPendSeleccionarDef" location="1850,1150" dimension="231,49" />
+  <StrutsActivity path=".comprobanteBuscarDef" location="650,1050" dimension="145,49" />
+  <StrutsActivity path="/cComprobanteEliminarAction.do" location="2150,1150" dimension="195,75" />
+  <StrutsActivity path=".comprobanteDetalleDef" location="2450,1150" dimension="146,49" />
+  <StrutsActivity path="/cPagoBuscarAction.do" location="50,1350" dimension="150,75" />
+  <StrutsActivity path=".comprobanteModificarDef" location="2150,2350" dimension="156,49" />
+  <StrutsActivity path=".comporbanteModificarDef" location="2450,2350" dimension="156,49" />
+  <StrutsActivity path=".comprobanteAnularDef" location="2450,1750" dimension="144,49" />
+  <StrutsActivity path=".pagoAltaDef" location="1250,1150" dimension="93,49" />
+  <StrutsActivity path=".pagoMultipleAltaDef" location="2450,1850" dimension="129,49" />
+  <StrutsActivity path="/cPagoMultipleModificarAction.do" location="2750,1050" dimension="197,75" />
+  <StrutsActivity path="/cComprobanteDetPendSeleccionarAction.do" location="2750,1450" dimension="254,75" />
+  <StrutsActivity path=".comprobantePendienteSeleccionarDef" location="2750,1650" dimension="215,49" />
+  <StrutsActivity path=".indexDef" location="865,1567" dimension="76,49" />
+  <StrutsTransition id="/cFacturaModificarAction.do,volver,.facturaDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3515,832" />
+      <AbsolutePoint location="3515,1609" />
+      <AbsolutePoint location="2609,1609" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaPendienteSeleccionarAction.do,cobroMultiple,/cCobroMultipleAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="676,1636" />
+      <AbsolutePoint location="676,1914" />
+      <AbsolutePoint location="2104,1914" />
+      <AbsolutePoint location="2104,1824" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".pagoAltaDef,null,/cPagoAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1296,1199" />
+      <AbsolutePoint location="1296,1257" />
+      <AbsolutePoint location="2102,1257" />
+      <AbsolutePoint location="2102,985" />
+      <AbsolutePoint location="3768,985" />
+      <AbsolutePoint location="3768,347" />
+      <AbsolutePoint location="1998,347" />
+      <AbsolutePoint location="1998,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaBuscarAction.do,listado,.transferenciaBancariaBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1165,2314" />
+      <AbsolutePoint location="1165,2810" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaAltaAction.do,alta,.transferenciaBancariaAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="748,2106" />
+      <AbsolutePoint location="748,2245" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaModificarAction.do,confirmar,.facturaModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3455,832" />
+      <AbsolutePoint location="3455,1031" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteModificarAction.do,detalleGestor,/cGestorDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1401,1750" />
+      <AbsolutePoint location="1401,1271" />
+      <AbsolutePoint location="499,1271" />
+      <AbsolutePoint location="499,1225" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaAltaAction.do,seleccionContrataciones,/cContratacionPendienteSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3884,88" />
+      <AbsolutePoint location="3884,1012" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteModificarAction.do,listado,/cComprobanteBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1357,1750" />
+      <AbsolutePoint location="1357,1687" />
+      <AbsolutePoint location="337,1687" />
+      <AbsolutePoint location="337,738" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPagoAltaAction.do,listado,/cComprobanteBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1968,450" />
+      <AbsolutePoint location="1968,199" />
+      <AbsolutePoint location="-99,199" />
+      <AbsolutePoint location="-99,694" />
+      <AbsolutePoint location="50,694" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteBuscarAction.do,formularioBusqueda,.comprobanteBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="401,659" />
+      <AbsolutePoint location="922,659" />
+      <AbsolutePoint location="922,1087" />
+      <AbsolutePoint location="795,1087" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaModificarAction.do,modificar,.transferenciaBancariaModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="232,2690" />
+      <AbsolutePoint location="232,2810" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteContPendSeleccionarAction.do,formulario,.comprobanteContPendSeleccionarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1640,538" />
+      <AbsolutePoint location="1640,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaDetalleAction.do,formulario,.facturaDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2533,542" />
+      <AbsolutePoint location="3306,542" />
+      <AbsolutePoint location="3306,1591" />
+      <AbsolutePoint location="2609,1591" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroBuscarAction.do,listarCobrosByFactura,.cobroBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="457,818" />
+      <AbsolutePoint location="315,818" />
+      <AbsolutePoint location="315,1335" />
+      <AbsolutePoint location="423,1335" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaDetalleAction.do,altaCobro,/cCobroAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2207,556" />
+      <AbsolutePoint location="1844,556" />
+      <AbsolutePoint location="1844,1354" />
+      <AbsolutePoint location="1901,1354" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaPendienteSeleccionarAction.do,cobroMultipleModificar,/cCobroMultipleModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="741,1548" />
+      <AbsolutePoint location="741,1398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteDetalleAction.do,detalleProveedor,/cProveedorDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1140,650" />
+      <AbsolutePoint location="1140,643" />
+      <AbsolutePoint location="2442,643" />
+      <AbsolutePoint location="2442,1871" />
+      <AbsolutePoint location="1112,1871" />
+      <AbsolutePoint location="1112,1825" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaEliminarAction.do,eliminar,.transferenciaBancariaEliminarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="683,2690" />
+      <AbsolutePoint location="683,2810" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".transferenciaBancariaBuscarDef,null,/cTransferenciaBancariaBuscarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1221,2824" />
+      <AbsolutePoint location="1236,2824" />
+      <AbsolutePoint location="1236,2314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cProveedorSeleccionarAction.do,proveedorAlta,/cProveedorAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="819,538" />
+      <AbsolutePoint location="819,1042" />
+      <AbsolutePoint location="131,1042" />
+      <AbsolutePoint location="131,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteDetalleAction.do,formulario,.comprobanteDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1126,738" />
+      <AbsolutePoint location="1126,840" />
+      <AbsolutePoint location="2513,840" />
+      <AbsolutePoint location="2513,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaAltaAction.do,alta,.cuentaAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="436,2992" />
+      <AbsolutePoint location="436,3111" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".cobroBuscarDef,null,/cCobroBuscarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="477,1329" />
+      <AbsolutePoint location="477,1265" />
+      <AbsolutePoint location="-15,1265" />
+      <AbsolutePoint location="-15,133" />
+      <AbsolutePoint location="555,133" />
+      <AbsolutePoint location="555,744" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPagoAltaAction.do,detalleGestor,/cGestorDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2012,538" />
+      <AbsolutePoint location="2012,571" />
+      <AbsolutePoint location="4373,571" />
+      <AbsolutePoint location="4373,1435" />
+      <AbsolutePoint location="416,1435" />
+      <AbsolutePoint location="416,1225" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPagoMultipleAltaAction.do,seleccionComprobantes,/cComprobantePendienteSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2783,1294" />
+      <AbsolutePoint location="4247,1294" />
+      <AbsolutePoint location="4247,524" />
+      <AbsolutePoint location="3171,524" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioAltaAction.do,alta,.movimientoBancarioAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1936,2106" />
+      <AbsolutePoint location="1936,2225" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaDetalleAction.do,eliminar,/cTransferenciaBancariaEliminarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="817,2502" />
+      <AbsolutePoint location="817,2602" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".facturaModificarDef,null,/cFacturaModificarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3395,1031" />
+      <AbsolutePoint location="3395,832" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteDetalleAction.do,detalleGestor,/cGestorDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,659" />
+      <AbsolutePoint location="936,659" />
+      <AbsolutePoint location="936,1032" />
+      <AbsolutePoint location="429,1032" />
+      <AbsolutePoint location="429,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaBuscarAction.do,alta,/cTransferenciaBancariaAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1015,2226" />
+      <AbsolutePoint location="1015,2106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".cuentaBuscarDef,null,/cCuentaBuscarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="59,3487" />
+      <AbsolutePoint location="59,3180" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteBuscarAction.do,formulario,.comprobanteBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="371,738" />
+      <AbsolutePoint location="371,917" />
+      <AbsolutePoint location="550,917" />
+      <AbsolutePoint location="550,1065" />
+      <AbsolutePoint location="650,1065" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroDetalleAction.do,facturaByCobro,.facturaListarByCobroDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1237,1065" />
+      <AbsolutePoint location="1221,1065" />
+      <AbsolutePoint location="1221,1329" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioEliminarAction.do,eliminar,.movimientoBancarioEliminarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2072,2690" />
+      <AbsolutePoint location="2072,2790" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaPendienteDetalleAction.do,facturaPendiente,/cFacturaPendienteSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="374,1780" />
+      <AbsolutePoint location="389,1780" />
+      <AbsolutePoint location="389,1636" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".contratacionPendienteDetalleSeleccionarDef,null,/cContratacionPendienteDetalleSeleccionarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4037,1567" />
+      <AbsolutePoint location="4037,1398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteDetalleAction.do,modificar,/cComprobanteModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1281,738" />
+      <AbsolutePoint location="1281,914" />
+      <AbsolutePoint location="2126,914" />
+      <AbsolutePoint location="2126,1295" />
+      <AbsolutePoint location="1865,1295" />
+      <AbsolutePoint location="1865,1810" />
+      <AbsolutePoint location="1612,1810" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioModificarAction.do,modificar,.movimientoBancarioModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1587,2690" />
+      <AbsolutePoint location="1587,2790" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroMultipleModificarAction.do,volver,.cobroDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1090,1385" />
+      <AbsolutePoint location="1471,1385" />
+      <AbsolutePoint location="1471,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cContratacionPendienteSeleccionarAction.do,altaFactura,/cFacturaAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3854,1012" />
+      <AbsolutePoint location="3854,88" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAltaAction.do,detalleEntidad,/cEntidadDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="416,538" />
+      <AbsolutePoint location="416,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroEliminarAction.do,eliminar,.cobroEliminarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1679,1398" />
+      <AbsolutePoint location="1679,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteBuscarAction.do,alta,/cComprobanteAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="264,650" />
+      <AbsolutePoint location="264,538" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaAnularAction.do,anular,.facturaAnularDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3051,832" />
+      <AbsolutePoint location="3051,1031" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".pagoMultipleAltaDef,null,/cPagoMultipleAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2514,1899" />
+      <AbsolutePoint location="2514,2251" />
+      <AbsolutePoint location="2668,2251" />
+      <AbsolutePoint location="2668,1338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaEliminarAction.do,volver,.cuentaDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="589,3512" />
+      <AbsolutePoint location="670,3512" />
+      <AbsolutePoint location="670,3656" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteModificarAction.do,modificar,.comporbanteModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1526,1838" />
+      <AbsolutePoint location="1526,2547" />
+      <AbsolutePoint location="2527,2547" />
+      <AbsolutePoint location="2527,2399" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cContratacionPendienteDetalleSeleccionarAction.do,contratacionPendiente,/cContratacionPendienteSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3986,1310" />
+      <AbsolutePoint location="3986,1100" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteBuscarAction.do,detalle,/cComprobanteDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="401,695" />
+      <AbsolutePoint location="472,695" />
+      <AbsolutePoint location="472,341" />
+      <AbsolutePoint location="1126,341" />
+      <AbsolutePoint location="1126,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioBuscarAction.do,detalle,/cMovimientoBancarioDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2081,2250" />
+      <AbsolutePoint location="1996,2250" />
+      <AbsolutePoint location="1996,2414" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteDetalleAction.do,altaPago,/cPagoAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1302,694" />
+      <AbsolutePoint location="1745,694" />
+      <AbsolutePoint location="1745,494" />
+      <AbsolutePoint location="1850,494" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroDetalleAction.do,altaCobro,/cCobroAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1555,1057" />
+      <AbsolutePoint location="2088,1057" />
+      <AbsolutePoint location="2088,1310" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".facturaAltaDef,null,/cFacturaAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3994,227" />
+      <AbsolutePoint location="3994,88" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAnularAction.do,listado,/cComprobanteBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1228" />
+      <AbsolutePoint location="263,1228" />
+      <AbsolutePoint location="263,738" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteDetalleAction.do,listado,/cComprobanteBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,725" />
+      <AbsolutePoint location="401,725" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAnularAction.do,detalleEntidad,/cEntidadDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="825,1150" />
+      <AbsolutePoint location="825,1019" />
+      <AbsolutePoint location="513,1019" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAltaAction.do,detalleGestor,/cGestorDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,464" />
+      <AbsolutePoint location="-135,464" />
+      <AbsolutePoint location="-135,1065" />
+      <AbsolutePoint location="407,1065" />
+      <AbsolutePoint location="407,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPagoMultipleAltaAction.do,listado,/cPagoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2698,1338" />
+      <AbsolutePoint location="2698,2739" />
+      <AbsolutePoint location="-69,2739" />
+      <AbsolutePoint location="-69,1401" />
+      <AbsolutePoint location="50,1401" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaEliminarAction.do,eliminar,.facturaEliminarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2624,832" />
+      <AbsolutePoint location="2624,1031" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobantePendienteSeleccionarAction.do,pagoMultipleModificar,/cPagoMultipleModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2874,538" />
+      <AbsolutePoint location="2874,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroDetalleAction.do,anular,/cCobroAnularAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1251,1012" />
+      <AbsolutePoint location="1251,938" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteContPendSeleccionarAction.do,detalleC,/cComprobanteContDetPendSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1396,538" />
+      <AbsolutePoint location="1396,672" />
+      <AbsolutePoint location="1850,672" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPagoMultipleAltaAction.do,alta,.pagoMultipleAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2646,1338" />
+      <AbsolutePoint location="2646,2063" />
+      <AbsolutePoint location="2544,2063" />
+      <AbsolutePoint location="2544,1899" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroBuscarAction.do,detalle,/cCobroDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="774,788" />
+      <AbsolutePoint location="1396,788" />
+      <AbsolutePoint location="1396,1012" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaModificarAction.do,listado,/cFacturaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3485,832" />
+      <AbsolutePoint location="3485,1563" />
+      <AbsolutePoint location="1135,1563" />
+      <AbsolutePoint location="1135,1065" />
+      <AbsolutePoint location="870,1065" />
+      <AbsolutePoint location="870,695" />
+      <AbsolutePoint location="502,695" />
+      <AbsolutePoint location="502,252" />
+      <AbsolutePoint location="1159,252" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaAltaAction.do,confirmar,.cuentaAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="502,2992" />
+      <AbsolutePoint location="502,3111" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteModificarAction.do,contratacionPendiente,/cComprobanteContPendSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1459,1750" />
+      <AbsolutePoint location="1459,1631" />
+      <AbsolutePoint location="2360,1631" />
+      <AbsolutePoint location="2360,788" />
+      <AbsolutePoint location="1467,788" />
+      <AbsolutePoint location="1467,538" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteContPendSeleccionarAction.do,comprobanteModificar,/cComprobanteModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1366,538" />
+      <AbsolutePoint location="1366,984" />
+      <AbsolutePoint location="1165,984" />
+      <AbsolutePoint location="1165,1495" />
+      <AbsolutePoint location="1547,1495" />
+      <AbsolutePoint location="1547,1750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroMultipleModificarAction.do,confirmar,.cobroMultipleModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1056,1398" />
+      <AbsolutePoint location="1056,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobantePendienteSeleccionarAction.do,pagoMultiple,/cPagoMultipleAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2844,538" />
+      <AbsolutePoint location="2844,865" />
+      <AbsolutePoint location="2714,865" />
+      <AbsolutePoint location="2714,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioBuscarAction.do,formulario,.movimientoBancarioBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2410,2294" />
+      <AbsolutePoint location="2410,2621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteDetalleAction.do,pagoByComprobante,/cPagoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1104,650" />
+      <AbsolutePoint location="1104,407" />
+      <AbsolutePoint location="37,407" />
+      <AbsolutePoint location="37,1387" />
+      <AbsolutePoint location="50,1387" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAnularAction.do,detalleProveedor,/cProveedorDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="719,1238" />
+      <AbsolutePoint location="719,1532" />
+      <AbsolutePoint location="1004,1532" />
+      <AbsolutePoint location="1004,1750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroBuscarAction.do,formularioAvanzado,.cobroBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="457,788" />
+      <AbsolutePoint location="285,788" />
+      <AbsolutePoint location="285,1465" />
+      <AbsolutePoint location="477,1465" />
+      <AbsolutePoint location="477,1378" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroMultipleModificarAction.do,listado,/cCobroBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="908,1310" />
+      <AbsolutePoint location="908,1295" />
+      <AbsolutePoint location="-105,1295" />
+      <AbsolutePoint location="-105,865" />
+      <AbsolutePoint location="498,865" />
+      <AbsolutePoint location="498,832" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".movimientoBancarioAltaDef,null,/cMovimientoBancarioAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1899,2225" />
+      <AbsolutePoint location="1899,2106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaBuscarAction.do,formularioAvanzado,.facturaBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1441,208" />
+      <AbsolutePoint location="1441,163" />
+      <AbsolutePoint location="3478,163" />
+      <AbsolutePoint location="3478,695" />
+      <AbsolutePoint location="2420,695" />
+      <AbsolutePoint location="2420,1665" />
+      <AbsolutePoint location="241,1665" />
+      <AbsolutePoint location="241,1616" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".cobroMultipleAltaDef,null,/cCobroMultipleAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2194,1924" />
+      <AbsolutePoint location="2194,1824" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaAltaAction.do,listado,/cFacturaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3875,0" />
+      <AbsolutePoint location="3875,-45" />
+      <AbsolutePoint location="1291,-45" />
+      <AbsolutePoint location="1291,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroMultipleModificarAction.do,seleccionFacturas,/cFacturaPendienteSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="726,1353" />
+      <AbsolutePoint location="637,1353" />
+      <AbsolutePoint location="637,1548" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaAltaAction.do,listado,/cTransferenciaBancariaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="938,2106" />
+      <AbsolutePoint location="938,2226" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroAltaAction.do,confirmar,.cobroAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2023,1398" />
+      <AbsolutePoint location="2023,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cProveedorSeleccionarAction.do,comprobanteModificar,/cComprobanteModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="825,538" />
+      <AbsolutePoint location="825,984" />
+      <AbsolutePoint location="1045,984" />
+      <AbsolutePoint location="1045,1295" />
+      <AbsolutePoint location="1379,1295" />
+      <AbsolutePoint location="1379,1750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaEliminarAction.do,listado,/cFacturaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2624,744" />
+      <AbsolutePoint location="2624,-15" />
+      <AbsolutePoint location="1321,-15" />
+      <AbsolutePoint location="1321,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".contratacionPendienteSeleccionarDef,null,/cContratacionPendienteSeleccionarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3637,1329" />
+      <AbsolutePoint location="3637,1100" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaBuscarAction.do,detalle,/cTransferenciaBancariaDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="999,2314" />
+      <AbsolutePoint location="999,2414" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".transferenciaBancariaModificarDef,null,/cTransferenciaBancariaModificarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="169,2810" />
+      <AbsolutePoint location="169,2690" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroAnularAction.do,volver,.cobroDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1108,938" />
+      <AbsolutePoint location="1108,1555" />
+      <AbsolutePoint location="814,1555" />
+      <AbsolutePoint location="814,1743" />
+      <AbsolutePoint location="1477,1743" />
+      <AbsolutePoint location="1477,1616" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPagoAltaAction.do,detalleComprobante,.comprobanteDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2034,450" />
+      <AbsolutePoint location="2034,431" />
+      <AbsolutePoint location="3824,431" />
+      <AbsolutePoint location="3824,895" />
+      <AbsolutePoint location="2523,895" />
+      <AbsolutePoint location="2523,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaPendienteSeleccionarAction.do,formulario,.facturaPendienteSeleccionarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="567,1636" />
+      <AbsolutePoint location="567,1755" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaModificarAction.do,listado,/cTransferenciaBancariaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="202,2602" />
+      <AbsolutePoint location="202,1988" />
+      <AbsolutePoint location="1038,1988" />
+      <AbsolutePoint location="1038,2226" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".facturaPendienteDetalleDef,null,/cFacturaPendienteDetalleAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="187,1924" />
+      <AbsolutePoint location="187,1824" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".cobroMultipleModificarDef,null,/cCobroMultipleModificarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1041,1591" />
+      <AbsolutePoint location="965,1591" />
+      <AbsolutePoint location="965,1398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroAltaAction.do,alta,.cobroAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2053,1398" />
+      <AbsolutePoint location="2053,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioModificarAction.do,confirmar,.movimientoBancarioModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1557,2690" />
+      <AbsolutePoint location="1557,2790" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaModificarAction.do,confirmar,.transferenciaBancariaModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="202,2690" />
+      <AbsolutePoint location="202,2810" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAnularAction.do,volver,.comprobanteDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="922,1150" />
+      <AbsolutePoint location="922,1147" />
+      <AbsolutePoint location="2481,1147" />
+      <AbsolutePoint location="2481,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteContDetPendSeleccionarAction.do,formulario,.comprobanteContDetPendSeleccionarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2088,738" />
+      <AbsolutePoint location="2088,1038" />
+      <AbsolutePoint location="1965,1038" />
+      <AbsolutePoint location="1965,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaBuscarAction.do,volverBusqueda,/cTransferenciaBancariaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1112,2226" />
+      <AbsolutePoint location="1112,2070" />
+      <AbsolutePoint location="1436,2070" />
+      <AbsolutePoint location="1436,2259" />
+      <AbsolutePoint location="1316,2259" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioAltaAction.do,confirmar,.movimientoBancarioAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1966,2106" />
+      <AbsolutePoint location="1966,2225" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroAnularAction.do,anular,.cobroAnularDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1266,884" />
+      <AbsolutePoint location="1850,884" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".movimientoBancarioBuscarDef,null,/cMovimientoBancarioBuscarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2365,2645" />
+      <AbsolutePoint location="2321,2645" />
+      <AbsolutePoint location="2321,2294" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cProveedorSeleccionarAction.do,comprobanteAlta,/cComprobanteAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,524" />
+      <AbsolutePoint location="418,524" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaModificarAction.do,modificar,.facturaModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3425,832" />
+      <AbsolutePoint location="3425,1031" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".comprobanteContDetPendSeleccionarDef,null,/cComprobanteContDetPendSeleccionarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1979,1150" />
+      <AbsolutePoint location="1979,1107" />
+      <AbsolutePoint location="2481,1107" />
+      <AbsolutePoint location="2481,971" />
+      <AbsolutePoint location="2102,971" />
+      <AbsolutePoint location="2102,738" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteBuscarAction.do,formularioAvanzadoListar,.comprobanteBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="223,738" />
+      <AbsolutePoint location="223,931" />
+      <AbsolutePoint location="-39,931" />
+      <AbsolutePoint location="-39,1087" />
+      <AbsolutePoint location="650,1087" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".comprobanteModificarDef,null,/cComprobanteModificarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2228,2350" />
+      <AbsolutePoint location="2228,2329" />
+      <AbsolutePoint location="1739,2329" />
+      <AbsolutePoint location="1739,1780" />
+      <AbsolutePoint location="1612,1780" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteDetalleAction.do,eliminar,/cComprobanteEliminarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1302,716" />
+      <AbsolutePoint location="1808,716" />
+      <AbsolutePoint location="1808,1206" />
+      <AbsolutePoint location="2150,1206" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPagoAltaAction.do,detalleProveedor,/cProveedorDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2020,450" />
+      <AbsolutePoint location="2020,371" />
+      <AbsolutePoint location="4341,371" />
+      <AbsolutePoint location="4341,2181" />
+      <AbsolutePoint location="1060,2181" />
+      <AbsolutePoint location="1060,1825" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaDetalleAction.do,listado,.transferenciaBancariaBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="916,2502" />
+      <AbsolutePoint location="916,2834" />
+      <AbsolutePoint location="1034,2834" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAltaAction.do,comprobanteBuscar,/cComprobanteBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="204,538" />
+      <AbsolutePoint location="204,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaModificarAction.do,volver,.cuentaDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="708,3556" />
+      <AbsolutePoint location="708,3656" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaBuscarAction.do,formularioBusqueda,.facturaBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1321,296" />
+      <AbsolutePoint location="1321,401" />
+      <AbsolutePoint location="3288,401" />
+      <AbsolutePoint location="3288,1413" />
+      <AbsolutePoint location="245,1413" />
+      <AbsolutePoint location="245,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioDetalleAction.do,formulario,.movimientoBancarioDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1865,2502" />
+      <AbsolutePoint location="1865,2790" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioModificarAction.do,detalle,.movimientoBancarioDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1719,2690" />
+      <AbsolutePoint location="1719,2790" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroDetalleAction.do,eliminar,/cCobroEliminarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1495,1100" />
+      <AbsolutePoint location="1495,1310" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaBuscarAction.do,detalle,/cFacturaDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1484,252" />
+      <AbsolutePoint location="2370,252" />
+      <AbsolutePoint location="2370,476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaBuscarAction.do,alta,/cFacturaAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,208" />
+      <AbsolutePoint location="1351,15" />
+      <AbsolutePoint location="3719,15" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cContratacionPendienteSeleccionarAction.do,modificaFactura,/cFacturaModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3634,1012" />
+      <AbsolutePoint location="3634,832" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".comprobanteBuscarDef,null,/cComprobanteBuscarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1073" />
+      <AbsolutePoint location="347,1073" />
+      <AbsolutePoint location="347,738" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAltaAction.do,seleccionEntidad,/cEntidadSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="294,538" />
+      <AbsolutePoint location="294,609" />
+      <AbsolutePoint location="2326,609" />
+      <AbsolutePoint location="2326,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioModificarAction.do,listado,/cMovimientoBancarioBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1436,2602" />
+      <AbsolutePoint location="1436,2289" />
+      <AbsolutePoint location="2081,2289" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaAltaAction.do,confirmar,.transferenciaBancariaAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="778,2106" />
+      <AbsolutePoint location="778,2245" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cContratacionPendienteSeleccionarAction.do,formulario,.contratacionPendienteSeleccionarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3728,1100" />
+      <AbsolutePoint location="3728,1329" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaBuscarAction.do,listado,.cuentaBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="119,3180" />
+      <AbsolutePoint location="119,3487" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroEliminarAction.do,listado,/cCobroBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1779,1310" />
+      <AbsolutePoint location="1779,45" />
+      <AbsolutePoint location="585,45" />
+      <AbsolutePoint location="585,744" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaAltaAction.do,confirmar,.facturaAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4024,88" />
+      <AbsolutePoint location="4024,227" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaBuscarAction.do,formulario,.facturaBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1484,212" />
+      <AbsolutePoint location="3258,212" />
+      <AbsolutePoint location="3258,1714" />
+      <AbsolutePoint location="211,1714" />
+      <AbsolutePoint location="211,1616" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cProveedorSeleccionarAction.do,formulario,.proveedorSeleccionarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="837,450" />
+      <AbsolutePoint location="837,97" />
+      <AbsolutePoint location="4095,97" />
+      <AbsolutePoint location="4095,957" />
+      <AbsolutePoint location="2227,957" />
+      <AbsolutePoint location="2227,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaModificarAction.do,listado,/cCuentaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="873,3468" />
+      <AbsolutePoint location="873,3175" />
+      <AbsolutePoint location="321,3175" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaModificarAction.do,seleccionContrataciones,/cContratacionPendienteSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3596,832" />
+      <AbsolutePoint location="3596,1012" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioDetalleAction.do,listado,.movimientoBancarioBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2076,2459" />
+      <AbsolutePoint location="2465,2459" />
+      <AbsolutePoint location="2465,2621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroAnularAction.do,listado,/cCobroBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,895" />
+      <AbsolutePoint location="746,895" />
+      <AbsolutePoint location="746,832" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".comprobanteContPendSeleccionarDef,null,/cComprobanteContPendSeleccionarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1596,1150" />
+      <AbsolutePoint location="1596,538" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPagoMultipleAltaAction.do,confirmar,.pagoMultipleAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2624,1338" />
+      <AbsolutePoint location="2624,1874" />
+      <AbsolutePoint location="2579,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroMultipleAltaAction.do,confirmar,.cobroMultipleAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2164,1824" />
+      <AbsolutePoint location="2164,1924" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaDetalleAction.do,formulario,.transferenciaBancariaDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="977,2502" />
+      <AbsolutePoint location="977,2621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaAnularAction.do,volver,.facturaDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3184,832" />
+      <AbsolutePoint location="3184,1623" />
+      <AbsolutePoint location="2550,1623" />
+      <AbsolutePoint location="2550,1616" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAltaAction.do,seleccionGestor,/cGestorSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,494" />
+      <AbsolutePoint location="-75,494" />
+      <AbsolutePoint location="-75,987" />
+      <AbsolutePoint location="50,987" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaEliminarAction.do,listado,.cuentaListarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="273,3556" />
+      <AbsolutePoint location="273,3656" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteBuscarAction.do,formularioAvanzado,.comprobanteBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="357,738" />
+      <AbsolutePoint location="357,931" />
+      <AbsolutePoint location="637,931" />
+      <AbsolutePoint location="637,1059" />
+      <AbsolutePoint location="650,1059" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroBuscarAction.do,formulario,.cobroBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="517,832" />
+      <AbsolutePoint location="517,1329" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobantePendienteSeleccionarAction.do,detalleC,/cComprobanteDetPendSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3171,464" />
+      <AbsolutePoint location="4425,464" />
+      <AbsolutePoint location="4425,1487" />
+      <AbsolutePoint location="3004,1487" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaAltaAction.do,facturaBuscar,/cFacturaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3719,75" />
+      <AbsolutePoint location="1381,75" />
+      <AbsolutePoint location="1381,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaPendienteDetalleAction.do,formulario,.facturaPendienteDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="217,1824" />
+      <AbsolutePoint location="217,1924" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroAltaAction.do,listado,.facturaBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2205,1354" />
+      <AbsolutePoint location="3417,1354" />
+      <AbsolutePoint location="3417,3780" />
+      <AbsolutePoint location="-105,3780" />
+      <AbsolutePoint location="-105,1465" />
+      <AbsolutePoint location="185,1465" />
+      <AbsolutePoint location="185,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroBuscarAction.do,formularioBusqueda,.cobroBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="585,832" />
+      <AbsolutePoint location="585,1353" />
+      <AbsolutePoint location="532,1353" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroDetalleAction.do,listado,.cobroBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1429,1100" />
+      <AbsolutePoint location="1429,1517" />
+      <AbsolutePoint location="499,1517" />
+      <AbsolutePoint location="499,1378" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroMultipleAltaAction.do,alta,.cobroMultipleAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2134,1824" />
+      <AbsolutePoint location="2134,1924" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPagoAltaAction.do,detalleEntidad,/cEntidadDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1970,538" />
+      <AbsolutePoint location="1970,546" />
+      <AbsolutePoint location="802,546" />
+      <AbsolutePoint location="802,1002" />
+      <AbsolutePoint location="513,1002" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaDetalleAction.do,anular,/cFacturaAnularAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2420,564" />
+      <AbsolutePoint location="2420,609" />
+      <AbsolutePoint location="3051,609" />
+      <AbsolutePoint location="3051,744" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaDetalleAction.do,modificar,/cTransferenciaBancariaModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="620,2458" />
+      <AbsolutePoint location="232,2458" />
+      <AbsolutePoint location="232,2602" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaBuscarAction.do,formulario,.transferenciaBancariaBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1195,2314" />
+      <AbsolutePoint location="1195,2810" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaModificarAction.do,modificar,.cuentaModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="903,3556" />
+      <AbsolutePoint location="903,3656" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAnularAction.do,detalleGestor,/cGestorDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1194" />
+      <AbsolutePoint location="509,1194" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroDetalleAction.do,modificar,/cCobroMultipleModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1357,1100" />
+      <AbsolutePoint location="1357,1322" />
+      <AbsolutePoint location="1090,1322" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroDetalleAction.do,formulario,.cobroDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1451,1100" />
+      <AbsolutePoint location="1451,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteContPendSeleccionarAction.do,comprobanteAlta,/cComprobanteAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1321,450" />
+      <AbsolutePoint location="1321,431" />
+      <AbsolutePoint location="264,431" />
+      <AbsolutePoint location="264,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroBuscarAction.do,detalleFactura,.facturaDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="774,818" />
+      <AbsolutePoint location="2390,818" />
+      <AbsolutePoint location="2390,1591" />
+      <AbsolutePoint location="2491,1591" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioDetalleAction.do,eliminar,/cMovimientoBancarioEliminarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1895,2502" />
+      <AbsolutePoint location="1895,2602" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".facturaPendienteSeleccionarDef,null,/cFacturaPendienteSeleccionarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="597,1755" />
+      <AbsolutePoint location="597,1636" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaBuscarAction.do,detalle,/cCuentaDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="149,3180" />
+      <AbsolutePoint location="149,3324" />
+      <AbsolutePoint location="333,3324" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaBuscarAction.do,alta,/cCuentaAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,3092" />
+      <AbsolutePoint location="282,2992" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaEliminarAction.do,eliminar,.cuentaEliminarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="426,3556" />
+      <AbsolutePoint location="426,3656" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaAltaAction.do,listado,/cCuentaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="306,2992" />
+      <AbsolutePoint location="306,3092" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPagoAltaAction.do,alta,.pagoAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1984,538" />
+      <AbsolutePoint location="1984,585" />
+      <AbsolutePoint location="1618,585" />
+      <AbsolutePoint location="1618,1137" />
+      <AbsolutePoint location="1515,1137" />
+      <AbsolutePoint location="1515,1174" />
+      <AbsolutePoint location="1343,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroBuscarAction.do,alta,/cCobroMultipleAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="615,832" />
+      <AbsolutePoint location="615,1465" />
+      <AbsolutePoint location="2164,1465" />
+      <AbsolutePoint location="2164,1736" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAltaAction.do,detalleProveedor,/cProveedorDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="174,538" />
+      <AbsolutePoint location="174,609" />
+      <AbsolutePoint location="15,609" />
+      <AbsolutePoint location="15,1495" />
+      <AbsolutePoint location="1026,1495" />
+      <AbsolutePoint location="1026,1750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroEliminarAction.do,volver,.cobroDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1517,1398" />
+      <AbsolutePoint location="1517,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".cobroAltaDef,null,/cCobroAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2101,1591" />
+      <AbsolutePoint location="2116,1591" />
+      <AbsolutePoint location="2116,1398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteContDetPendSeleccionarAction.do,contratacionPendiente,/cComprobanteContPendSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1956,650" />
+      <AbsolutePoint location="1956,571" />
+      <AbsolutePoint location="1618,571" />
+      <AbsolutePoint location="1618,538" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAltaAction.do,seleccionProveedor,/cProveedorSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="418,494" />
+      <AbsolutePoint location="650,494" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaAltaAction.do,alta,.facturaAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3957,88" />
+      <AbsolutePoint location="3957,227" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cContratacionPendienteSeleccionarAction.do,detalleC,/cContratacionPendienteDetalleSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3858,1100" />
+      <AbsolutePoint location="3858,1310" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAltaAction.do,seleccionContratacion,/cComprobanteContPendSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="234,450" />
+      <AbsolutePoint location="234,371" />
+      <AbsolutePoint location="1351,371" />
+      <AbsolutePoint location="1351,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteModificarAction.do,detalleProveedor,/cProveedorDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1794" />
+      <AbsolutePoint location="1127,1794" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobantePendienteSeleccionarAction.do,formulario,.comprobantePendienteSeleccionarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3171,494" />
+      <AbsolutePoint location="4311,494" />
+      <AbsolutePoint location="4311,1674" />
+      <AbsolutePoint location="2965,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".facturaBuscarDef,null,/cFacturaBuscarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="181,1616" />
+      <AbsolutePoint location="181,1665" />
+      <AbsolutePoint location="-15,1665" />
+      <AbsolutePoint location="-15,2151" />
+      <AbsolutePoint location="3228,2151" />
+      <AbsolutePoint location="3228,-135" />
+      <AbsolutePoint location="1231,-135" />
+      <AbsolutePoint location="1231,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioAltaAction.do,listado,/cMovimientoBancarioBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2096,2106" />
+      <AbsolutePoint location="2096,2206" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAltaAction.do,formulario,.comprobanteAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,524" />
+      <AbsolutePoint location="-45,524" />
+      <AbsolutePoint location="-45,895" />
+      <AbsolutePoint location="716,895" />
+      <AbsolutePoint location="716,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroMultipleAltaAction.do,listado,/cCobroBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1994,1780" />
+      <AbsolutePoint location="1826,1780" />
+      <AbsolutePoint location="1826,311" />
+      <AbsolutePoint location="615,311" />
+      <AbsolutePoint location="615,744" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteModificarAction.do,confirmar,.comprobanteModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1556,1838" />
+      <AbsolutePoint location="1556,2374" />
+      <AbsolutePoint location="2150,2374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroBuscarAction.do,formularioAvListar,.cobroBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="457,758" />
+      <AbsolutePoint location="245,758" />
+      <AbsolutePoint location="245,1365" />
+      <AbsolutePoint location="423,1365" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioBuscarAction.do,alta,/cMovimientoBancarioAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2164,2206" />
+      <AbsolutePoint location="2164,2106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaBuscarAction.do,formularioAvanzadoListar,.facturaBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1351,296" />
+      <AbsolutePoint location="1351,341" />
+      <AbsolutePoint location="1685,341" />
+      <AbsolutePoint location="1685,1115" />
+      <AbsolutePoint location="-45,1115" />
+      <AbsolutePoint location="-45,1591" />
+      <AbsolutePoint location="153,1591" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".movimientoBancarioModificarDef,null,/cMovimientoBancarioModificarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1510,2790" />
+      <AbsolutePoint location="1510,2690" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteDetalleAction.do,anular,/cComprobanteAnularAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,695" />
+      <AbsolutePoint location="900,695" />
+      <AbsolutePoint location="900,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroAltaAction.do,detalleFactura,.facturaDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2083,1398" />
+      <AbsolutePoint location="2083,1495" />
+      <AbsolutePoint location="2550,1495" />
+      <AbsolutePoint location="2550,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".cuentaAltaDef,null,/cCuentaAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="472,3111" />
+      <AbsolutePoint location="472,2992" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaDetalleAction.do,modificar,/cCuentaModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="655,3324" />
+      <AbsolutePoint location="843,3324" />
+      <AbsolutePoint location="843,3468" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaBuscarAction.do,formulario,.cuentaBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="89,3180" />
+      <AbsolutePoint location="89,3487" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".cuentaModificarDef,null,/cCuentaModificarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="933,3656" />
+      <AbsolutePoint location="933,3556" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cContratacionPendienteDetalleSeleccionarAction.do,formulario,.contratacionPendienteDetalleSeleccionarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4069,1398" />
+      <AbsolutePoint location="4069,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaEliminarAction.do,volver,.facturaDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2481,832" />
+      <AbsolutePoint location="2481,917" />
+      <AbsolutePoint location="3170,917" />
+      <AbsolutePoint location="3170,1385" />
+      <AbsolutePoint location="2572,1385" />
+      <AbsolutePoint location="2572,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaModificarAction.do,confirmar,.cuentaModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="873,3556" />
+      <AbsolutePoint location="873,3656" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaPendienteSeleccionarAction.do,detalleF,/cFacturaPendienteDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="370,1592" />
+      <AbsolutePoint location="315,1592" />
+      <AbsolutePoint location="315,1736" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".proveedorSeleccionarDef,null,/cProveedorSeleccionarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2241,1050" />
+      <AbsolutePoint location="2241,999" />
+      <AbsolutePoint location="3684,999" />
+      <AbsolutePoint location="3684,185" />
+      <AbsolutePoint location="851,185" />
+      <AbsolutePoint location="851,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteModificarAction.do,detalleEntidad,/cEntidadDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1415,1750" />
+      <AbsolutePoint location="1415,1137" />
+      <AbsolutePoint location="451,1137" />
+      <AbsolutePoint location="451,1025" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteDetalleAction.do,detalleEntidad,/cEntidadDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,673" />
+      <AbsolutePoint location="438,673" />
+      <AbsolutePoint location="438,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTransferenciaBancariaEliminarAction.do,listado,/cTransferenciaBancariaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="901,2606" />
+      <AbsolutePoint location="1119,2606" />
+      <AbsolutePoint location="1119,2314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioDetalleAction.do,modificar,/cMovimientoBancarioModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1738,2502" />
+      <AbsolutePoint location="1738,2602" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaDetalleAction.do,modificar,/cFacturaModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2390,564" />
+      <AbsolutePoint location="2390,725" />
+      <AbsolutePoint location="3478,725" />
+      <AbsolutePoint location="3478,744" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaDetalleAction.do,formulario,.cuentaDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="622,3368" />
+      <AbsolutePoint location="622,3656" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteModificarAction.do,volver,.comprobanteDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1586,1838" />
+      <AbsolutePoint location="1586,1988" />
+      <AbsolutePoint location="3050,1988" />
+      <AbsolutePoint location="3050,1174" />
+      <AbsolutePoint location="2596,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPagoAltaAction.do,confirmar,.pagoAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1998,538" />
+      <AbsolutePoint location="1998,585" />
+      <AbsolutePoint location="4165,585" />
+      <AbsolutePoint location="4165,1245" />
+      <AbsolutePoint location="1310,1245" />
+      <AbsolutePoint location="1310,1199" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaDetalleAction.do,cobroByFactura,/cCobroBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2360,564" />
+      <AbsolutePoint location="2360,758" />
+      <AbsolutePoint location="774,758" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaAnularAction.do,listado,/cFacturaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3186,744" />
+      <AbsolutePoint location="3186,-105" />
+      <AbsolutePoint location="1261,-105" />
+      <AbsolutePoint location="1261,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioEliminarAction.do,listado,/cMovimientoBancarioBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2096,2602" />
+      <AbsolutePoint location="2096,2294" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaDetalleAction.do,eliminar,/cCuentaEliminarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="494,3368" />
+      <AbsolutePoint location="494,3468" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaDetalleAction.do,listado,/cFacturaBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2400,476" />
+      <AbsolutePoint location="2400,133" />
+      <AbsolutePoint location="1411,133" />
+      <AbsolutePoint location="1411,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cFacturaDetalleAction.do,eliminar,/cFacturaEliminarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2475,564" />
+      <AbsolutePoint location="2475,744" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cMovimientoBancarioBuscarAction.do,listado,.movimientoBancarioBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2380,2294" />
+      <AbsolutePoint location="2380,2621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroMultipleAltaAction.do,seleccionFacturas,/cFacturaPendienteSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2245,1824" />
+      <AbsolutePoint location="2245,2121" />
+      <AbsolutePoint location="459,2121" />
+      <AbsolutePoint location="459,1636" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCuentaDetalleAction.do,listado,.cuentaBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="333,3354" />
+      <AbsolutePoint location="149,3354" />
+      <AbsolutePoint location="149,3487" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".comprobantePendienteSeleccionarDef,null,/cComprobantePendienteSeleccionarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2857,1699" />
+      <AbsolutePoint location="2857,2459" />
+      <AbsolutePoint location="4395,2459" />
+      <AbsolutePoint location="4395,665" />
+      <AbsolutePoint location="2960,665" />
+      <AbsolutePoint location="2960,538" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAnularAction.do,anular,.comprobanteAnularDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1000,1232" />
+      <AbsolutePoint location="2337,1232" />
+      <AbsolutePoint location="2337,1774" />
+      <AbsolutePoint location="2450,1774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".comprobanteAltaDef,null,/cComprobanteAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="782,954" />
+      <AbsolutePoint location="1715,954" />
+      <AbsolutePoint location="1715,-75" />
+      <AbsolutePoint location="204,-75" />
+      <AbsolutePoint location="204,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCobroMultipleModificarAction.do,modificar,.cobroMultipleModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1086,1398" />
+      <AbsolutePoint location="1086,1567" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAltaAction.do,seleccionOtroOrganismo,/cOtroOrganismoSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="324,538" />
+      <AbsolutePoint location="324,579" />
+      <AbsolutePoint location="1437,579" />
+      <AbsolutePoint location="1437,984" />
+      <AbsolutePoint location="1850,984" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".transferenciaBancariaAltaDef,null,/cTransferenciaBancariaAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="706,2245" />
+      <AbsolutePoint location="706,2106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cComprobanteAltaAction.do,listado,/cComprobanteBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="234,538" />
+      <AbsolutePoint location="234,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

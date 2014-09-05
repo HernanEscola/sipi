@@ -1,0 +1,34 @@
+[PropertyInfo]
+CGestor,CGestor,false,false, , ,true,<default>
+codPostal,String,false,false, , ,false,<default>
+comboLocalidad,Collection,false,false, , ,false,<default>
+comboProvincia,Collection,false,false, , ,false,<default>
+contacto,String,false,false, , ,false,<default>
+contactoMail,String,false,false, , ,false,<default>
+cuit,String,false,false, , ,true,<default>
+cuitNumero,String,false,false, , ,true,<default>
+cuitPrefijo,String,false,false, , ,true,<default>
+cuitSufijo,String,false,false, , ,true,<default>
+descripcion,String,false,false, , ,true,<default>
+domicilio,String,false,false, , ,false,<default>
+email,String,false,false, , ,true,<default>
+email1,String,false,false, , ,false,<default>
+email2,String,false,false, , ,false,<default>
+email3,String,false,false, , ,false,<default>
+estado,String,false,false, , ,true,<default>
+fax,String,false,false, , ,false,<default>
+gestor,CGestor,false,false, , ,true,<default>
+habilitado,String,false,false, , ,true,<default>
+id,Long,false,false, , ,true,<default>
+Id,Long,false,false, , ,false,<default>
+localidad,String,false,false, , ,false,<default>
+provincia,String,false,false, , ,false,<default>
+sigla,String,false,false, , ,true,<default>
+telefono,String,false,false, , ,true,<default>
+tipoGestor,String,false,false, , ,true,<default>
+web,String,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

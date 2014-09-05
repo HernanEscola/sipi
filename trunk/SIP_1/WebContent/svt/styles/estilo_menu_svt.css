@@ -1,0 +1,550 @@
+
+#coni_header {
+background: rgb(0,15,153); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(0,15,153,1) 0%, rgba(212,215,216,1) 100%, rgba(32,124,202,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,15,153,1)), color-stop(100%,rgba(212,215,216,1)), color-stop(100%,rgba(32,124,202,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,15,153,1) 0%,rgba(212,215,216,1) 100%,rgba(32,124,202,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,15,153,1) 0%,rgba(212,215,216,1) 100%,rgba(32,124,202,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,15,153,1) 0%,rgba(212,215,216,1) 100%,rgba(32,124,202,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,15,153,1) 0%,rgba(212,215,216,1) 100%,rgba(32,124,202,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000f99', endColorstr='#207cca',GradientType=0 ); /* IE6-9 */
+
+
+
+	height: 103px;
+	margin: 0px;
+	padding: 0px;
+	min-width: 980px;
+	width: 100%;
+}
+#coni_container{
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding: 0px;
+	text-align: left;
+	min-height: 400px;
+	width:980px;
+}
+
+
+
+#logo {
+	background: transparent url(../imagenes/header/logoC.png) no-repeat 10px 0px;
+	float: left;
+	height: 70px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+#logo a {
+	display: block;
+	height: 46px;
+	left: 10px;
+	position: relative;
+	top: 10px;
+	width: 200px;
+}
+
+#logo a span {
+	display: none;
+}
+
+#panel-derecha{
+	color: #fff;
+	float: right;
+	line-height: 2em;
+	margin: 0px 17px 0px 0px;
+	margin-right: 17px;
+	padding: 0px;
+	text-align: right;
+}
+
+#nombre-sistema {
+	background: none;
+	display: block;
+	font-size: 18px;
+	height: 21px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-top: 3px;
+	padding:0px;
+	text-align: right;
+	width: 100%;
+}
+
+#datos-usuario {
+	background: none;
+	display: block;
+	font-size: 1em;
+	height: 15px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding:0px;
+	text-align: right;
+	width: 100%;
+}
+#datos-usuario a{
+	color: #fff;
+}
+
+
+#datos-usuario a:hover{
+	color: #000;
+}
+
+
+
+#cerrar-sesion{
+	background: none;
+	display: block;
+	font-size: 1em;
+	height: 21px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 9px;
+	padding:0px;
+	text-align: right;
+	width: 100%;
+}
+
+#cerrar-sesion a{
+	color: #fff;
+}
+
+
+#cerrar-sesion a:hover{
+	color: #000;/*
+	border-style: solid;
+	border-left-color: #000;
+	border-right-color: #000;
+	border-top-color: #000;*/
+}
+
+#fecha-sistema-actual {
+	background: none;
+	float: right;
+	height: 1em;
+	margin-top: 2px;
+	margin-right: 21px;
+	/*position: absolute;*/
+	text-align: right;
+	font-size: 1em;
+	font-style: bold;
+	color: #fff;
+	display: block;
+	width: 74px;
+	z-index: 1;
+}
+
+#menu-coni{
+	display: block;
+	height:30px;
+	left:44px;
+	position:absolute;
+	top: 49px;
+	padding: 0px 2px 0px 4px;
+	width: auto;
+	min-width: 872px;
+}
+#menu-coni ul{
+	/*para adaptarse a los navegadores hay que setear en cero el padding y el margin:*/
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: auto;
+	display:block;
+	list-style: none;
+	/*background: #FAA819 url(images/mainNavBg.gif) repeat-x;*/
+}
+#menu-coni li{
+	float: left;
+}
+
+#menu-coni ul a{
+	display: block;
+	/*para compatibilidad con ie5.2*/
+	float: left;
+	padding: 0 2em;
+	line-height: 2.1em;
+	background: url(../imagenes/header/mainNavBorder.gif) repeat-y left top;
+	text-decoration: none;
+	color: #fff;
+}
+
+#menu-coni ul  .first a{
+	background: none;
+}
+
+#menu-coni ul a:hover {
+	color: #000;
+	border-bottom-color: #fff;
+	border-bottom-style: solid;
+	background: url(../imagenes/header/mainNavBorder.gif) repeat-y left top;
+}
+
+#menu-coni .moduloActivo{
+	color: #F90;
+	background-color: #000;
+	border-bottom-color: #000;
+	border-bottom-style: solid;
+}
+
+#menu-coni .moduloActivo:hover{
+	color: #F90;
+	background-color: #000;
+	border-bottom-color: #000;
+	border-bottom-style: solid;
+}
+
+#submenu-coni{
+	display: block;
+	height:20px;
+	left:0px;
+	position:absolute;
+	top: 75px;
+	padding: 0px 0px 0px 2px;
+	background: #000000;
+	min-width: 872px;
+	width: 99.9%;
+}
+#submenu-coni ul{
+	/*para adaptarse a los navegadores hay que setear en cero el padding y el margin:*/
+	margin: 0;
+	padding: 0;
+	left:51px;
+	position: absolute;
+	float: left;
+	width: auto;
+	display:block;
+	font-size: 11px;
+	list-style: none;
+}
+#submenu-coni li{
+	float: left;
+}
+
+#submenu-coni ul a{
+	display: block;
+	/*para compatibilidad con ie5.2*/
+	float: left;
+	padding: 0 2em;
+	line-height: 1.8em;
+	text-decoration: none;
+	color: #fff;
+}
+
+#submenu-coni ul  .first a{
+	background: none;
+}
+
+
+#submenu-coni .conicetmenuSel{
+	color: #F90;
+	font-weight: bold;
+}
+
+#submenu-coni ul a:hover {
+	color: #E85211;/*#F90*/
+	font-weight: bold;
+}
+
+
+Table.CformTableLog {
+ border-color: #003366;
+ border-right-color: #999999;
+ border-top-color: #003366;
+ border-top-style:  solid;
+ border-left-style: solid;
+ border-left-color: #003366;
+ border-bottom-color: #999999;
+ border-bottom-style: solid;
+ border-right-style: solid;
+ border-top-width: thin;
+ border-right-width: thin;
+ border-bottom-width: thin;
+ border-left-width: thin;
+ background-color: #FAFCFF;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ width: 950px;
+ min-width: 800px;
+}
+
+Table.CformTable {
+ border-color: #003366;
+ border-right-color: #999999;
+ border-top-color: #003366;
+ border-top-style:  solid;
+ border-left-style: solid;
+ border-left-color: #003366;
+ border-bottom-color: #999999;
+ border-bottom-style: solid;
+ border-right-style: solid;
+ border-top-width: thin;
+ border-right-width: thin;
+ border-bottom-width: thin;
+ border-left-width: thin;
+ background-color: #FAFCFF;
+ margin-top: 20px;
+ margin-bottom: 20px;
+ width: 950px;
+}
+
+Table.tablaMin {
+ /* para ver en pantalla reducida
+ width:600px;
+ min-width:600px;
+ */
+ width:95%;
+ min-width: 950px;
+ 
+}
+
+Table.tablaMinMenu {
+ width:100%;
+}
+
+.bodyClass {
+	background-color: #f7f7f7;	
+}
+
+Table.tablaMenu {
+	background-color: #000066;
+ 	width:100%;
+}
+
+.headerImg {
+	width: 100%;
+	height: 52;
+		
+}
+
+.tablaMenuDesplegable {
+ 	width:100%;
+	position: absolute;
+	top: 75px;
+	height: 28px;
+	background-color: #000000;
+}
+
+
+
+
+/***********************************************************************************/
+/* Tema del menu */
+/*
+ * ThemeGray Style Sheet
+ * by Ian Reyes and Heng Yuan
+ * mod by Maxigis
+ */
+
+.ThemeSVTMenu,.ThemeSVTSubMenuTable
+{
+	font-family: Tahoma;
+	font-size: 12px;
+
+	color: white;
+
+	cursor:		default;
+	cursor:		hand !important;
+	white-space:	nowrap;
+}
+
+.ThemeSVTSubMenu
+{
+	position:	absolute;
+	display:	block;
+	visibility:	hidden;
+	overflow:	hidden;
+
+	border:		0px outset #000000;
+	background-color: transparent;
+}
+
+.ThemeSVTSubMenuTable
+{
+	border-collapse:	separate;
+	opacity:	0.9;
+	filter:Alpha(style=0,opacity=90);
+}
+
+.ThemeSVTMenuItem,.ThemeSVTMenuItemHover,.ThemeSVTMenuItemActive
+{
+	cursor:		default;
+	cursor:		hand !important;
+	white-space:	nowrap;
+}
+
+.ThemeSVTMainItem,
+.ThemeSVTMenuItem
+{
+	padding:	6px 15px 6px 15px;
+	border:		0px solid #ffffff;
+	background-color:	transparent;
+	border-left: 2px solid #FFFFFF;
+}
+
+.ThemeSVTMenuItem {
+	background-color:	#000000;	
+}
+
+.ThemeSVTMainItemHover,
+.ThemeSVTMainItemActive
+{
+	padding:	6px 15px 6px 15px;	
+	border:		0px solid #ffffff;
+	background-color:	#000000;
+	border-left: 2px solid #FFFFFF;
+	color: #F90;
+}
+
+.ThemeSVTMenuItemHover,
+.ThemeSVTMenuItemActive
+{
+	padding:	6px 15px 6px 15px;	
+	border:		1px solid #ffffff;
+	background-color:	#000000;
+	color: #F90;
+}
+
+/* horizontal main menu sub components */
+/* panel doesn't really support horizontal menus */
+/* there are simpler approaches, but the setting here allows me to
+   set a background image for the menu without lines all over it */
+
+.ThemeSVTMainFolderLeft,
+.ThemeSVTMainItemLeft,
+.ThemeSVTMainFolderText,
+.ThemeSVTMainItemText,
+.ThemeSVTMainItemRight,
+.ThemeSVTMainFolderRight
+{
+	border: 0;
+	background-color: inherit;
+	white-space: nowrap;
+}
+
+/* sub menus sub components */
+
+.ThemeSVTMenuFolderLeft,
+.ThemeSVTMenuItemLeft
+{
+	padding:	6px 0px 10px 10px;
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+.ThemeSVTMenuFolderText,
+.ThemeSVTMenuItemText
+{
+	padding:	10px 10px 10px 13px;
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+.ThemeSVTMenuItemRight,
+.ThemeSVTMenuFolderRight
+{
+	padding:	10px 3px 10px 10px;
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+/* hoover and active border */
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderLeft,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderLeft,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemLeft,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemLeft,
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderText,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderText,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemText,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemText,
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderRight,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderRight,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemRight,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemRight
+{
+	border-color:	#000000;
+}
+
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderLeft,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderLeft,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemLeft,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemLeft
+{
+	border-width:	3px 0px 3px 3px;
+	border-style:	solid;
+	padding:	6px 0px 6px 6px;
+}
+
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderText,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderText,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemText,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemText
+{
+	border-width:	3px 0px 3px 0px;
+	border-style:	solid;
+	padding:	6px 9px 6px 15px;
+}
+
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderRight,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderRight,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemRight,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemRight
+{
+	border-width:	3px 3px 3px 0px;
+	border-style:	solid;
+	padding:	6px 0px 6px 0px;
+}
+
+td.ThemeSVTMenuSplit
+{
+	padding:	0px;
+	margin:		0px;
+	height:		15px;
+	border:		0px;
+	background-color:	inherit;
+	overflow:	hidden;
+}
+
+div.ThemeSVTMenuSplit
+{
+	margin: 4px;
+	height: 3px;
+	overflow: hidden;
+	background-color: inherit;
+	border-top: 3px solid #000000;
+}
+
+.ThemeSVTMenuItem img.seq1
+{
+	display:	inline;
+}
+
+.ThemeSVTMenuItemHover seq2,
+.ThemeSVTMenuItemActive seq2
+{
+	display:	inline;
+}
+
+.ThemeSVTMenuItem .seq2,
+.ThemeSVTMenuItemHover .seq1,
+.ThemeSVTMenuItemActive .seq1
+{
+	display:	none;
+}
+
+.ui-tabs .ui-tabs-panel {
+	display: block;
+	border-width: 0;
+	padding: 0;
+	background: none;
+}

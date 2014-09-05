@@ -1,0 +1,14 @@
+[PropertyInfo]
+CONFIRMAR,String,false,false, , ,false,<default>
+ERROR_FATAL,String,false,false, , ,false,<default>
+INI,String,false,false, , ,false,<default>
+LISTADO,String,false,false, , ,false,<default>
+MODIFICAR,String,false,false, , ,false,<default>
+SALIR,String,false,false, , ,false,<default>
+SELECCIONARPRESTADOR,String,false,false, , ,false,<default>
+VOLVER,String,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

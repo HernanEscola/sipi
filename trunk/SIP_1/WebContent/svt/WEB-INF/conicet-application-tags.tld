@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+  "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>capplication</shortname>
+	<info>Tags utiles</info>
+
+	<tag>
+		<name>isApplication</name>
+		<tagclass>conicet.apps.svt.util.security.CTagCheckApplication</tagclass>
+		<info>Evalua su contenido sólo para la webapp seleccionada .</info>
+		<attribute>
+			<name>application</name>
+			<required>yes</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>isNotApplication</name>
+		<tagclass>conicet.apps.svt.util.security.CTagCheckNotApplication</tagclass>
+		<info>Evalua su contenido para todos menos la webapp seleccionada .</info>
+		<attribute>
+			<name>application</name>
+			<required>yes</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>checkProperty</name>
+		<tagclass>conicet.apps.svt.util.web.CTagAceptacionRechazoProperty</tagclass>
+		<info>Renderiza dos checkbox para aceptar o rechazar una property</info>
+		<attribute>
+			<name>form</name>
+			<required>yes</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>property</name>
+			<required>yes</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>autoComplete</name>
+		<tagclass>conicet.apps.svt.util.autoComplete.tag.CTagAutoComplete</tagclass>
+		<info>Genera un autocomplete (Version en desarrollo)</info>
+		<attribute>
+			<name>tipoAutocomplete</name>
+			<required>yes</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               	Nombre del autocomplete. A partir de este nombre se setean los name de los input.
+            ]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>name</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               	Nombre del Form.
+            ]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>actionIngresarNuevo</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               El metodo al cual llamar del action para ingresar nuevo
+            ]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>tipoAction</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               Por default Method. Es el parametro q se va a encarar de ejecutar los metodos en el action. 
+               Otro valor posible es BtnSubmit. (Siempre primer letra en mayuscula)
+            ]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>minSizeFind</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               Cantidad de caracteres que hay que ingresar antes de que se ejecute la busqueda
+            ]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>afterSelectCallBack</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               Función javascript que se ejecutará luego del onSelect del autocomplete
+            ]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>afterRemoveCallBack</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               Función javascript que se ejecutará luego de remover la opcion previamente seleccionada
+            ]]>
+			</description>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>autoCompleteView</name>
+		<tagclass>conicet.apps.svt.util.autoComplete.tag.CTagAutoCompleteView</tagclass>
+		<info>Muestra la descripcion del AutoComplete Seleccionado (Version en desarrollo)</info>
+		<attribute>
+			<name>tipoAutocomplete</name>
+			<required>yes</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               	Nombre del autocomplete. A partir de este nombre se setean los name de los input.
+            ]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               	Nombre del Form.
+            ]]>
+			</description>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>comboAjax</name>
+		<tagclass>conicet.apps.svt.util.web.CTagComboAjax</tagclass>
+		<info>Carga opciones en un combo utilizando una llamada ajax.
+		Para usarlo se proporcionan las siguientes funciones javascript:
+		nombre+CargarComboAjax() - Cargar el combo con las opciones que devuelve el form 
+		nombre+DeshabilitarYReiniciarComboAjax() - Deshabilita el combo y deja 'Seleccionar' como opción seleccionada
+		
+		Convenciones: 
+			El nombre de la coleccion de opciones debe ser nombre+Combo
+			El nombre del método en el Action (o el string a comparar contra el btnSubmit) será nombre+CargarComboAjax
+			
+		</info>
+		<attribute>
+			<name>nombre</name>
+			<required>yes</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               	Nombre del combo. A partir de este nombre se generarán las funciones js.
+            	]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>actionName</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               	Nombre del action.
+            	]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>matchId</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               	Id del elemento que contiene el valor que se enviará al form para cargar el combo.
+            	]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>tipoAction</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               	Por default Method. Es el parametro q se va a encarar de ejecutar los metodos en el action. 
+               	Otro valor posible es btnSubmit. (Siempre primer letra en minúscula)
+            	]]>
+			</description>
+		</attribute>
+		<attribute>
+			<name>msjVacio</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+                <![CDATA[
+               	Mensaje que se va a mostrar en lugar del combo cuando no haya opciones para elegir.
+            	]]>
+			</description>
+		</attribute>
+	</tag>
+</taglib>
+

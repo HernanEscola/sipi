@@ -1,0 +1,87 @@
+[PropertyInfo]
+anioExpediente,String,false,false, , ,true,<default>
+capacidadOperativa,String,false,false, , ,true,<default>
+categorias,List,false,false, , ,true,<default>
+cip,String,false,false, , ,true,<default>
+COfertaTecnologica,COfertaTecnologica,false,false, , ,true,<default>
+comboCA,Collection,false,false, , ,true,<default>
+comboCO,Collection,false,false, , ,true,<default>
+comboDD,Collection,false,false, , ,true,<default>
+comboDP,Collection,false,false, , ,true,<default>
+comisiones,List,false,false, , ,true,<default>
+costoDistribucion,List,false,false, , ,true,<default>
+costoOtraMoneda,String,false,false, , ,true,<default>
+costoPesos,String,false,false, , ,true,<default>
+denominacion,String,false,false, , ,true,<default>
+descripcion,String,false,false, , ,true,<default>
+detalle,String,false,false, , ,true,<default>
+detalleEntidad,CEntidad,false,false, , ,true,<default>
+detalleGestor,conicet.apps.svt.object.gestor.CGestor,false,false,detalleGestor,detalleGestor,true,<default>
+distribucionLote,List,false,false, , ,true,<default>
+equiposLote,Set,false,false, , ,true,<default>
+especificacionMetodologia,String,false,false, , ,true,<default>
+estado,String,false,false, , ,true,<default>
+estadoResolucion,String,false,false, , ,true,<default>
+fechaAutorizacion,String,false,false, , ,true,<default>
+fechaInpi,String,false,false, , ,true,<default>
+fechaRedactada,String,false,false, , ,true,<default>
+fechaRegistrada,String,false,false, , ,true,<default>
+fechaResolucion,String,false,false, , ,true,<default>
+fechaSolicitada,String,false,false, , ,true,<default>
+fechaVerificada,String,false,false, , ,true,<default>
+gananciasCategoria,List,false,false, , ,true,<default>
+input,String,false,false, , ,true,<default>
+inventores,Set,false,false, , ,true,<default>
+listaContratantes,Collection,false,false, , ,true,<default>
+loteCA,String[],false,false, , ,true,<default>
+loteCO,String[],false,false, , ,true,<default>
+loteDD,String[],false,false, , ,true,<default>
+loteDP,String[],false,false, , ,true,<default>
+lugar,String,false,false, , ,true,<default>
+nroExpediente,String,false,false, , ,true,<default>
+nroResolucion,String,false,false, , ,true,<default>
+numeroPropiedad,String,false,false, , ,true,<default>
+ofertaTecnologica,COfertaTecnologica,false,false, , ,true,<default>
+organismo,String,false,false, , ,true,<default>
+palabraClave1,String,false,false, , ,true,<default>
+palabraClave2,String,false,false, , ,true,<default>
+palabraClave3,String,false,false, , ,true,<default>
+palabraClave4,String,false,false, , ,true,<default>
+palabraClave5,String,false,false, , ,true,<default>
+permitirAltaCategorias,String,false,false, , ,true,<default>
+porcentajeComisiones,List,false,false, , ,true,<default>
+prestacionDescripcion,String,false,false, , ,true,<default>
+prestacionUnidad,String,false,false, , ,true,<default>
+prestador,String,false,false, , ,true,<default>
+prestadorDescripcion,String,false,false, , ,true,<default>
+principalCA,String,false,false, , ,true,<default>
+principalCADescripcion,String,false,false, , ,true,<default>
+principalCO,String,false,false, , ,true,<default>
+principalCODescripcion,String,false,false, , ,true,<default>
+principalDD,String,false,false, , ,true,<default>
+principalDDDescripcion,String,false,false, , ,true,<default>
+principalDP,String,false,false, , ,true,<default>
+principalDPDescripcion,String,false,false, , ,true,<default>
+publicar,boolean,false,false, , ,true,<default>
+responsable,String,false,false, , ,true,<default>
+stanCategoria,java.util.List,false,false, , ,true,<default>
+stanCategoriaSeleccionado,Object,false,false, , ,true,<default>
+stanCosto,List,false,false, , ,true,<default>
+stanCostos,Collection,false,false, , ,true,<default>
+stanCostoSeleccionado,Object,false,false, , ,true,<default>
+tipoEstado,String,false,false, , ,true,<default>
+tipoMoneda,String,false,false, , ,true,<default>
+tipoOferta,String,false,false, , ,true,<default>
+tipoOfertaDescripcion,String,false,false, , ,true,<default>
+tipoPropiedad,String,false,false, , ,true,<default>
+tipoResolucion,String,false,false, , ,true,<default>
+titularAMap,Map,false,false, , ,true,<default>
+titularLote,List,false,false, , ,true,<default>
+totalComisiones,String,false,false, , ,true,<default>
+totalPorcentajes,String,false,false, , ,true,<default>
+colGestor,java.util.List,false,false,colGestor,colGestor,true,<default>
+[IconNames]
+
+
+
+

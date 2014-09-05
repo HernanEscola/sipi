@@ -1,0 +1,9 @@
+[PropertyInfo]
+descripcion,String,false,false, , ,false,<default>
+exception,String,false,false, , ,true,<default>
+submit,String,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

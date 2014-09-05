@@ -1,0 +1,729 @@
+/*autocomplete loading image*/
+.ui-autocomplete-loading {
+	background: white url("./images/indicator.gif") right center no-repeat;
+}
+
+ .ui-autocomplete {
+max-height: 250px;
+overflow-y: auto;
+/* prevent horizontal scrollbar */
+overflow-x: hidden;
+}
+
+ /* IE 6 doesn't support max-height
+* we use height instead, but this forces the menu to always be this tall
+*/
+*  html .ui-autocomplete {
+height: 250px;
+}
+
+
+
+
+
+button.CformBoton {
+    background-image: url("../imagenes/bgcolor.gif");
+    border: 1px solid #003366;
+    color: #000000;
+    font-family: tahoma,sans-serif;
+    font-size: 11px;
+    height: 20px;
+    margin-right: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-decoration: none;
+}
+
+.mensajeSuperior{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #FF0000;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.mensajeSuperiorAzul{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #000080;
+  letter-spacing: normal;
+  text-align: center;
+}
+.mensajeSuperiorNegro{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+Table.CformTable {
+ border-color: #003366;
+ border-right-color: #999999;
+ border-top-color: #003366;
+ border-top-style:  solid;
+ border-left-style: solid;
+ border-left-color: #003366;
+ border-bottom-color: #999999;
+ border-bottom-style: solid;
+ border-right-style: solid;
+ border-top-width: thin;
+ border-right-width: thin;
+ border-bottom-width: thin;
+ border-left-width: thin;
+ background-color: #FAFCFF;
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
+
+Table.CFormDisplayTable{
+	width: 100%; 
+	background-color:#FCFCFC; 
+	border-color: #CCCCCC; 
+	border-style: solid; 
+	border-width: 1px;
+}
+
+
+td.CinFormHeader {
+	/*background-color:#87A0EE;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 10px;*/
+
+	background-color:#efefef;
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+select
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+input
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+
+TD.CformRowHeader {
+	background-color:#1F2367;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+        font-color: #666666;
+    filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#205DA5,endColorStr=#C3DFFF);
+}
+
+
+td.CformAreaBotones{
+	border-top: 1px double #CCCCCC;
+	background-color : #ffffff;
+/*    filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#F0F0F0,endColorStr=#EEEEEE)*/
+}
+
+td.CformAreaBotonesInterna{
+	border-top: 1px double #CCCCCC;
+	background-color : #FAFCFF;
+/*    filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,startColorStr=#F0F0F0,endColorStr=#EEEEEE)*/
+}
+
+INPUT.CformBoton {
+HEIGHT:20px;BORDER:1px solid #003366;TEXT-DECORATION:none;BACKGROUND-IMAGE:url(../imagenes/bgcolor.gif);
+COLOR:#000000;TEXT-DECORATION:none;
+FONT-SIZE:11px;FONT-FAMILY:tahoma,sans-serif;
+PADDING-RIGHT:2px;
+PADDING-LEFT:2px;
+margin-right: 5px;
+cursor: hand;
+}
+
+INPUT.CformBotonRemove {
+HEIGHT:16px;
+width: 16px;
+TEXT-DECORATION:none;
+background: inherit;
+BACKGROUND-IMAGE:url(../imagenes/close.png);
+border: 0 none;
+color: #000000;
+cursor: pointer;
+line-height: normal;
+margin: 6px;
+padding: 0;
+}
+
+INPUT.CformBotonDisabled {
+
+	background-color: #B5B5C8;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+        margin-right: 5px;
+	height: 22px;
+	border-top-color:#ECF5FF;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #ECF5FF;
+	border-left-width: thin;
+	border-bottom-width: thin;
+	border-right-width: thin;
+	border-top-width: thin;
+	border-top-style: solid;
+	border-right-style:solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+
+input.CformTextDisabled {
+	background-color: #e3e3e3;
+}
+
+input.CformTextEnabled {
+	background-color: #ffffff;
+}
+
+
+td.CformLeyenda {
+	color: #1F2367;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	text-align: right;
+	font-style: italic;
+	height:10;
+	margin-right: 5px;
+}
+
+label.CformLeyenda {
+	color: #1F2367;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	text-align: right;
+	font-style: italic;
+	height:10;
+	margin-right: 5px;
+}
+span.CformLeyenda {
+	color: #1F2367;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	font-style: italic;
+	margin-right: 5px;
+}
+
+td.CformSubtitulo {
+	color: #1F2367;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	text-align: left;
+	font-style: italic;
+	font-weight: bold;
+	height:10;
+	margin-left: 5px;
+}
+
+tr.CformBox {
+/*	background-color: #E8F1FF;*/
+	background-color: #FAFCFF;
+}
+
+#CformBorderRBL {
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+}
+
+#CformBorderRL {
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+}
+
+#CformBorderTRL {
+	border-top: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+}
+
+#CformBorderTRBL {
+	border-bottom: 1px solid #CCCCCC;
+	border-top: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+}
+
+
+#CformBorderTL {
+	border-top: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+s}
+
+#CformBorderTR {
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+}
+
+#CformBorderRB {
+	border-bottom: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+}
+
+#CformBorderBL {
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+}
+
+#CformBorderL {
+	border-left: 1px solid #CCCCCC;
+}
+
+#CformBorderR {
+	border-right: 1px solid #CCCCCC;
+}
+
+#CformBorderT {
+	border-top: 1px solid #CCCCCC;
+}
+
+#CformBorderB {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+#CformBorderTB {
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+/*Celda nombre de campo*/
+td.CformNombre {
+	color: #626262;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	text-align: right;
+	vertical-align: top;
+}
+
+td.CformNombreGris {
+	color: #626262;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	text-align: right;
+	vertical-align: top;
+}
+
+/*Celda dato*/
+td.CformDato {
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	padding: 2;
+	margin-left: 150px;
+	vertical-align: top;
+}
+
+
+/*Span nombre de campo*/
+span.CformNombre {
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+/*Span dato*/
+span.CformDato {
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	padding: 2;
+}
+
+
+/*Celda vacia*/
+td.CformVacio {
+	width: 1;
+}
+
+.datosRepetidos {
+background-color:#CCCCCC;
+border: 2px double #000000;
+}
+
+
+INPUT.CformBotonTransp {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	/*color: #0000FF;*/
+	color: #0000E6;
+       cursor: hand;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+        cursor:pointer;
+}
+
+
+input.CFormBotonDato {
+  color: #0000E6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  padding: 2;
+  margin-left: 150px;
+  vertical-align: top;
+  background: inherit;
+  cursor: hand;
+  border: 0px none;
+  margin: -1px;
+  padding: 0px;
+  line-height: normal;
+}
+INPUT.CformBotonNavegacion {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	/*color: #0000FF;*/
+	color: #0000E6;
+       cursor: hand;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+        font-weight: bold;
+}
+
+INPUT.CformBotonTranspBorde {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+        /*color: #0000FF;*/
+	color: #990000;
+       cursor: hand;
+	padding: 2px;
+       BORDER:0px;
+       font-weight: bold;
+}
+
+
+INPUT.CformBotonTranspImporte {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	/*color: #0000FF;*/
+	color: #0000E6;
+       cursor: hand;
+	/*margin: -1px;*/
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+        text-align:right;
+      	font-weight: bold;
+}
+
+INPUT.CformBotonTranspRojo {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	/*color: #0000FF;*/
+	color: #FF0000;
+       cursor: hand;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+}
+
+INPUT.CformBotonTranspDisabled {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #efefef;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+}
+
+IMG.CformImageHandCursor {
+	cursor:hand;
+}
+
+.CformheadTablaHomePage {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: DDEEFF;
+	text-align: left;
+	line-height:normal;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color:#cccccc;
+	border-right-color: #cccccc;
+	border-bottom-color: #cccccc;
+	border-left-color: #cccccc;
+}
+
+.CformNombreChico {
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.dato_obligatorio {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+
+	font-weight: bold;
+	color: #990000;
+}
+.mensajes {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+
+.caratula_titulo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+
+}
+
+.caratula_subtitulo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	 color: #E85211;
+}
+
+.caratula_texto {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color:#000066;
+}
+
+.CformIndiceRojo {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF0000;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+}
+
+.CformDetalleRojo {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF0000;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+}
+
+.CformDetalleOro {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #E08000;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+}
+
+
+
+span.CformAlt {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+        cursor:help;
+}
+
+span.CformAlt2 {
+	background: inherit;
+	font-family: verdana, tahoma, arial, helvetica;
+  	font-size: 11px;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+        cursor:help;
+}
+
+INPUT.CformBotonTranspNumero {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #0000E6;
+       cursor: hand;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+        text-align:right;
+}
+.CformMensajeRojo{
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FF0000;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+}
+.titulo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	letter-spacing: normal;
+	text-align: center;
+
+}
+
+li.mensaje{
+  font-family: verdana, tahoma, arial, helvetica;
+  font-size: 11px;
+}
+
+td.CformAreaDatos{
+	border-top: 1px double #CCCCCC;
+	background-color : #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	vertical-align: top;
+}
+td.tableCellTotal{
+
+	background-color : #efefef;
+        font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	vertical-align: top;
+	text-align: right;
+}
+.HomeTable{
+  text-align:center;
+  border-top: 2px solid #efefef;
+  border-bottom: 2px solid #efefef;
+  border-right: 2px solid #efefef;
+  border-left: 2px solid #efefef;
+  margin:0px auto;
+}
+
+body{
+
+  text-align:center;
+  margin:0px auto;
+  text-align:left;
+}
+
+input.textDisabled{
+  background-color:cdcdcd;
+}
+
+A.CformBotonTransp {
+  background: inherit;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  /*color: #0000FF;*/
+  color: #0000E6;
+  cursor: hand;
+  margin: -1px;
+  padding: 0px;
+  line-height: normal;
+  border: 0px none;
+  cursor:pointer;
+}
+A.CformBotonTransp:link {text-decoration: none}
+
+a.CformBotonTransp:hover {
+	 background: inherit;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  /*color: #0000FF;*/
+  color: #0000E6;
+  cursor: hand;
+  margin: -1px;
+  padding: 0px;
+  line-height: normal;
+  border: 0px none;
+  cursor:pointer;
+}
+a.CformBotonTranspAzul {
+	background: inherit;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	/*color: #0000FF;*/
+	color: #0000E6;
+       cursor: hand;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+	 cursor:pointer;
+}
+a.CformBotonTranspAlerta {
+	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #0000E6;
+    background-color:#FF0000;
+    cursor: hand;
+	margin: -1px;
+	padding: 0px;
+	line-height: normal;
+	border: 0px none;
+	cursor:pointer;
+}
+
+
+th,td {
+  padding: 2px 0px 2px 2px;
+  text-align: left;
+  vertical-align: top;
+}
+.labelSeparador{
+	padding-left: 5px;
+	background-color: #BFDFFF;
+	font-weight: bold;
+}
+p.primeralinea {
+       text-indent: 40px;
+}
+
+.ui-state-success{border: 1px solid green; background: #E5FCED 50% 50% repeat-x;color: green;padding: .3em;}
+

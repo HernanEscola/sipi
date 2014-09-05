@@ -9,9 +9,11 @@ import java.util.List;
 import javax.persistence.NoResultException;
 import javax.persistence.RollbackException;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 
 public abstract class HibernateDao<T> {
@@ -45,6 +47,11 @@ public abstract class HibernateDao<T> {
 	protected void commitTransaction(Session session){
 		session.getTransaction().commit();
 		session.close();
+	}
+	
+	protected void commitTransaction() throws Exception{
+		getSession().getTransaction().commit();
+		getSession().close();
 	}
 	
 	protected void rollbackTransaction(Exception e){

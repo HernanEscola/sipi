@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+              "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+              "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+  <definition extends=".baseDef" name=".prestadorBuscarDef">
+    <put name="body" value="/jsp/prestadorBuscar.jsp" />
+  </definition>
+  <definition extends=".bitacoraDef" name=".prestadorDetalleDef">
+    <put name="body" value="/jsp/prestadorDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".temaAltaDef">
+    <put name="body" value="/jsp/temaAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".propiedadAltaDef">
+    <put name="body" value="/jsp/propiedadAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".patenteAltaDef">
+    <put name="body" value="/jsp/patenteAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".patenteAltaCfmDef">
+    <put name="body" value="/jsp/patenteAltaCfm.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".stanAltaDef">
+    <put name="body" value="/jsp/stanAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".ofertaTecnologicaBuscarDef">
+    <put name="body" value="/jsp/ofertaTecnologicaBuscar.jsp" />
+  </definition>
+  <definition extends=".bitacoraLogDef" name=".ofertaTecnologicaDetalleDef">
+    <put name="body" value="/jsp/ofertaTecnologicaDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".ofertaTecnologicaModificarDef">
+    <put name="body" value="/jsp/ofertaTecnologicaModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".ofertaTecnologicaEliminarDef">
+    <put name="body" value="/jsp/ofertaTecnologicaEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".equipoAltaDef">
+    <put name="body" value="/jsp/equipo/equipoAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".equipoBuscarDef">
+    <put name="body" value="/jsp/equipo/equipoBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".equipoListarDef">
+    <put name="body" value="/jsp/equipo/equipoListar.jsp" />
+  </definition>
+  <definition extends=".bitacoraLogDef" name=".equipoDetalleDef">
+    <put name="body" value="/jsp/equipo/equipoDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".equipoModificarDef">
+    <put name="body" value="/jsp/equipo/equipoModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".equipoEliminarDef">
+    <put name="body" value="/jsp/equipo/equipoEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".marcaAltaDef">
+    <put name="body" value="/jsp/marca/marcaAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".marcaBuscarDef">
+    <put name="body" value="/jsp/marca/marcaBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".marcaModificarDef">
+    <put name="body" value="/jsp/marca/marcaModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".unidadPrestacionBuscarDef">
+    <put name="body" value="/jsp/unidadPrestacion/unidadPrestacionBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".unidadPrestacionAltaDef">
+    <put name="body" value="/jsp/unidadPrestacion/unidadPrestacionAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".unidadPrestacionModificarDef">
+    <put name="body" value="/jsp/unidadPrestacion/unidadPrestacionModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".unidadPrestacionEliminarDef">
+    <put name="body" value="/jsp/unidadPrestacion/unidadPrestacionEliminar.jsp" />
+  </definition>  
+  <definition extends=".baseDef" name=".stanCostoAltaDef">
+    <put name="body" value="/jsp/stanCostoAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".stanCostoModificarDef">
+    <put name="body" value="/jsp/stanCostoModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".stanCostoEliminarDef">
+    <put name="body" value="/jsp/stanCostoEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".seleccionarOfertaTecnologicaDef">
+    <put name="body" value="/jsp/seleccionarOfertaTecnologica.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".costoSeleccionarDef">
+    <put name="body" value="/jsp/costoSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".equipoSeleccionarDef">
+    <put name="body" value="/jsp/equipo/equipoSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".stanAltaCfmDef">
+    <put name="body" value="/jsp/stanAltaCfm.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".prestadorSeleccionarDef">
+    <put name="body" value="/jsp/prestadorSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".tipoOfertaSeleccionarDef">
+    <put name="body" value="/jsp/tipoOfertaSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".ofertaTecnologicaBuscarStanDef">
+    <put name="body" value="/jsp/ofertaTecnologicaBuscarStan.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".ofertaTecnologicaBuscarPropiedadDef">
+    <put name="body" value="/jsp/ofertaTecnologicaBuscarPropiedad.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".entidadAltaDef">
+    <put name="body" value="/jsp/entidadAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".entidadAltaGrupoCfmDef">
+    <put name="body" value="/jsp/entidadAltaGrupoCfm.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".entidadAltaOrganismoCfmDef">
+    <put name="body" value="/jsp/entidadAltaOrganismoCfm.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".entidadAltaPersonaDef">
+    <put name="body" value="/jsp/entidadAltaPersona.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".entidadBuscarDef">
+    <put name="body" value="/jsp/entidadBuscar.jsp" />
+  </definition>
+  <definition extends=".logDef" name=".entidadDetalleDef">
+    <put name="body" value="/jsp/entidadDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".entidadModificarDef">
+    <put name="body" value="/jsp/entidadModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".entidadModificarCfmDef">
+    <put name="body" value="/jsp/entidadModificarCfm.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".entidadEliminarDef">
+    <put name="body" value="/jsp/entidadEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".entidadSeleccionarDef">
+    <put name="body" value="/jsp/entidadSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".personaEntidadAltaDef">
+    <put name="body" value="/jsp/personaAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".inventorSeleccionarDef">
+    <put name="body" value="/jsp/inventorSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".coTitularSeleccionarDef">
+    <put name="body" value="/jsp/coTitularSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".entidadActivarDef">
+    <put name="body" value="/jsp/entidadActivar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".prestadorYOTSuspenderDef">
+    <put name="body" value="/jsp/prestadorYOTSuspender.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".distribucionBeneficiosDef">
+    <put name="body" value="/jsp/distribucionBeneficios.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".organismoRegistroSeleccionarDef">
+    <put name="body" value="/jsp/organismoRegistroSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".organismoRegistroAltaDef">
+    <put name="body" value="/jsp/organismoRegistroAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".propiedadInventorDistribucionDef">
+    <put name="body" value="/jsp/propiedadInventorDistribucion.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".stanModificarDef">
+    <put name="body" value="/jsp/stanModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".conocimientoModificarDef">
+    <put name="body" value="/jsp/conocimientoModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".propiedadModificarDef">
+    <put name="body" value="/jsp/propiedadModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".instanciaSeleccionarDef">
+    <put name="body" value="/jsp/instanciaSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".prestadorAdmSeleccionarDef">
+    <put name="body" value="/jsp/prestadorAdmSeleccionar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".organismoRegistroBuscarDef">
+    <put name="body" value="/jsp/organismoRegistroBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".organismoRegistroDetalleDef">
+    <put name="body" value="/jsp/organismoRegistroDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".organismoRegistroActivarDef">
+    <put name="body" value="/jsp/organismoRegistroActivar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".organismoRegistroModificarDef">
+    <put name="body" value="/jsp/organismoRegistroModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".costoSeleccionDef">
+    <put name="body" value="/jsp/costoSeleccion.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".costoAltaDef">
+    <put name="body" value="/jsp/costoAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".costoDetalleDef">
+    <put name="body" value="/jsp/costoDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".costoEliminarDef">
+    <put name="body" value="/jsp/costoEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".costoModificarDef">
+    <put name="body" value="/jsp/costoModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".costoActivarDef">
+    <put name="body" value="/jsp/costoActivar.jsp" />
+  </definition>
+  <definition extends=".selectDef" name=".entidadElegirDef">
+    <put name="body" value="/jsp/entidadElegir.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".preOfertaTecnologicaBuscarDef">
+    <put name="body" value="/jsp/preOfertaTecnologicaBuscar.jsp" />
+  </definition>
+  <definition extends=".bitacoraLogDef" name=".preOfertaTecnologicaDetalleDef">
+    <put name="body" value="/jsp/preOfertaTecnologicaDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".ofertaTecnologicaPresentacionDef">
+    <put name="body" value="/jsp/ofertaTecnologicaPresentacion.jsp" />
+  </definition>
+   <definition extends=".baseDef" name=".ofertaTecnologicaSeleccionarDef">
+    <put name="body" value="/jsp/ofertaTecnologicaSeleccionar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".equipoNombreAltaDef">
+    <put name="body" value="/jsp/equipoNombre/equipoNombreAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".equipoNombreBuscarDef">
+    <put name="body" value="/jsp/equipoNombre/equipoNombreBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".equipoNombreModificarDef">
+    <put name="body" value="/jsp/equipoNombre/equipoNombreModificar.jsp" />
+  </definition>
+</tiles-definitions>
