@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="criterioFacturaSIUVT" type="criterioFacturaSIUVT"/>
+
+  <xs:complexType name="criterioFacturaSIUVT">
+    <xs:sequence>
+      <xs:element name="codigoPuntoVenta" type="xs:string" minOccurs="0"/>
+      <xs:element name="contratante" type="criterioContratanteSIUVT" minOccurs="0"/>
+      <xs:element name="fechaDesde" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="fechaHasta" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="letra" type="xs:string" minOccurs="0"/>
+      <xs:element name="numero" type="xs:string" minOccurs="0"/>
+      <xs:element name="codigoPuntoVentaConsultora" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="criterioContratanteSIUVT">
+    <xs:sequence>
+      <xs:element name="apellido" type="xs:string" minOccurs="0"/>
+      <xs:element name="cuit" type="xs:string" minOccurs="0"/>
+      <xs:element name="extranjero" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="nombre" type="xs:string" minOccurs="0"/>
+      <xs:element name="numeroDocumento" type="xs:string" minOccurs="0"/>
+      <xs:element name="razonSocial" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

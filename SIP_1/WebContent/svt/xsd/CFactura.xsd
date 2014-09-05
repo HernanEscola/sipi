@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:include schemaLocation="CContratante.xsd"/>
+
+
+
+	<xs:simpleType name="EEstadoFacturaXml">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="N" />
+			<xs:enumeration value="CP" />
+			<xs:enumeration value="CO" />
+			<xs:enumeration value="A" />
+			<xs:enumeration value="E" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+		<xs:complexType name="CFacturaXml">
+			<xs:sequence>
+				<xs:element name="id" type="xs:long" />
+				<xs:element name="nro" type="xs:string" minOccurs="0" />
+				<xs:element name="estado" type="EEstadoFacturaXml" minOccurs="1" maxOccurs="1" />
+				<xs:element name="importe" type="xs:decimal" minOccurs="0" />
+				<xs:element name="ImporteCobrado" type="xs:decimal" minOccurs="0" />
+				<xs:element name="fecha" type="xs:date" minOccurs="1"/>
+				<xs:element name="contratante" type="CContratanteXml" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	
+	<xs:element name="factura" type="CFacturaXml"/>
+
+</xs:schema>

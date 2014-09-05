@@ -1,0 +1,48 @@
+.conicetmenu {
+	FONT-SIZE: 8pt;
+	FONT-FAMILY:  Arial, Helvetica, sans-serif, Courier;
+	text-decoration: none;
+	color:#000000;
+}
+
+A.conicetmenu:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.conicetmenu:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.conicetmenu:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.conicetmenu:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+
+.conicetcomun {
+	FONT-SIZE: 8pt;
+	FONT-FAMILY: Arial, Helvetica, sans-serif, Courier;
+	text-decoration: none;
+	text-align:center;
+	font-weight: bold;
+}
+
+A.conicetcomun:visited {
+	COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+A.conicetcomun:active {
+	COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+A.conicetcomun:hover {
+	COLOR: #CCCCCC; TEXT-DECORATION: none
+}
+A.conicetcomun:link {
+	COLOR: #FFFFFF; TEXT-DECORATION: none
+}
+
+A.conicetmenuSel {
+
+	COLOR: #FF9900; TEXT-DECORATION: none
+}
+
+}
+

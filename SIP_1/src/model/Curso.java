@@ -32,7 +32,7 @@ public class Curso {
 	@ManyToOne
 	private Cuatrimestre cuatrimestre;
 	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
-	private Set<ItemListaDeEspera> SetaDeEspera;
+	private Set<ItemListaDeEspera> listaDeEspera;
 	private int Capacidad;
 	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
 	private Set<ItemHorarioCursada> horarioCursada;
@@ -97,12 +97,12 @@ public class Curso {
 		this.cuatrimestre = cuatrimestre;
 	}
 
-	public Set<ItemListaDeEspera> getSetaDeEspera() {
-		return SetaDeEspera;
+	public Set<ItemListaDeEspera> getListaDeEspera() {
+		return listaDeEspera;
 	}
 
-	public void setSetaDeEspera(Set<ItemListaDeEspera> SetaDeEspera) {
-		this.SetaDeEspera = SetaDeEspera;
+	public void setListaDeEspera(Set<ItemListaDeEspera> listaDeEspera) {
+		this.listaDeEspera = listaDeEspera;
 	}
 
 	public int getCapacidad() {
@@ -136,5 +136,6 @@ public class Curso {
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
+	
 
 }

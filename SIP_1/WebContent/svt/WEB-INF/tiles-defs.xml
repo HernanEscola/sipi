@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+              "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+              "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+  <definition name=".baseDef" path="/jsp/layout/layout.jsp">
+    <put name="title" value="Sistema de Vinculación Tecnológica" />
+    <put name="include" value="/jsp/layout/include.jsp" />
+    <put name="header" value="/jsp/layout/header.jsp" />
+    <put name="menu" value="/jsp/layout/menu.jsp" />
+    <put name="messages" value="/jsp/layout/messages.jsp" />
+    <put name="footer" value="/jsp/layout/footer.jsp" />
+    <put name="loger" value="/jsp/layout/loger.jsp" />
+    <put name="body" />
+  </definition>
+  <definition name=".selectDef" path="/jsp/layout/layout.jsp">
+    <put name="title" value="Sistema de Vinculación Tecnológica" />
+    <put name="include" value="/jsp/layout/include.jsp" />
+    <put name="header" value="/jsp/layout/header.jsp" />
+    <put name="menu" value="/jsp/layout/menuVacio.jsp"  />
+    <put name="messages" value="/jsp/layout/messages.jsp" />
+    <put name="footer" value="/jsp/layout/footer.jsp" />
+    <put name="loger" value="/jsp/layout/loger.jsp"  />
+    <put name="body" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".indexDef">
+    <put name="body" value="/jsp/index.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".normativaDef">
+    <put name="body" value="/jsp/normativa.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".errorFatalDef">
+    <put name="body" value="/jsp/error.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".bitacoraDef">
+    <put name="footer" value="/jsp/bitacora.jsp" />
+  </definition>
+  <definition name=".baseBitacoraDef" path="/jsp/layout/layoutBitacora.jsp">
+    <put name="title" value="Bitacora" />
+    <put name="messages" value="/jsp/layout/messages.jsp" />
+    <put name="body" />
+  </definition>
+  <definition extends=".baseBitacoraDef" name=".bitacoraVerDef">
+    <put name="body" value="/jsp/bitacoraVer.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".logDef">
+    <put name="footer" value="/jsp/log.jsp" />
+  </definition>
+  <definition extends=".baseBitacoraDef" name=".logVerDef">
+    <put name="body" value="/jsp/logVer.jsp" />
+  </definition>
+  <definition extends=".bitacoraDef" name=".bitacoraLogDef">
+    <put name="loger" value="/jsp/log.jsp" />
+  </definition>
+    <definition extends=".baseDef" name=".usuarioAltaDef">
+    <put name="body" value="/jsp/usuario/usuario.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".usuarioBuscarDef">
+    <put name="body" value="/jsp/usuario/usuarioBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".usuarioDetalleDef">
+    <put name="body" value="/jsp/usuario/usuario.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".usuarioEliminarDef">
+    <put name="body" value="/jsp/usuario/usuario.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".usuarioHabilitarDef">
+    <put name="body" value="/jsp/usuario/usuario.jsp" />
+  </definition>
+  <definition extends=".selectDef" name=".usuarioElegirDef">
+    <put name="body" value="/jsp/usuarioElegir.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".configurarListadoDef">
+    <put name="body" value="/jsp/configurarListado.jsp" />
+  </definition>
+  <definition extends=".bitacoraDef" name=".bitacoraFaceboxDef">
+    <put name="loger" value="/jsp/facebox.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".usuarioPerfilDef">
+    <put name="body" value="/jsp/usuarioPerfil.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".valorReferenciaConicetDef">
+    <put name="body" value="/jsp/valorReferenciaConicet.jsp" />
+  </definition>
+   <definition extends=".baseDef" name=".valorReferenciaConicetDetalleDef">
+    <put name="body" value="/jsp/valorReferenciaConicetDetalle.jsp" />
+  </definition>
+</tiles-definitions>

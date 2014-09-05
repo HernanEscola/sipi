@@ -1,0 +1,23 @@
+[PropertyInfo]
+apellido,String,false,false, , ,true,<default>
+CPrestador,CPrestador,false,false, , ,true,<default>
+descripcion,String,false,false, , ,true,<default>
+documentoNro,String,false,false, , ,true,<default>
+documentoTipo,String,false,false, , ,true,<default>
+domicilio,String,false,false, , ,true,<default>
+mail,String,false,false, , ,true,<default>
+nombre,String,false,false, , ,true,<default>
+persona,String,false,false, , ,true,<default>
+prestador,CPrestador,false,false, , ,true,<default>
+prestadorTipo,String,false,false, , ,true,<default>
+provincia,String,false,false, , ,true,<default>
+sigla,String,false,false, , ,true,<default>
+telefono,String,false,false, , ,true,<default>
+tipo,String,false,false, , ,true,<default>
+lugarTrabajo,String,false,false,lugarTrabajo,lugarTrabajo,true,<default>
+escalafon,String,false,false,escalafon,escalafon,true,<default>
+[IconNames]
+
+
+
+

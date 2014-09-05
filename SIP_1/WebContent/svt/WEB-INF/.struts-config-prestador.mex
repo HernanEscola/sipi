@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/cOfertaAceptarListarAction.do" location="50,50" dimension="398,88" />
+  <StrutsActivity path="/cOfertaTecnologicaAceptarModificacionesAction.do" location="950,250" dimension="497,88" />
+  <StrutsActivity path="/cCostoAceptarModificacionesAction.do" location="350,450" dimension="437,88" />
+  <StrutsActivity path=".ofertaAceptarListarDef" location="650,50" dimension="144,49" />
+  <StrutsActivity path="/cTemaAltaAction.do" location="950,50" dimension="139,75" />
+  <StrutsActivity path="/cPropiedadAltaAction.do" location="650,150" dimension="161,75" />
+  <StrutsActivity path="/cStanAltaAction.do" location="50,250" dimension="135,75" />
+  <StrutsActivity path="/cCostoDetalleAction.do" location="950,550" dimension="155,75" />
+  <StrutsActivity path=".conocimientoAceptarModificacionesDef" location="350,350" dimension="219,49" />
+  <StrutsActivity path=".propiedadAceptarModificacionesDef" location="650,350" dimension="205,49" />
+  <StrutsActivity path=".stanAceptarModificacionesDef" location="50,450" dimension="178,49" />
+  <StrutsActivity path=".ofertaAceptarModificacionesDef" location="350,250" dimension="187,49" />
+  <StrutsActivity path=".costoAceptarModificacionesDef" location="50,750" dimension="183,49" />
+  <StrutsActivity path="/cOfertaAceptarListarAction" location="950,450" dimension="164,49" />
+  <StrutsTransition id=".ofertaAceptarListarDef,null,/cOfertaAceptarListarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="722,50" />
+      <AbsolutePoint location="722,-85" />
+      <AbsolutePoint location="249,-85" />
+      <AbsolutePoint location="249,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaAceptarListarAction.do,tema,/cTemaAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="448,114" />
+      <AbsolutePoint location="950,114" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaTecnologicaAceptarModificacionesAction.do,costoDetalle,/cCostoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1228,338" />
+      <AbsolutePoint location="1228,587" />
+      <AbsolutePoint location="1105,587" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaTecnologicaAceptarModificacionesAction.do,listadoAceptacion,/cOfertaAceptarListarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1198,294" />
+      <AbsolutePoint location="249,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaAceptarListarAction.do,propiedad,/cPropiedadAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="249,138" />
+      <AbsolutePoint location="249,187" />
+      <AbsolutePoint location="650,187" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaTecnologicaAceptarModificacionesAction.do,Conocimiento,.conocimientoAceptarModificacionesDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,314" />
+      <AbsolutePoint location="459,314" />
+      <AbsolutePoint location="459,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaTecnologicaAceptarModificacionesAction.do,STAN,.stanAceptarModificacionesDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1168,338" />
+      <AbsolutePoint location="1168,414" />
+      <AbsolutePoint location="139,414" />
+      <AbsolutePoint location="139,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaAceptarListarAction.do,formulario,.ofertaAceptarListarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="448,54" />
+      <AbsolutePoint location="650,54" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaAceptarListarAction.do,aceptarModificaciones,/cOfertaTecnologicaAceptarModificacionesAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="448,84" />
+      <AbsolutePoint location="614,84" />
+      <AbsolutePoint location="614,254" />
+      <AbsolutePoint location="950,254" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaAceptarListarAction.do,stan,/cStanAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="170,138" />
+      <AbsolutePoint location="170,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaTecnologicaAceptarModificacionesAction.do,costoAceptarModificaciones,/cCostoAceptarModificacionesAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1198,338" />
+      <AbsolutePoint location="1198,514" />
+      <AbsolutePoint location="787,514" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCostoAceptarModificacionesAction.do,formulario,.costoAceptarModificacionesDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="568,538" />
+      <AbsolutePoint location="568,774" />
+      <AbsolutePoint location="233,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaTecnologicaAceptarModificacionesAction.do,Propiedad Intelectual,.propiedadAceptarModificacionesDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,284" />
+      <AbsolutePoint location="752,284" />
+      <AbsolutePoint location="752,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cCostoAceptarModificacionesAction.do,stanAceptarModificaciones,.stanAceptarModificacionesDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,484" />
+      <AbsolutePoint location="228,484" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".ofertaAceptarModificacionesDef,null,/cOfertaTecnologicaAceptarModificacionesAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="463,250" />
+      <AbsolutePoint location="463,-25" />
+      <AbsolutePoint location="1198,-25" />
+      <AbsolutePoint location="1198,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cOfertaTecnologicaAceptarModificacionesAction.do,listadoAceptacion,/cOfertaAceptarListarAction,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1099,338" />
+      <AbsolutePoint location="1099,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

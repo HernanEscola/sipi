@@ -1,0 +1,32 @@
+[PropertyInfo]
+anioAutorizacion,String,false,false, , ,true,<default>
+anioExpediente,String,false,false, , ,true,<default>
+anioResolucion,String,false,false, , ,true,<default>
+capacidadOperativa,String,false,false, , ,true,<default>
+categorias,List,false,false, , ,true,<default>
+comisiones,List,false,false, , ,true,<default>
+costoDistribucion,List,false,false, , ,true,<default>
+costoOtraMoneda,String,false,false, , ,true,<default>
+costoPesos,String,false,false, , ,true,<default>
+diaAutorizacion,String,false,false, , ,true,<default>
+diaResolucion,String,false,false, , ,true,<default>
+especificacionMetodologia,String,false,false, , ,true,<default>
+estadoResolucion,String,false,false, , ,true,<default>
+gananciasCategoria,List,false,false, , ,true,<default>
+mesAutorizacion,String,false,false, , ,true,<default>
+mesResolucion,String,false,false, , ,true,<default>
+nroExpediente,String,false,false, , ,true,<default>
+nroResolucion,String,false,false, , ,true,<default>
+porcentajeComisiones,List,false,false, , ,true,<default>
+prestacionDescripcion,String,false,false, , ,true,<default>
+prestacionUnidad,String,false,false, , ,true,<default>
+responsable,String,false,false, , ,true,<default>
+tipoMoneda,String,false,false, , ,true,<default>
+tipoResolucion,String,false,false, , ,true,<default>
+totalComisiones,String,false,false, , ,true,<default>
+totalPorcentajes,String,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

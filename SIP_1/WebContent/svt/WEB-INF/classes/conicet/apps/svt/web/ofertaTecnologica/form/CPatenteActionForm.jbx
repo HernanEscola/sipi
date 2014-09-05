@@ -1,0 +1,46 @@
+[PropertyInfo]
+costoMantenimiento,String,false,false, , ,true,<default>
+costoPatentamiento,String,false,false, , ,true,<default>
+denominacion,String,false,false, , ,true,<default>
+fechaInpi,String,false,false, , ,true,<default>
+fechaPatente,String,false,false, , ,true,<default>
+fechaRedactada,String,false,false, , ,true,<default>
+fechaSolicitada,String,false,false, , ,true,<default>
+fechaVerificada,String,false,false, , ,true,<default>
+ianio,String,false,false, , ,true,<default>
+Ianio,String,false,false, , ,false,<default>
+idia,String,false,false, , ,true,<default>
+Idia,String,false,false, , ,false,<default>
+imes,String,false,false, , ,true,<default>
+Imes,String,false,false, , ,false,<default>
+pais,String,false,false, , ,true,<default>
+panio,String,false,false, , ,true,<default>
+Panio,String,false,false, , ,false,<default>
+pdia,String,false,false, , ,true,<default>
+Pdia,String,false,false, , ,false,<default>
+pmes,String,false,false, , ,true,<default>
+Pmes,String,false,false, , ,false,<default>
+ranio,String,false,false, , ,true,<default>
+Ranio,String,false,false, , ,false,<default>
+rdia,String,false,false, , ,true,<default>
+Rdia,String,false,false, , ,false,<default>
+rmes,String,false,false, , ,true,<default>
+Rmes,String,false,false, , ,false,<default>
+sanio,String,false,false, , ,true,<default>
+Sanio,String,false,false, , ,false,<default>
+sdia,String,false,false, , ,true,<default>
+Sdia,String,false,false, , ,false,<default>
+smes,String,false,false, , ,true,<default>
+Smes,String,false,false, , ,false,<default>
+titular,String,false,false, , ,true,<default>
+vanio,String,false,false, , ,true,<default>
+Vanio,String,false,false, , ,false,<default>
+vdia,String,false,false, , ,true,<default>
+Vdia,String,false,false, , ,false,<default>
+vmes,String,false,false, , ,true,<default>
+Vmes,String,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

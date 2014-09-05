@@ -1,0 +1,45 @@
+[PropertyInfo]
+accion,String,false,false, , ,true,<default>
+btnSubmit,String,false,false, , ,true,<default>
+cambiaPanel,String,false,false, , ,true,<default>
+campoAplicacion,String[],false,false, , ,true,<default>
+clasificacionOnu,String[],false,false, , ,true,<default>
+CLotes,COfertaTecnologicaLotesStruct,false,false, , ,true,<default>
+codigoTipoOferta,Integer,false,false, , ,true,<default>
+COfertaTecnologica,COfertaTecnologica,false,false, , ,true,<default>
+costoDistribucion,List,false,false, , ,true,<default>
+descripcion,String,false,false, , ,true,<default>
+detalle,String,false,false, , ,true,<default>
+detalleEntidad,Object,false,false, , ,true,<default>
+detalleEntidad,CEntidad,false,false, , ,true,<default>
+disciplinaDesagregada,String[],false,false, , ,true,<default>
+disciplinaPrimaria,String[],false,false, , ,true,<default>
+distribucionLote,List,false,false, , ,true,<default>
+equiposLote,Set,false,false, , ,true,<default>
+estado,String,false,false, , ,true,<default>
+input,String,false,false, , ,true,<default>
+inventorLote,Set,false,false, , ,true,<default>
+palabraClave1,String,false,false, , ,true,<default>
+palabraClave2,String,false,false, , ,true,<default>
+palabraClave3,String,false,false, , ,true,<default>
+palabraClave4,String,false,false, , ,true,<default>
+palabraClave5,String,false,false, , ,true,<default>
+prestador,CPrestador,false,false, , ,true,<default>
+prestadorDescripcion,String,false,false, , ,true,<default>
+prestadorLote,List,false,false, , ,true,<default>
+principalCA,String,false,false, , ,true,<default>
+principalCO,String,false,false, , ,true,<default>
+principalDD,String,false,false, , ,true,<default>
+principalDP,String,false,false, , ,true,<default>
+publicar,boolean,false,false, , ,true,<default>
+tipoEstado,String,false,false, , ,true,<default>
+tipoOferta,String,false,false, , ,true,<default>
+titularAMap,Map,false,false, , ,true,<default>
+titularLote,List,false,false, , ,true,<default>
+colGestor,java.util.List,false,false,colGestor,colGestor,true,<default>
+detalleGestor,conicet.apps.svt.object.gestor.CGestor,false,false,detalleGestor,detalleGestor,true,<default>
+[IconNames]
+
+
+
+

@@ -1,0 +1,22 @@
+[PropertyInfo]
+accion,String,false,false, , ,true,<default>
+anio,String,false,false, , ,true,<default>
+bloquearDatos,boolean,false,false, , ,true,<default>
+btnSubmit,String,false,false, , ,true,<default>
+CEquipo,CEquipo,false,false, , ,true,<default>
+colPrestador,Collection,false,false, , ,true,<default>
+conicet,String,false,false, , ,true,<default>
+descripcion,String,false,false, , ,true,<default>
+input,String,false,false, , ,true,<default>
+marca,String,false,false, , ,true,<default>
+modelo,String,false,false, , ,true,<default>
+nroPatrimonio,String,false,false, , ,true,<default>
+prestador,CPrestador,false,false, , ,true,<default>
+prestadorDescripcion,String,false,false, , ,true,<default>
+prestadorUnico,CPrestador,false,false, , ,true,<default>
+tab,String,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

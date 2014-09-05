@@ -1,0 +1,199 @@
+/*
+ * ThemeGray Style Sheet
+ * by Ian Reyes and Heng Yuan
+ * mod by Maxigis
+ */
+
+.ThemeSVTMenu,.ThemeSVTSubMenuTable
+{
+	font-family: Tahoma;
+	font-size: 12px;
+
+	color: white;
+	background-color: #000066;
+
+	cursor:		default;
+	cursor:		hand !important;
+	white-space:	nowrap;
+}
+
+.ThemeSVTSubMenu
+{
+	position:	absolute;
+	display:	block;
+	visibility:	hidden;
+	overflow:	hidden;
+
+	border:		0px outset #0044BB;
+	background-color: transparent;
+}
+
+.ThemeSVTSubMenuTable
+{
+	border-collapse:	separate;
+	opacity:	0.9;
+	filter:Alpha(style=0,opacity=90);
+}
+
+.ThemeSVTMenuItem,.ThemeSVTMenuItemHover,.ThemeSVTMenuItemActive
+{
+	cursor:		default;
+	cursor:		hand !important;
+	white-space:	nowrap;
+}
+
+.ThemeSVTMainItem,
+.ThemeSVTMenuItem
+{
+	padding:	6px 15px 6px 15px;
+	border:		0px solid #ffffff;
+	background-color:	#000066;
+	border-left: 2px solid #FFFFFF;
+}
+
+.ThemeSVTMainItemHover,
+.ThemeSVTMainItemActive
+{
+	padding:	6px 15px 6px 15px;	
+	border:		0px solid #ffffff;
+	background-color:	#0044BB;
+	border-left: 2px solid #FFFFFF;
+}
+
+.ThemeSVTMenuItemHover,
+.ThemeSVTMenuItemActive
+{
+	padding:	6px 15px 6px 15px;	
+	border:		1px solid #ffffff;
+	background-color:	#0044BB;
+}
+
+/* horizontal main menu sub components */
+/* panel doesn't really support horizontal menus */
+/* there are simpler approaches, but the setting here allows me to
+   set a background image for the menu without lines all over it */
+
+.ThemeSVTMainFolderLeft,
+.ThemeSVTMainItemLeft,
+.ThemeSVTMainFolderText,
+.ThemeSVTMainItemText,
+.ThemeSVTMainItemRight,
+.ThemeSVTMainFolderRight
+{
+	border: 0;
+	background-color: inherit;
+	white-space: nowrap;
+}
+
+/* sub menus sub components */
+
+.ThemeSVTMenuFolderLeft,
+.ThemeSVTMenuItemLeft
+{
+	padding:	6px 0px 10px 10px;
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+.ThemeSVTMenuFolderText,
+.ThemeSVTMenuItemText
+{
+	padding:	10px 10px 10px 13px;
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+.ThemeSVTMenuItemRight,
+.ThemeSVTMenuFolderRight
+{
+	padding:	10px 3px 10px 10px;
+	border:		0;
+	white-space:	nowrap;
+	background-color:	inherit;
+}
+
+/* hoover and active border */
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderLeft,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderLeft,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemLeft,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemLeft,
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderText,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderText,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemText,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemText,
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderRight,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderRight,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemRight,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemRight
+{
+	border-color:	#0044BB;
+}
+
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderLeft,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderLeft,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemLeft,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemLeft
+{
+	border-width:	3px 0px 3px 3px;
+	border-style:	solid;
+	padding:	6px 0px 6px 6px;
+}
+
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderText,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderText,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemText,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemText
+{
+	border-width:	3px 0px 3px 0px;
+	border-style:	solid;
+	padding:	6px 9px 6px 15px;
+}
+
+.ThemeSVTMenuItemHover .ThemeSVTMenuFolderRight,
+.ThemeSVTMenuItemActive .ThemeSVTMenuFolderRight,
+.ThemeSVTMenuItemHover .ThemeSVTMenuItemRight,
+.ThemeSVTMenuItemActive .ThemeSVTMenuItemRight
+{
+	border-width:	3px 3px 3px 0px;
+	border-style:	solid;
+	padding:	6px 0px 6px 0px;
+}
+
+td.ThemeSVTMenuSplit
+{
+	padding:	0px;
+	margin:		0px;
+	height:		15px;
+	border:		0px;
+	background-color:	inherit;
+	overflow:	hidden;
+}
+
+div.ThemeSVTMenuSplit
+{
+	margin: 4px;
+	height: 3px;
+	overflow: hidden;
+	background-color: inherit;
+	border-top: 3px solid #000066;
+}
+
+.ThemeSVTMenuItem img.seq1
+{
+	display:	inline;
+}
+
+.ThemeSVTMenuItemHover seq2,
+.ThemeSVTMenuItemActive seq2
+{
+	display:	inline;
+}
+
+.ThemeSVTMenuItem .seq2,
+.ThemeSVTMenuItemHover .seq1,
+.ThemeSVTMenuItemActive .seq1
+{
+	display:	none;
+}

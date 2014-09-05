@@ -1,0 +1,14 @@
+[PropertyInfo]
+aAsignar,java.util.Collection,false,false,aAsignar,aAsignar,true,<default>
+accion,String,false,false,accion,accion,true,<default>
+ADesasignar,java.util.Collection,false,false, , ,true,<default>
+asignados,java.util.Collection,false,false,asignados,asignados,true,<default>
+btnSubmit,String,false,false,btnSubmit,btnSubmit,true,<default>
+descripcion,String,false,false,descripcion,descripcion,true,<default>
+noAsignados,java.util.Collection,false,false,noAsignados,noAsignados,true,<default>
+aDonde,String,false,false,aDonde,aDonde,true,<default>
+[IconNames]
+
+
+
+

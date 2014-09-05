@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence  
+								http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+	<persistence-unit name="svt" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:comp/env/jdbc/SVT</jta-data-source>
+
+		<!-- Todas las clases mapeadas -->
+
+		<!--para svtp -->
+
+
+
+		<!-- para siuvt -->
+
+
+		<!-- para svt -->
+
+
+		<!-- global object -->
+
+		<class>conicet.framework.file.object.configuracion.CConfiguracionPropiedad</class>
+		<class>conicet.framework.file.object.documento.CDocumento</class>
+		<class>conicet.framework.file.object.extension.CExtension</class>
+		<class>conicet.framework.file.object.tipoDocumento.CTipoDocumento</class>
+		<class>conicet.framework.hibernate3.object.menu.CMenu</class>
+		<class>conicet.framework.hibernate3.object.menu.CMenuPK</class>
+		<class>conicet.framework.hibernate3.object.persona.CPersona</class>
+		<class>conicet.framework.hibernate3.object.escalafon.CEscalafon</class>
+		<class>conicet.framework.hibernate3.object.localidad.CLocalidad</class>
+		<class>conicet.framework.hibernate3.object.lugarDeTrabajo.CLugarDeTrabajo</class>
+		<class>conicet.framework.hibernate3.object.lugarDeTrabajo.CLugarDeTrabajoArbol</class>
+		<class>conicet.framework.hibernate3.object.mail.CMail</class>
+		<class>conicet.framework.hibernate3.object.pais.CPais</class>
+		<class>conicet.framework.hibernate3.object.partido.CPartido</class>
+		<class>conicet.framework.hibernate3.object.personaDatosAdicionales.CDatosAdicionalesPersona</class>
+		<class>conicet.framework.hibernate3.object.provincia.CProvincia</class>
+		<class>conicet.framework.hibernate3.object.telefono.CTelefono</class>
+		<class>conicet.framework.hibernate3.object.campoAplicacion.CCampoAplicacion</class>
+		<class>conicet.framework.hibernate3.object.disciplinaPrimaria.CDisciplinaPrimaria</class>
+		<class>conicet.framework.hibernate3.object.disciplinaDesagregada.CDisciplinaDesagregada</class>
+		<class>conicet.framework.hibernate3.object.categoria.CCategoria</class>
+		<class>conicet.framework.hibernate3.object.categoria.CCategoriaId</class>
+		<class>conicet.framework.hibernate3.object.titulo.CTitulo</class>
+		<class>conicet.framework.hibernate3.object.personaTitulo.CPersonaTitulo</class>
+		<class>conicet.framework.hibernate3.object.personaTitulo.CPersonaTituloId</class>
+		<class>conicet.framework.hibernate3.object.datoAcademico.CDatoAcademico</class>
+
+		<properties>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.transaction.flush_before_completion" value="true" />
+			<property name="hibernate.current_session_context_class" value="thread" />
+			<property name="hibernate.connection.autocommit" value="false" />
+			<property name="hibernate.max_fetch_depth" value="3" />
+			<property name="hibernate.use_sql_comments" value="true" />
+			<property name="hibernate.archive.autodetection" value="class" />
+			<property name="hibernate.generate_statistics" value="true" />
+
+			<!--property name="hibernate.hbm2ddl.auto" value="update" / -->
+
+			<property name="hibernate.auditable" value="true" />
+			<property name="org.hibernate.envers.store_data_at_delete" value="true" />
+			<property name="hibernate.ejb.event.post-insert" value="org.hibernate.ejb.event.EJB3PostInsertEventListener,org.hibernate.envers.event.AuditEventListener,conicet.apps.svt.contabilidad.eventListener.CContabilidadEventListener" />
+			<property name="hibernate.ejb.event.post-update" value="org.hibernate.ejb.event.EJB3PostUpdateEventListener,org.hibernate.envers.event.AuditEventListener,conicet.apps.svt.contabilidad.eventListener.CContabilidadEventListener" />
+			<property name="hibernate.ejb.event.post-delete" value="org.hibernate.ejb.event.EJB3PostDeleteEventListener,org.hibernate.envers.event.AuditEventListener,conicet.apps.svt.contabilidad.eventListener.CContabilidadEventListener" />
+			<property name="hibernate.ejb.event.pre-collection-update" value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="hibernate.ejb.event.pre-collection-remove" value="org.hibernate.envers.event.AuditEventListener" />
+			<property name="hibernate.ejb.event.post-collection-recreate" value="org.hibernate.envers.event.AuditEventListener" />
+			
+		</properties>
+	</persistence-unit>
+	
+	<persistence-unit name="test" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<!-- Todas las clases mapeadas -->
+
+		<!-- global object -->
+
+		<class>conicet.framework.file.object.configuracion.CConfiguracionPropiedad</class>
+		<class>conicet.framework.file.object.documento.CDocumento</class>
+		<class>conicet.framework.file.object.extension.CExtension</class>
+		<class>conicet.framework.file.object.tipoDocumento.CTipoDocumento</class>
+		<class>conicet.framework.hibernate3.object.menu.CMenu</class>
+		<class>conicet.framework.hibernate3.object.menu.CMenuPK</class>
+		<class>conicet.framework.hibernate3.object.persona.CPersona</class>
+		<class>conicet.framework.hibernate3.object.escalafon.CEscalafon</class>
+		<class>conicet.framework.hibernate3.object.localidad.CLocalidad</class>
+		<class>conicet.framework.hibernate3.object.lugarDeTrabajo.CLugarDeTrabajo</class>
+		<class>conicet.framework.hibernate3.object.lugarDeTrabajo.CLugarDeTrabajoArbol</class>
+		<class>conicet.framework.hibernate3.object.mail.CMail</class>
+		<class>conicet.framework.hibernate3.object.pais.CPais</class>
+		<class>conicet.framework.hibernate3.object.partido.CPartido</class>
+		<class>conicet.framework.hibernate3.object.personaDatosAdicionales.CDatosAdicionalesPersona</class>
+		<class>conicet.framework.hibernate3.object.provincia.CProvincia</class>
+		<class>conicet.framework.hibernate3.object.telefono.CTelefono</class>
+		<class>conicet.framework.hibernate3.object.campoAplicacion.CCampoAplicacion</class>
+		<class>conicet.framework.hibernate3.object.disciplinaPrimaria.CDisciplinaPrimaria</class>
+		<class>conicet.framework.hibernate3.object.disciplinaDesagregada.CDisciplinaDesagregada</class>
+		<class>conicet.framework.hibernate3.object.categoria.CCategoria</class>
+		<class>conicet.framework.hibernate3.object.categoria.CCategoriaId</class>
+		<class>conicet.framework.hibernate3.object.titulo.CTitulo</class>
+		<class>conicet.framework.hibernate3.object.personaTitulo.CPersonaTitulo</class>
+		<class>conicet.framework.hibernate3.object.personaTitulo.CPersonaTituloId</class>
+		<class>conicet.framework.hibernate3.object.datoAcademico.CDatoAcademico</class>
+	
+		<properties>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.transaction.flush_before_completion" value="true" />
+			<property name="hibernate.current_session_context_class" value="thread" />
+			<property name="hibernate.max_fetch_depth" value="3" />
+			<property name="hibernate.use_sql_comments" value="true" />
+			<property name="hibernate.archive.autodetection" value="class" />
+	
+	
+			<property name="dialect" value="org.hibernate.dialect.HSQLDialect" />
+			<property name="hibernate.connection.autocommit" value="false" />
+			<property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver" />
+			<property name="hibernate.connection.url" value="jdbc:hsqldb:mem:tsg" />
+			<property name="hibernate.connection.username" value="sa" />
+			<property name="hibernate.connection.password" value="" />
+	
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			
+		</properties>
+	</persistence-unit>
+</persistence>

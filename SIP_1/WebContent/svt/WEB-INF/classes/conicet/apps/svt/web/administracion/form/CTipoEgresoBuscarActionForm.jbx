@@ -1,0 +1,11 @@
+[PropertyInfo]
+CTipoEgreso,CTipoEgreso,false,false, , ,true,<default>
+descripcion,String,false,false, , ,true,<default>
+descripcionBusqueda,String,false,false, , ,false,<default>
+grupoEgreso,String,false,false, , ,true,<default>
+grupoEgresoBusqueda,String,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

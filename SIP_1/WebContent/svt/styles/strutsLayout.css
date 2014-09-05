@@ -1,0 +1,15 @@
+select.CLayoutSelect
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+th.CLayoutSelect
+{
+  color: #626262;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  text-align: right;
+  vertical-align: top;
+  font-weight: normal;
+}

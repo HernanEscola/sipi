@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="ETipoContratanteXml">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CF" />
+			<xs:enumeration value="OTROS" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="CCategoriaIvaXml">
+		<xs:sequence>
+			<xs:element name="adicional" type="xs:decimal" minOccurs="0" />
+			<xs:element name="alicuota" type="xs:decimal" minOccurs="0" />
+			<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+			<xs:element name="estado" type="xs:string" minOccurs="0" />
+			<xs:element name="id" type="xs:int" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CConsumidorFinalXml">
+		<xs:sequence>
+			<xs:element name="nombre" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0" />
+						<xs:maxLength value="50" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="apellido" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0" />
+						<xs:maxLength value="50" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="documento" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0" />
+						<xs:maxLength value="10" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="telefono" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0" />
+						<xs:maxLength value="50" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fax" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0" />
+						<xs:maxLength value="20" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="email" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0" />
+						<xs:maxLength value="30" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="DatosCContratanteOtroXml">
+		<xs:sequence>
+			<xs:element name="razonSocial" minOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0" />
+						<xs:maxLength value="100" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="nombreFantasia" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0" />
+						<xs:maxLength value="60" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="extranjero" type="xs:boolean" minOccurs="1" />
+			<xs:element name="cuit" minOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[0-9]{11}" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="categoriaIva" type="CCategoriaIvaXml" minOccurs="0" />
+			<xs:element name="tipoPersonaJuridica" type="xs:string" minOccurs="0" />
+			
+			<xs:element name="paisDescripcion" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="30" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="localidadDescripcion" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="30" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="domicilio" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="60" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="codigoPostal" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="60" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CContratanteOtroXml">
+		<xs:sequence>
+			<xs:element name="sucursal" type="xs:boolean" minOccurs="1" />
+			<xs:element name="datosContratante" type="DatosCContratanteOtroXml" minOccurs="1" />
+			<xs:element name="central" type="DatosCContratanteOtroXml" minOccurs="0" />
+			<xs:element name="centralId" type="xs:long"  minOccurs="0" />		
+		</xs:sequence>
+	</xs:complexType>
+
+	
+		<xs:complexType name="CContratanteXml">
+			<xs:sequence>
+				<xs:element name="id" type="xs:long" />
+				<xs:element name="tipo" type="ETipoContratanteXml" minOccurs="1" maxOccurs="1" />
+				<xs:element name="consumidorFinal" type="CConsumidorFinalXml" minOccurs="0" />
+				<xs:element name="contratanteOtro" type="CContratanteOtroXml" minOccurs="0" />
+				<xs:element name="paisDescripcion" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="30" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="localidadDescripcion" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="30" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="domicilio" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="60" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="codigoPostal" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="60" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="fechaAlta" type="xs:date" />
+				<xs:element name="fechaMod" type="xs:date" />
+				
+			</xs:sequence>
+		</xs:complexType>
+		
+	<xs:element  name="CContratanteTypeXml" type="CContratanteXml"> 
+	</xs:element>
+
+
+
+</xs:schema>

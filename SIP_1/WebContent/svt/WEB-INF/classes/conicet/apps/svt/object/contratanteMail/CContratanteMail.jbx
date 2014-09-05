@@ -1,0 +1,9 @@
+[PropertyInfo]
+contratante,Long,false,false, , ,false,<default>
+id,Long,false,false, , ,false,<default>
+mail,String,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

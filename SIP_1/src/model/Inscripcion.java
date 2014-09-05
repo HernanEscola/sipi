@@ -17,11 +17,16 @@ import java.sql.Date;
 
 
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import enumerates.EEstado;
 import enumerates.EEstadoInscripcion;
@@ -35,6 +40,8 @@ public class Inscripcion {
 	private Cuatrimestre cuatrimestre;
 	@Enumerated
 	private EEstadoInscripcion estado;
+	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	private Set<Curso> cursos;
 
 	@Id
 	@GeneratedValue
@@ -89,6 +96,15 @@ public class Inscripcion {
 	public EEstadoInscripcion getEstado() {
 		return estado;
 	}
+
+	public Set<Curso> getCursos() {
+		return cursos;
+	}
+
+	public void setCursos(Set<Curso> cursos) {
+		this.cursos = cursos;
+	}
+	
 	
 	
 }

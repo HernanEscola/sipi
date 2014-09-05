@@ -4,6 +4,7 @@ import hbt.HibernateUtil;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Vector;
 
@@ -25,7 +26,9 @@ import bean.Promocion;
 import bean.PromocionDescuento;
 import bean.PromocionNochesLibres;
 import bean.Reserva;
+import bean.dao.CursoDAO;
 import bean.dao.GenericDAO;
+import bean.dao.InscripcionDAO;
 import bean.dao.UsuarioDAO;
 import bean.dto.ClienteDTO;
 import bean.dto.DatosPagoDTO;
@@ -33,9 +36,7 @@ import bean.dto.HabitacionDTO;
 import bean.dto.HotelDTO;
 import bean.dto.PromocionDTO;
 import bean.dto.ReservaDTO;
-
 import common.CommonUtils;
-
 import enumerates.EEstadoInscripcion;
 import enumerates.ETipoEstadoMateria;
 
@@ -47,6 +48,8 @@ public class Sistema implements Serializable {
 
 
 	private UsuarioDAO usuarioDao;
+	private CursoDAO cursoDao;
+	private InscripcionDAO inscripcionDao;
 	
 	public static void main(String[] args) {
 		HibernateUtil.getSession();
@@ -55,6 +58,10 @@ public class Sistema implements Serializable {
 		
 		
 		System.out.println("joya");
+	}
+	
+	public Usuario login(String nroDoc, String pass) throws Exception{
+		return findUsuarioByUserNameAndPassword(nroDoc, pass);
 	}
 	
 	public Usuario findUsuarioByUserNameAndPassword(String nroDoc, String pass) throws Exception{
@@ -81,13 +88,11 @@ public class Sistema implements Serializable {
 		// abro los cursos
 		Grilla grilla = null;
 		
-		List<Curso> cursos;
-		for(ItemGrilla ig : grilla.getGrilla()){
-			ig.getCurso().set
-		}
+		List<Curso> cursos = cursoDao.findCursosByCuatrimestre(inscripcion.getCuatrimestre());
+		inscripcion.setCursos(new HashSet(cursos));
 		//Informo a los alumnos
 			
-		InscripcionDao.registrarInscripcion(inscripcion, alumnos, cursos);
+		inscripcionDao.registrarAperturaInscripcion(inscripcion, alumnos);
 	}
 	
 	private int calcularDuracionInscripcion(String fechaInicio,

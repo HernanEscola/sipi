@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+              "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+              "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+  <definition extends=".baseDef" name=".precioOfertaAltaDef">
+    <put name="body" value="/jsp/precioOfertaAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".presupuestoAltaDef">
+    <put name="body" value="/jsp/presupuestoAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".presupuestoBuscarDef">
+    <put name="body" value="/jsp/presupuestoBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".precioOfertaDetalleDef">
+    <put name="body" value="/jsp/precioOfertaDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".precioOfertaModificarDef">
+    <put name="body" value="/jsp/precioOfertaModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".presupuestoDetalleDef">
+    <put name="body" value="/jsp/presupuestoDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".presupuestoModificarDef">
+    <put name="body" value="/jsp/presupuestoModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".ordenFacturacionBuscarDef">
+    <put name="body" value="/jsp/ordenFacturacion/ordenFacturacionPresupuestoBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".presupuestoEliminarDef">
+    <put name="body" value="/jsp/presupuestoEliminar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".presupuestoHabilitarDeshabilitarDef">
+    <put name="body" value="/jsp/presupuestoHabilitarDeshabilitar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".pruebaDef">
+    <put name="body" value="/jsp/prueba.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".precioSugeridoAltaDef">
+    <put name="body" value="/jsp/precioSugeridoAlta.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".precioSugeridoBuscarDef">
+    <put name="body" value="/jsp/precioSugeridoBuscar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".precioSugeridoDetalleDef">
+    <put name="body" value="/jsp/precioSugeridoDetalle.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".precioSugeridoModificarDef">
+    <put name="body" value="/jsp/precioSugeridoModificar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".precioSugeridoDetaDef">
+    <put name="body" value="/jsp/precioSugeridoDetalle.jsp" />
+  </definition>
+    <definition extends=".baseDef" name=".costoSeleccionarPrecioSugeridoDef">
+    <put name="body" value="/jsp/costoSeleccionarPrecioSugerido.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".precioSugeridoEliminarDef">
+    <put name="body" value="/jsp/precioSugeridoEliminar.jsp" />
+  </definition>
+   <definition extends=".baseDef" name=".precioSugeridoHabilitarDef">
+    <put name="body" value="/jsp/precioSugeridoHabilitar.jsp" />
+  </definition>
+  <definition extends=".baseDef" name=".costoPrecioSeleccionarDef">
+    <put name="body" value="/jsp/costoPrecioSeleccionar.jsp" />
+  </definition>
+    <definition extends=".baseDef" name=".rolBuscarDef">
+    <put name="body" value="/jsp/rolFuncionBuscar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".funcionRolSeleccionarDef">
+    <put name="body" value="/jsp/funcionRolSeleccionar.jsp" />
+  </definition>
+  
+  <definition extends=".baseDef" name=".wsTokenGeneratorDef">
+    <put name="body" value="/jsp/wsTokenGenerator.jsp" />
+  </definition>
+
+</tiles-definitions>

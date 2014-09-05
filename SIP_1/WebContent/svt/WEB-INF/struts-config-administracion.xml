@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="cTipoEgresoActionForm" type="conicet.apps.svt.web.administracion.form.CTipoEgresoActionForm" />
+    <form-bean name="cTipoEgresoBuscarActionForm" type="conicet.apps.svt.web.administracion.form.CTipoEgresoBuscarActionForm" />
+    <form-bean name="cTipoEgresoDetalleActionForm" type="conicet.apps.svt.web.administracion.form.CTipoEgresoDetalleActionForm" />
+    <form-bean name="cTipoEgresoEliminarActionForm" type="conicet.apps.svt.web.administracion.form.CTipoEgresoEliminarActionForm" />
+    <form-bean name="cTipoEgresoModificarActionForm" type="conicet.apps.svt.web.administracion.form.CTipoEgresoModificarActionForm" />
+    <form-bean name="cPersonaActionForm" type="conicet.apps.svt.web.entidad.form.CPersonaActionForm" />
+    <form-bean name="cPersonaSeleccionarActionForm" type="conicet.apps.svt.web.entidad.form.CPersonaSeleccionarActionForm" />
+    <form-bean name="cPersonaDetalleActionForm" type="conicet.apps.svt.web.entidad.form.CPersonaDetalleActionForm" />
+    <form-bean name="cConvenioMarcoActionForm" type="conicet.apps.svt.web.administracion.form.CConvenioMarcoActionForm" />
+    <form-bean name="cConvenioMarcoBuscarActionForm" type="conicet.apps.svt.web.administracion.form.CConvenioMarcoBuscarActionForm" />
+    <form-bean name="cConvenioMarcoDetalleActionForm" type="conicet.apps.svt.web.administracion.form.CConvenioMarcoDetalleActionForm" />
+    <form-bean name="cConvenioMarcoModificarActionForm" type="conicet.apps.svt.web.administracion.form.CConvenioMarcoModificarActionForm" />
+    <form-bean name="cConvenioMarcoEliminar2ActionForm" type="conicet.apps.svt.web.administracion.form.CConvenioMarcoEliminar2ActionForm" />
+    <form-bean name="cConvenioMarcoSeleccionarActionForm" type="conicet.apps.svt.web.administracion.form.CConvenioMarcoSeleccionarActionForm" />
+    <form-bean name="cTipoEgresoHabilitarActionForm" type="conicet.apps.svt.web.administracion.form.CTipoEgresoHabilitarActionForm" />
+    <form-bean name="cConvenioMarcoHabilitarActionForm" type="conicet.apps.svt.web.administracion.form.CConvenioMarcoHabilitarActionForm" />
+    <form-bean name="cAdministracionPrestadoresActionForm" type="conicet.apps.svt.web.administracion.form.CAdministracionPrestadoresActionForm" />
+    <form-bean name="cAdministracionPrestadoresBuscarActionForm" type="conicet.apps.svt.web.administracion.form.CAdministracionPrestadoresBuscarActionForm" />
+    <form-bean name="cAdministracionPrestadoresModificarActionForm" type="conicet.apps.svt.web.administracion.form.CAdministracionPrestadoresModificarActionForm" />
+    <form-bean name="cAdministracionPrestadoresAutorizacionActionForm" type="conicet.apps.svt.web.administracion.form.CAdministracionPrestadoresAutorizacionActionForm" />
+    <form-bean name="cValorManoObraDetalleActionForm" type="conicet.apps.svt.web.administracion.form.CValorManoObraDetalleActionForm" />
+    <form-bean name="cValorManoObraModificarActionForm" type="conicet.apps.svt.web.administracion.form.CValorManoObraModificarActionForm" />
+    <form-bean name="cValorReferenciaConicetActionForm" type="conicet.apps.svt.web.administracion.form.CValorReferenciaConicetActionForm" />
+    <form-bean name="cValorReferenciaConicetDetalleActionForm" type="conicet.apps.svt.web.administracion.form.CValorReferenciaConicetDetalleActionForm" />
+ 	<form-bean name="cReporteMensualUvtsActionForm" type="conicet.apps.svt.web.reporte.form.CReporteMensualUvtsActionForm" />
+ 	<form-bean name="cComboPaisActionForm" type="conicet.apps.svt.web.util.form.CComboPaisActionForm" />
+ 	<form-bean name="cEntidadExternaRelacionBuscarForm" type="conicet.apps.svt.web.entidadRelacion.form.CEntidadExternaRelacionBuscarForm" />
+ 	<form-bean name="cContactoBuscarActionForm" type="conicet.apps.svt.web.contacto.form.CContactoBuscarActionForm" />
+ 	<form-bean name="cContactoForm" type="conicet.apps.svt.web.contacto.form.CContactoForm" />
+ 	<form-bean name="cContactoEliminarActionForm" type="conicet.apps.svt.web.contacto.form.CContactoEliminarActionForm" />
+ 	<form-bean name="cSectorForm" type="conicet.apps.svt.web.gestor.form.CSectorForm" />
+    <form-bean name="cSectorBuscarActionForm" type="conicet.apps.svt.web.gestor.form.CSectorBuscarActionForm" />
+  </form-beans>
+
+  <action-mappings>
+    <action input=".tipoEgresoAltaDef" name="cTipoEgresoActionForm" path="/cTipoEgresoAltaAction" scope="session" type="conicet.apps.svt.web.administracion.action.CTipoEgresoAltaAction" validate="true">
+      <forward name="alta" path=".tipoEgresoAltaDef" />
+      <forward name="confirmar" path=".tipoEgresoAltaDef" />
+      <forward name="listado" path="/cTipoEgresoBuscarAction.do?accion=refrescar" />
+    </action>
+    <action input=".tipoEgresoBuscarDef" name="cTipoEgresoBuscarActionForm" path="/cTipoEgresoBuscarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CTipoEgresoBuscarAction" validate="true">
+      <forward name="formulario" path=".tipoEgresoBuscarDef" />
+      <forward name="listado" path=".tipoEgresoBuscarDef" />
+      <forward name="alta" path="/cTipoEgresoAltaAction.do?accion=ini" />
+      <forward name="detalle" path="/cTipoEgresoDetalleAction.do?accion=ini" />
+      <forward name="volverBusqueda" path="/cTipoEgresoBuscarAction.do?accion=ini" />
+    </action>
+    <action name="cTipoEgresoDetalleActionForm" path="/cTipoEgresoDetalleAction" scope="session" type="conicet.apps.svt.web.administracion.action.CTipoEgresoDetalleAction" validate="false">
+      <forward name="formulario" path=".tipoEgresoDetalleDef" />
+      <forward name="listado" path="/cTipoEgresoBuscarAction.do?accion=refrescar" />
+      <forward name="modificar" path="/cTipoEgresoModificarAction.do?accion=ini" />
+      <forward name="eliminar" path="/cTipoEgresoEliminarAction.do?accion=ini" />
+      <forward name="activar" path="/cTipoEgresoHabilitarAction.do?accion=ini"/>
+      <forward name="listadoOriginal" path=".tipoEgresoBuscarDef"/>
+    </action>
+    <action name="cTipoEgresoEliminarActionForm" path="/cTipoEgresoEliminarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CTipoEgresoEliminarAction" validate="false">
+      <forward name="eliminar" path=".tipoEgresoEliminarDef" />
+      <forward name="ficha" path="/cTipoEgresoDetalleAction.do?accion=ini" />
+      <forward name="listado" path="/cTipoEgresoBuscarAction.do?accion=refrescar" />
+      <forward name="volver" path=".tipoEgresoDetalleDef" />
+    </action>
+    <action input=".tipoEgresoModificarDef" name="cTipoEgresoModificarActionForm" path="/cTipoEgresoModificarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CTipoEgresoModificarAction" validate="true">
+      <forward name="modificar" path=".tipoEgresoModificarDef" />
+      <forward name="confirmar" path=".tipoEgresoModificarDef" />
+      <forward name="listado" path="/cTipoEgresoBuscarAction.do?accion=refrescar" />
+      <forward name="detalle" path="/cTipoEgresoDetalleAction.do?accion=ini" />
+      <forward name="volver" path=".tipoEgresoDetalleDef" />
+    </action>
+    <action input=".personaAltaDef" name="cPersonaActionForm" path="/cPersonaAltaAction" scope="session" type="conicet.apps.svt.web.entidad.action.CPersonaAltaAction" validate="true">
+      <forward name="formulario" path=".personaAltaDef" />
+      <forward name="altaPersonaCfm" path=".personaAltaDef" />
+      <forward name="seleccionarPersonas" path="/cPersonaSeleccionarAction.do?accion=nuevaPersona" />
+    </action>
+    <action input=".personaSeleccionarDef" name="cPersonaSeleccionarActionForm" path="/cPersonaSeleccionarAction" scope="session" type="conicet.apps.svt.web.entidad.action.CPersonaSeleccionarAction" validate="true">
+      <forward name="formulario" path=".personaSeleccionarDef" />
+      <forward name="entidadAlta" path="/cEntidadAltaAction.do?accion=agregarIntegrantes" />
+      <forward name="entidadModificar" path="/cEntidadModificarAction.do?accion=agregarIntegrantes" />
+      <forward name="nuevaPersona" path="/cPersonaAltaAction.do?accion=ini" />
+      <forward name="personaDetalle" path="/cPersonaDetalleAction.do?accion=ini" />
+    </action>
+    <action name="cPersonaDetalleActionForm" path="/cPersonaDetalleAction" scope="session" type="conicet.apps.svt.web.entidad.action.CPersonaDetalleAction" validate="false">
+      <forward name="formulario" path=".personaDetalleDef" />
+      <forward name="listado" path=".personaSeleccionarDef" />
+      <forward name="seleccionarPersonas" path="/cPersonaSeleccionarAction.do?accion=nuevaPersona" />
+      <forward name="altaGrupo" path=".entidadAltaDef" />
+      <forward name="altaGrupoCfm" path=".entidadAltaGrupoCfmDef" />
+      <forward name="detalleGrupo" path=".entidadDetalleDef" />
+      <forward name="eliminarGrupo" path=".entidadEliminarDef" />
+      <forward name="activarGrupo" path=".entidadActivarDef" />
+      <forward name="modificarGrupo" path=".entidadModificarDef" />
+      <forward name="modificarGrupoCfm" path=".entidadModificarCfmDef" />
+      <forward name="entidadAlta" path=".entidadAltaDef"/>
+    </action>
+    <action name="cTipoEgresoHabilitarActionForm" path="/cTipoEgresoHabilitarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CTipoEgresoHabilitarAction" validate="false">
+      <forward name="activar" path=".tipoEgresoHabilitarDef" />
+      <forward name="ficha" path="/cTipoEgresoDetalleAction.do?accion=ini" />
+      <forward name="listado" path="/cTipoEgresoBuscarAction.do?accion=refrescar" />
+      <forward name="volver" path="/cTipoEgresoDetalleAction.do?accion=ini" />
+    </action>
+    <action input=".convenioMarcoAltaDef" name="cConvenioMarcoActionForm" path="/cConvenioMarcoAltaAction" scope="session" type="conicet.apps.svt.web.administracion.action.CConvenioMarcoAltaAction" validate="true">
+      <forward name="alta" path=".convenioMarcoAltaDef" />
+      <forward name="confirmar" path=".convenioMarcoAltaDef" />
+      <forward name="listado" path="/cConvenioMarcoBuscarAction.do?accion=refrescar" />
+      <forward name="seleccionEntidad" path="/cEntidadSeleccionarAction.do?accion=ini" />
+      <forward name="seleccionUvt" path="/cUvtSeleccionarAction.do?accion=ini" />
+      <forward name="convenioMarcoSeleccionar" path="/cConvenioMarcoSeleccionarAction.do?accion=refrescarAlta" />
+      <forward name="convenioMarcoDetalle" path=".convenioMarcoDetalleDef" />
+      <forward name="detalleFicha" path="/cConvenioMarcoDetalleAction.do?accion=ini" />
+      <forward name="detalleEntidad" path="/cEntidadDetalleAction.do?accion=ini" />
+      <forward name="detalleUvt" path="/cGestorDetalleAction.do?accion=ini" />
+    </action>
+    <action input=".convenioMarcoBuscarDef" name="cConvenioMarcoBuscarActionForm" path="/cConvenioMarcoBuscarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CConvenioMarcoBuscarAction" validate="true">
+      <forward name="formulario" path=".convenioMarcoBuscarDef" />
+      <forward name="listado" path=".convenioMarcoBuscarDef" />
+      <forward name="alta" path="/cConvenioMarcoAltaAction.do?accion=ini" />
+      <forward name="detalle" path="/cConvenioMarcoDetalleAction.do?accion=ini" />
+      <forward name="volverBusqueda" path="/cConvenioMarcoBuscarAction.do?accion=ini" />
+    </action>
+    <action name="cConvenioMarcoDetalleActionForm" path="/cConvenioMarcoDetalleAction" scope="session" type="conicet.apps.svt.web.administracion.action.CConvenioMarcoDetalleAction" validate="false">
+      <forward name="formulario" path=".convenioMarcoDetalleDef" />
+      <forward name="listado" path="/cConvenioMarcoBuscarAction.do?accion=refrescar" />
+      <forward name="listadoOriginal" path="/cConvenioMarcoBuscarAction.do?accion=volver" />
+      <forward name="modificar" path="/cConvenioMarcoModificarAction.do?accion=ini" />
+      <forward name="eliminar" path="/cConvenioMarcoEliminarAction.do?accion=ini" />
+      <forward name="activar" path="/cConvenioMarcoHabilitarAction.do?accion=ini" />
+      <forward name="altaCopia" path="/cConvenioMarcoAltaAction.do?accion=ini" />
+      <forward name="detalleEntidad" path=".entidadDetalleDef" />
+      <forward name="detalleUvt" path="/cGestorDetalleAction.do?accion=ini" />
+    </action>
+    <action input=".convenioMarcoModificarDef" name="cConvenioMarcoModificarActionForm" path="/cConvenioMarcoModificarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CConvenioMarcoModificarAction" validate="true">
+      <forward name="modificar" path=".convenioMarcoModificarDef" />
+      <forward name="confirmar" path=".convenioMarcoModificarDef" />
+      <forward name="listado" path="/cConvenioMarcoBuscarAction.do?accion=refrescar" />
+      <forward name="detalle" path="/cConvenioMarcoDetalleAction.do?accion=ini" />
+      <forward name="volver" path=".convenioMarcoDetalleDef" />
+      <forward name="seleccionEntidad" path="/cEntidadSeleccionarAction.do?accion=ini" />
+      <forward name="detalleEntidad" path="/cEntidadDetalleAction.do?accion=ini" />
+      <forward name="seleccionUvt" path="/cUvtSeleccionarAction.do?accion=ini" />
+      <forward name="detalleUvt" path="/cGestorDetalleAction.do?accion=ini" />
+    </action>
+    <action name="cConvenioMarcoEliminar2ActionForm" path="/cConvenioMarcoEliminarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CConvenioMarcoEliminarAction" validate="false">
+      <forward name="eliminar" path=".convenioMarcoEliminarDef" />
+      <forward name="refrescarConvenio" path="/cConvenioMarcoDetalleAction.do?accion=ini" />
+      <forward name="listado" path="/cConvenioMarcoBuscarAction.do?accion=refrescar" />
+      <forward name="volver" path=".convenioMarcoDetalleDef" />
+      <forward name="detalleEntidad" path="/cEntidadDetalleAction.do?accion=ini" />
+    </action>
+    <action input=".convenioMarcoSeleccionarDef" name="cConvenioMarcoSeleccionarActionForm" path="/cConvenioMarcoSeleccionarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CConvenioMarcoSeleccionarAction" validate="true">
+      <forward name="formulario" path=".convenioMarcoSeleccionarDef" />
+      <forward name="entidadAlta" path="/cEntidadAltaAction.do?accion=agregarConvenioMarco"/>
+      <forward name="entidadModificar" path="/cEntidadModificarAction.do?accion=agregarConvenioMarco"/>
+      <forward name="convenioMarcoAlta" path="/cConvenioMarcoAltaAction.do?accion=ini"/>
+      <forward name="personaAlta" path="/cEntidadAltaAction.do?accion=agregarConvenioMarco"/>
+      <forward name="grupoAlta" path="/cEntidadAltaAction.do?accion=agregarConvenioMarco"/>
+      <forward name="orgAlta" path="/cEntidadAltaAction.do?accion=agregarConvenioMarco"/>
+      <forward name="ueAlta" path="/cEntidadAltaAction.do?accion=agregarConvenioMarco"/>
+    </action>
+    <action name="cConvenioMarcoHabilitarActionForm" path="/cConvenioMarcoHabilitarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CConvenioMarcoHabilitarAction" validate="false">
+      <forward name="activar" path=".convenioMarcoHabilitarDef" />
+      <forward name="ficha" path="/cConvenioMarcoDetalleAction.do?accion=ini" />
+      <forward name="listado" path="/cConvenioMarcoBuscarAction.do?accion=refrescar" />
+      <forward name="volver" path="/cConvenioMarcoDetalleAction.do?accion=ini" />
+      <forward name="detalleEntidad" path="/cEntidadDetalleAction.do?accion=ini" />
+      <forward name="detalleUvt" path="/cGestorDetalleAction.do?accion=ini" />
+    </action>
+    <action input=".administracionPrestadoresDef" name="cAdministracionPrestadoresActionForm" path="/cAdministracionPrestadoresAction" scope="session" type="conicet.apps.svt.web.administracion.action.CAdministracionPrestadoresAction" validate="true">
+      <forward name="alta" path=".administracionPrestadoresDef" />
+      <forward name="seleccionEntidad" path="/cEntidadSeleccionarAction.do?accion=ini" />
+      <forward name="seleccionPrestadores" path="/cPrestadorAdmSeleccionarAction.do?accion=ini" />
+    </action>
+    <action input=".administracionPrestadoresBuscarDef" name="cAdministracionPrestadoresBuscarActionForm" path="/cAdministracionPrestadoresBuscarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CAdministracionPrestadoresBuscarAction" validate="true">
+      <forward name="formulario" path=".administracionPrestadoresBuscarDef" />
+      <forward name="listado" path=".administracionPrestadoresBuscarDef" />
+      <forward name="detalleModificar" path="/cAdministracionPrestadoresModificarAction.do?accion=ini" />
+      <forward name="detallePrestador" path="/cEntidadDetalleAction.do?accion=ini" />
+      <forward name="alta" path="/cAdministracionPrestadoresAction.do?accion=ini" />
+    </action>
+    <action input=".administracionPrestadoresModificarDef" name="cAdministracionPrestadoresModificarActionForm" path="/cAdministracionPrestadoresModificarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CAdministracionPrestadoresModificarAction" validate="true">
+      <forward name="modificar" path=".administracionPrestadoresModificarDef" />
+      <forward name="listado" path="/cAdministracionPrestadoresBuscarAction.do?accion=refrescar" />
+      <forward name="volver" path="/cAdministracionPrestadoresBuscarAction.do?accion=volver" />
+      <forward name="seleccionPrestadores" path="/cPrestadorAdmSeleccionarAction.do?accion=ini" />
+    </action>
+    <action input=".administracionPrestadoresAutorizacionDef" name="cAdministracionPrestadoresAutorizacionActionForm" path="/cAdministracionPrestadoresAutorizacionAction" scope="session" type="conicet.apps.svt.web.administracion.action.CAdministracionPrestadoresAutorizacionAction" validate="true">
+      <forward name="formulario" path=".administracionPrestadoresAutorizacionDef" />
+      <forward name="inicializar" path="/cAdministracionPrestadoresAutorizacionAction.do?accion=ini" />
+    </action>
+    <action input=".valorManoObraDetalleDef" name="cValorManoObraDetalleActionForm" path="/cValorManoObraDetalleAction" scope="session" type="conicet.apps.svt.web.administracion.action.CValorManoObraDetalleAction" validate="false">
+      <forward name="formulario" path=".valorManoObraDetalleDef" />
+      <forward name="modificar" path="/cValorManoObraModificarAction.do?accion=ini" />
+   </action>
+   <action name="cValorManoObraModificarActionForm" path="/cValorManoObraModificarAction" scope="session" type="conicet.apps.svt.web.administracion.action.CValorManoObraModificarAction" validate="true">
+      <forward name="formulario" path=".valorManoObraModificarDef" />
+      <forward name="modificar" path="/cValorManoObraModificarAction.do?accion=ini" />
+      <forward name="detalle" path="/cValorManoObraDetalleAction.do?accion=ini" />
+      <forward name="valorManoObraDetalle" path="/cValorManoObraDetalleAction.do?accion=ini" />
+   </action>
+   <action input=".valorReferenciaConicetDef" parameter="btnSubmit" name="cValorReferenciaConicetActionForm" path="/cValorReferenciaConicetDispatchAction" scope="session" type="conicet.apps.svt.web.administracion.action.CValorReferenciaConicetDispatchAction" validate="true">
+      <forward name="formulario" path=".valorReferenciaConicetDef" />
+      <forward name="modificar" path=".valorReferenciaConicetDef" />
+      <forward name="detalle" path=".valorReferenciaConicetDetalleDef" />
+   </action>
+   <action input=".valorReferenciaConicetDetalleDef" parameter="btnSubmit" name="cValorReferenciaConicetDetalleActionForm" path="/cValorReferenciaConicetDetalleAction" scope="session" type="conicet.apps.svt.web.administracion.action.CValorReferenciaConicetDetalleAction" validate="true">
+      <forward name="formulario" path=".valorReferenciaConicetDetalleDef" />
+      <forward name="modificar" path="/cValorReferenciaConicetDispatchAction.do?btnSubmit=init" />
+   </action>
+   
+   <action input=".reporteMensualUvtsDef" parameter="btnSubmit" name="cReporteMensualUvtsActionForm" path="/cReporteMensualUvtsAction" scope="session" type="conicet.apps.svt.web.reporte.action.CReporteMensualUvtsAction" validate="true">
+      <forward name="formulario" path=".reporteMensualUvtsDef" />
+   </action>
+    
+   <action parameter="btnSubmit"  name="cComboPaisActionForm" path="/cComboPaisAction" scope="session" type="conicet.apps.svt.web.util.action.CComboPaisAction" validate="false">
+   </action>
+   
+   <action input=".entidadExternaRelacionBuscarDef" parameter="btnSubmit" name="cEntidadExternaRelacionBuscarForm" path="/cEntidadExternaRelacionBuscarAction" scope="session" type="conicet.apps.svt.web.entidadRelacion.action.CEntidadExternaRelacionBuscarAction" validate="true">
+      <forward name="formulario" path=".entidadExternaRelacionBuscarDef" />
+      <forward name="listado" path=".entidadExternaRelacionBuscarDef" />
+    </action>
+   
+   
+   <action forward=".formularioTest" path="/testCalendar" />
+    <action forward=".formularioTest1" path="/test1" />
+	<action forward=".formularioTest2" path="/test2" />	
+	
+	<action input=".contactoBuscarDef" parameter="btnSubmit" name="cContactoBuscarActionForm" path="/cContactoBuscarAction" scope="session" type="conicet.apps.svt.web.contacto.action.CContactoBuscarAction" validate="true">
+      <forward name="formulario" path=".contactoBuscarDef" />
+      <forward name="detalle" path="/cContactoDetalleAction.do?method=init" />
+      <forward name="alta" path="/cContactoAltaAction.do?method=init" />
+    </action>
+
+    <action input=".contactoAltaDef" parameter="btnSubmit"  name="cContactoForm" path="/cContactoAltaAction" scope="session" type="conicet.apps.svt.web.contacto.action.CContactoAltaAction" validate="true">
+      <forward name="formulario" path=".contactoAltaDef" />
+      <forward name="cContactoBuscarAction" path="/cContactoBuscarAction.do?method=altasdeldia" />
+      <forward name="listadoRecientes" path="/cContactoBuscarAction.do?method=altasdeldia" />
+      <forward name="listado" path="/cContactoBuscarAction.do?method=refrescar" />
+    </action>
+    
+    <action input=".contactoModificarDef" parameter="btnSubmit" name="cContactoForm" path="/cContactoModificarAction" scope="session" type="conicet.apps.svt.web.contacto.action.CContactoModificarAction" validate="true">
+      <forward name="modificar" path=".contactoModificarDef" />
+      <forward name="detalle" path=".contactoDetalleDef" />
+      <forward name="formulario" path=".contactoModificarDef" />
+      <forward name="listado" path="/cContactoBuscarAction.do?method=refrescar" />
+	  <forward name="cContactoBuscarAction" path="/cContactoBuscarAction.do?method=refrescar" />           
+      <forward name="confirmar" path=".contactoModificarDef" />
+      <forward name="volver" path=".contactoBuscarDef" />
+    </action>
+    
+	<action input=".contactoEliminarDef" parameter="btnSubmit"  name="cContactoForm" path="/cContactoEliminarAction" scope="session" type="conicet.apps.svt.web.contacto.action.CContactoEliminarAction" validate="true">
+      <forward name="formulario" path=".contactoEliminarDef" />
+      <forward name="listado" path="/cContactoBuscarAction.do?method=refrescar" />
+	  <forward name="volver" path=".contactoDetalleDef" />	
+    </action>
+                
+    <action name="cContactoForm"  parameter="btnSubmit" path="/cContactoDetalleAction" scope="session" type="conicet.apps.svt.web.contacto.action.CContactoDetalleAction" validate="false">
+      <forward name="formulario" path=".contactoDetalleDef" />
+      <forward name="listado" path="/cContactoBuscarAction.do?method=refrescar" />
+      <forward name="cContactoBuscarAction" path="/cContactoBuscarAction.do?method=refrescar" />    
+	  <forward name="modificar" path="/cContactoModificarAction.do?method=init" />
+      <forward name="eliminar" path="/cContactoEliminarAction.do?method=init" />
+      <forward name="cConvenioDetalleAction" path="/cConvenioDetalleAction.do?method=refrescar" />
+      <forward name="cPdtsDetalleAction" path=".pdtsDetalleDef"/>
+      
+    </action>
+    
+   	<action input=".sectorBuscarDef" parameter="btnSubmit" name="cSectorBuscarActionForm" path="/cSectorBuscarAction" scope="session" type="conicet.apps.svt.web.gestor.action.CSectorBuscarAction" validate="true">
+      <forward name="formulario" path=".sectorBuscarDef" />
+      <forward name="detalle" path="/cSectorDetalleAction.do?method=init" />
+      <forward name="alta" path="/cSectorAltaAction.do?method=init" />
+    </action>
+
+    <action input=".sectorAltaDef" parameter="btnSubmit"  name="cSectorForm" path="/cSectorAltaAction" scope="session" type="conicet.apps.svt.web.gestor.action.CSectorAltaAction" validate="true">
+      <forward name="formulario" path=".sectorAltaDef" />
+      <forward name="cSectorBuscarAction" path="/cSectorBuscarAction.do?method=altasdeldia" />
+      <forward name="listadoRecientes" path="/cSectorBuscarAction.do?method=altasdeldia" />
+      <forward name="listado" path="/cSectorBuscarAction.do?method=refrescar" />
+    </action>
+    
+    <action input=".sectorModificarDef" parameter="btnSubmit" name="cSectorForm" path="/cSectorModificarAction" scope="session" type="conicet.apps.svt.web.gestor.action.CSectorModificarAction" validate="true">
+      <forward name="modificar" path=".sectorModificarDef" />
+      <forward name="detalle" path=".sectorDetalleDef" />
+      <forward name="formulario" path=".sectorModificarDef" />
+      <forward name="listado" path="/cSectorBuscarAction.do?method=refrescar" />
+	  <forward name="cSectorBuscarAction" path="/cSectorBuscarAction.do?method=refrescar" />           
+      <forward name="confirmar" path=".sectorModificarDef" />
+      <forward name="volver" path=".sectorBuscarDef" />
+    </action>
+    
+	<action input=".sectorEliminarDef" parameter="btnSubmit"  name="cSectorForm" path="/cSectorEliminarAction" scope="session" type="conicet.apps.svt.web.gestor.action.CSectorEliminarAction" validate="true">
+      <forward name="formulario" path=".sectorEliminarDef" />
+      <forward name="listado" path="/cSectorBuscarAction.do?method=refrescar" />
+	  <forward name="volver" path=".sectorDetalleDef" />	
+    </action>
+    
+    <action input=".sectorHabilitarDef" parameter="btnSubmit"  name="cSectorForm" path="/cSectorHabilitarAction" scope="session" type="conicet.apps.svt.web.gestor.action.CSectorHabilitarAction" validate="true">
+      <forward name="formulario" path=".sectorHabilitarDef" />
+      <forward name="listado" path="/cSectorBuscarAction.do?method=refrescar" />
+	  <forward name="volver" path=".sectorDetalleDef" />	
+    </action>    
+    
+    <action name="cSectorForm"  parameter="btnSubmit" path="/cSectorDetalleAction" scope="session" type="conicet.apps.svt.web.gestor.action.CSectorDetalleAction" validate="false">
+      <forward name="formulario" path=".sectorDetalleDef" />
+      <forward name="listado" path="/cSectorBuscarAction.do?method=refrescar" />
+      <forward name="cSectorBuscarAction" path="/cSectorBuscarAction.do?method=refrescar" />    
+	  <forward name="modificar" path="/cSectorModificarAction.do?method=init" />
+      <forward name="eliminar" path="/cSectorEliminarAction.do?method=init" />
+      <forward name="habilitar" path="/cSectorHabilitarAction.do?method=init" />
+      <forward name="deshabilitar" path="/cSectorHabilitarAction.do?method=init" />
+      
+    </action>
+
+    
+  </action-mappings>
+</struts-config>

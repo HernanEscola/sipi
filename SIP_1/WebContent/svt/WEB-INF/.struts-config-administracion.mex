@@ -1,0 +1,868 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/cTipoEgresoAltaAction.do" location="491,0" dimension="361,88" />
+  <StrutsActivity path="/cTipoEgresoBuscarAction.do" location="740,208" dimension="374,88" />
+  <StrutsActivity path="/cTipoEgresoDetalleAction.do" location="397,446" dimension="375,88" />
+  <StrutsActivity path="/cTipoEgresoEliminarAction.do" location="0,714" dimension="378,88" />
+  <StrutsActivity path="/cTipoEgresoModificarAction.do" location="447,714" dimension="385,88" />
+  <StrutsActivity path="/cPersonaAltaAction.do" location="1462,1938" dimension="315,88" />
+  <StrutsActivity path="/cPersonaSeleccionarAction.do" location="1702,2126" dimension="350,88" />
+  <StrutsActivity path="/cPersonaDetalleAction.do" location="812,2484" dimension="329,88" />
+  <StrutsActivity path="/cTipoEgresoHabilitarAction.do" location="932,714" dimension="381,88" />
+  <StrutsActivity path="/cConvenioMarcoAltaAction.do" location="627,996" dimension="382,88" />
+  <StrutsActivity path="/cConvenioMarcoBuscarAction.do" location="763,1234" dimension="395,88" />
+  <StrutsActivity path="/cConvenioMarcoDetalleAction.do" location="400,1442" dimension="396,88" />
+  <StrutsActivity path="/cConvenioMarcoModificarAction.do" location="655,1630" dimension="406,88" />
+  <StrutsActivity path="/cConvenioMarcoEliminarAction.do" location="142,1630" dimension="399,88" />
+  <StrutsActivity path="/cConvenioMarcoSeleccionarAction.do" location="2242,2126" dimension="417,88" />
+  <StrutsActivity path="/cConvenioMarcoHabilitarAction.do" location="1550,650" dimension="402,88" />
+  <StrutsActivity path="/cAdministracionPrestadoresAction.do" location="1250,950" dimension="416,88" />
+  <StrutsActivity path="/cAdministracionPrestadoresBuscarAction.do" location="1850,850" dimension="448,88" />
+  <StrutsActivity path="/cAdministracionPrestadoresModificarAction.do" location="1250,250" dimension="459,88" />
+  <StrutsActivity path="/cAdministracionPrestadoresAutorizacionAction.do" location="1850,1050" dimension="475,88" />
+  <StrutsActivity path=".tipoEgresoAltaDef" location="490,227" dimension="120,49" />
+  <StrutsActivity path=".tipoEgresoBuscarDef" location="1186,465" dimension="133,49" />
+  <StrutsActivity path=".tipoEgresoDetalleDef" location="341,902" dimension="134,49" />
+  <StrutsActivity path=".tipoEgresoEliminarDef" location="26,902" dimension="137,49" />
+  <StrutsActivity path=".tipoEgresoModificarDef" location="591,902" dimension="144,49" />
+  <StrutsActivity path=".personaAltaDef" location="1494,2145" dimension="108,49" />
+  <StrutsActivity path=".personaSeleccionarDef" location="1818,2722" dimension="143,49" />
+  <StrutsActivity path="/cEntidadModificarAction.do" location="1982,2490" dimension="173,75" />
+  <StrutsActivity path="/cEntidadAltaAction.do" location="2292,2490" dimension="149,75" />
+  <StrutsActivity path=".entidadModificarDef" location="0,2722" dimension="129,49" />
+  <StrutsActivity path=".entidadEliminarDef" location="229,2722" dimension="122,49" />
+  <StrutsActivity path=".entidadAltaGrupoCfmDef" location="451,2722" dimension="153,49" />
+  <StrutsActivity path=".entidadActivarDef" location="704,2722" dimension="120,49" />
+  <StrutsActivity path=".entidadAltaDef" location="924,2722" dimension="105,49" />
+  <StrutsActivity path=".entidadModificarCfmDef" location="1129,2722" dimension="148,49" />
+  <StrutsActivity path=".personaDetalleDef" location="1377,2722" dimension="122,49" />
+  <StrutsActivity path=".entidadDetalleDef" location="1599,2722" dimension="119,49" />
+  <StrutsActivity path=".tipoEgresoHabilitarDef" location="1052,902" dimension="140,49" />
+  <StrutsActivity path=".convenioMarcoAltaDef" location="492,1253" dimension="141,49" />
+  <StrutsActivity path="/cEntidadDetalleAction.do" location="0,1818" dimension="163,75" />
+  <StrutsActivity path="/cEntidadSeleccionarAction.do" location="1083,1818" dimension="184,75" />
+  <StrutsActivity path=".convenioMarcoBuscarDef" location="1000,1461" dimension="154,49" />
+  <StrutsActivity path=".convenioMarcoDetalleDef" location="521,1831" dimension="155,49" />
+  <StrutsActivity path=".convenioMarcoModificarDef" location="776,1831" dimension="165,49" />
+  <StrutsActivity path=".convenioMarcoEliminarDef" location="263,1831" dimension="158,49" />
+  <StrutsActivity path=".convenioMarcoSeleccionarDef" location="2780,2503" dimension="176,49" />
+  <StrutsActivity path=".convenioMarcoHabilitarDef" location="1550,850" dimension="161,49" />
+  <StrutsActivity path="/cPrestadorAdmSeleccionarAction.do" location="350,1050" dimension="216,75" />
+  <StrutsActivity path=".administracionPrestadoresDef" location="50,1050" dimension="176,49" />
+  <StrutsActivity path=".administracionPrestadoresBuscarDef" location="50,1150" dimension="208,49" />
+  <StrutsActivity path=".administracionPrestadoresModificarDef" location="1550,1150" dimension="219,49" />
+  <StrutsActivity path=".administracionPrestadoresAutorizacionDef" location="1250,1150" dimension="235,49" />
+  <StrutsActivity path=".tipoEgresoDef" location="50,1250" dimension="101,49" />
+  <StrutsTransition id="/cTipoEgresoDetalleAction.do,activar,/cTipoEgresoHabilitarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="772,529" />
+      <AbsolutePoint location="1129,529" />
+      <AbsolutePoint location="1129,714" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoBuscarAction.do,detalle,/cConvenioMarcoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="763,1278" />
+      <AbsolutePoint location="678,1278" />
+      <AbsolutePoint location="678,1442" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoHabilitarAction.do,detalleEntidad,/cEntidadDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,664" />
+      <AbsolutePoint location="-105,664" />
+      <AbsolutePoint location="-105,1855" />
+      <AbsolutePoint location="0,1855" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaAltaAction.do,formulario,.personaAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1518,2026" />
+      <AbsolutePoint location="1518,2145" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoAltaAction.do,confirmar,.tipoEgresoAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="595,88" />
+      <AbsolutePoint location="595,227" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoDetalleAction.do,formulario,.convenioMarcoDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="598,1530" />
+      <AbsolutePoint location="598,1831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoModificarAction.do,confirmar,.tipoEgresoModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="639,802" />
+      <AbsolutePoint location="639,902" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".administracionPrestadoresBuscarDef,null,/cAdministracionPrestadoresBuscarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="258,1165" />
+      <AbsolutePoint location="445,1165" />
+      <AbsolutePoint location="445,1370" />
+      <AbsolutePoint location="2570,1370" />
+      <AbsolutePoint location="2570,894" />
+      <AbsolutePoint location="2298,894" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresBuscarAction.do,alta,/cAdministracionPrestadoresAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2074,938" />
+      <AbsolutePoint location="2074,994" />
+      <AbsolutePoint location="1666,994" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoDetalleAction.do,formulario,.tipoEgresoDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="432,534" />
+      <AbsolutePoint location="432,902" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".convenioMarcoModificarDef,null,/cConvenioMarcoModificarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="918,1831" />
+      <AbsolutePoint location="918,1718" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoModificarAction.do,detalle,/cTipoEgresoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="639,714" />
+      <AbsolutePoint location="639,534" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaDetalleAction.do,listado,.personaSeleccionarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="976,2484" />
+      <AbsolutePoint location="976,2349" />
+      <AbsolutePoint location="1889,2349" />
+      <AbsolutePoint location="1889,2722" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoBuscarAction.do,formulario,.convenioMarcoBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1045,1322" />
+      <AbsolutePoint location="1045,1461" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoModificarAction.do,listado,/cConvenioMarcoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="960,1630" />
+      <AbsolutePoint location="960,1322" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresBuscarAction.do,detallePrestador,/cEntidadDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2074,894" />
+      <AbsolutePoint location="81,1855" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaDetalleAction.do,entidadAlta,.entidadAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="976,2528" />
+      <AbsolutePoint location="976,2746" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoEliminarAction.do,listado,/cTipoEgresoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="189,714" />
+      <AbsolutePoint location="189,291" />
+      <AbsolutePoint location="740,291" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoSeleccionarAction.do,entidadAlta,/cEntidadAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2426,2214" />
+      <AbsolutePoint location="2426,2490" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresModificarAction.do,modificar,.administracionPrestadoresModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1479,250" />
+      <AbsolutePoint location="1479,-150" />
+      <AbsolutePoint location="2370,-150" />
+      <AbsolutePoint location="2370,1174" />
+      <AbsolutePoint location="1769,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoModificarAction.do,volver,.convenioMarcoDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="661,1718" />
+      <AbsolutePoint location="661,1831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoEliminarAction.do,listado,/cConvenioMarcoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="326,1630" />
+      <AbsolutePoint location="326,1235" />
+      <AbsolutePoint location="763,1235" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaSeleccionarAction.do,entidadModificar,/cEntidadModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1997,2214" />
+      <AbsolutePoint location="1997,2490" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoAltaAction.do,alta,.convenioMarcoAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="627,1065" />
+      <AbsolutePoint location="611,1065" />
+      <AbsolutePoint location="611,1253" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoSeleccionarAction.do,convenioMarcoAlta,/cConvenioMarcoAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2480,2126" />
+      <AbsolutePoint location="2480,579" />
+      <AbsolutePoint location="847,579" />
+      <AbsolutePoint location="847,996" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaDetalleAction.do,altaGrupo,.entidadAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="976,2572" />
+      <AbsolutePoint location="976,2722" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoSeleccionarAction.do,personaAlta,/cEntidadAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2456,2214" />
+      <AbsolutePoint location="2456,2846" />
+      <AbsolutePoint location="2366,2846" />
+      <AbsolutePoint location="2366,2565" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresBuscarAction.do,detalleModificar,/cAdministracionPrestadoresModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2074,850" />
+      <AbsolutePoint location="2074,294" />
+      <AbsolutePoint location="1709,294" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoHabilitarAction.do,volver,/cConvenioMarcoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,694" />
+      <AbsolutePoint location="-75,694" />
+      <AbsolutePoint location="-75,1486" />
+      <AbsolutePoint location="400,1486" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".administracionPrestadoresAutorizacionDef,null,/cAdministracionPrestadoresAutorizacionAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1367,1150" />
+      <AbsolutePoint location="1367,1069" />
+      <AbsolutePoint location="1850,1069" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoBuscarAction.do,volverBusqueda,/cTipoEgresoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="927,208" />
+      <AbsolutePoint location="927,-75" />
+      <AbsolutePoint location="1159,-75" />
+      <AbsolutePoint location="1159,235" />
+      <AbsolutePoint location="1114,235" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoHabilitarAction.do,activar,.convenioMarcoHabilitarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1696,738" />
+      <AbsolutePoint location="1696,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoDetalleAction.do,eliminar,/cConvenioMarcoEliminarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="526,1530" />
+      <AbsolutePoint location="526,1630" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaDetalleAction.do,modificarGrupoCfm,.entidadModificarCfmDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1141,2528" />
+      <AbsolutePoint location="1203,2528" />
+      <AbsolutePoint location="1203,2722" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoModificarAction.do,seleccionEntidad,/cEntidadSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1061,1674" />
+      <AbsolutePoint location="1207,1674" />
+      <AbsolutePoint location="1207,1818" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoEliminarAction.do,refrescarConvenio,/cConvenioMarcoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="415,1630" />
+      <AbsolutePoint location="415,1530" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresAction.do,seleccionPrestadores,/cPrestadorAdmSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,975" />
+      <AbsolutePoint location="458,975" />
+      <AbsolutePoint location="458,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresAction.do,seleccionEntidad,/cEntidadSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1500,1038" />
+      <AbsolutePoint location="1500,1855" />
+      <AbsolutePoint location="1267,1855" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoAltaAction.do,seleccionEntidad,/cEntidadSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1009,1023" />
+      <AbsolutePoint location="1175,1023" />
+      <AbsolutePoint location="1175,1818" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresModificarAction.do,listado,/cAdministracionPrestadoresBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1709,324" />
+      <AbsolutePoint location="2044,324" />
+      <AbsolutePoint location="2044,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoBuscarAction.do,formulario,.tipoEgresoBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1114,265" />
+      <AbsolutePoint location="1235,265" />
+      <AbsolutePoint location="1235,465" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoDetalleAction.do,eliminar,/cTipoEgresoEliminarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="397,490" />
+      <AbsolutePoint location="219,490" />
+      <AbsolutePoint location="219,714" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresModificarAction.do,volver,/cAdministracionPrestadoresBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1449,250" />
+      <AbsolutePoint location="1449,-225" />
+      <AbsolutePoint location="2104,-225" />
+      <AbsolutePoint location="2104,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoAltaAction.do,listado,/cTipoEgresoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="755,88" />
+      <AbsolutePoint location="755,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoModificarAction.do,modificar,.convenioMarcoModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="858,1718" />
+      <AbsolutePoint location="858,1831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresAutorizacionAction.do,inicializar,/cAdministracionPrestadoresAutorizacionAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2087,1094" />
+      <AbsolutePoint location="2087,1094" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaDetalleAction.do,detalleGrupo,.entidadDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1006,2484" />
+      <AbsolutePoint location="1006,2409" />
+      <AbsolutePoint location="1658,2409" />
+      <AbsolutePoint location="1658,2722" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoSeleccionarAction.do,grupoAlta,/cEntidadAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2306,2214" />
+      <AbsolutePoint location="2306,2490" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoHabilitarAction.do,activar,.tipoEgresoHabilitarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1122,802" />
+      <AbsolutePoint location="1122,902" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoSeleccionarAction.do,orgAlta,/cEntidadAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2276,2214" />
+      <AbsolutePoint location="2276,2527" />
+      <AbsolutePoint location="2292,2527" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoEliminarAction.do,detalleEntidad,/cEntidadDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="148,1718" />
+      <AbsolutePoint location="148,1818" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaAltaAction.do,altaPersonaCfm,.personaAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1587,2026" />
+      <AbsolutePoint location="1587,2145" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoDetalleAction.do,activar,/cConvenioMarcoHabilitarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="796,1446" />
+      <AbsolutePoint location="1792,1446" />
+      <AbsolutePoint location="1792,738" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaDetalleAction.do,activarGrupo,.entidadActivarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="909,2572" />
+      <AbsolutePoint location="909,2746" />
+      <AbsolutePoint location="824,2746" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoDetalleAction.do,volver,/cTipoEgresoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="584,490" />
+      <AbsolutePoint location="927,252" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoModificarAction.do,listado,/cTipoEgresoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="787,714" />
+      <AbsolutePoint location="787,296" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoModificarAction.do,modificar,.tipoEgresoModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="669,802" />
+      <AbsolutePoint location="669,902" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresBuscarAction.do,listado,.administracionPrestadoresBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2014,850" />
+      <AbsolutePoint location="2014,383" />
+      <AbsolutePoint location="-45,383" />
+      <AbsolutePoint location="-45,1174" />
+      <AbsolutePoint location="50,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoAltaAction.do,convenioMarcoSeleccionar,/cConvenioMarcoSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="877,996" />
+      <AbsolutePoint location="877,817" />
+      <AbsolutePoint location="2450,817" />
+      <AbsolutePoint location="2450,2126" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".tipoEgresoAltaDef,null,/cTipoEgresoAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="535,227" />
+      <AbsolutePoint location="535,88" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoHabilitarAction.do,listado,/cConvenioMarcoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1751,738" />
+      <AbsolutePoint location="1751,1099" />
+      <AbsolutePoint location="930,1099" />
+      <AbsolutePoint location="930,1234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoDetalleAction.do,listadoOriginal,.tipoEgresoBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="584,490" />
+      <AbsolutePoint location="1252,489" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresBuscarAction.do,formulario,.administracionPrestadoresBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1850,917" />
+      <AbsolutePoint location="1424,917" />
+      <AbsolutePoint location="1424,865" />
+      <AbsolutePoint location="241,865" />
+      <AbsolutePoint location="241,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoAltaAction.do,alta,.tipoEgresoAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="565,88" />
+      <AbsolutePoint location="565,227" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresAction.do,alta,.administracionPrestadoresDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1458,950" />
+      <AbsolutePoint location="1458,609" />
+      <AbsolutePoint location="-135,609" />
+      <AbsolutePoint location="-135,1074" />
+      <AbsolutePoint location="50,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaSeleccionarAction.do,personaDetalle,/cPersonaDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1702,2130" />
+      <AbsolutePoint location="916,2130" />
+      <AbsolutePoint location="916,2484" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoDetalleAction.do,modificar,/cConvenioMarcoModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="670,1530" />
+      <AbsolutePoint location="670,1630" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaDetalleAction.do,modificarGrupo,.entidadModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="812,2498" />
+      <AbsolutePoint location="64,2498" />
+      <AbsolutePoint location="64,2722" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoSeleccionarAction.do,ueAlta,/cEntidadAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2336,2214" />
+      <AbsolutePoint location="2336,2490" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoSeleccionarAction.do,formulario,.convenioMarcoSeleccionarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2659,2170" />
+      <AbsolutePoint location="2868,2170" />
+      <AbsolutePoint location="2868,2503" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaDetalleAction.do,seleccionarPersonas,/cPersonaSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="946,2484" />
+      <AbsolutePoint location="946,2209" />
+      <AbsolutePoint location="1702,2209" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaSeleccionarAction.do,nuevaPersona,/cPersonaAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1762,2126" />
+      <AbsolutePoint location="1762,2026" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaDetalleAction.do,eliminarGrupo,.entidadEliminarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="812,2528" />
+      <AbsolutePoint location="290,2528" />
+      <AbsolutePoint location="290,2722" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoHabilitarAction.do,volver,/cTipoEgresoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="932,758" />
+      <AbsolutePoint location="877,758" />
+      <AbsolutePoint location="877,489" />
+      <AbsolutePoint location="772,489" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaDetalleAction.do,formulario,.personaDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1006,2572" />
+      <AbsolutePoint location="1006,2648" />
+      <AbsolutePoint location="1438,2648" />
+      <AbsolutePoint location="1438,2722" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoDetalleAction.do,listado,/cConvenioMarcoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="796,1486" />
+      <AbsolutePoint location="858,1486" />
+      <AbsolutePoint location="858,1322" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaDetalleAction.do,altaGrupoCfm,.entidadAltaGrupoCfmDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="812,2558" />
+      <AbsolutePoint location="536,2558" />
+      <AbsolutePoint location="536,2722" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoAltaAction.do,listado,/cConvenioMarcoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="818,1084" />
+      <AbsolutePoint location="818,1234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".convenioMarcoBuscarDef,null,/cConvenioMarcoBuscarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1077,1461" />
+      <AbsolutePoint location="1077,1322" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresAutorizacionAction.do,formulario,.administracionPrestadoresAutorizacionDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2068,1138" />
+      <AbsolutePoint location="2068,2071" />
+      <AbsolutePoint location="1362,2071" />
+      <AbsolutePoint location="1362,1199" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoModificarAction.do,confirmar,.convenioMarcoModificarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="888,1718" />
+      <AbsolutePoint location="888,1831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoSeleccionarAction.do,entidadModificar,/cEntidadModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2242,2170" />
+      <AbsolutePoint location="2068,2170" />
+      <AbsolutePoint location="2068,2490" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".administracionPrestadoresModificarDef,null,/cAdministracionPrestadoresModificarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1689,1199" />
+      <AbsolutePoint location="1689,1476" />
+      <AbsolutePoint location="3031,1476" />
+      <AbsolutePoint location="3031,163" />
+      <AbsolutePoint location="1509,163" />
+      <AbsolutePoint location="1509,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".administracionPrestadoresDef,null,/cAdministracionPrestadoresAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="138,1050" />
+      <AbsolutePoint location="138,1035" />
+      <AbsolutePoint location="-15,1035" />
+      <AbsolutePoint location="-15,413" />
+      <AbsolutePoint location="1488,413" />
+      <AbsolutePoint location="1488,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoHabilitarAction.do,ficha,/cConvenioMarcoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1822,738" />
+      <AbsolutePoint location="1822,1525" />
+      <AbsolutePoint location="796,1525" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".convenioMarcoAltaDef,null,/cConvenioMarcoAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="551,1253" />
+      <AbsolutePoint location="551,1165" />
+      <AbsolutePoint location="678,1165" />
+      <AbsolutePoint location="678,1084" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoModificarAction.do,volver,.tipoEgresoDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="460,802" />
+      <AbsolutePoint location="460,902" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoBuscarAction.do,listado,.convenioMarcoBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1015,1322" />
+      <AbsolutePoint location="1015,1461" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoBuscarAction.do,volverBusqueda,/cConvenioMarcoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="960,1234" />
+      <AbsolutePoint location="960,1165" />
+      <AbsolutePoint location="1207,1165" />
+      <AbsolutePoint location="1207,1278" />
+      <AbsolutePoint location="1158,1278" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoEliminarAction.do,eliminar,.convenioMarcoEliminarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="341,1718" />
+      <AbsolutePoint location="341,1831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoHabilitarAction.do,ficha,/cTipoEgresoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1159,714" />
+      <AbsolutePoint location="1159,450" />
+      <AbsolutePoint location="772,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoModificarAction.do,detalleEntidad,/cEntidadDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="828,1718" />
+      <AbsolutePoint location="828,1763" />
+      <AbsolutePoint location="111,1763" />
+      <AbsolutePoint location="111,1818" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoDetalleAction.do,modificar,/cTipoEgresoModificarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="584,534" />
+      <AbsolutePoint location="584,714" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaAltaAction.do,seleccionarPersonas,/cPersonaSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1717,2026" />
+      <AbsolutePoint location="1717,2126" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoBuscarAction.do,listado,.tipoEgresoBuscarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="917,296" />
+      <AbsolutePoint location="917,489" />
+      <AbsolutePoint location="1186,489" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoEliminarAction.do,ficha,/cTipoEgresoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="378,758" />
+      <AbsolutePoint location="402,758" />
+      <AbsolutePoint location="402,534" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".convenioMarcoSeleccionarDef,null,/cConvenioMarcoSeleccionarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2780,2527" />
+      <AbsolutePoint location="2510,2527" />
+      <AbsolutePoint location="2510,2214" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoModificarAction.do,detalle,/cConvenioMarcoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="781,1630" />
+      <AbsolutePoint location="781,1530" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoHabilitarAction.do,listado,/cTipoEgresoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1099,714" />
+      <AbsolutePoint location="1099,296" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".tipoEgresoModificarDef,null,/cTipoEgresoModificarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="699,902" />
+      <AbsolutePoint location="699,802" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoBuscarAction.do,alta,/cConvenioMarcoAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="848,1234" />
+      <AbsolutePoint location="848,1084" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".tipoEgresoBuscarDef,null,/cTipoEgresoBuscarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1205,465" />
+      <AbsolutePoint location="1205,295" />
+      <AbsolutePoint location="1114,295" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoBuscarAction.do,alta,/cTipoEgresoAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="837,208" />
+      <AbsolutePoint location="837,88" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoEliminarAction.do,volver,.tipoEgresoDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="356,802" />
+      <AbsolutePoint location="356,902" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaSeleccionarAction.do,formulario,.personaSeleccionarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1919,2214" />
+      <AbsolutePoint location="1919,2722" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoAltaAction.do,detalleEntidad,/cEntidadDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="627,1005" />
+      <AbsolutePoint location="11,1005" />
+      <AbsolutePoint location="11,1818" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoDetalleAction.do,listadoOriginal,/cConvenioMarcoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="778,1442" />
+      <AbsolutePoint location="778,1322" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".personaSeleccionarDef,null,/cPersonaSeleccionarAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1859,2722" />
+      <AbsolutePoint location="1859,2214" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoDetalleAction.do,altaCopia,/cConvenioMarcoAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="648,1442" />
+      <AbsolutePoint location="648,1084" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoAltaAction.do,convenioMarcoDetalle,/cConvenioMarcoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="748,1084" />
+      <AbsolutePoint location="748,1442" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoBuscarAction.do,detalle,/cTipoEgresoDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="757,296" />
+      <AbsolutePoint location="757,446" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoEliminarAction.do,eliminar,.tipoEgresoEliminarDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="148,802" />
+      <AbsolutePoint location="148,902" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoEliminarAction.do,volver,.convenioMarcoDetalleDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="536,1718" />
+      <AbsolutePoint location="536,1831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cTipoEgresoDetalleAction.do,listado,/cTipoEgresoBuscarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="625,446" />
+      <AbsolutePoint location="625,252" />
+      <AbsolutePoint location="740,252" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cAdministracionPrestadoresModificarAction.do,seleccionPrestadores,/cPrestadorAdmSeleccionarAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1479,294" />
+      <AbsolutePoint location="458,1087" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cPersonaSeleccionarAction.do,entidadAlta,/cEntidadAltaAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1889,2214" />
+      <AbsolutePoint location="1889,2269" />
+      <AbsolutePoint location="2366,2269" />
+      <AbsolutePoint location="2366,2490" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id=".personaAltaDef,null,/cPersonaAltaAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1548,2145" />
+      <AbsolutePoint location="1548,2026" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoDetalleAction.do,detalleEntidad,/cEntidadDetalleAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="400,1516" />
+      <AbsolutePoint location="81,1516" />
+      <AbsolutePoint location="81,1818" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cConvenioMarcoAltaAction.do,confirmar,.convenioMarcoAltaDef,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="627,1035" />
+      <AbsolutePoint location="581,1035" />
+      <AbsolutePoint location="581,1253" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

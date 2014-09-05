@@ -1,0 +1,198 @@
+/*table {
+	border: 1px solid #666;
+	width: 80%;
+	margin: 20px 0 20px 0 !important;
+}*/
+
+.displayTable.th,.displayTable.td {
+	padding: 2px 0px 2px 2px !important;
+	text-align: left;
+	vertical-align: top;
+}
+
+thead tr {
+  /*Fondillo de la tabla*/
+	background-color: #ffffff;
+	/*background-color: #ffffff;*/
+}
+
+th.sorted {
+	background-color: fefefe;
+}
+
+th a,th a:visited {
+	color: black;
+}
+
+th a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+th.sorted a,th.sortable a {
+	background-position: right;
+	display: block;
+	width: 100%;
+}
+
+.sortable{
+  color: black;
+  background-color: #efefef;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color:#cccccc;
+  border-right-color: #cccccc;
+  border-bottom-color: #cccccc;
+  border-left-color: #cccccc;
+  filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#DDEEFF,endColorStr=#C0C0C0);
+  display: list;
+}
+th.sortable a {
+	background-image: url(../imagenes/arrow_off.png);
+}
+
+th.order1 a {
+	background-image: url(../imagenes/arrow_down.png);
+}
+
+th.order2 a {
+	background-image: url(../imagenes/arrow_up.png);
+}
+
+tr.odd {
+  font-family: verdana, tahoma, arial, helvetica;
+  font-size: 11px;
+  background-color: #FFFFFF;
+  /*background-color: #fff*/
+}
+
+tr.tableRowEven,tr.even {
+  font-family: verdana, tahoma, arial, helvetica;
+  font-size: 11px;
+  background-color:#DDEEFF;
+  /*background-color: #fea*/
+
+}
+
+div.exportlinks {
+	background-color: #eee;
+	border: 1px solid #999;
+	padding: 2px 2px 2px 2px;
+	margin: 0px 0 0px 0;
+	width: 99%;
+}
+span.export {
+	padding: 0 4px 1px 20px;
+	display: inline;
+	display: inline-block;
+	cursor: pointer;
+}
+
+span.excel {
+	background-image: url(../imagenes/ico_file_excel.png);
+}
+
+span.csv {
+	background-image: url(../imagenes/ico_file_csv.png);
+}
+
+span.xml {
+	background-image: url(../imagenes/ico_file_xml.png);
+}
+
+span.pdf {
+	background-image: url(../imagenes/ico_file_pdf.png);
+}
+
+span.rtf {
+	background-image: url(../imagenes/ico_file_rtf.png);
+}
+
+span.pagebanner {
+	background-color: #eee;
+	border: 1px solid #999;
+	padding: 2px 4px 2px 4px;
+	width: 98%;
+	margin-top: 10px;
+	display: block;
+	border-bottom: none;
+        text-align: center;
+}
+
+span.pagelinks {
+  	align: center;
+	background-color: #eee;
+	border: 1px solid #999;
+	padding: 2px 4px 2px 4px;
+	width: 98%;
+	display: block;
+	border-top: none;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.headTabla {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #efefef;
+	text-align: left;
+	line-height:normal;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color:#cccccc;
+	border-right-color: #cccccc;
+	border-bottom-color: #cccccc;
+	border-left-color: #cccccc;
+}
+
+.tableCellHeader {
+  font-family: verdana, tahoma, arial, helvetica;
+  font-size: 11px;
+  font-weight: bold;
+  color: black;
+  background-color: #efefef;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color:#cccccc;
+  border-right-color: #cccccc;
+  border-bottom-color: #cccccc;
+  border-left-color: #cccccc;
+  filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#DDEEFF,endColorStr=#C0C0C0)
+}
+
+.displayTable {
+	background-color: #efefef;
+}
+
+tr.tableRowFooter {
+  font-family: verdana, tahoma, arial, helvetica;
+  font-size: 11px;
+  background-color: #efefef;
+}
+
+.empty {
+  font-family: verdana, tahoma, arial, helvetica;
+  font-size: 11px;
+}
+p.primeralinea {
+       text-indent: 40px;
+}

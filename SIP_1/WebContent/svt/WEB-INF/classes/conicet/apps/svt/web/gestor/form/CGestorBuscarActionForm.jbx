@@ -1,0 +1,20 @@
+[PropertyInfo]
+CGestor,CGestorBusquedaStruct,false,false, , ,true,<default>
+CHabilitado,String,false,false, , ,true,<default>
+cuit,String,false,false, , ,true,<default>
+cuitNumero,String,false,false, , ,true,<default>
+cuitPrefijo,String,false,false, , ,true,<default>
+cuitSufijo,String,false,false, , ,true,<default>
+descripcionBusqueda,String,false,false, , ,true,<default>
+email,String,false,false, , ,true,<default>
+estadoBusqueda,String,false,false, , ,true,<default>
+fechaAlta,String,false,false, , ,false,<default>
+habilitado,String,false,false, , ,true,<default>
+siglaBusqueda,String,false,false, , ,false,<default>
+telefono,String,false,false, , ,true,<default>
+tipoGestorBusqueda,String,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

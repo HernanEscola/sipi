@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<job-scheduling-data
+	xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData 
+	http://www.quartz-scheduler.org/xml/job_scheduling_data_1_8.xsd"
+	version="1.8">
+	<schedule>
+		<job>
+			<name>NotificarHitosAVencer</name>
+			<description>Envia mail indicando hitos a vencer</description>
+			<job-class>conicet.apps.svt.schedule.CNotificarHitosAVencer</job-class>
+			<durability>true</durability>
+			<recover>false</recover>
+		</job>
+		<trigger>
+			<cron>
+				<name>TriggerEveryDayNotificarHitosAVencer</name>
+				<job-name>NotificarHitosAVencer</job-name>
+				<cron-expression>0 20 5 * * ?</cron-expression>
+				<!-- cron-expression>0 0 5 31 2 ?</cron-expression -->
+			</cron>
+		</trigger>
+	</schedule>
+
+	<schedule>
+		<job>
+			<name>ActualizarDirAcademicoFromSIAF</name>
+			<description>Envia mail indicando actualización de directores académicos</description>
+			<job-class>conicet.apps.svt.batch.CActualizarDirAcademicoFromSIAF</job-class>
+			<durability>true</durability>
+			<recover>false</recover>
+		</job>
+		<trigger>
+			<cron>
+				<name>TriggerEveryDayActualizarDirAcademicoFromSIAF</name>
+				<job-name>ActualizarDirAcademicoFromSIAF</job-name>
+				<cron-expression>0 10 6 * * ?</cron-expression>
+				<!--cron-expression>0 0 5 31 2 ?</cron-expression-->
+			</cron>
+		</trigger>
+	</schedule>
+	
+	<schedule>
+		<job>
+			<name>ActualizarOrganismoSVTFromGlobal</name>
+			<description>Envia mail indicando actualización de organismos desde Tramix</description>
+			<job-class>conicet.apps.svt.batch.CActualizarOrganismoSVTFromGlobal</job-class>
+			<durability>true</durability>
+			<recover>false</recover>
+		</job>
+		<trigger>
+			<cron>
+				<name>TriggerEveryDayActualizarOrganismoSVTFromGlobal</name>
+				<job-name>ActualizarOrganismoSVTFromGlobal</job-name>
+				<cron-expression>0 20 6 * * ?</cron-expression>
+				<!--cron-expression>0 0 5 31 2 ?</cron-expression-->
+			</cron>
+		</trigger>
+	</schedule>
+	
+	<schedule>
+		<job>
+			<name>ActualizarPersonaSVTFromGlobal</name>
+			<description>Envia mail indicando actualización de personas desde Tramix</description>
+			<job-class>conicet.apps.svt.batch.CActualizarPersonaSVTFromGlobal</job-class>
+			<durability>true</durability>
+			<recover>false</recover>
+		</job>
+		<trigger>
+			<cron>
+				<name>TriggerEveryDayActualizarPersonaSVTFromGlobal</name>
+				<job-name>ActualizarPersonaSVTFromGlobal</job-name>
+				<cron-expression>0 30 6 * * ?</cron-expression>
+				<!--cron-expression>0 0 5 31 2 ?</cron-expression-->
+			</cron>
+		</trigger>
+	</schedule>
+	
+		<schedule>
+		<job>
+			<name>AsociarEntidadAConvenioMarco</name>
+			<description>Envia mail indicando actualización de Lugar de Trabajo</description>
+			<job-class>conicet.apps.svt.batch.CAsociarEntidadAConvenioMarco</job-class>
+			<durability>true</durability>
+			<recover>false</recover>
+		</job>
+		<trigger>
+			<cron>
+				<name>TriggerEveryDayAsociarEntidadAConvenioMarco</name>
+				<job-name>AsociarEntidadAConvenioMarco</job-name>
+				<cron-expression>0 40 6 * * ?</cron-expression>
+				<!--cron-expression>0 0 5 31 2 ?</cron-expression-->
+			</cron>
+		</trigger>
+	</schedule>
+	
+		<schedule>
+		<job>
+			<name>DBCheckBatch</name>
+			<description>Envia mail indicando errores en el proceso de verificacion de tablas de SVT</description>
+			<job-class>conicet.apps.svt.batch.CDBCheckBatch</job-class>
+			<durability>true</durability>
+			<recover>false</recover>
+		</job>
+		<trigger>
+			<cron>
+				<name>TriggerEveryDayDBCheckBatch</name>
+				<job-name>DBCheckBatch</job-name>
+				<cron-expression>0 50 06 * * ?</cron-expression>
+				<!--cron-expression>0 0 5 31 2 ?</cron-expression-->
+			</cron>
+		</trigger>
+	</schedule>
+
+</job-scheduling-data>
