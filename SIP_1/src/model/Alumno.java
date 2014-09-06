@@ -1,17 +1,18 @@
 package model;
-
-import java.beans.Transient;
 import java.sql.Date;
+import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 
 import enumerates.EEstado;
-import enumerates.ETipoEstadoMateria;
+import enumerates.EEstadoCursada;
 
 //
 //
@@ -29,7 +30,7 @@ public class Alumno extends Usuario {
 	@OneToMany(fetch = FetchType.EAGER)
 	@JoinColumn
 	private Set<AlumnoPlan> alumnoPlanes;
-	@OneToMany(fetch = FetchType.EAGER)
+	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinColumn
 	private Set<AlumnoCurso> alumnoCursos;
 	private Integer prioridad;
@@ -135,7 +136,32 @@ public class Alumno extends Usuario {
 	public void setNacionalidad(String nacionalidad) {
 		this.nacionalidad = nacionalidad;
 	}
+
+	@Transient
+	public Set<Materia> getMateriasAprobadas() {
+		Set<Materia> materiasAprobadas = new HashSet<Materia>();
+		
+		for(AlumnoCurso ac : this.alumnoCursos){
+			if(ac.getEstado().equals(EEstadoCursada.FinalAprobado) || ac.getEstado().equals(EEstadoCursada.CursadaAprobada)){
+				materiasAprobadas.add(ac.getCurso().getMateria());
+			}
+		}
+		
+		return materiasAprobadas;
+	}
 	
+	@Transient
+	public Set<Materia> getMateriasCursando() {
+		Set<Materia> materiasAprobadas = new HashSet<Materia>();
+		
+		for(AlumnoCurso ac : this.alumnoCursos){
+			if(ac.getEstado().equals(EEstadoCursada.Cursando) || ac.getEstado().equals(EEstadoCursada.Inscripto)){
+				materiasAprobadas.add(ac.getCurso().getMateria());
+			}
+		}
+		
+		return materiasAprobadas;
+	}
 	
 
 

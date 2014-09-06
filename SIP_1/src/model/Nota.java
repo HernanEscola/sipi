@@ -22,7 +22,7 @@ import enumerates.ETipoNota;
 
 
 @Entity
-public class Nota {
+public class Nota extends BaseEntity<Long> {
 	@Enumerated
 	private ETipoNota tipo;
 	private Date fechaAprobacion;

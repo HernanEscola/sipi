@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import enumerates.ETipoEstadoMateria;
+import enumerates.EEstadoCursada;
 
 //
 //
@@ -20,10 +20,10 @@ import enumerates.ETipoEstadoMateria;
 //
 
 @Entity
-public class AlumnoCurso {
+public class AlumnoCurso extends BaseEntity<Long> {
 
 	@Enumerated
-	private ETipoEstadoMateria estado;
+	private EEstadoCursada estado;
 	@ManyToOne
 	private Curso curso;
 	@ManyToOne
@@ -32,7 +32,7 @@ public class AlumnoCurso {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -40,7 +40,7 @@ public class AlumnoCurso {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
 	public Nota getNota() {
 		return nota;
 	}
@@ -49,17 +49,15 @@ public class AlumnoCurso {
 		this.nota = nota;
 	}
 
-
-
 	public AlumnoCurso() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ETipoEstadoMateria getEstado() {
+	public EEstadoCursada getEstado() {
 		return estado;
 	}
 
-	public void setEstado(ETipoEstadoMateria estado) {
+	public void setEstado(EEstadoCursada estado) {
 		this.estado = estado;
 	}
 
@@ -71,6 +69,10 @@ public class AlumnoCurso {
 		this.curso = curso;
 	}
 
-	
+	@Override
+	protected boolean dataEquals(Object other) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 }

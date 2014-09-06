@@ -23,7 +23,7 @@ import enumerates.EHoraCatedra;
 
 
 @Entity
-public class ItemHorarioCursada {
+public class ItemHorarioCursada extends BaseEntity<Long> {
 	@Enumerated
 	private EDia dia;
 	@Enumerated

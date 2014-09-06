@@ -8,15 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import app.Sistema;
+import app.SystemService;
 
 public class CrearPromocion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static Sistema instance;
+	private static SystemService instance;
 
 	public CrearPromocion() {
 		super();
-		instance = Sistema.getInstance();
+		instance = SystemService.getInstance();
 	}
 
 	protected void doGet(HttpServletRequest request,

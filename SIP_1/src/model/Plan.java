@@ -25,7 +25,7 @@ import enumerates.EEstadoPlan;
 
 
 @Entity
-public class Plan {
+public class Plan extends BaseEntity<Long> {
 	private Integer Año;
 	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
 	private Set<Materia> materias;

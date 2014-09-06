@@ -21,10 +21,10 @@ import javax.persistence.OneToMany;
 //
 
 @Entity
-public class Carrera {
-	public String nombre;
+public class Carrera extends BaseEntity<Long> {
+	private String nombre;
 	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
-	public Set<Plan> curricula;
+	private Set<Plan> curricula;
 	@Id
 	@GeneratedValue
 	private Long id;

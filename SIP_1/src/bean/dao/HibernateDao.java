@@ -137,10 +137,10 @@ public abstract class HibernateDao<T> {
 			}
 	}
 	
-	public static Object findById(Class c, Serializable id) throws Exception {
+	public static <E> E findById(Class<E> clazz, Serializable id) throws Exception {
 		try{
 			Session session = getSession();
-			Object ret = (Object) getSession().get(c, id);
+			E ret = (E) getSession().get(clazz, id);
 			session.close();
 			return ret;
 		}catch (NoResultException e) {
@@ -148,10 +148,10 @@ public abstract class HibernateDao<T> {
 			}
 	}
 	
-	public static List findAll(Class c) throws Exception {
+	public static <E> List<E> findAll(Class<E> clazz) throws Exception {
 		try {
 			Session session = getSession();
-			String clase = c.getName();
+			String clase = clazz.getName();
 			Query query = getSession().createQuery("FROM " + clase);
 			List list = query.list();
 			session.close();

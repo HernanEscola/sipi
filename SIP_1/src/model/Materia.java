@@ -21,15 +21,17 @@ import javax.persistence.OneToMany;
 //
 
 @Entity
-public class Materia {
+public class Materia extends BaseEntity<Long> {
+	
 	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
-	public Set<Materia> correlativas;
+	private Set<Materia> correlativas;
 	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
-	public Set<Curso> cursosMateria;
-	public int horasCatedra;
+	private Set<Curso> cursosMateria;
+	private int horasCatedra;
 	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
-	public Set<Profesor> profesoresHab;
-
+	private Set<Profesor> profesoresHab;
+	private String nombre;
+	
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -82,4 +84,14 @@ public class Materia {
 	public void planVigente() {
 
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	
 }

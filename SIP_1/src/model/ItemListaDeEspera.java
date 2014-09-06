@@ -17,7 +17,7 @@ import javax.persistence.ManyToOne;
 //
 
 @Entity
-public class ItemListaDeEspera {
+public class ItemListaDeEspera extends BaseEntity<Long> {
 	@ManyToOne
 	private Alumno alumno;
 	private int nroOrden;
