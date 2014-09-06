@@ -7,6 +7,8 @@ import java.util.Calendar;
 
 public class FechaUtil {
 
+	final static long MILLSECS_PER_DAY = 24 * 60 * 60 * 1000; //Milisegundos al día 
+	
 	public static Date getSqlDateFromString(String s) {
 		s = s.replace("-", "/");
 		DateFormat formater = new SimpleDateFormat("dd/MM/yyyy");
@@ -45,5 +47,9 @@ public class FechaUtil {
 		c.setTime(fecha);
 		c.add(Calendar.DAY_OF_MONTH, i);
 		return new Date(c.getTimeInMillis());
+	}
+	
+	public static Integer diferenciaDeDias(Date fecha1, Date fecha2) {
+		return (int) ((fecha1.getTime() - fecha2.getTime() )/ MILLSECS_PER_DAY);
 	}
 }

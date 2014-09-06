@@ -22,7 +22,7 @@ import enumerates.EEstado;
 //
 
 @Entity
-public class AlumnoPlan {
+public class AlumnoPlan extends BaseEntity<Long> {
 	@ManyToOne
 	private Plan plan;
 	@ManyToOne

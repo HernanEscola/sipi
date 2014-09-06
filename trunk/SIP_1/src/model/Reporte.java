@@ -19,7 +19,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class Reporte {
+public class Reporte extends BaseEntity<Long> {
 	private Date fecha;
 	private Byte[] archivoReporte;
 	

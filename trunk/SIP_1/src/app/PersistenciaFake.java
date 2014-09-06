@@ -14,7 +14,7 @@ import bean.dao.GenericDAO;
 import model.Alumno;
 
 
-public class PersistenciaFake extends Sistema {
+public class PersistenciaFake extends SystemService {
 	
 	protected PersistenciaFake() throws NumberFormatException, Exception {
 	}

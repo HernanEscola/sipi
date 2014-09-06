@@ -18,12 +18,12 @@ import javax.persistence.ManyToOne;
 //
 
 @Entity
-public class ItemGrilla {
+public class ItemGrilla extends BaseEntity<Long> {
 	@ManyToOne
-	public Curso curso;
-	public String diaSemana;
-	public Date horarioInicio;
-	public Date horarioFinal;
+	private Curso curso;
+	private String diaSemana;
+	private Date horarioInicio;
+	private Date horarioFinal;
 
 	@Id
 	@GeneratedValue

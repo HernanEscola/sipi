@@ -21,7 +21,7 @@ import javax.persistence.OneToMany;
 //
 //
 @Entity
-public class Curso {
+public class Curso extends BaseEntity<String> {
 	@ManyToOne
 	private ItemGrilla horario;
 	@ManyToOne
@@ -38,17 +38,17 @@ public class Curso {
 	private Set<ItemHorarioCursada> horarioCursada;
 	@ManyToOne
 	private Materia materia;
-	private String codigo;
+	
 	@Id
 	@GeneratedValue
-	private Long id;
+	private String codigo;
 	
-	public Long getId() {
-		return id;
+	public String getId() {
+		return codigo;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(String id) {
+		this.codigo = id;
 	}
 	
 

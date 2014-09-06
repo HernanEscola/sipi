@@ -19,7 +19,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class Cuatrimestre {
+public class Cuatrimestre extends BaseEntity<Long> {
 	private Date fechaInicio;
 	private Date fechaFin;
 	@Id

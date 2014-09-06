@@ -21,7 +21,7 @@ import javax.persistence.OneToMany;
 //
 
 @Entity
-public class Grilla {
+public class Grilla extends BaseEntity<Long> {
 	public String año;
 	public String cuatrimestre;
 	@OneToMany(fetch=FetchType.EAGER) @JoinColumn

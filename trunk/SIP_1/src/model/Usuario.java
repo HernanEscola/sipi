@@ -11,33 +11,22 @@ import javax.persistence.InheritanceType;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Usuario {
+public abstract class Usuario extends BaseEntity<Long> {
 	@Column
 	private String password;
-	@Column(unique=true)
+	@Column(unique = true)
 	private String nroDocumento;
-	@Column
-	private String rol;
 	@Column
 	private String nombre;
 	@Column
 	private String apellido;
 	@Column
 	private String mail;
-	/*@Column
-	private String tipoDocumento;
-	public String getTipoDocumento() {
-		return tipoDocumento;
-	}
-
-	public void setTipoDocumento(String tipoDocumento) {
-		this.tipoDocumento = tipoDocumento;
-	}*/
 
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -45,12 +34,11 @@ public abstract class Usuario {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-	
+
 	public Usuario() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Transient
 	abstract public String getRol();
 
@@ -95,9 +83,4 @@ public abstract class Usuario {
 	}
 
 
-	public void setRol(String rol) {
-		this.rol = rol;
-	}
-	
-	
 }

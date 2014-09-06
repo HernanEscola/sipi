@@ -18,16 +18,16 @@ import javax.persistence.Id;
 //
 
 @Entity
-public class DatosAlumno {
+public class DatosAlumno extends BaseEntity<Long> {
 	private String nombre;
 	private String apellido;
-	public String dni;
-	public Date fechaNacimiento;
-	public Date fechaInscripcion;
-	public String libreta;
-	public String domicilio;
-	public String telefono;
-	public String password;
+	private String dni;
+	private Date fechaNacimiento;
+	private Date fechaInscripcion;
+	private String libreta;
+	private String domicilio;
+	private String telefono;
+	private String password;
 	
 	@Id
 	@GeneratedValue

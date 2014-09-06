@@ -12,15 +12,15 @@ import javax.servlet.http.HttpServletResponse;
 
 import bean.dto.*;
 
-import app.Sistema;
+import app.SystemService;
 
 public class SearchAvailability extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static Sistema instance;
+	private static SystemService instance;
 
 	public SearchAvailability() {
 		super();
-		instance = Sistema.getInstance();
+		instance = SystemService.getInstance();
 	}
 
 	protected void doGet(HttpServletRequest request,
