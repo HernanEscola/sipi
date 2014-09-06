@@ -1,4 +1,5 @@
 package model;
+
 import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -30,7 +31,7 @@ public class Alumno extends Usuario {
 	@OneToMany(fetch = FetchType.EAGER)
 	@JoinColumn
 	private Set<AlumnoPlan> alumnoPlanes;
-	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn
 	private Set<AlumnoCurso> alumnoCursos;
 	private Integer prioridad;
@@ -140,29 +141,40 @@ public class Alumno extends Usuario {
 	@Transient
 	public Set<Materia> getMateriasAprobadas() {
 		Set<Materia> materiasAprobadas = new HashSet<Materia>();
-		
-		for(AlumnoCurso ac : this.alumnoCursos){
-			if(ac.getEstado().equals(EEstadoCursada.FinalAprobado) || ac.getEstado().equals(EEstadoCursada.CursadaAprobada)){
+
+		for (AlumnoCurso ac : this.alumnoCursos) {
+			if (ac.getEstado().equals(EEstadoCursada.FinalAprobado)
+					|| ac.getEstado().equals(EEstadoCursada.CursadaAprobada)) {
 				materiasAprobadas.add(ac.getCurso().getMateria());
 			}
 		}
-		
+
 		return materiasAprobadas;
 	}
-	
+
 	@Transient
 	public Set<Materia> getMateriasCursando() {
-		Set<Materia> materiasAprobadas = new HashSet<Materia>();
-		
-		for(AlumnoCurso ac : this.alumnoCursos){
-			if(ac.getEstado().equals(EEstadoCursada.Cursando) || ac.getEstado().equals(EEstadoCursada.Inscripto)){
-				materiasAprobadas.add(ac.getCurso().getMateria());
+		Set<Materia> materiasCursando = new HashSet<Materia>();
+
+		for (Curso c : this.getCursosActivos()) {
+			materiasCursando.add(c.getMateria());
+		}
+
+		return materiasCursando;
+	}
+
+	@Transient
+	public Set<Curso> getCursosActivos() {
+		Set<Curso> cursosActivos = new HashSet<Curso>();
+
+		for (AlumnoCurso ac : this.alumnoCursos) {
+			if (ac.getEstado().equals(EEstadoCursada.Cursando)
+					|| ac.getEstado().equals(EEstadoCursada.Inscripto)) {
+				cursosActivos.add(ac.getCurso());
 			}
 		}
-		
-		return materiasAprobadas;
-	}
-	
 
+		return cursosActivos;
+	}
 
 }

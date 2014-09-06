@@ -2,8 +2,12 @@ package model;
 import java.sql.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
+import enumerates.ETipoCuatrimestre;
 
 //
 //
@@ -22,6 +26,9 @@ import javax.persistence.Id;
 public class Cuatrimestre extends BaseEntity<Long> {
 	private Date fechaInicio;
 	private Date fechaFin;
+	@Enumerated(EnumType.ORDINAL)
+	private ETipoCuatrimestre tipoCuatrimestre;
+	private int año;
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -49,5 +56,25 @@ public class Cuatrimestre extends BaseEntity<Long> {
 	public void setFechaFin(Date fechaFin) {
 		this.fechaFin = fechaFin;
 	}
+
+	public ETipoCuatrimestre getTipoCuatrimestre() {
+		return tipoCuatrimestre;
+	}
+
+	public void setTipoCuatrimestre(ETipoCuatrimestre tipoCuatrimestre) {
+		this.tipoCuatrimestre = tipoCuatrimestre;
+	}
+
+	public int getAño() {
+		return año;
+	}
+
+	public void setAño(int año) {
+		this.año = año;
+	}
+
+	
+	
+
 	
 }
