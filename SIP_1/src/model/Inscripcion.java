@@ -14,7 +14,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
 import enumerates.EEstadoInscripcion;
-import enumerates.EPrioridad;
 
 @Entity
 public class Inscripcion extends BaseEntity<Long> {
@@ -61,12 +60,6 @@ public class Inscripcion extends BaseEntity<Long> {
 
 	public void setEstado(EEstadoInscripcion estado) {
 		this.estado = estado;
-	}
-
-
-	public Date getFechaInicioByPrioridad(EPrioridad p) {
-		return fechaInicio;
-
 	}
 
 	public EEstadoInscripcion getEstado() {

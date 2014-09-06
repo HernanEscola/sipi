@@ -23,26 +23,27 @@ import javax.persistence.OneToMany;
 @Entity
 public class Curso extends BaseEntity<String> {
 	@ManyToOne
-	private ItemGrilla horario;
-	@ManyToOne
 	private Profesor profesor;
 	private String aula;
-	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
 	private Set<AlumnoCurso> alumnos;
 	@ManyToOne
 	private Cuatrimestre cuatrimestre;
-	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
 	private Set<ItemListaDeEspera> listaDeEspera;
 	private int Capacidad;
-	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
 	private Set<ItemHorarioCursada> horarioCursada;
 	@ManyToOne
 	private Materia materia;
-	
+
 	@Id
 	@GeneratedValue
 	private String codigo;
-	
+
 	public String getId() {
 		return codigo;
 	}
@@ -50,18 +51,9 @@ public class Curso extends BaseEntity<String> {
 	public void setId(String id) {
 		this.codigo = id;
 	}
-	
 
 	public Curso() {
 		// TODO Auto-generated constructor stub
-	}
-
-	public ItemGrilla getHorario() {
-		return horario;
-	}
-
-	public void setHorario(ItemGrilla horario) {
-		this.horario = horario;
 	}
 
 	public Profesor getProfesor() {
@@ -79,7 +71,6 @@ public class Curso extends BaseEntity<String> {
 	public void setAula(String aula) {
 		this.aula = aula;
 	}
-
 
 	public Set<AlumnoCurso> getAlumnos() {
 		return alumnos;
@@ -136,6 +127,5 @@ public class Curso extends BaseEntity<String> {
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
-	
 
 }
