@@ -11,7 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.Transient;
 
 import enumerates.EEstadoInscripcion;
 
@@ -25,6 +24,8 @@ public class Inscripcion extends BaseEntity<Long> {
 	private EEstadoInscripcion estado;
 	@OneToMany(fetch=FetchType.EAGER) @JoinColumn
 	private Set<Curso> cursos;
+	@ManyToOne
+	private Reporte reporte;
 
 	@Id
 	@GeneratedValue
@@ -81,6 +82,16 @@ public class Inscripcion extends BaseEntity<Long> {
 	public void setFechaCierre(Date fechaCierre) {
 		this.fechaCierre = fechaCierre;
 	}
+
+	public Reporte getReporte() {
+		return reporte;
+	}
+
+	public void setReporte(Reporte reporte) {
+		this.reporte = reporte;
+	}
+	
+	
 	
 	
 }
