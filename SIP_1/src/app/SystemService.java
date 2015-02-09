@@ -53,14 +53,12 @@ public class SystemService implements Serializable {
 		System.out.println("joya");
 	}
 
-	public boolean hayInscripcionesAbiertas() {
-		// verifica si existe una inscripcion abierta
-		return true;
+	public boolean hayInscripcionesAbiertas() throws Exception {
+		return (InscripcionDAO.getInstancia().findInscripcionActual()!=null);
 	}
 
-	public Inscripcion darInscripcionActual() {
-
-		return null;
+	public Inscripcion darInscripcionActual() throws Exception {
+		return InscripcionDAO.getInstancia().findInscripcionActual();
 	}
 
 	public Usuario login(String nroDoc, String pass) throws Exception {
@@ -93,9 +91,7 @@ public class SystemService implements Serializable {
 		inscripcion.setEstado(EEstadoInscripcion.Abierta);
 		inscripcion.setFechaInicio(fechaInicio);
 
-		/*
-		 * // abro los cursos Grilla grilla = null;
-		 */
+		// los cursos ya se encuentras 
 
 		List<Curso> cursos = cursoDao.findCursosByCuatrimestre(inscripcion
 				.getCuatrimestre());
@@ -116,7 +112,7 @@ public class SystemService implements Serializable {
 	}
 
 	private void notificarAlumnoInscripcion(Inscripcion inscripcion, Alumno a) {
-		System.out.println("Enviar Email a "+ a.getApellido() + ", " + a.getNombre() + " a " + a.getMail() + " informando Fecha de inscripcion del " +FechaUtil.getStringFromSqlDate(darFechaPrioridadInscripcion(inscripcion, a.getPrioridad())) + " al "+ FechaUtil.getStringFromSqlDate(inscripcion.getFechaCierre())) ;
+		System.out.println("Envía Email a "+ a.getApellido() + ", " + a.getNombre() + " a " + a.getMail() + " informando Fecha de inscripcion del " +FechaUtil.getStringFromSqlDate(darFechaPrioridadInscripcion(inscripcion, a.getPrioridad())) + " al "+ FechaUtil.getStringFromSqlDate(inscripcion.getFechaCierre())) ;
 	}
 
 	public boolean validarFechasInscripcion(String fechaInicio,
@@ -143,7 +139,7 @@ public class SystemService implements Serializable {
 		return true;
 	}
 
-	public List<Curso> darOfertaDeCursosParaAlumno(Alumno alumno) {
+	public List<Curso> darOfertaDeCursosParaAlumno(Alumno alumno) throws Exception {
 		Inscripcion inscripcion = darInscripcionActual();
 		List<Curso> cursos = new LinkedList<Curso>();
 		Set<Materia> materiasCursables = new HashSet<Materia>();
@@ -194,6 +190,7 @@ public class SystemService implements Serializable {
 	public Object inscribirAlumnoACursos(Alumno alumno, List<Curso> cursos)
 			throws Exception {
 
+		//no hay listas de espera ACTUALMENTE
 		inscripcionDao.inscribirAlumnoACursos(alumno, cursos);
 
 		return null;
