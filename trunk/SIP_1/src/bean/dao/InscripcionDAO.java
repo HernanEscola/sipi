@@ -2,11 +2,18 @@ package bean.dao;
 
 import java.util.List;
 
+import javax.persistence.NoResultException;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+
 import model.Alumno;
 import model.AlumnoCurso;
 import model.Curso;
 import model.Inscripcion;
+import model.Usuario;
 import enumerates.EEstadoCursada;
+import enumerates.EEstadoInscripcion;
 import errors.ErrorException;
 
 public class InscripcionDAO extends HibernateDao<Inscripcion> {
@@ -58,6 +65,23 @@ public class InscripcionDAO extends HibernateDao<Inscripcion> {
 		
 		commitTransaction();
 	}
+	
+	
+	public Inscripcion findInscripcionActual()throws Exception{
+		try {
+			Session session = getSession();
+			Query query = session.createQuery("FROM " + Inscripcion.class.getName() + " i  where i.estado :estado ");
+			query.setParameter("estado", EEstadoInscripcion.Finalizada);
+			Inscripcion list = (Inscripcion) query.uniqueResult();
+			session.close();
+			return list;
+		}catch(NoResultException e){
+			return null;
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			throw ex;
+		}
+}
 	
 	
 }

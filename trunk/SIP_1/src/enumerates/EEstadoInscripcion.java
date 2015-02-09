@@ -1,6 +1,6 @@
 package enumerates;
 
 public enum EEstadoInscripcion {
-	Abierta
+	Abierta, Finalizada
 
 }

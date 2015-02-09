@@ -33,6 +33,8 @@ public class Cuatrimestre extends BaseEntity<Long> {
 	@GeneratedValue
 	private Long id;
 	
+	private boolean activo;
+	
 	public Long getId() {
 		return id;
 	}
@@ -71,6 +73,14 @@ public class Cuatrimestre extends BaseEntity<Long> {
 
 	public void setAño(int año) {
 		this.año = año;
+	}
+
+	public boolean isActivo() {
+		return activo;
+	}
+
+	public void setActivo(boolean activo) {
+		this.activo = activo;
 	}
 
 	
