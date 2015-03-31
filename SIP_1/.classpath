@@ -11,5 +11,25 @@
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v6.0"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.31-bin.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/antlr-2.7.2.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/bsf-2.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/commons-chain-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/commons-digester-1.8.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/commons-fileupload-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/commons-io-1.1.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/commons-validator-1.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/jstl-1.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/oro-2.0.8.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/standard-1.0.6.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/struts-core-1.3.10.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/struts-el-1.3.10.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/struts-extras-1.3.10.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/struts-faces-1.3.10.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/struts-mailreader-dao-1.3.10.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/struts-scripting-1.3.10.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/struts-taglib-1.3.10.jar"/>
+	<classpathentry kind="lib" path="lib/libStruts/struts-tiles-1.3.10.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
